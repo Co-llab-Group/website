@@ -1,0 +1,88 @@
+{
+  "schemaVersion": "site-deal-zones.v1",
+  "zones": [
+    {
+      "id": "zone-1",
+      "name": "L-Shape Corner",
+      "role": "anchor_mixed_use",
+      "padSf": 15700,
+      "zoningDistrict": "CC-M-B",
+      "parcels": [
+        "022800030019",
+        "022800030020",
+        "022800030017",
+        "022800030018",
+        "022800030036"
+      ],
+      "groundFloor": "retail",
+      "retailSf": 2500,
+      "tuckUnder": true,
+      "tuckUnderSf": 15700,
+      "maxHeightFt": 85,
+      "slopeContext": {
+        "avgPct": 9,
+        "crossSlopeDirection": "east"
+      }
+    },
+    {
+      "id": "zone-2",
+      "name": "Colerain Frontage",
+      "role": "residential",
+      "padSf": 18160,
+      "usablePadSf": 14400,
+      "zoningDistrict": "CC-P-B",
+      "parcels": [
+        "022800030049",
+        "022800030104",
+        "022800030105",
+        "022800030034"
+      ],
+      "groundFloor": "residential",
+      "retailSf": 0,
+      "tuckUnder": false,
+      "maxHeightFt": 85,
+      "slopeContext": {
+        "avgPct": 12,
+        "crossSlopeDirection": "east"
+      }
+    },
+    {
+      "id": "zone-3",
+      "name": "North Bend Frontage",
+      "role": "mixed_use",
+      "padSf": 12642,
+      "usablePadSf": 10100,
+      "zoningDistrict": "CC-P-B",
+      "parcels": [
+        "022800030035",
+        "022800030033",
+        "022800030064"
+      ],
+      "groundFloor": "flex",
+      "retailSf": 1500,
+      "tuckUnder": false,
+      "maxHeightFt": 85,
+      "slopeContext": {
+        "avgPct": 14,
+        "crossSlopeDirection": "south"
+      }
+    },
+    {
+      "id": "zone-4",
+      "name": "Hillside Buffer",
+      "role": "green_buffer",
+      "padSf": 30348,
+      "parcels": [
+        "022800030048",
+        "022800030016",
+        "022800030247"
+      ],
+      "buildable": false,
+      "program": [
+        "trail",
+        "bioswale",
+        "community_garden"
+      ]
+    }
+  ]
+}

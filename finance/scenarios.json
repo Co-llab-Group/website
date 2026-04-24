@@ -1,0 +1,301 @@
+{
+  "schemaVersion": "site-deal-scenarios.v1",
+  "fundingPath": "lihtc_9",
+  "amiBand": 60,
+  "scenarios": [
+    {
+      "id": "starter",
+      "name": "Starter",
+      "description": "57 units, 2 buildings, CDC first deal",
+      "zones": {
+        "zone-1": {
+          "stories": 4,
+          "residentialFloors": 3,
+          "buildingType": "mixed_use_podium",
+          "constructionType": "wood_frame_type_v",
+          "unitMix": [
+            {
+              "type": "studio",
+              "sf": 500,
+              "count": 7
+            },
+            {
+              "type": "1br",
+              "sf": 725,
+              "count": 18
+            },
+            {
+              "type": "2br",
+              "sf": 1000,
+              "count": 15
+            },
+            {
+              "type": "3br",
+              "sf": 1200,
+              "count": 5
+            }
+          ]
+        },
+        "zone-2": {
+          "stories": 2,
+          "residentialFloors": 2,
+          "buildingType": "townhome_row",
+          "constructionType": "wood_frame",
+          "unitMix": [
+            {
+              "type": "2br",
+              "sf": 1000,
+              "count": 4
+            },
+            {
+              "type": "2br_th",
+              "sf": 1200,
+              "count": 4
+            },
+            {
+              "type": "3br",
+              "sf": 1400,
+              "count": 4
+            }
+          ]
+        },
+        "zone-3": null,
+        "zone-4": null
+      }
+    },
+    {
+      "id": "right-sized",
+      "name": "Right-Sized",
+      "description": "87 units, 2 buildings, solid CDC",
+      "zones": {
+        "zone-1": {
+          "stories": 6,
+          "residentialFloors": 5,
+          "buildingType": "mixed_use_podium",
+          "constructionType": "five_over_one",
+          "unitMix": [
+            {
+              "type": "studio",
+              "sf": 500,
+              "count": 12
+            },
+            {
+              "type": "1br",
+              "sf": 725,
+              "count": 30
+            },
+            {
+              "type": "2br",
+              "sf": 1000,
+              "count": 25
+            },
+            {
+              "type": "3br",
+              "sf": 1200,
+              "count": 8
+            }
+          ]
+        },
+        "zone-2": {
+          "stories": 2,
+          "residentialFloors": 2,
+          "buildingType": "townhome_row",
+          "constructionType": "wood_frame",
+          "unitMix": [
+            {
+              "type": "2br",
+              "sf": 1000,
+              "count": 4
+            },
+            {
+              "type": "2br_th",
+              "sf": 1200,
+              "count": 4
+            },
+            {
+              "type": "3br",
+              "sf": 1400,
+              "count": 4
+            }
+          ]
+        },
+        "zone-3": null,
+        "zone-4": null
+      }
+    },
+    {
+      "id": "three-buildings",
+      "name": "Three Buildings",
+      "description": "131 units, 3 buildings, co-developer",
+      "zones": {
+        "zone-1": {
+          "stories": 6,
+          "residentialFloors": 5,
+          "buildingType": "mixed_use_podium",
+          "constructionType": "five_over_one",
+          "unitMix": [
+            {
+              "type": "studio",
+              "sf": 500,
+              "count": 12
+            },
+            {
+              "type": "1br",
+              "sf": 725,
+              "count": 30
+            },
+            {
+              "type": "2br",
+              "sf": 1000,
+              "count": 25
+            },
+            {
+              "type": "3br",
+              "sf": 1200,
+              "count": 8
+            }
+          ]
+        },
+        "zone-2": {
+          "stories": 3,
+          "residentialFloors": 3,
+          "buildingType": "walk_up_apartment",
+          "constructionType": "wood_frame",
+          "unitMix": [
+            {
+              "type": "1br",
+              "sf": 725,
+              "count": 8
+            },
+            {
+              "type": "2br",
+              "sf": 1000,
+              "count": 14
+            },
+            {
+              "type": "3br",
+              "sf": 1400,
+              "count": 10
+            }
+          ]
+        },
+        "zone-3": {
+          "stories": 3,
+          "residentialFloors": 2,
+          "buildingType": "mixed_use_walk_up",
+          "constructionType": "wood_frame",
+          "unitMix": [
+            {
+              "type": "studio",
+              "sf": 500,
+              "count": 4
+            },
+            {
+              "type": "1br",
+              "sf": 725,
+              "count": 10
+            },
+            {
+              "type": "2br",
+              "sf": 1000,
+              "count": 8
+            },
+            {
+              "type": "3br",
+              "sf": 1200,
+              "count": 2
+            }
+          ]
+        },
+        "zone-4": null
+      }
+    },
+    {
+      "id": "max-density",
+      "name": "Max Density",
+      "description": "165 units, 3 buildings, major developer",
+      "zones": {
+        "zone-1": {
+          "stories": 6,
+          "residentialFloors": 5,
+          "buildingType": "mixed_use_podium",
+          "constructionType": "five_over_one",
+          "unitMix": [
+            {
+              "type": "studio",
+              "sf": 500,
+              "count": 12
+            },
+            {
+              "type": "1br",
+              "sf": 725,
+              "count": 30
+            },
+            {
+              "type": "2br",
+              "sf": 1000,
+              "count": 25
+            },
+            {
+              "type": "3br",
+              "sf": 1200,
+              "count": 8
+            }
+          ]
+        },
+        "zone-2": {
+          "stories": 4,
+          "residentialFloors": 4,
+          "buildingType": "walk_up_apartment",
+          "constructionType": "wood_frame",
+          "unitMix": [
+            {
+              "type": "1br",
+              "sf": 725,
+              "count": 13
+            },
+            {
+              "type": "2br",
+              "sf": 1000,
+              "count": 23
+            },
+            {
+              "type": "3br",
+              "sf": 1400,
+              "count": 17
+            }
+          ]
+        },
+        "zone-3": {
+          "stories": 4,
+          "residentialFloors": 3,
+          "buildingType": "mixed_use_walk_up",
+          "constructionType": "wood_frame",
+          "unitMix": [
+            {
+              "type": "studio",
+              "sf": 500,
+              "count": 6
+            },
+            {
+              "type": "1br",
+              "sf": 725,
+              "count": 15
+            },
+            {
+              "type": "2br",
+              "sf": 1000,
+              "count": 12
+            },
+            {
+              "type": "3br",
+              "sf": 1200,
+              "count": 4
+            }
+          ]
+        },
+        "zone-4": null
+      }
+    }
+  ]
+}

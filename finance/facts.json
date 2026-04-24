@@ -1,0 +1,145 @@
+{
+  "schemaVersion": "site-deal-facts.v1",
+  "source": "colerain-north-bend-gateway",
+  "site": {
+    "projectSlug": "mt-airy",
+    "projectName": "Mt Airy - Colerain-North Bend Gateway",
+    "siteSlug": "colerain-north-bend-gateway",
+    "siteName": "Colerain-North Bend Gateway",
+    "addressSummary": "COLERAIN AVE + 9 more",
+    "totalLotAreaSf": 111182.5,
+    "totalLotAreaAcres": 2.5524,
+    "parcelCount": 15,
+    "neighborhood": "Mount Airy",
+    "municipality": "Cincinnati",
+    "state": "OH",
+    "plannerFrame": {
+      "widthFt": 397.6759,
+      "depthFt": 472.2609
+    },
+    "dataSnapshotDate": "2026-04-15"
+  },
+  "landControl": {
+    "controlType": "hclrc_controlled_assemblage",
+    "controlEntity": "Hamilton County Land Reutilization Corporation",
+    "siteControlConfirmedDate": "2026-03-15",
+    "transferDate": null,
+    "notes": [
+      "Site control is HomeBase-attested working truth; title work has not been performed.",
+      "13 parcels trace to 2021-11-15 conveyance 286389.",
+      "2 parcels (022800030019, 022800030064) follow an alternate acquisition path."
+    ]
+  },
+  "zoning": {
+    "districts": [
+      {
+        "code": "CC-P-B",
+        "parcelCount": 13,
+        "lotAreaSf": 86532.7,
+        "maxHeightFt": 85,
+        "maxStories": null,
+        "maxFAR": null,
+        "frontSetbackFt": 0,
+        "sideSetbackFt": 0,
+        "rearSetbackFt": 0,
+        "densityLotSfPerUnit": 700,
+        "parkingRatio": {
+          "threshold": 10,
+          "ratioAtOrBelow": 0,
+          "ratioAbove": 0.5
+        }
+      },
+      {
+        "code": "CC-M-B",
+        "parcelCount": 1,
+        "lotAreaSf": 8973.4,
+        "maxHeightFt": 85,
+        "maxStories": null,
+        "maxFAR": null,
+        "frontSetbackFt": 0,
+        "sideSetbackFt": 0,
+        "rearSetbackFt": 0,
+        "densityLotSfPerUnit": 700,
+        "parkingRatio": {
+          "threshold": 10,
+          "ratioAtOrBelow": 0,
+          "ratioAbove": 0.5
+        }
+      },
+      {
+        "code": "SF-6-MH",
+        "parcelCount": 1,
+        "lotAreaSf": 15636.4,
+        "maxHeightFt": 35,
+        "maxStories": null,
+        "maxFAR": null,
+        "frontSetbackFt": 25,
+        "sideSetbackFt": 7,
+        "rearSetbackFt": 35,
+        "densityLotSfPerUnit": 6000,
+        "parkingRatio": null
+      }
+    ],
+    "commercialBandLotAreaSf": 95506.1,
+    "commercialBandMaxUnitsByDensity": 136,
+    "sitewideIllustrativeUnitsAt700SfPerUnit": 158,
+    "notes": [
+      "The finance draft treats the CC-P-B and CC-M-B frontage band as the primary development area.",
+      "The SF-6-MH rear parcel is steep hillside context rather than a primary finance pad in this draft."
+    ]
+  },
+  "overlays": {
+    "qct": null,
+    "qctTractId": null,
+    "qctBasisBoostPct": 0.3,
+    "oz": false,
+    "craTier": "Expand",
+    "craAbatementPct": 0.75,
+    "craAbatementYears": 12,
+    "craEligibility": "new_construction",
+    "historicDistrict": false,
+    "floodZone": false,
+    "hillsideOverlay": true,
+    "notes": [
+      "Parcel-level enrichment currently reports CRA Expand and not OZ-eligible across the full assemblage.",
+      "QCT status has not yet been verified in the checked-in project artifacts."
+    ]
+  },
+  "amiRentLimits": {
+    "vintage": "HUD-2025",
+    "county": "Hamilton",
+    "limits60pct": {
+      "studio": {
+        "grossMonthly": 1050,
+        "utilityAllowance": 100
+      },
+      "oneBr": {
+        "grossMonthly": 1259,
+        "utilityAllowance": 125
+      },
+      "twoBr": {
+        "grossMonthly": 1511,
+        "utilityAllowance": 150
+      },
+      "threeBr": {
+        "grossMonthly": 1594,
+        "utilityAllowance": 175
+      }
+    }
+  },
+  "topography": {
+    "siteHighFt": 943,
+    "siteLowFt": 870,
+    "colerainSidewalkFt": 937,
+    "northBendSidewalkFt": 940,
+    "cliffTransitionPct": 27,
+    "buildableSlopePct": {
+      "min": 6,
+      "max": 16
+    },
+    "notes": [
+      "There is a hard slope break from 16% to 27% with no parcels in between.",
+      "Rear hillside parcels peak at 27%, 35%, and 40% average slope."
+    ]
+  }
+}

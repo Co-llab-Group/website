@@ -1,0 +1,362 @@
+{
+  "generatedAt": "2026-04-16T12:00:00-04:00",
+  "source": "deal-structuring-engine/v1-mock",
+  "note": "Prototype snapshot — replace with live engine output when pipeline is wired",
+  "commonAssumptions": {
+    "fundingPath": "lihtc_9",
+    "amiBand": 60,
+    "hardCostPsf": 210,
+    "softCostPct": 10,
+    "contingencyPct": 6,
+    "devFeePct": 5,
+    "landCost": 4500,
+    "siteExtraordinaries": 450000,
+    "permRate": 6.25,
+    "permAmort": 30,
+    "dscrMin": 1.25,
+    "creditRate": 9,
+    "creditPricing": 0.92,
+    "vacancyPct": 5,
+    "opexPct": 35,
+    "mgmtPct": 8
+  },
+  "scenarios": {
+    "starter": {
+      "label": "Starter",
+      "tagline": "CDC first deal — conservative scope",
+      "buildings": 2,
+      "units": 57,
+      "retailSf": 2500,
+      "grossSf": 51850,
+      "summary": {
+        "totalDevCost": 14780000,
+        "totalSources": 14780000,
+        "noiStabilized": 374900,
+        "dscr": 1.28,
+        "yieldOnCost": 2.54,
+        "cashOnCash": 2.7,
+        "gapSurplus": -498000,
+        "lihtcEquity": 9180000,
+        "permLoan": 4802000,
+        "sponsorCash": 498000,
+        "costPerUnit": 259298
+      },
+      "budget": {
+        "uses": [
+          { "category": "Hard Costs", "subcategory": "Residential Construction", "amount": 10363500 },
+          { "category": "Hard Costs", "subcategory": "Retail Shell", "amount": 525000 },
+          { "category": "Soft Costs", "subcategory": "Architecture & Engineering", "amount": 544425 },
+          { "category": "Soft Costs", "subcategory": "Legal, Accounting, Other", "amount": 544425 },
+          { "category": "Contingency", "subcategory": "6% of Hard+Soft", "amount": 717442 },
+          { "category": "Site Work", "subcategory": "Retaining Walls", "amount": 80000 },
+          { "category": "Site Work", "subcategory": "Stormwater/Bioswale", "amount": 120000 },
+          { "category": "Site Work", "subcategory": "Trail & Landscaping", "amount": 100000 },
+          { "category": "Site Work", "subcategory": "Utility Connections", "amount": 150000 },
+          { "category": "Land", "subcategory": "Acquisition + Closing", "amount": 4500 },
+          { "category": "Financing", "subcategory": "Construction Interest", "amount": 620000 },
+          { "category": "Financing", "subcategory": "Origination & Fees", "amount": 162000 },
+          { "category": "Developer Fee", "subcategory": "5% of Hard+Soft", "amount": 599368 },
+          { "category": "Reserves", "subcategory": "Operating & Replacement", "amount": 199340 }
+        ],
+        "totalUses": 14780000
+      },
+      "sources": {
+        "items": [
+          { "source": "Permanent Loan", "type": "debt", "amount": 4802000, "terms": "6.25% / 30yr / 1.25x DSCR" },
+          { "source": "LIHTC 9% Equity", "type": "equity", "amount": 9180000, "terms": "9% credit / $0.92 / 10yr" },
+          { "source": "Deferred Developer Fee", "type": "deferred", "amount": 300000, "terms": "Repaid from cash flow" },
+          { "source": "Sponsor Cash / Gap", "type": "gap", "amount": 498000, "terms": "Unfunded — requires grant or additional source" }
+        ],
+        "totalSources": 14780000
+      },
+      "proforma": {
+        "year1": {
+          "potentialGrossIncome": 692364,
+          "retailIncome": 37500,
+          "vacancy": -34618,
+          "effectiveGrossIncome": 695246,
+          "operatingExpenses": -243336,
+          "propertyManagement": -55620,
+          "replacementReserve": -21390,
+          "netOperatingIncome": 374900,
+          "debtService": -293075,
+          "cashFlowBeforeTax": 81825
+        }
+      },
+      "returns": {
+        "yieldOnCost": 2.54,
+        "cashOnCash": 2.7,
+        "debtCoverageRatio": 1.28,
+        "loanToValue": 62.4,
+        "loanToCost": 32.5,
+        "breakEvenOccupancy": 86.2,
+        "stabilizedValue": 5998400,
+        "costPerUnit": 259298,
+        "noiPerUnit": 6577,
+        "effectiveGrossMultiplier": 21.3
+      },
+      "constraints": {
+        "predevelopmentGate": "conditional_pass",
+        "warnings": [
+          "Site extraordinaries ($450,000) excluded from engine TDC — hardcoded as site_work passthrough",
+          "Gap of $498,000 requires additional funding source (grant, soft loan, or increased deferred fee)",
+          "Per-unit opex uses engine defaults — not site-specific"
+        ],
+        "unsupported": [
+          "siteExtraordinary.hillsideRetaining: $80,000",
+          "siteExtraordinary.stormwaterBioswale: $120,000",
+          "siteExtraordinary.trailAndLandscaping: $100,000",
+          "siteExtraordinary.utilityConnections: $150,000"
+        ]
+      }
+    },
+    "right-sized": {
+      "label": "Right-Sized",
+      "tagline": "Solid CDC — proven operator",
+      "buildings": 2,
+      "units": 87,
+      "retailSf": 2500,
+      "grossSf": 75850,
+      "summary": {
+        "totalDevCost": 21620000,
+        "totalSources": 21620000,
+        "noiStabilized": 582400,
+        "dscr": 1.32,
+        "yieldOnCost": 2.69,
+        "cashOnCash": 3.8,
+        "gapSurplus": -310000,
+        "lihtcEquity": 14250000,
+        "permLoan": 6760000,
+        "sponsorCash": 310000,
+        "costPerUnit": 248506
+      },
+      "budget": {
+        "uses": [
+          { "category": "Hard Costs", "subcategory": "Residential Construction", "amount": 15403500 },
+          { "category": "Hard Costs", "subcategory": "Retail Shell", "amount": 525000 },
+          { "category": "Soft Costs", "subcategory": "Architecture & Engineering", "amount": 796425 },
+          { "category": "Soft Costs", "subcategory": "Legal, Accounting, Other", "amount": 796425 },
+          { "category": "Contingency", "subcategory": "6% of Hard+Soft", "amount": 1051292 },
+          { "category": "Site Work", "subcategory": "All Extraordinaries", "amount": 450000 },
+          { "category": "Land", "subcategory": "Acquisition + Closing", "amount": 4500 },
+          { "category": "Financing", "subcategory": "Construction Interest + Fees", "amount": 985000 },
+          { "category": "Developer Fee", "subcategory": "5% of Hard+Soft", "amount": 876096 },
+          { "category": "Reserves", "subcategory": "Operating & Replacement", "amount": 281762 }
+        ],
+        "totalUses": 21620000
+      },
+      "sources": {
+        "items": [
+          { "source": "Permanent Loan", "type": "debt", "amount": 6760000, "terms": "6.25% / 30yr / 1.32x DSCR" },
+          { "source": "LIHTC 9% Equity", "type": "equity", "amount": 14250000, "terms": "9% credit / $0.92 / 10yr" },
+          { "source": "Deferred Developer Fee", "type": "deferred", "amount": 300000, "terms": "Repaid from cash flow" },
+          { "source": "Sponsor Cash / Gap", "type": "gap", "amount": 310000, "terms": "Unfunded" }
+        ],
+        "totalSources": 21620000
+      },
+      "proforma": {
+        "year1": {
+          "potentialGrossIncome": 1058244,
+          "retailIncome": 37500,
+          "vacancy": -52912,
+          "effectiveGrossIncome": 1042832,
+          "operatingExpenses": -364991,
+          "propertyManagement": -83427,
+          "replacementReserve": -12014,
+          "netOperatingIncome": 582400,
+          "debtService": -441150,
+          "cashFlowBeforeTax": 141250
+        }
+      },
+      "returns": {
+        "yieldOnCost": 2.69,
+        "cashOnCash": 3.8,
+        "debtCoverageRatio": 1.32,
+        "loanToValue": 59.8,
+        "loanToCost": 31.3,
+        "breakEvenOccupancy": 82.5,
+        "stabilizedValue": 9318400,
+        "costPerUnit": 248506,
+        "noiPerUnit": 6694,
+        "effectiveGrossMultiplier": 20.7
+      },
+      "constraints": {
+        "predevelopmentGate": "conditional_pass",
+        "warnings": [
+          "Site extraordinaries ($450,000) excluded from engine TDC",
+          "Gap of $310,000 requires additional source",
+          "5-over-1 construction may require Type IIIA fire rating — verify with code consultant"
+        ],
+        "unsupported": [
+          "siteExtraordinary (all items)"
+        ]
+      }
+    },
+    "three-buildings": {
+      "label": "Three Buildings",
+      "tagline": "Co-developer — activates Zone 3",
+      "buildings": 3,
+      "units": 131,
+      "retailSf": 4000,
+      "grossSf": 109000,
+      "summary": {
+        "totalDevCost": 31450000,
+        "totalSources": 31450000,
+        "noiStabilized": 862500,
+        "dscr": 1.30,
+        "yieldOnCost": 2.74,
+        "cashOnCash": 4.1,
+        "gapSurplus": -125000,
+        "lihtcEquity": 21500000,
+        "permLoan": 9525000,
+        "sponsorCash": 125000,
+        "costPerUnit": 240076
+      },
+      "budget": {
+        "uses": [
+          { "category": "Hard Costs", "subcategory": "Residential Construction", "amount": 22050000 },
+          { "category": "Hard Costs", "subcategory": "Retail Shell", "amount": 840000 },
+          { "category": "Soft Costs", "subcategory": "All Soft Costs", "amount": 2289000 },
+          { "category": "Contingency", "subcategory": "6% of Hard+Soft", "amount": 1510740 },
+          { "category": "Site Work", "subcategory": "All Extraordinaries", "amount": 450000 },
+          { "category": "Land", "subcategory": "Acquisition + Closing", "amount": 4500 },
+          { "category": "Financing", "subcategory": "Construction Interest + Fees", "amount": 1430000 },
+          { "category": "Developer Fee", "subcategory": "5% of Hard+Soft", "amount": 1271950 },
+          { "category": "Reserves", "subcategory": "Operating & Replacement", "amount": 403810 }
+        ],
+        "totalUses": 31450000
+      },
+      "sources": {
+        "items": [
+          { "source": "Permanent Loan", "type": "debt", "amount": 9525000, "terms": "6.25% / 30yr / 1.30x DSCR" },
+          { "source": "LIHTC 9% Equity", "type": "equity", "amount": 21500000, "terms": "9% credit / $0.92 / 10yr" },
+          { "source": "Deferred Developer Fee", "type": "deferred", "amount": 300000, "terms": "Repaid from cash flow" },
+          { "source": "Sponsor Cash / Gap", "type": "gap", "amount": 125000, "terms": "Near break-even" }
+        ],
+        "totalSources": 31450000
+      },
+      "proforma": {
+        "year1": {
+          "potentialGrossIncome": 1581720,
+          "retailIncome": 60000,
+          "vacancy": -79086,
+          "effectiveGrossIncome": 1562634,
+          "operatingExpenses": -546922,
+          "propertyManagement": -125011,
+          "replacementReserve": -28201,
+          "netOperatingIncome": 862500,
+          "debtService": -663275,
+          "cashFlowBeforeTax": 199225
+        }
+      },
+      "returns": {
+        "yieldOnCost": 2.74,
+        "cashOnCash": 4.1,
+        "debtCoverageRatio": 1.30,
+        "loanToValue": 58.2,
+        "loanToCost": 30.3,
+        "breakEvenOccupancy": 80.8,
+        "stabilizedValue": 13800000,
+        "costPerUnit": 240076,
+        "noiPerUnit": 6584,
+        "effectiveGrossMultiplier": 20.1
+      },
+      "constraints": {
+        "predevelopmentGate": "conditional_pass",
+        "warnings": [
+          "Site extraordinaries ($450,000) excluded from engine TDC",
+          "Gap of $125,000 — near break-even, likely closeable with soft source",
+          "3-building phasing may require separate LIHTC applications — verify with syndicator",
+          "Zone 3 slope at 14% may increase foundation costs beyond $210/sf baseline"
+        ],
+        "unsupported": [
+          "siteExtraordinary (all items)",
+          "Multi-building phasing / separate applications"
+        ]
+      }
+    },
+    "max-density": {
+      "label": "Max Density",
+      "tagline": "Major developer — full buildout",
+      "buildings": 3,
+      "units": 165,
+      "retailSf": 4000,
+      "grossSf": 142500,
+      "summary": {
+        "totalDevCost": 40800000,
+        "totalSources": 40800000,
+        "noiStabilized": 1105000,
+        "dscr": 1.31,
+        "yieldOnCost": 2.71,
+        "cashOnCash": 4.3,
+        "gapSurplus": 82000,
+        "lihtcEquity": 27800000,
+        "permLoan": 12418000,
+        "sponsorCash": 0,
+        "costPerUnit": 247273
+      },
+      "budget": {
+        "uses": [
+          { "category": "Hard Costs", "subcategory": "Residential Construction", "amount": 29085000 },
+          { "category": "Hard Costs", "subcategory": "Retail Shell", "amount": 840000 },
+          { "category": "Soft Costs", "subcategory": "All Soft Costs", "amount": 2992500 },
+          { "category": "Contingency", "subcategory": "6% of Hard+Soft", "amount": 1975050 },
+          { "category": "Site Work", "subcategory": "All Extraordinaries", "amount": 450000 },
+          { "category": "Land", "subcategory": "Acquisition + Closing", "amount": 4500 },
+          { "category": "Financing", "subcategory": "Construction Interest + Fees", "amount": 1856000 },
+          { "category": "Developer Fee", "subcategory": "5% of Hard+Soft", "amount": 1093875 },
+          { "category": "Reserves", "subcategory": "Operating & Replacement", "amount": 503075 }
+        ],
+        "totalUses": 40800000
+      },
+      "sources": {
+        "items": [
+          { "source": "Permanent Loan", "type": "debt", "amount": 12418000, "terms": "6.25% / 30yr / 1.31x DSCR" },
+          { "source": "LIHTC 9% Equity", "type": "equity", "amount": 27800000, "terms": "9% credit / $0.92 / 10yr" },
+          { "source": "Deferred Developer Fee", "type": "deferred", "amount": 500000, "terms": "Repaid from cash flow" },
+          { "source": "Surplus", "type": "surplus", "amount": 82000, "terms": "Available for additional reserves" }
+        ],
+        "totalSources": 40800000
+      },
+      "proforma": {
+        "year1": {
+          "potentialGrossIncome": 2012040,
+          "retailIncome": 60000,
+          "vacancy": -100602,
+          "effectiveGrossIncome": 1971438,
+          "operatingExpenses": -690003,
+          "propertyManagement": -157715,
+          "replacementReserve": -18720,
+          "netOperatingIncome": 1105000,
+          "debtService": -843700,
+          "cashFlowBeforeTax": 261300
+        }
+      },
+      "returns": {
+        "yieldOnCost": 2.71,
+        "cashOnCash": 4.3,
+        "debtCoverageRatio": 1.31,
+        "loanToValue": 57.0,
+        "loanToCost": 30.4,
+        "breakEvenOccupancy": 79.5,
+        "stabilizedValue": 17680000,
+        "costPerUnit": 247273,
+        "noiPerUnit": 6697,
+        "effectiveGrossMultiplier": 20.7
+      },
+      "constraints": {
+        "predevelopmentGate": "pass",
+        "warnings": [
+          "Site extraordinaries ($450,000) excluded from engine TDC",
+          "Max density at 165 units exceeds commercial-band density cap (136 units by zoning rule) — requires variance or density bonus",
+          "3-building phasing may require separate LIHTC applications"
+        ],
+        "unsupported": [
+          "siteExtraordinary (all items)",
+          "Multi-building phasing / separate applications",
+          "Density variance / bonus"
+        ]
+      }
+    }
+  }
+}

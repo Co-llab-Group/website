@@ -1,0 +1,7892 @@
+window.SITE_DEAL_RUN_ARTIFACT = {
+  "schemaVersion": "site-deal-run.v1",
+  "project": {
+    "source": "colerain-north-bend-gateway",
+    "projectSlug": "mt-airy",
+    "projectName": "Mt Airy - Colerain-North Bend Gateway",
+    "siteSlug": "colerain-north-bend-gateway",
+    "siteName": "Colerain-North Bend Gateway",
+    "addressSummary": "COLERAIN AVE + 9 more",
+    "directory": "/Users/hoff/dev/pre-dev-intel/app/site-engine/projects/mt-airy/colerain-north-bend-gateway/artifacts"
+  },
+  "generatedAt": "2026-04-16T16:48:03.584Z",
+  "engineVersion": "deal-structuring-v1",
+  "inputs": {
+    "facts": {
+      "schemaVersion": "site-deal-facts.v1",
+      "source": "colerain-north-bend-gateway",
+      "site": {
+        "projectSlug": "mt-airy",
+        "projectName": "Mt Airy - Colerain-North Bend Gateway",
+        "siteSlug": "colerain-north-bend-gateway",
+        "siteName": "Colerain-North Bend Gateway",
+        "addressSummary": "COLERAIN AVE + 9 more",
+        "totalLotAreaSf": 111182.5,
+        "parcelCount": 15,
+        "neighborhood": "Mount Airy",
+        "municipality": "Cincinnati",
+        "state": "OH",
+        "totalLotAreaAcres": 2.5524,
+        "plannerFrame": {
+          "widthFt": 397.6759,
+          "depthFt": 472.2609
+        },
+        "dataSnapshotDate": "2026-04-15"
+      },
+      "landControl": {
+        "closingCosts": 0,
+        "controlType": "hclrc_controlled_assemblage",
+        "controlEntity": "Hamilton County Land Reutilization Corporation",
+        "transferDate": null,
+        "siteControlConfirmedDate": "2026-03-15",
+        "notes": [
+          "Site control is HomeBase-attested working truth; title work has not been performed.",
+          "13 parcels trace to 2021-11-15 conveyance 286389.",
+          "2 parcels (022800030019, 022800030064) follow an alternate acquisition path."
+        ]
+      },
+      "zoning": {
+        "districts": [
+          {
+            "code": "CC-P-B",
+            "parcelCount": 13,
+            "maxHeightFt": 85,
+            "lotAreaSf": 86532.7,
+            "maxStories": null,
+            "maxFAR": null,
+            "frontSetbackFt": 0,
+            "sideSetbackFt": 0,
+            "rearSetbackFt": 0,
+            "densityLotSfPerUnit": 700,
+            "parkingRatio": {
+              "threshold": 10,
+              "ratioAtOrBelow": 0,
+              "ratioAbove": 0.5
+            }
+          },
+          {
+            "code": "CC-M-B",
+            "parcelCount": 1,
+            "maxHeightFt": 85,
+            "lotAreaSf": 8973.4,
+            "maxStories": null,
+            "maxFAR": null,
+            "frontSetbackFt": 0,
+            "sideSetbackFt": 0,
+            "rearSetbackFt": 0,
+            "densityLotSfPerUnit": 700,
+            "parkingRatio": {
+              "threshold": 10,
+              "ratioAtOrBelow": 0,
+              "ratioAbove": 0.5
+            }
+          },
+          {
+            "code": "SF-6-MH",
+            "parcelCount": 1,
+            "maxHeightFt": 35,
+            "lotAreaSf": 15636.4,
+            "maxStories": null,
+            "maxFAR": null,
+            "frontSetbackFt": 25,
+            "sideSetbackFt": 7,
+            "rearSetbackFt": 35,
+            "densityLotSfPerUnit": 6000,
+            "parkingRatio": null
+          }
+        ],
+        "commercialBandMaxUnitsByDensity": 136,
+        "sitewideIllustrativeUnitsAt700SfPerUnit": 158,
+        "commercialBandLotAreaSf": 95506.1,
+        "notes": [
+          "The finance draft treats the CC-P-B and CC-M-B frontage band as the primary development area.",
+          "The SF-6-MH rear parcel is steep hillside context rather than a primary finance pad in this draft."
+        ]
+      },
+      "overlays": {
+        "qct": null,
+        "qctTractId": null,
+        "qctBasisBoostPct": 0.3,
+        "oz": false,
+        "craTier": "Expand",
+        "craAbatementPct": 0.75,
+        "craAbatementYears": 12,
+        "craEligibility": "new_construction",
+        "historicDistrict": false,
+        "floodZone": false,
+        "hillsideOverlay": true,
+        "notes": [
+          "Parcel-level enrichment currently reports CRA Expand and not OZ-eligible across the full assemblage.",
+          "QCT status has not yet been verified in the checked-in project artifacts."
+        ]
+      },
+      "amiRentLimits": {
+        "vintage": "HUD-2025",
+        "county": "Hamilton",
+        "limits60pct": {
+          "studio": {
+            "grossMonthly": 1050,
+            "utilityAllowance": 100
+          },
+          "oneBr": {
+            "grossMonthly": 1259,
+            "utilityAllowance": 125
+          },
+          "twoBr": {
+            "grossMonthly": 1511,
+            "utilityAllowance": 150
+          },
+          "threeBr": {
+            "grossMonthly": 1594,
+            "utilityAllowance": 175
+          }
+        }
+      },
+      "topography": {
+        "siteHighFt": 943,
+        "siteLowFt": 870,
+        "colerainSidewalkFt": 937,
+        "northBendSidewalkFt": 940,
+        "cliffTransitionPct": 27,
+        "buildableSlopePct": {
+          "min": 6,
+          "max": 16
+        },
+        "notes": [
+          "There is a hard slope break from 16% to 27% with no parcels in between.",
+          "Rear hillside parcels peak at 27%, 35%, and 40% average slope."
+        ]
+      }
+    },
+    "assumptions": {
+      "schemaVersion": "site-deal-assumptions.v1",
+      "land": {
+        "acquisitionCost": 1,
+        "closingCosts": 3500
+      },
+      "construction": {
+        "hardCostPsf": 210,
+        "costTier": "standard_wood_frame",
+        "basementFactor": 0.5,
+        "softCostPct": 0.1,
+        "contingencyPct": 0.06,
+        "siteExtraordinary": {
+          "hillsideRetaining": 80000,
+          "stormwaterBioswale": 120000,
+          "trailAndLandscaping": 100000,
+          "utilityConnections": 150000,
+          "demolition": 0
+        }
+      },
+      "operations": {
+        "vacancyPct": 0.05,
+        "collectionLossPct": 0.01,
+        "opexRatioPct": 0.35,
+        "propertyMgmtPct": 0.08,
+        "propertyTaxMillRate": 0.062,
+        "assessmentRatio": 0.35,
+        "maintenancePct": 0.1,
+        "capexReservePct": 0.05,
+        "rentGrowthPct": 0.02,
+        "expenseGrowthPct": 0.02
+      },
+      "operatingExpenseAssumptions": {
+        "maintenanceAndRepairsPerUnit": 1800,
+        "utilitiesOwnerPaidPerUnit": 600,
+        "insurancePerUnit": 900,
+        "taxesPerUnit": 2700,
+        "complianceMonitoringPerUnit": 0,
+        "annualAuditAndReportingCost": 0,
+        "replacementReservePerUnit": 300
+      },
+      "taxAssumptions": {
+        "marginalFederalRate": 0.24,
+        "marginalStateRate": 0.04,
+        "depreciationYears": 27.5,
+        "depreciationRecaptureRate": 0.25
+      },
+      "financing": {
+        "constructionLoan": {
+          "rate": 0.0875,
+          "ltcPct": 0.75,
+          "termMonths": 14,
+          "originationPct": 0.015
+        },
+        "permanentLoan": {
+          "rate": 0.0625,
+          "ltvPct": 0.75,
+          "amortYears": 30,
+          "minDscr": 1.25
+        },
+        "lihtc9": {
+          "creditRate": 0.09,
+          "creditPeriodYears": 10,
+          "pricingPerDollar": 0.92,
+          "compliancePeriodYears": 15
+        }
+      },
+      "developerFee": {
+        "ratePct": 0.05,
+        "basis": "hard_plus_soft",
+        "floorDollars": 5000,
+        "lihtcMaxPct": 0.1
+      },
+      "retail": {
+        "rentPsfAnnual": 15,
+        "tiAllowancePsf": 50,
+        "capRate": 0.075
+      },
+      "marketRents": {
+        "studio": 950,
+        "oneBr": 1150,
+        "twoBr": 1400,
+        "threeBr": 1650
+      }
+    },
+    "zones": {
+      "schemaVersion": "site-deal-zones.v1",
+      "zones": [
+        {
+          "id": "zone-1",
+          "name": "L-Shape Corner",
+          "role": "anchor_mixed_use",
+          "padSf": 15700,
+          "zoningDistrict": "CC-M-B",
+          "parcels": [
+            "022800030019",
+            "022800030020",
+            "022800030017",
+            "022800030018",
+            "022800030036"
+          ],
+          "groundFloor": "retail",
+          "retailSf": 2500,
+          "tuckUnder": true,
+          "tuckUnderSf": 15700,
+          "maxHeightFt": 85,
+          "buildable": true,
+          "slopeContext": {
+            "avgPct": 9,
+            "crossSlopeDirection": "east"
+          }
+        },
+        {
+          "id": "zone-2",
+          "name": "Colerain Frontage",
+          "role": "residential",
+          "padSf": 18160,
+          "usablePadSf": 14400,
+          "zoningDistrict": "CC-P-B",
+          "parcels": [
+            "022800030049",
+            "022800030104",
+            "022800030105",
+            "022800030034"
+          ],
+          "groundFloor": "residential",
+          "retailSf": 0,
+          "tuckUnder": false,
+          "maxHeightFt": 85,
+          "buildable": true,
+          "slopeContext": {
+            "avgPct": 12,
+            "crossSlopeDirection": "east"
+          }
+        },
+        {
+          "id": "zone-3",
+          "name": "North Bend Frontage",
+          "role": "mixed_use",
+          "padSf": 12642,
+          "usablePadSf": 10100,
+          "zoningDistrict": "CC-P-B",
+          "parcels": [
+            "022800030035",
+            "022800030033",
+            "022800030064"
+          ],
+          "groundFloor": "flex",
+          "retailSf": 1500,
+          "tuckUnder": false,
+          "maxHeightFt": 85,
+          "buildable": true,
+          "slopeContext": {
+            "avgPct": 14,
+            "crossSlopeDirection": "south"
+          }
+        },
+        {
+          "id": "zone-4",
+          "name": "Hillside Buffer",
+          "role": "green_buffer",
+          "padSf": 30348,
+          "parcels": [
+            "022800030048",
+            "022800030016",
+            "022800030247"
+          ],
+          "buildable": false,
+          "program": [
+            "trail",
+            "bioswale",
+            "community_garden"
+          ]
+        }
+      ]
+    },
+    "scenarios": {
+      "schemaVersion": "site-deal-scenarios.v1",
+      "fundingPath": "lihtc_9",
+      "amiBand": 60,
+      "scenarios": [
+        {
+          "id": "starter",
+          "name": "Starter",
+          "description": "57 units, 2 buildings, CDC first deal",
+          "zones": {
+            "zone-1": {
+              "stories": 4,
+              "residentialFloors": 3,
+              "buildingType": "mixed_use_podium",
+              "constructionType": "wood_frame_type_v",
+              "unitMix": [
+                {
+                  "type": "studio",
+                  "sf": 500,
+                  "count": 7
+                },
+                {
+                  "type": "1br",
+                  "sf": 725,
+                  "count": 18
+                },
+                {
+                  "type": "2br",
+                  "sf": 1000,
+                  "count": 15
+                },
+                {
+                  "type": "3br",
+                  "sf": 1200,
+                  "count": 5
+                }
+              ]
+            },
+            "zone-2": {
+              "stories": 2,
+              "residentialFloors": 2,
+              "buildingType": "townhome_row",
+              "constructionType": "wood_frame",
+              "unitMix": [
+                {
+                  "type": "2br",
+                  "sf": 1000,
+                  "count": 4
+                },
+                {
+                  "type": "2br_th",
+                  "sf": 1200,
+                  "count": 4
+                },
+                {
+                  "type": "3br",
+                  "sf": 1400,
+                  "count": 4
+                }
+              ]
+            },
+            "zone-3": null,
+            "zone-4": null
+          }
+        },
+        {
+          "id": "right-sized",
+          "name": "Right-Sized",
+          "description": "87 units, 2 buildings, solid CDC",
+          "zones": {
+            "zone-1": {
+              "stories": 6,
+              "residentialFloors": 5,
+              "buildingType": "mixed_use_podium",
+              "constructionType": "five_over_one",
+              "unitMix": [
+                {
+                  "type": "studio",
+                  "sf": 500,
+                  "count": 12
+                },
+                {
+                  "type": "1br",
+                  "sf": 725,
+                  "count": 30
+                },
+                {
+                  "type": "2br",
+                  "sf": 1000,
+                  "count": 25
+                },
+                {
+                  "type": "3br",
+                  "sf": 1200,
+                  "count": 8
+                }
+              ]
+            },
+            "zone-2": {
+              "stories": 2,
+              "residentialFloors": 2,
+              "buildingType": "townhome_row",
+              "constructionType": "wood_frame",
+              "unitMix": [
+                {
+                  "type": "2br",
+                  "sf": 1000,
+                  "count": 4
+                },
+                {
+                  "type": "2br_th",
+                  "sf": 1200,
+                  "count": 4
+                },
+                {
+                  "type": "3br",
+                  "sf": 1400,
+                  "count": 4
+                }
+              ]
+            },
+            "zone-3": null,
+            "zone-4": null
+          }
+        },
+        {
+          "id": "three-buildings",
+          "name": "Three Buildings",
+          "description": "131 units, 3 buildings, co-developer",
+          "zones": {
+            "zone-1": {
+              "stories": 6,
+              "residentialFloors": 5,
+              "buildingType": "mixed_use_podium",
+              "constructionType": "five_over_one",
+              "unitMix": [
+                {
+                  "type": "studio",
+                  "sf": 500,
+                  "count": 12
+                },
+                {
+                  "type": "1br",
+                  "sf": 725,
+                  "count": 30
+                },
+                {
+                  "type": "2br",
+                  "sf": 1000,
+                  "count": 25
+                },
+                {
+                  "type": "3br",
+                  "sf": 1200,
+                  "count": 8
+                }
+              ]
+            },
+            "zone-2": {
+              "stories": 3,
+              "residentialFloors": 3,
+              "buildingType": "walk_up_apartment",
+              "constructionType": "wood_frame",
+              "unitMix": [
+                {
+                  "type": "1br",
+                  "sf": 725,
+                  "count": 8
+                },
+                {
+                  "type": "2br",
+                  "sf": 1000,
+                  "count": 14
+                },
+                {
+                  "type": "3br",
+                  "sf": 1400,
+                  "count": 10
+                }
+              ]
+            },
+            "zone-3": {
+              "stories": 3,
+              "residentialFloors": 2,
+              "buildingType": "mixed_use_walk_up",
+              "constructionType": "wood_frame",
+              "unitMix": [
+                {
+                  "type": "studio",
+                  "sf": 500,
+                  "count": 4
+                },
+                {
+                  "type": "1br",
+                  "sf": 725,
+                  "count": 10
+                },
+                {
+                  "type": "2br",
+                  "sf": 1000,
+                  "count": 8
+                },
+                {
+                  "type": "3br",
+                  "sf": 1200,
+                  "count": 2
+                }
+              ]
+            },
+            "zone-4": null
+          }
+        },
+        {
+          "id": "max-density",
+          "name": "Max Density",
+          "description": "165 units, 3 buildings, major developer",
+          "zones": {
+            "zone-1": {
+              "stories": 6,
+              "residentialFloors": 5,
+              "buildingType": "mixed_use_podium",
+              "constructionType": "five_over_one",
+              "unitMix": [
+                {
+                  "type": "studio",
+                  "sf": 500,
+                  "count": 12
+                },
+                {
+                  "type": "1br",
+                  "sf": 725,
+                  "count": 30
+                },
+                {
+                  "type": "2br",
+                  "sf": 1000,
+                  "count": 25
+                },
+                {
+                  "type": "3br",
+                  "sf": 1200,
+                  "count": 8
+                }
+              ]
+            },
+            "zone-2": {
+              "stories": 4,
+              "residentialFloors": 4,
+              "buildingType": "walk_up_apartment",
+              "constructionType": "wood_frame",
+              "unitMix": [
+                {
+                  "type": "1br",
+                  "sf": 725,
+                  "count": 13
+                },
+                {
+                  "type": "2br",
+                  "sf": 1000,
+                  "count": 23
+                },
+                {
+                  "type": "3br",
+                  "sf": 1400,
+                  "count": 17
+                }
+              ]
+            },
+            "zone-3": {
+              "stories": 4,
+              "residentialFloors": 3,
+              "buildingType": "mixed_use_walk_up",
+              "constructionType": "wood_frame",
+              "unitMix": [
+                {
+                  "type": "studio",
+                  "sf": 500,
+                  "count": 6
+                },
+                {
+                  "type": "1br",
+                  "sf": 725,
+                  "count": 15
+                },
+                {
+                  "type": "2br",
+                  "sf": 1000,
+                  "count": 12
+                },
+                {
+                  "type": "3br",
+                  "sf": 1200,
+                  "count": 4
+                }
+              ]
+            },
+            "zone-4": null
+          }
+        }
+      ]
+    }
+  },
+  "scenarios": [
+    {
+      "id": "starter",
+      "name": "Starter",
+      "description": "57 units, 2 buildings, CDC first deal",
+      "summary": {
+        "scenario_id": "starter",
+        "label": "Starter",
+        "active_zone_ids": [
+          "zone-1",
+          "zone-2"
+        ],
+        "total_units": 57,
+        "total_commercial_square_feet": 2500,
+        "total_constructed_square_feet": 91600
+      },
+      "request": {
+        "schema_version": 1,
+        "run_kind": "structure_plan_deal",
+        "custom_site_plan_spec": {
+          "site_plan_id": "colerain-north-bend-gateway_starter",
+          "site_plan_label": "Starter",
+          "arrangement_type": "starter",
+          "dominant_building_type": "mixed_use",
+          "site_layout": "frontage_bar",
+          "buildings": [
+            {
+              "building_id": "zone-1",
+              "shell_id": "zone-1",
+              "shell_label": "L-Shape Corner",
+              "building_type": "mixed_use",
+              "site_layout": "frontage_bar",
+              "use_class": "residential",
+              "units_per_building": 45,
+              "building_width_ft": 125.3,
+              "building_depth_ft": 125.3,
+              "stories_above_grade": 4,
+              "above_grade_building_sf": 62800,
+              "total_constructed_sf": 62800,
+              "sf_per_unit": 1395.56,
+              "parking_strategy": {
+                "parking_family": "tuck_under",
+                "stall_count": 40
+              }
+            },
+            {
+              "building_id": "zone-2",
+              "shell_id": "zone-2",
+              "shell_label": "Colerain Frontage",
+              "building_type": "townhouse_row",
+              "site_layout": "side_by_side",
+              "use_class": "residential",
+              "units_per_building": 12,
+              "building_width_ft": 120,
+              "building_depth_ft": 120,
+              "stories_above_grade": 2,
+              "above_grade_building_sf": 28800,
+              "total_constructed_sf": 28800,
+              "sf_per_unit": 2400
+            }
+          ],
+          "aggregate_units": 57,
+          "aggregate_above_grade_building_sf": 91600,
+          "aggregate_total_constructed_sf": 91600,
+          "land_cost_allocation_policy": "pro_rata_gross_sf",
+          "shared_site_costs": {
+            "parking_and_access": 0,
+            "site_work": 200000,
+            "utilities": 0
+          },
+          "source": "scenario_matrix"
+        },
+        "site_fit_context": {
+          "site_slug": "colerain-north-bend-gateway",
+          "canonical_address": "colerain-north-bend-gateway",
+          "municipality_slug": "cincinnati",
+          "zoning_code": "CC-P-B+CC-M-B+SF-6-MH"
+        },
+        "deal_definition": {
+          "unit_mix": [],
+          "segments": [
+            {
+              "segment_id": "zone-1_commercial",
+              "segment_type": "commercial",
+              "label": "L-Shape Corner Commercial",
+              "square_feet": 2500,
+              "commercial_use_type": "retail",
+              "lease_structure": "nnn",
+              "annual_rent_per_sf": 15,
+              "tenant_improvement_allowance_per_sf": 50
+            },
+            {
+              "segment_id": "zone-1_residential",
+              "segment_type": "residential",
+              "label": "L-Shape Corner Residential",
+              "square_feet": 60300,
+              "unit_mix": [
+                {
+                  "bedroom_count": 0,
+                  "count": 7,
+                  "ami_band": 60
+                },
+                {
+                  "bedroom_count": 1,
+                  "count": 18,
+                  "ami_band": 60
+                },
+                {
+                  "bedroom_count": 2,
+                  "count": 15,
+                  "ami_band": 60
+                },
+                {
+                  "bedroom_count": 3,
+                  "count": 5,
+                  "ami_band": 60
+                }
+              ]
+            },
+            {
+              "segment_id": "zone-2_residential",
+              "segment_type": "residential",
+              "label": "Colerain Frontage Residential",
+              "square_feet": 28800,
+              "unit_mix": [
+                {
+                  "bedroom_count": 2,
+                  "count": 4,
+                  "ami_band": 60
+                },
+                {
+                  "bedroom_count": 2,
+                  "count": 4,
+                  "ami_band": 60
+                },
+                {
+                  "bedroom_count": 3,
+                  "count": 4,
+                  "ami_band": 60
+                }
+              ]
+            }
+          ],
+          "housing_tier": "affordable",
+          "ami_band": 60,
+          "tenure_strategy": "rental_hold",
+          "funding_path": "lihtc",
+          "project_program_profile_id": "mixed_use",
+          "subordinate_financing_products": [],
+          "subsidy_program_ids": [],
+          "developer_fee_policy": {
+            "calculation_basis": "hard_plus_soft",
+            "developer_fee_pct": 0.05,
+            "developer_fee_floor": 5000
+          },
+          "reserve_policy": {
+            "replacement_reserve_per_unit": 300
+          },
+          "program_eligibility_policy": {
+            "enforce_program_compatibility": true,
+            "enforce_ami_mix_rules": true,
+            "enforce_use_class_rules": true,
+            "enforce_location_rules": true,
+            "enforce_construction_type_rules": true,
+            "enforce_mutual_exclusions": true,
+            "eligibility_override_mode": "strict"
+          },
+          "sponsor_profile": {
+            "developer_archetype": "private_for_profit",
+            "mission_constraints": {
+              "long_term_affordability_required": false,
+              "permanent_land_stewardship": false,
+              "anti_displacement_priority": false
+            },
+            "capital_access_profile": {
+              "can_raise_tax_credit_equity": true,
+              "can_raise_program_related_investments": false,
+              "can_access_philanthropic_grants": false,
+              "can_access_below_market_public_land": false,
+              "can_raise_sponsor_equity": true
+            },
+            "return_tolerance_profile": {
+              "target_cash_on_cash_floor": null,
+              "target_developer_fee_floor": null,
+              "allows_deferred_fee": false
+            }
+          },
+          "land_control_mode": {
+            "mode": "public_land_write_down",
+            "acquisition_cost": 3501,
+            "land_use_restrictions": [],
+            "disposition_conditions": [],
+            "notes": "Hamilton County Land Reutilization Corporation hclrc_controlled_assemblage"
+          }
+        },
+        "assumptions": {
+          "land_cost": 3501,
+          "hard_cost_basis": 210,
+          "soft_cost_basis": 0.1,
+          "contingency_basis": 0.06,
+          "market_context": {
+            "geography_type": "municipality",
+            "geography_ref": "cincinnati",
+            "construction_cost_region": "cincinnati_metro",
+            "rent_region": "mount_airy",
+            "sale_region": "mount_airy",
+            "insurance_region": "cincinnati_metro",
+            "tax_region": "hamilton_county_oh",
+            "source_as_of_date": "HUD-2025",
+            "notes": "Loaded from colerain-north-bend-gateway/finance"
+          },
+          "ami_rent_limit_assumptions": {
+            "source": "hamilton_county_2025_hud",
+            "percent_of_income": 0.3
+          },
+          "operating_expense_assumptions": {
+            "property_management_pct": 0.08,
+            "maintenance_and_repairs_per_unit": 1800,
+            "utilities_owner_paid_per_unit": 600,
+            "insurance_per_unit": 900,
+            "taxes_per_unit": 2700,
+            "compliance_monitoring_per_unit": 0,
+            "annual_audit_and_reporting_cost": 0,
+            "replacement_reserve_per_unit": 300,
+            "vacancy_pct": 0.05,
+            "bad_debt_pct": 0.01
+          },
+          "revenue_assumptions": {
+            "cap_rate": 0.065
+          },
+          "timeline_assumptions": {
+            "predev_months": 2,
+            "construction_months": 8,
+            "lease_up_months": 3
+          },
+          "exit_or_hold_assumptions": {
+            "hold_years": 15,
+            "rent_growth_pct": 0.02,
+            "expense_growth_pct": 0.02
+          },
+          "tax_credit_assumptions": {
+            "credit_type": "lihtc_9",
+            "credit_period_years": 10,
+            "credit_pricing_per_dollar": 0.92
+          },
+          "site_development_costs": {
+            "utility_connection_fee": 150000,
+            "landscaping_allowance": 100000
+          },
+          "tax_assumptions": {
+            "mill_rate": 0.062,
+            "assessment_ratio": 0.35,
+            "marginal_federal_rate": 0.24,
+            "marginal_state_rate": 0.04,
+            "depreciation_years": 27.5,
+            "depreciation_recapture_rate": 0.25
+          }
+        },
+        "requested_views": [
+          "summary",
+          "analyst"
+        ]
+      },
+      "loaderDiagnostics": [
+        {
+          "kind": "combined_value",
+          "field": "assumptions.land_cost",
+          "message": "Modeled land basis combines acquisitionCost and closingCosts because the current deal engine prices a single land use line.",
+          "value": 3501
+        },
+        {
+          "kind": "unsupported_engine_field",
+          "field": "assumptions.construction.siteExtraordinary.{hillsideRetaining,stormwaterBioswale,demolition}",
+          "message": "These extraordinary site-work buckets are preserved on custom_site_plan_spec.shared_site_costs for future consumers, but the v1 deal engine does not price them yet.",
+          "value": 200000
+        },
+        {
+          "kind": "approximated_dimension",
+          "field": "custom_site_plan_spec.buildings.zone-1.{building_width_ft,building_depth_ft}",
+          "message": "Footprint width/depth are approximated from usable pad area because finance/zones.json currently stores area, not explicit building dimensions.",
+          "value": {
+            "footprint_sf": 15700,
+            "building_width_ft": 125.3,
+            "building_depth_ft": 125.3
+          }
+        },
+        {
+          "kind": "approximated_dimension",
+          "field": "custom_site_plan_spec.buildings.zone-2.{building_width_ft,building_depth_ft}",
+          "message": "Footprint width/depth are approximated from usable pad area because finance/zones.json currently stores area, not explicit building dimensions.",
+          "value": {
+            "footprint_sf": 14400,
+            "building_width_ft": 120,
+            "building_depth_ft": 120
+          }
+        },
+        {
+          "kind": "unsupported_engine_field",
+          "field": "assumptions.financing.constructionLoan",
+          "message": "Project-level construction loan term overrides are not injected into v1 deal structuring. The engine still resolves the financing product from canonical config.",
+          "value": {
+            "rate": 0.0875,
+            "ltcPct": 0.75,
+            "termMonths": 14,
+            "originationPct": 0.015
+          }
+        },
+        {
+          "kind": "unsupported_engine_field",
+          "field": "assumptions.financing.permanentLoan",
+          "message": "Project-level permanent loan overrides are not injected into v1 deal structuring. The engine still resolves the permanent product from canonical config.",
+          "value": {
+            "rate": 0.0625,
+            "ltvPct": 0.75,
+            "amortYears": 30,
+            "minDscr": 1.25
+          }
+        },
+        {
+          "kind": "unsupported_engine_field",
+          "field": "assumptions.operations.opexRatioPct",
+          "message": "High-level opex ratio is not a direct v1 deal-engine input. The loader maps vacancy, bad debt, and property management, then falls back to canonical per-unit operating lines.",
+          "value": 0.35
+        },
+        {
+          "kind": "unsupported_engine_field",
+          "field": "assumptions.retail.capRate",
+          "message": "Retail cap rate is not applied directly in the v1 project-deal loader. Project valuation still uses the canonical residential cap-rate path.",
+          "value": 0.075
+        },
+        {
+          "kind": "normalized_value",
+          "field": "deal_definition.project_program_profile_id",
+          "message": "Project program profile inferred from active commercial segments.",
+          "value": "mixed_use"
+        },
+        {
+          "kind": "unsupported_engine_field",
+          "field": "facts.overlays.{craTier,craEligibility}",
+          "message": "CRA Expand is preserved as a verified overlay fact, but the v1 deal engine does not currently allow cra_expand_tax_abatement on this custom site-plan scope.",
+          "value": {
+            "craTier": "Expand",
+            "craEligibility": "new_construction"
+          }
+        },
+        {
+          "kind": "unsupported_engine_field",
+          "field": "assumptions.developerFee.lihtcMaxPct",
+          "message": "LIHTC developer-fee max percentage is not mapped directly because the v1 engine contract caps developer fee in dollars, not as a percent-of-basis constraint.",
+          "value": 0.1
+        }
+      ],
+      "dealResult": {
+        "schema_version": 1,
+        "engine_version": "deal-structuring-v1",
+        "deal_structure": {
+          "structure_id": "deal_cincinnati_colerain_north_bend_gateway_starter_rental_hold",
+          "feasibility_status": "viable_with_gap",
+          "completeness_status": "deal_structuring_ready",
+          "plan_scope": {
+            "plan_code": null,
+            "plan_family": "mixed_use",
+            "custom_shell_id": "colerain-north-bend-gateway_starter",
+            "custom_shell_label": "Starter",
+            "building_type": "mixed_use",
+            "site_layout": "frontage_bar"
+          },
+          "deal_definition": {
+            "unit_mix": [
+              {
+                "bedroom_count": 0,
+                "count": 7,
+                "ami_band": 60
+              },
+              {
+                "bedroom_count": 1,
+                "count": 18,
+                "ami_band": 60
+              },
+              {
+                "bedroom_count": 2,
+                "count": 23,
+                "ami_band": 60
+              },
+              {
+                "bedroom_count": 3,
+                "count": 9,
+                "ami_band": 60
+              }
+            ],
+            "segments": [
+              {
+                "segment_id": "zone-1_commercial",
+                "segment_type": "commercial",
+                "label": "L-Shape Corner Commercial",
+                "square_feet": 2500,
+                "commercial_use_type": "retail",
+                "lease_structure": "nnn",
+                "annual_rent_per_sf": 15,
+                "tenant_improvement_allowance_per_sf": 50
+              },
+              {
+                "segment_id": "zone-1_residential",
+                "segment_type": "residential",
+                "label": "L-Shape Corner Residential",
+                "square_feet": 60300,
+                "unit_mix": [
+                  {
+                    "bedroom_count": 0,
+                    "count": 7,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 1,
+                    "count": 18,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 2,
+                    "count": 15,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 3,
+                    "count": 5,
+                    "ami_band": 60
+                  }
+                ]
+              },
+              {
+                "segment_id": "zone-2_residential",
+                "segment_type": "residential",
+                "label": "Colerain Frontage Residential",
+                "square_feet": 28800,
+                "unit_mix": [
+                  {
+                    "bedroom_count": 2,
+                    "count": 4,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 2,
+                    "count": 4,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 3,
+                    "count": 4,
+                    "ami_band": 60
+                  }
+                ]
+              }
+            ],
+            "housing_tier": "affordable",
+            "ami_band": 60,
+            "tenure_strategy": "rental_hold",
+            "funding_path": "lihtc",
+            "project_program_profile_id": "mixed_use",
+            "subordinate_financing_products": [],
+            "subsidy_program_ids": [],
+            "developer_fee_policy": {
+              "calculation_basis": "hard_plus_soft",
+              "developer_fee_pct": 0.05,
+              "developer_fee_floor": 5000
+            },
+            "reserve_policy": {
+              "replacement_reserve_per_unit": 300
+            },
+            "program_eligibility_policy": {
+              "enforce_program_compatibility": true,
+              "enforce_ami_mix_rules": true,
+              "enforce_use_class_rules": true,
+              "enforce_location_rules": true,
+              "enforce_construction_type_rules": true,
+              "enforce_mutual_exclusions": true,
+              "eligibility_override_mode": "strict"
+            },
+            "sponsor_profile": {
+              "developer_archetype": "private_for_profit",
+              "mission_constraints": {
+                "long_term_affordability_required": false,
+                "permanent_land_stewardship": false,
+                "anti_displacement_priority": false
+              },
+              "capital_access_profile": {
+                "can_raise_tax_credit_equity": true,
+                "can_raise_program_related_investments": false,
+                "can_access_philanthropic_grants": false,
+                "can_access_below_market_public_land": false,
+                "can_raise_sponsor_equity": true
+              },
+              "return_tolerance_profile": {
+                "target_cash_on_cash_floor": null,
+                "target_developer_fee_floor": null,
+                "allows_deferred_fee": false
+              }
+            },
+            "land_control_mode": {
+              "mode": "public_land_write_down",
+              "acquisition_cost": 3501,
+              "land_use_restrictions": [],
+              "disposition_conditions": [],
+              "notes": "Hamilton County Land Reutilization Corporation hclrc_controlled_assemblage"
+            }
+          },
+          "assumptions": {
+            "land_cost": 3501,
+            "hard_cost_basis": 210,
+            "soft_cost_basis": 0.1,
+            "contingency_basis": 0.06,
+            "market_context": {
+              "geography_type": "municipality",
+              "geography_ref": "cincinnati",
+              "construction_cost_region": "cincinnati_metro",
+              "rent_region": "mount_airy",
+              "sale_region": "mount_airy",
+              "insurance_region": "cincinnati_metro",
+              "tax_region": "hamilton_county_oh",
+              "source_as_of_date": "HUD-2025",
+              "notes": "Loaded from colerain-north-bend-gateway/finance"
+            },
+            "ami_rent_limit_assumptions": {
+              "source": "hamilton_county_2025_hud",
+              "percent_of_income": 0.3
+            },
+            "operating_expense_assumptions": {
+              "property_management_pct": 0.08,
+              "maintenance_and_repairs_per_unit": 1800,
+              "utilities_owner_paid_per_unit": 600,
+              "insurance_per_unit": 900,
+              "taxes_per_unit": 2700,
+              "compliance_monitoring_per_unit": 0,
+              "annual_audit_and_reporting_cost": 0,
+              "replacement_reserve_per_unit": 300,
+              "vacancy_pct": 0.05,
+              "bad_debt_pct": 0.01
+            },
+            "revenue_assumptions": {
+              "cap_rate": 0.065
+            },
+            "timeline_assumptions": {
+              "predev_months": 2,
+              "construction_months": 8,
+              "lease_up_months": 3
+            },
+            "exit_or_hold_assumptions": {
+              "hold_years": 15,
+              "rent_growth_pct": 0.02,
+              "expense_growth_pct": 0.02
+            },
+            "tax_credit_assumptions": {
+              "credit_type": "lihtc_9",
+              "credit_period_years": 10,
+              "credit_pricing_per_dollar": 0.92
+            },
+            "site_development_costs": {
+              "utility_connection_fee": 150000,
+              "landscaping_allowance": 100000
+            },
+            "tax_assumptions": {
+              "mill_rate": 0.062,
+              "assessment_ratio": 0.35,
+              "marginal_federal_rate": 0.24,
+              "marginal_state_rate": 0.04,
+              "depreciation_years": 27.5,
+              "depreciation_recapture_rate": 0.25
+            }
+          },
+          "applied_cost_model": {
+            "cost_model_path": "resolved",
+            "construction_system_id": "masonry_mixed_use_small",
+            "construction_system_selection_origin": "auto",
+            "construction_system_label": "Masonry Small Mixed-Use",
+            "construction_system_legacy_cost_preset_id": "standard_wood",
+            "building_type": "mixed_use",
+            "site_layout": "frontage_bar",
+            "matched_lookup_building_type": "mixed_use",
+            "sponsor_archetype": "private_for_profit",
+            "sponsor_archetype_origin": "explicit",
+            "base_cost_basis": {
+              "hard_cost_psf": 240,
+              "soft_cost_pct": 0.12,
+              "contingency_pct": 0.08,
+              "sale_marketing_pct": 0.03,
+              "rental_stabilization_pct": 0.025
+            },
+            "effective_cost_basis": {
+              "hard_cost_psf": 240,
+              "soft_cost_pct": 0.12,
+              "contingency_pct": 0.08,
+              "sale_marketing_pct": 0.03,
+              "rental_stabilization_pct": 0.025
+            },
+            "building_type_modifier": {
+              "hard_cost_multiplier": 1,
+              "notes": []
+            },
+            "site_layout_modifier": {
+              "hard_cost_multiplier": 1,
+              "notes": []
+            },
+            "sponsor_delivery_override": {
+              "soft_cost_pct_delta": 0,
+              "contingency_pct_delta": 0,
+              "construction_duration_months_delta": 0,
+              "notes": []
+            },
+            "applied_hard_cost_multiplier": 1,
+            "applied_notes": [],
+            "fallback_reason": null,
+            "fallback_retirement_signal": null
+          },
+          "applied_program_mix": {
+            "segments": [
+              {
+                "segment_id": "zone-1_commercial",
+                "segment_type": "commercial",
+                "label": "L-Shape Corner Commercial",
+                "square_feet": 2500,
+                "residential_unit_count": null,
+                "commercial_use_type": "retail",
+                "lease_structure": "nnn",
+                "operating_expense_ratio": 0.12,
+                "absorption_months": 12,
+                "stabilized_occupancy_pct": 0.9,
+                "revenue": {
+                  "annual_gross_potential_income": 37500,
+                  "annual_effective_gross_income": 33750,
+                  "annual_operating_expenses": 4050,
+                  "annual_noi": 29700
+                },
+                "cost": {
+                  "hard_cost_total": 387500,
+                  "tenant_improvement_allowance_total": 125000,
+                  "total_segment_cost": 512500,
+                  "effective_hard_cost_psf": 155
+                }
+              },
+              {
+                "segment_id": "zone-1_residential",
+                "segment_type": "residential",
+                "label": "L-Shape Corner Residential",
+                "square_feet": 60300,
+                "residential_unit_count": 45,
+                "commercial_use_type": null,
+                "lease_structure": null,
+                "operating_expense_ratio": 0.5451,
+                "absorption_months": 3,
+                "stabilized_occupancy_pct": 0.94,
+                "revenue": {
+                  "annual_gross_potential_income": 648396,
+                  "annual_effective_gross_income": 609492.24,
+                  "annual_operating_expenses": 332259.38,
+                  "annual_noi": 277232.86
+                },
+                "cost": {
+                  "hard_cost_total": 14472000,
+                  "tenant_improvement_allowance_total": 0,
+                  "total_segment_cost": 14472000,
+                  "effective_hard_cost_psf": 240
+                }
+              },
+              {
+                "segment_id": "zone-2_residential",
+                "segment_type": "residential",
+                "label": "Colerain Frontage Residential",
+                "square_feet": 28800,
+                "residential_unit_count": 12,
+                "commercial_use_type": null,
+                "lease_structure": null,
+                "operating_expense_ratio": 0.4316,
+                "absorption_months": 3,
+                "stabilized_occupancy_pct": 0.94,
+                "revenue": {
+                  "annual_gross_potential_income": 228744,
+                  "annual_effective_gross_income": 215019.36,
+                  "annual_operating_expenses": 92801.55,
+                  "annual_noi": 122217.81
+                },
+                "cost": {
+                  "hard_cost_total": 6912000,
+                  "tenant_improvement_allowance_total": 0,
+                  "total_segment_cost": 6912000,
+                  "effective_hard_cost_psf": 240
+                }
+              }
+            ],
+            "totals": {
+              "residential_unit_count": 57,
+              "commercial_square_feet": 2500,
+              "annual_gross_potential_income": 914640,
+              "annual_effective_gross_income": 858261.6,
+              "annual_operating_expenses": 429110.93,
+              "annual_noi": 429150.67,
+              "hard_cost_total": 21771500,
+              "tenant_improvement_allowance_total": 125000,
+              "total_segment_cost": 21896500
+            }
+          },
+          "sources_and_uses": {
+            "uses": [
+              {
+                "label": "Land",
+                "amount": 3501
+              },
+              {
+                "label": "Hard Costs",
+                "amount": 21771500
+              },
+              {
+                "label": "Commercial TI Allowance",
+                "amount": 125000
+              },
+              {
+                "label": "Water/Sewer Tap Fees",
+                "amount": 150000
+              },
+              {
+                "label": "Landscaping",
+                "amount": 100000
+              },
+              {
+                "label": "Soft Costs",
+                "amount": 2612580
+              },
+              {
+                "label": "Contingency",
+                "amount": 1741720
+              },
+              {
+                "label": "Reserves",
+                "amount": 34200
+              },
+              {
+                "label": "Developer Fee",
+                "amount": 1219204
+              },
+              {
+                "label": "Financing Carry Estimate",
+                "amount": 1168243.6
+              }
+            ],
+            "sources": [
+              {
+                "label": "Permanent Debt",
+                "amount": 4470319.5
+              },
+              {
+                "label": "Tax Credit Equity",
+                "amount": 20190018.24
+              }
+            ],
+            "gap_or_surplus": -4265610.86
+          },
+          "primary_financial_metrics": {
+            "mode": "rental",
+            "return_metric": null,
+            "return_metric_label": "yield_on_cost_pct",
+            "annual_noi": 429150.67,
+            "gross_sales_revenue": null,
+            "net_sales_proceeds": null,
+            "net_profit": null,
+            "profit_margin_pct": null
+          },
+          "construction_capital_stack": {
+            "construction_financing": {
+              "financing_product_id": "construction_loan",
+              "financing_product_label": "Construction Loan",
+              "loan_to_cost_pct": 0.8,
+              "interest_rate": 0.0875,
+              "term_months": 11,
+              "origination_fee_pct": 0.015,
+              "equity_at_close_pct": 0.2,
+              "max_loan_per_unit": null,
+              "max_loan_per_property": null,
+              "max_borrower_exposure": null
+            },
+            "sources_and_uses": {
+              "uses": {
+                "stage_1": {
+                  "land": 3501,
+                  "hard": 21771500,
+                  "tenant_improvements": 125000,
+                  "site_extraordinary": 250000,
+                  "soft_costs": 2612580,
+                  "contingency": 1741720,
+                  "total": 26504301
+                },
+                "additional_close_uses": 1253404,
+                "close_uses_before_financing": 27757705,
+                "financing_costs_estimate": {
+                  "financed_basis": 26500800,
+                  "average_outstanding_pct_of_financed_basis": 0.5,
+                  "estimated_average_loan_balance": 10600320,
+                  "origination_fee": 318009.6,
+                  "interest_carry": 850234,
+                  "total": 1168243.6,
+                  "included_in_stage_1_total": false
+                },
+                "subsidy_bridge_costs_estimate": {
+                  "estimated_advance_amount": 0,
+                  "interest_carry": 0,
+                  "fee": 0,
+                  "total": 0,
+                  "blended_interest_rate": null,
+                  "blended_fee_pct": null,
+                  "blended_term_months": null,
+                  "included_in_stage_1_total": false
+                },
+                "total_with_capital_estimate": 28925948.6
+              },
+              "sources": {
+                "construction_debt_estimate": {
+                  "loan_to_cost_pct": 0.8,
+                  "raw_ltc_proceeds": 21200640,
+                  "estimated_proceeds": 21200640,
+                  "max_loan_per_unit_cap_amount": null,
+                  "max_loan_per_property_cap_amount": null,
+                  "max_borrower_exposure_cap_amount": null,
+                  "binding_constraint": "ltc",
+                  "basis": "hard + tenant_improvements + site_extraordinary + soft_costs + contingency"
+                },
+                "subsidy": {
+                  "amount": 0,
+                  "manual_amount": 0,
+                  "manual_close_funding_amount": 0,
+                  "program_amount": 0,
+                  "program_at_close_amount": 0,
+                  "program_bridgeable_short_term_amount": 0,
+                  "program_post_stabilization_amount": 0,
+                  "program_operating_period_amount": 0,
+                  "close_funding_amount": 0,
+                  "deferred_amount": 0,
+                  "selected_program_ids": []
+                },
+                "subsidy_bridge_advance_estimate": {
+                  "estimated_amount": 0,
+                  "backed_by_program_amount": 0,
+                  "included_in_close_funding": true,
+                  "bridge_carry_modeled_in_stage_1_total": false
+                },
+                "sponsor_equity_estimate": {
+                  "estimated_amount": 7725308.6
+                },
+                "total_estimated_sources": 28925948.6
+              },
+              "balancing": {
+                "estimated_gap_or_surplus": 0,
+                "note": "Construction capital stack balances Stage 1 cost plus financing and bridge estimates using construction debt, close-funded subsidy, bridgeable subsidy advances, and sponsor equity. Post-stabilization and operating-period subsidy remains visible but does not reduce close equity in this stage."
+              }
+            },
+            "subordinate_sources": [
+              {
+                "label": "Tax Credit Equity",
+                "amount": 20190018.24,
+                "instrument_class": "tax_credit_equity",
+                "priority_position": 90
+              }
+            ]
+          },
+          "permanent_capital_stack": {
+            "mode": "rental_hold",
+            "financing_product_id": "bank_portfolio_perm",
+            "financing_product_label": "Bank Portfolio Permanent Loan",
+            "ltv": 0.72,
+            "min_dscr": 1.2,
+            "rate": 0.0675,
+            "amortization_months": 300,
+            "implied_value": 6602318,
+            "max_debt_by_ltv": 4753668.96,
+            "max_debt_by_dscr": 4470319.5,
+            "selected_permanent_debt": 4470319.5,
+            "annual_debt_service": 370631.43,
+            "adjusted_noi": 429150.67,
+            "debt_yield": 0.096,
+            "debt_service_coverage_ratio": 1.1579,
+            "equity_requirement_at_conversion": 23287385.5
+          },
+          "subsidy_stack": {
+            "selected_program_ids": [],
+            "selected_programs": [],
+            "property_tax_abatement_pct": 0,
+            "tax_credit_equity_amount": 20190018.24
+          },
+          "capital_events_timeline": [
+            {
+              "stage": "close",
+              "timing_ref": "month_0",
+              "sources": [
+                {
+                  "label": "Construction Debt",
+                  "amount": 21200640
+                },
+                {
+                  "label": "Tax Credit Equity",
+                  "amount": 20190018.24
+                }
+              ],
+              "uses": [
+                {
+                  "label": "Close Uses Before Financing",
+                  "amount": 27757705
+                },
+                {
+                  "label": "Financing Carry Estimate",
+                  "amount": 1168243.6
+                }
+              ]
+            },
+            {
+              "stage": "stabilization_conversion",
+              "timing_ref": "post_stabilization",
+              "sources": [
+                {
+                  "label": "Permanent Debt",
+                  "amount": 4470319.5
+                }
+              ],
+              "uses": [],
+              "notes": "Conversion to stabilized hold capital stack."
+            }
+          ],
+          "unit_program_summary": {
+            "selected_plan_id": "colerain-north-bend-gateway_starter",
+            "selected_plan_name": "Starter",
+            "requested_plan_family": "mixed_use",
+            "custom_shell": {
+              "shell_id": "colerain-north-bend-gateway_starter",
+              "shell_label": "Starter",
+              "building_type": "mixed_use",
+              "site_layout": "frontage_bar",
+              "use_class": "residential",
+              "units_per_building": 57,
+              "building_width_ft": 125.3,
+              "building_depth_ft": 125.3,
+              "stories_above_grade": 4,
+              "above_grade_building_sf": 91600,
+              "total_constructed_sf": 91600,
+              "sf_per_unit": 1607.02,
+              "parking_strategy": {
+                "parking_family": "tuck_under",
+                "stall_count": 40
+              },
+              "source": "planner"
+            },
+            "custom_site_plan": {
+              "site_plan_id": "colerain-north-bend-gateway_starter",
+              "site_plan_label": "Starter",
+              "arrangement_type": "starter",
+              "dominant_building_type": "mixed_use",
+              "site_layout": "frontage_bar",
+              "buildings": [
+                {
+                  "building_id": "zone-1",
+                  "shell_id": "zone-1",
+                  "shell_label": "L-Shape Corner",
+                  "building_type": "mixed_use",
+                  "site_layout": "frontage_bar",
+                  "use_class": "residential",
+                  "units_per_building": 45,
+                  "building_width_ft": 125.3,
+                  "building_depth_ft": 125.3,
+                  "stories_above_grade": 4,
+                  "above_grade_building_sf": 62800,
+                  "total_constructed_sf": 62800,
+                  "sf_per_unit": 1395.56,
+                  "parking_strategy": {
+                    "parking_family": "tuck_under",
+                    "stall_count": 40
+                  }
+                },
+                {
+                  "building_id": "zone-2",
+                  "shell_id": "zone-2",
+                  "shell_label": "Colerain Frontage",
+                  "building_type": "townhouse_row",
+                  "site_layout": "side_by_side",
+                  "use_class": "residential",
+                  "units_per_building": 12,
+                  "building_width_ft": 120,
+                  "building_depth_ft": 120,
+                  "stories_above_grade": 2,
+                  "above_grade_building_sf": 28800,
+                  "total_constructed_sf": 28800,
+                  "sf_per_unit": 2400
+                }
+              ],
+              "aggregate_units": 57,
+              "aggregate_above_grade_building_sf": 91600,
+              "aggregate_total_constructed_sf": 91600,
+              "land_cost_allocation_policy": "pro_rata_gross_sf",
+              "shared_site_costs": {
+                "parking_and_access": 0,
+                "site_work": 200000,
+                "utilities": 0
+              },
+              "source": "scenario_matrix"
+            },
+            "plan_house_type": "57-unit custom shell",
+            "plan_units_per_building": 57,
+            "total_requested_units": 57,
+            "building_count": 1,
+            "site_constrained": false,
+            "selected_orientation": "default",
+            "unit_mix": [
+              {
+                "bedroom_count": 0,
+                "count": 7,
+                "ami_band": 60
+              },
+              {
+                "bedroom_count": 1,
+                "count": 18,
+                "ami_band": 60
+              },
+              {
+                "bedroom_count": 2,
+                "count": 23,
+                "ami_band": 60
+              },
+              {
+                "bedroom_count": 3,
+                "count": 9,
+                "ami_band": 60
+              }
+            ],
+            "program_segments": [
+              {
+                "segment_id": "zone-1_commercial",
+                "segment_type": "commercial",
+                "label": "L-Shape Corner Commercial",
+                "square_feet": 2500,
+                "commercial_use_type": "retail",
+                "lease_structure": "nnn",
+                "annual_rent_per_sf": 15,
+                "tenant_improvement_allowance_per_sf": 50
+              },
+              {
+                "segment_id": "zone-1_residential",
+                "segment_type": "residential",
+                "label": "L-Shape Corner Residential",
+                "square_feet": 60300,
+                "unit_mix": [
+                  {
+                    "bedroom_count": 0,
+                    "count": 7,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 1,
+                    "count": 18,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 2,
+                    "count": 15,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 3,
+                    "count": 5,
+                    "ami_band": 60
+                  }
+                ]
+              },
+              {
+                "segment_id": "zone-2_residential",
+                "segment_type": "residential",
+                "label": "Colerain Frontage Residential",
+                "square_feet": 28800,
+                "unit_mix": [
+                  {
+                    "bedroom_count": 2,
+                    "count": 4,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 2,
+                    "count": 4,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 3,
+                    "count": 4,
+                    "ami_band": 60
+                  }
+                ]
+              }
+            ]
+          },
+          "required_subsidy_to_breakeven": 4265610.86,
+          "required_subsidy_to_target_return": 4265610.86,
+          "max_supportable_land_cost": 0,
+          "max_supportable_hard_cost": 193.43,
+          "program_constraint_result": {
+            "status": "eligible_with_warnings",
+            "failures": [],
+            "warnings": [
+              {
+                "severity": "warning",
+                "code": "lihtc_9_competitive_allocation",
+                "message": "9% LIHTC feasibility remains subject to competitive allocation and QAP scoring."
+              },
+              {
+                "severity": "warning",
+                "code": "lihtc_basis_boost_not_resolved",
+                "message": "Automatic QCT/DDA basis boost lookup is not yet wired; provide basis_boost_pct explicitly when known."
+              },
+              {
+                "severity": "warning",
+                "code": "public_land_access_unconfirmed_for_sponsor",
+                "message": "Public land write-down is modeled, but the sponsor profile does not indicate direct access to below-market public land."
+              }
+            ],
+            "competitive_allocation_required": true,
+            "applied_lihtc_set_aside_test": "40_60",
+            "basis_boost_pct_applied": null,
+            "basis_boost_source": "none"
+          },
+          "predevelopment_budget_gate": {
+            "gate_status": "limited_spend",
+            "recommended_budget_total": 413658.5,
+            "recommended_budget_breakdown": {
+              "concept_design": 163286.25,
+              "survey": 32657.25,
+              "geotech": 32657.25,
+              "environmental": 32657.25,
+              "legal": 65314.5,
+              "entitlement": 54428.75,
+              "consultant_other": 32657.25
+            },
+            "confidence_tier": "low",
+            "decision_rationale": "Structure is directionally promising, but diligence gaps still limit spend confidence.",
+            "blocking_unknowns": [
+              "site_fit_context",
+              "confirmed_frontage",
+              "unit_level_rent_assumptions",
+              "construction_draw_schedule",
+              "conversion_or_refi_timing",
+              "reserve_release_schedule"
+            ],
+            "next_required_inputs": [
+              "site_fit_context",
+              "confirmed_frontage",
+              "unit_level_rent_assumptions",
+              "construction_draw_schedule",
+              "conversion_or_refi_timing",
+              "reserve_release_schedule"
+            ]
+          },
+          "confidence_notes": [
+            "Requested building type mixed_use resolved to custom shell colerain-north-bend-gateway_starter.",
+            "Custom shell screening used 125.3x125.3 at 4 stories instead of a catalog plan.",
+            "Multi-building site plan colerain-north-bend-gateway_starter was translated to an aggregate shell for v1 deal structuring while preserving per-building land and shared-cost allocations in the input contract.",
+            "Run is site-agnostic and relies on market_context rather than a resolved site.",
+            "Missing unit rents were auto-derived from the Hamilton County 2025 AMI rent-limit schedule.",
+            "Rental revenue uses partial unit-level pricing coverage and may rely on plan-average fallbacks.",
+            "Private sponsor defaults assume market-rate execution posture unless explicit mission capital or partner access is supplied.",
+            "Hamilton County Land Reutilization Corporation hclrc_controlled_assemblage",
+            "9% LIHTC feasibility remains subject to competitive allocation and QAP scoring.",
+            "Automatic QCT/DDA basis boost lookup is not yet wired; provide basis_boost_pct explicitly when known.",
+            "Public land write-down is modeled, but the sponsor profile does not indicate direct access to below-market public land."
+          ],
+          "verification_summary": {
+            "arithmetic_checks": [
+              {
+                "check_name": "sources_uses_gap_consistency",
+                "status": "passed",
+                "message": "Sources minus uses matches the reported gap or surplus."
+              },
+              {
+                "check_name": "required_subsidy_consistency",
+                "status": "passed",
+                "message": "Required subsidy to breakeven matches the computed gap."
+              },
+              {
+                "check_name": "feasibility_status_consistency",
+                "status": "passed",
+                "message": "Feasibility status is consistent with the computed subsidy gap."
+              },
+              {
+                "check_name": "rental_permanent_debt_service_consistency",
+                "status": "passed",
+                "message": "Permanent debt implies positive annual debt service."
+              },
+              {
+                "check_name": "rental_dscr_consistency",
+                "status": "passed",
+                "message": "Reported DSCR matches adjusted NOI and annual debt service."
+              }
+            ],
+            "data_validation_notes": [
+              "Arithmetic checks were evaluated against the engine output for this run.",
+              "Run is site-agnostic and did not use a resolved parcel/site record.",
+              "Rent assumptions were derived from the Hamilton County 2025 AMI rent-limit schedule."
+            ],
+            "human_review_flags": [
+              "Historical closed-deal backtest is not available for this run.",
+              "Construction cost, market rent, and sale assumptions remain caller- or config-driven inputs and are not independently appraised by the engine.",
+              "LIHTC structures still require human review of award likelihood, legal structure, and investor terms."
+            ],
+            "historical_backtest_status": "not_available",
+            "requires_human_review": true
+          },
+          "missing_inputs_for_full_proforma": [
+            "site_fit_context",
+            "confirmed_frontage",
+            "unit_level_rent_assumptions",
+            "construction_draw_schedule",
+            "conversion_or_refi_timing",
+            "reserve_release_schedule"
+          ]
+        }
+      },
+      "annualCashFlow": {
+        "years": [
+          {
+            "year": 1,
+            "grossPotentialIncome": 685980,
+            "effectiveGrossIncome": 643696.2,
+            "operatingExpensesBeforeAbatement": 429110.93,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 429110.93,
+            "annualNoi": 214585.27,
+            "annualDebtService": 370631.43,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": -156046.16,
+            "endingLoanBalance": 4399263.04,
+            "annualDepreciation": 1051725.37,
+            "taxableIncome": -1207771.53,
+            "taxLiability": 0,
+            "afterTaxCashFlow": -156046.16
+          },
+          {
+            "year": 2,
+            "grossPotentialIncome": 932932.8,
+            "effectiveGrossIncome": 875426.83,
+            "operatingExpensesBeforeAbatement": 437693.15,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 437693.15,
+            "annualNoi": 437733.68,
+            "annualDebtService": 370631.43,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 67102.25,
+            "endingLoanBalance": 4323259.07,
+            "annualDepreciation": 1051725.37,
+            "taxableIncome": -984623.12,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 67102.25
+          },
+          {
+            "year": 3,
+            "grossPotentialIncome": 951591.46,
+            "effectiveGrossIncome": 892935.37,
+            "operatingExpensesBeforeAbatement": 446447.01,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 446447.01,
+            "annualNoi": 446488.36,
+            "annualDebtService": 370631.43,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 75856.93,
+            "endingLoanBalance": 4241963.09,
+            "annualDepreciation": 1051725.37,
+            "taxableIncome": -975868.44,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 75856.93
+          },
+          {
+            "year": 4,
+            "grossPotentialIncome": 970623.29,
+            "effectiveGrossIncome": 910794.08,
+            "operatingExpensesBeforeAbatement": 455375.95,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 455375.95,
+            "annualNoi": 455418.13,
+            "annualDebtService": 370631.43,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 84786.7,
+            "endingLoanBalance": 4155006.65,
+            "annualDepreciation": 1051725.37,
+            "taxableIncome": -966938.67,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 84786.7
+          },
+          {
+            "year": 5,
+            "grossPotentialIncome": 990035.75,
+            "effectiveGrossIncome": 929009.96,
+            "operatingExpensesBeforeAbatement": 464483.47,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 464483.47,
+            "annualNoi": 464526.49,
+            "annualDebtService": 370631.43,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 93895.06,
+            "endingLoanBalance": 4061995.6,
+            "annualDepreciation": 1051725.37,
+            "taxableIncome": -957830.31,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 93895.06
+          },
+          {
+            "year": 6,
+            "grossPotentialIncome": 1009836.47,
+            "effectiveGrossIncome": 947590.16,
+            "operatingExpensesBeforeAbatement": 473773.14,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 473773.14,
+            "annualNoi": 473817.02,
+            "annualDebtService": 370631.43,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 103185.59,
+            "endingLoanBalance": 3962508.39,
+            "annualDepreciation": 1051725.37,
+            "taxableIncome": -948539.78,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 103185.59
+          },
+          {
+            "year": 7,
+            "grossPotentialIncome": 1030033.2,
+            "effectiveGrossIncome": 966541.96,
+            "operatingExpensesBeforeAbatement": 483248.6,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 483248.6,
+            "annualNoi": 483293.36,
+            "annualDebtService": 370631.43,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 112661.93,
+            "endingLoanBalance": 3856094.09,
+            "annualDepreciation": 1051725.37,
+            "taxableIncome": -939063.44,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 112661.93
+          },
+          {
+            "year": 8,
+            "grossPotentialIncome": 1050633.86,
+            "effectiveGrossIncome": 985872.8,
+            "operatingExpensesBeforeAbatement": 492913.58,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 492913.58,
+            "annualNoi": 492959.22,
+            "annualDebtService": 370631.43,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 122327.79,
+            "endingLoanBalance": 3742270.39,
+            "annualDepreciation": 1051725.37,
+            "taxableIncome": -929397.58,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 122327.79
+          },
+          {
+            "year": 9,
+            "grossPotentialIncome": 1071646.54,
+            "effectiveGrossIncome": 1005590.26,
+            "operatingExpensesBeforeAbatement": 502771.85,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 502771.85,
+            "annualNoi": 502818.41,
+            "annualDebtService": 370631.43,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 132186.98,
+            "endingLoanBalance": 3620521.37,
+            "annualDepreciation": 1051725.37,
+            "taxableIncome": -919538.39,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 132186.98
+          },
+          {
+            "year": 10,
+            "grossPotentialIncome": 1093079.47,
+            "effectiveGrossIncome": 1025702.06,
+            "operatingExpensesBeforeAbatement": 512827.28,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 512827.28,
+            "annualNoi": 512874.78,
+            "annualDebtService": 370631.43,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 142243.35,
+            "endingLoanBalance": 3490295.22,
+            "annualDepreciation": 1051725.37,
+            "taxableIncome": -909482.02,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 142243.35
+          },
+          {
+            "year": 11,
+            "grossPotentialIncome": 1114941.06,
+            "effectiveGrossIncome": 1046216.1,
+            "operatingExpensesBeforeAbatement": 523083.83,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 523083.83,
+            "annualNoi": 523132.27,
+            "annualDebtService": 370631.43,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 152500.84,
+            "endingLoanBalance": 3351001.69,
+            "annualDepreciation": 1051725.37,
+            "taxableIncome": -899224.53,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 152500.84
+          },
+          {
+            "year": 12,
+            "grossPotentialIncome": 1137239.88,
+            "effectiveGrossIncome": 1067140.43,
+            "operatingExpensesBeforeAbatement": 533545.51,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 533545.51,
+            "annualNoi": 533594.92,
+            "annualDebtService": 370631.43,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 162963.49,
+            "endingLoanBalance": 3202009.44,
+            "annualDepreciation": 1051725.37,
+            "taxableIncome": -888761.88,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 162963.49
+          },
+          {
+            "year": 13,
+            "grossPotentialIncome": 1159984.67,
+            "effectiveGrossIncome": 1088483.23,
+            "operatingExpensesBeforeAbatement": 544216.42,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 544216.42,
+            "annualNoi": 544266.81,
+            "annualDebtService": 370631.43,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 173635.38,
+            "endingLoanBalance": 3042643.17,
+            "annualDepreciation": 1051725.37,
+            "taxableIncome": -878089.99,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 173635.38
+          },
+          {
+            "year": 14,
+            "grossPotentialIncome": 1183184.37,
+            "effectiveGrossIncome": 1110252.9,
+            "operatingExpensesBeforeAbatement": 555100.74,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 555100.74,
+            "annualNoi": 555152.16,
+            "annualDebtService": 370631.43,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 184520.73,
+            "endingLoanBalance": 2872180.55,
+            "annualDepreciation": 1051725.37,
+            "taxableIncome": -867204.64,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 184520.73
+          },
+          {
+            "year": 15,
+            "grossPotentialIncome": 1206848.06,
+            "effectiveGrossIncome": 1132457.96,
+            "operatingExpensesBeforeAbatement": 566202.76,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 566202.76,
+            "annualNoi": 566255.2,
+            "annualDebtService": 370631.43,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 195623.77,
+            "endingLoanBalance": 2689848.97,
+            "annualDepreciation": 1051725.37,
+            "taxableIncome": -856101.6,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 195623.77
+          }
+        ],
+        "sponsorEquity": 7725308.6,
+        "unfundedGap": 4265610.86,
+        "initialEquity": 11990919.46,
+        "exitValue": 8711618.46,
+        "saleCosts": 261348.55,
+        "remainingBalance": 2689848.97,
+        "exitEquity": 5760420.94,
+        "exitEquityAfterTax": 1816450.8,
+        "leveragedIrr": -0.0336,
+        "avgCashOnCash": 0.0092,
+        "afterTaxIrr": -0.0893,
+        "afterTaxCashOnCash": 0.0092,
+        "hold_years": 15,
+        "irr": -0.0336,
+        "avg_cash_on_cash": 0.0092,
+        "annual_coc": [
+          -0.01,
+          0.01,
+          0.01,
+          0.01,
+          0.01,
+          0.01,
+          0.01,
+          0.01,
+          0.01,
+          0.01,
+          0.01,
+          0.01,
+          0.01,
+          0.02,
+          0.02
+        ],
+        "exit": {
+          "exit_value": 8711618.46,
+          "sale_costs": 261348.55,
+          "remaining_balance": 2689848.97,
+          "exit_equity": 5760420.94,
+          "exit_equity_after_tax": 1816450.8
+        }
+      },
+      "workbook": {
+        "label": "Starter",
+        "description": "57 units, 2 buildings, CDC first deal",
+        "buildings": 2,
+        "units": 57,
+        "retailSf": 2500,
+        "grossSf": 91600,
+        "summary": {
+          "totalDevCost": 28925948.6,
+          "totalSources": 24660337.74,
+          "noiStabilized": 429150.67,
+          "dscr": 1.1579,
+          "yieldOnCost": 0.0148,
+          "avgCashOnCash": 0.0092,
+          "gapOrSurplus": -4265610.86,
+          "requiredSubsidyToBreakeven": 4265610.86,
+          "requiredSubsidyToTargetReturn": 4265610.86,
+          "lihtcEquity": 20190018.24,
+          "permLoan": 4470319.5,
+          "costPerUnit": 507472.78
+        },
+        "budget": {
+          "uses": [
+            {
+              "category": "Land",
+              "label": "Land",
+              "amount": 3501
+            },
+            {
+              "category": "Hard Costs",
+              "label": "Hard Costs",
+              "amount": 21771500
+            },
+            {
+              "category": "Hard Costs",
+              "label": "Commercial TI Allowance",
+              "amount": 125000
+            },
+            {
+              "category": "Site Work",
+              "label": "Water/Sewer Tap Fees",
+              "amount": 150000
+            },
+            {
+              "category": "Site Work",
+              "label": "Landscaping",
+              "amount": 100000
+            },
+            {
+              "category": "Soft Costs",
+              "label": "Soft Costs",
+              "amount": 2612580
+            },
+            {
+              "category": "Contingency",
+              "label": "Contingency",
+              "amount": 1741720
+            },
+            {
+              "category": "Reserves",
+              "label": "Reserves",
+              "amount": 34200
+            },
+            {
+              "category": "Developer Fee",
+              "label": "Developer Fee",
+              "amount": 1219204
+            },
+            {
+              "category": "Financing",
+              "label": "Financing Carry Estimate",
+              "amount": 1168243.6
+            }
+          ],
+          "totalUses": 28925948.6
+        },
+        "sources": {
+          "items": [
+            {
+              "label": "Permanent Debt",
+              "type": "debt",
+              "amount": 4470319.5,
+              "terms": "6.75% / 25yr / 1.16x DSCR"
+            },
+            {
+              "label": "Tax Credit Equity",
+              "type": "equity",
+              "amount": 20190018.24,
+              "terms": "LIHTC 9% / $0.92 / 10yr credit"
+            }
+          ],
+          "totalSources": 24660337.74
+        },
+        "proforma": [
+          {
+            "label": "Potential Gross Income",
+            "amount": 914640
+          },
+          {
+            "label": "Effective Gross Income",
+            "amount": 858261.6
+          },
+          {
+            "label": "Operating Expenses",
+            "amount": -429110.93
+          },
+          {
+            "label": "Net Operating Income",
+            "amount": 429150.67
+          },
+          {
+            "label": "Annual Debt Service",
+            "amount": -370631.43
+          },
+          {
+            "label": "Cash Flow Before Tax",
+            "amount": 58519.24
+          }
+        ],
+        "returns": {
+          "yieldOnCost": 0.0148,
+          "avgCashOnCash": 0.0092,
+          "leveragedIrr": -0.0336,
+          "afterTaxIrr": -0.0893,
+          "dscr": 1.1579,
+          "permLoanToValue": 0.6771,
+          "permLoanToCost": 0.1545,
+          "stabilizedValue": 6602318,
+          "costPerUnit": 507472.78,
+          "noiPerUnit": 7528.96
+        },
+        "constraints": {
+          "gate": "limited_spend",
+          "warnings": [
+            "Modeled land basis combines acquisitionCost and closingCosts because the current deal engine prices a single land use line.",
+            "Footprint width/depth are approximated from usable pad area because finance/zones.json currently stores area, not explicit building dimensions.",
+            "Footprint width/depth are approximated from usable pad area because finance/zones.json currently stores area, not explicit building dimensions.",
+            "Project program profile inferred from active commercial segments.",
+            "9% LIHTC feasibility remains subject to competitive allocation and QAP scoring.",
+            "Automatic QCT/DDA basis boost lookup is not yet wired; provide basis_boost_pct explicitly when known.",
+            "Public land write-down is modeled, but the sponsor profile does not indicate direct access to below-market public land.",
+            "Missing input: site_fit_context",
+            "Missing input: confirmed_frontage",
+            "Missing input: unit_level_rent_assumptions",
+            "Missing input: construction_draw_schedule",
+            "Missing input: conversion_or_refi_timing",
+            "Missing input: reserve_release_schedule",
+            "Full pro forma still needs: site_fit_context",
+            "Full pro forma still needs: confirmed_frontage",
+            "Full pro forma still needs: unit_level_rent_assumptions",
+            "Full pro forma still needs: construction_draw_schedule",
+            "Full pro forma still needs: conversion_or_refi_timing",
+            "Full pro forma still needs: reserve_release_schedule"
+          ],
+          "unsupported": [
+            "assumptions.construction.siteExtraordinary.{hillsideRetaining,stormwaterBioswale,demolition}: These extraordinary site-work buckets are preserved on custom_site_plan_spec.shared_site_costs for future consumers, but the v1 deal engine does not price them yet.",
+            "assumptions.financing.constructionLoan: Project-level construction loan term overrides are not injected into v1 deal structuring. The engine still resolves the financing product from canonical config.",
+            "assumptions.financing.permanentLoan: Project-level permanent loan overrides are not injected into v1 deal structuring. The engine still resolves the permanent product from canonical config.",
+            "assumptions.operations.opexRatioPct: High-level opex ratio is not a direct v1 deal-engine input. The loader maps vacancy, bad debt, and property management, then falls back to canonical per-unit operating lines.",
+            "assumptions.retail.capRate: Retail cap rate is not applied directly in the v1 project-deal loader. Project valuation still uses the canonical residential cap-rate path.",
+            "facts.overlays.{craTier,craEligibility}: CRA Expand is preserved as a verified overlay fact, but the v1 deal engine does not currently allow cra_expand_tax_abatement on this custom site-plan scope.",
+            "assumptions.developerFee.lihtcMaxPct: LIHTC developer-fee max percentage is not mapped directly because the v1 engine contract caps developer fee in dollars, not as a percent-of-basis constraint."
+          ],
+          "arithmeticChecks": [
+            {
+              "checkName": "sources_uses_gap_consistency",
+              "status": "passed",
+              "message": "Sources minus uses matches the reported gap or surplus."
+            },
+            {
+              "checkName": "required_subsidy_consistency",
+              "status": "passed",
+              "message": "Required subsidy to breakeven matches the computed gap."
+            },
+            {
+              "checkName": "feasibility_status_consistency",
+              "status": "passed",
+              "message": "Feasibility status is consistent with the computed subsidy gap."
+            },
+            {
+              "checkName": "rental_permanent_debt_service_consistency",
+              "status": "passed",
+              "message": "Permanent debt implies positive annual debt service."
+            },
+            {
+              "checkName": "rental_dscr_consistency",
+              "status": "passed",
+              "message": "Reported DSCR matches adjusted NOI and annual debt service."
+            }
+          ],
+          "humanReviewFlags": [
+            "Historical closed-deal backtest is not available for this run.",
+            "Construction cost, market rent, and sale assumptions remain caller- or config-driven inputs and are not independently appraised by the engine.",
+            "LIHTC structures still require human review of award likelihood, legal structure, and investor terms."
+          ]
+        }
+      }
+    },
+    {
+      "id": "right-sized",
+      "name": "Right-Sized",
+      "description": "87 units, 2 buildings, solid CDC",
+      "summary": {
+        "scenario_id": "right-sized",
+        "label": "Right-Sized",
+        "active_zone_ids": [
+          "zone-1",
+          "zone-2"
+        ],
+        "total_units": 87,
+        "total_commercial_square_feet": 2500,
+        "total_constructed_square_feet": 123000
+      },
+      "request": {
+        "schema_version": 1,
+        "run_kind": "structure_plan_deal",
+        "custom_site_plan_spec": {
+          "site_plan_id": "colerain-north-bend-gateway_right-sized",
+          "site_plan_label": "Right-Sized",
+          "arrangement_type": "right-sized",
+          "dominant_building_type": "mixed_use",
+          "site_layout": "frontage_bar",
+          "buildings": [
+            {
+              "building_id": "zone-1",
+              "shell_id": "zone-1",
+              "shell_label": "L-Shape Corner",
+              "building_type": "mixed_use",
+              "site_layout": "frontage_bar",
+              "use_class": "residential",
+              "units_per_building": 75,
+              "building_width_ft": 125.3,
+              "building_depth_ft": 125.3,
+              "stories_above_grade": 6,
+              "above_grade_building_sf": 94200,
+              "total_constructed_sf": 94200,
+              "sf_per_unit": 1256,
+              "parking_strategy": {
+                "parking_family": "tuck_under",
+                "stall_count": 40
+              }
+            },
+            {
+              "building_id": "zone-2",
+              "shell_id": "zone-2",
+              "shell_label": "Colerain Frontage",
+              "building_type": "townhouse_row",
+              "site_layout": "side_by_side",
+              "use_class": "residential",
+              "units_per_building": 12,
+              "building_width_ft": 120,
+              "building_depth_ft": 120,
+              "stories_above_grade": 2,
+              "above_grade_building_sf": 28800,
+              "total_constructed_sf": 28800,
+              "sf_per_unit": 2400
+            }
+          ],
+          "aggregate_units": 87,
+          "aggregate_above_grade_building_sf": 123000,
+          "aggregate_total_constructed_sf": 123000,
+          "land_cost_allocation_policy": "pro_rata_gross_sf",
+          "shared_site_costs": {
+            "parking_and_access": 0,
+            "site_work": 200000,
+            "utilities": 0
+          },
+          "source": "scenario_matrix"
+        },
+        "site_fit_context": {
+          "site_slug": "colerain-north-bend-gateway",
+          "canonical_address": "colerain-north-bend-gateway",
+          "municipality_slug": "cincinnati",
+          "zoning_code": "CC-P-B+CC-M-B+SF-6-MH"
+        },
+        "deal_definition": {
+          "unit_mix": [],
+          "segments": [
+            {
+              "segment_id": "zone-1_commercial",
+              "segment_type": "commercial",
+              "label": "L-Shape Corner Commercial",
+              "square_feet": 2500,
+              "commercial_use_type": "retail",
+              "lease_structure": "nnn",
+              "annual_rent_per_sf": 15,
+              "tenant_improvement_allowance_per_sf": 50
+            },
+            {
+              "segment_id": "zone-1_residential",
+              "segment_type": "residential",
+              "label": "L-Shape Corner Residential",
+              "square_feet": 91700,
+              "unit_mix": [
+                {
+                  "bedroom_count": 0,
+                  "count": 12,
+                  "ami_band": 60
+                },
+                {
+                  "bedroom_count": 1,
+                  "count": 30,
+                  "ami_band": 60
+                },
+                {
+                  "bedroom_count": 2,
+                  "count": 25,
+                  "ami_band": 60
+                },
+                {
+                  "bedroom_count": 3,
+                  "count": 8,
+                  "ami_band": 60
+                }
+              ]
+            },
+            {
+              "segment_id": "zone-2_residential",
+              "segment_type": "residential",
+              "label": "Colerain Frontage Residential",
+              "square_feet": 28800,
+              "unit_mix": [
+                {
+                  "bedroom_count": 2,
+                  "count": 4,
+                  "ami_band": 60
+                },
+                {
+                  "bedroom_count": 2,
+                  "count": 4,
+                  "ami_band": 60
+                },
+                {
+                  "bedroom_count": 3,
+                  "count": 4,
+                  "ami_band": 60
+                }
+              ]
+            }
+          ],
+          "housing_tier": "affordable",
+          "ami_band": 60,
+          "tenure_strategy": "rental_hold",
+          "funding_path": "lihtc",
+          "project_program_profile_id": "mixed_use",
+          "subordinate_financing_products": [],
+          "subsidy_program_ids": [],
+          "developer_fee_policy": {
+            "calculation_basis": "hard_plus_soft",
+            "developer_fee_pct": 0.05,
+            "developer_fee_floor": 5000
+          },
+          "reserve_policy": {
+            "replacement_reserve_per_unit": 300
+          },
+          "program_eligibility_policy": {
+            "enforce_program_compatibility": true,
+            "enforce_ami_mix_rules": true,
+            "enforce_use_class_rules": true,
+            "enforce_location_rules": true,
+            "enforce_construction_type_rules": true,
+            "enforce_mutual_exclusions": true,
+            "eligibility_override_mode": "strict"
+          },
+          "sponsor_profile": {
+            "developer_archetype": "private_for_profit",
+            "mission_constraints": {
+              "long_term_affordability_required": false,
+              "permanent_land_stewardship": false,
+              "anti_displacement_priority": false
+            },
+            "capital_access_profile": {
+              "can_raise_tax_credit_equity": true,
+              "can_raise_program_related_investments": false,
+              "can_access_philanthropic_grants": false,
+              "can_access_below_market_public_land": false,
+              "can_raise_sponsor_equity": true
+            },
+            "return_tolerance_profile": {
+              "target_cash_on_cash_floor": null,
+              "target_developer_fee_floor": null,
+              "allows_deferred_fee": false
+            }
+          },
+          "land_control_mode": {
+            "mode": "public_land_write_down",
+            "acquisition_cost": 3501,
+            "land_use_restrictions": [],
+            "disposition_conditions": [],
+            "notes": "Hamilton County Land Reutilization Corporation hclrc_controlled_assemblage"
+          }
+        },
+        "assumptions": {
+          "land_cost": 3501,
+          "hard_cost_basis": 210,
+          "soft_cost_basis": 0.1,
+          "contingency_basis": 0.06,
+          "market_context": {
+            "geography_type": "municipality",
+            "geography_ref": "cincinnati",
+            "construction_cost_region": "cincinnati_metro",
+            "rent_region": "mount_airy",
+            "sale_region": "mount_airy",
+            "insurance_region": "cincinnati_metro",
+            "tax_region": "hamilton_county_oh",
+            "source_as_of_date": "HUD-2025",
+            "notes": "Loaded from colerain-north-bend-gateway/finance"
+          },
+          "ami_rent_limit_assumptions": {
+            "source": "hamilton_county_2025_hud",
+            "percent_of_income": 0.3
+          },
+          "operating_expense_assumptions": {
+            "property_management_pct": 0.08,
+            "maintenance_and_repairs_per_unit": 1800,
+            "utilities_owner_paid_per_unit": 600,
+            "insurance_per_unit": 900,
+            "taxes_per_unit": 2700,
+            "compliance_monitoring_per_unit": 0,
+            "annual_audit_and_reporting_cost": 0,
+            "replacement_reserve_per_unit": 300,
+            "vacancy_pct": 0.05,
+            "bad_debt_pct": 0.01
+          },
+          "revenue_assumptions": {
+            "cap_rate": 0.065
+          },
+          "timeline_assumptions": {
+            "predev_months": 2,
+            "construction_months": 8,
+            "lease_up_months": 3
+          },
+          "exit_or_hold_assumptions": {
+            "hold_years": 15,
+            "rent_growth_pct": 0.02,
+            "expense_growth_pct": 0.02
+          },
+          "tax_credit_assumptions": {
+            "credit_type": "lihtc_9",
+            "credit_period_years": 10,
+            "credit_pricing_per_dollar": 0.92
+          },
+          "site_development_costs": {
+            "utility_connection_fee": 150000,
+            "landscaping_allowance": 100000
+          },
+          "tax_assumptions": {
+            "mill_rate": 0.062,
+            "assessment_ratio": 0.35,
+            "marginal_federal_rate": 0.24,
+            "marginal_state_rate": 0.04,
+            "depreciation_years": 27.5,
+            "depreciation_recapture_rate": 0.25
+          }
+        },
+        "requested_views": [
+          "summary",
+          "analyst"
+        ]
+      },
+      "loaderDiagnostics": [
+        {
+          "kind": "combined_value",
+          "field": "assumptions.land_cost",
+          "message": "Modeled land basis combines acquisitionCost and closingCosts because the current deal engine prices a single land use line.",
+          "value": 3501
+        },
+        {
+          "kind": "unsupported_engine_field",
+          "field": "assumptions.construction.siteExtraordinary.{hillsideRetaining,stormwaterBioswale,demolition}",
+          "message": "These extraordinary site-work buckets are preserved on custom_site_plan_spec.shared_site_costs for future consumers, but the v1 deal engine does not price them yet.",
+          "value": 200000
+        },
+        {
+          "kind": "approximated_dimension",
+          "field": "custom_site_plan_spec.buildings.zone-1.{building_width_ft,building_depth_ft}",
+          "message": "Footprint width/depth are approximated from usable pad area because finance/zones.json currently stores area, not explicit building dimensions.",
+          "value": {
+            "footprint_sf": 15700,
+            "building_width_ft": 125.3,
+            "building_depth_ft": 125.3
+          }
+        },
+        {
+          "kind": "approximated_dimension",
+          "field": "custom_site_plan_spec.buildings.zone-2.{building_width_ft,building_depth_ft}",
+          "message": "Footprint width/depth are approximated from usable pad area because finance/zones.json currently stores area, not explicit building dimensions.",
+          "value": {
+            "footprint_sf": 14400,
+            "building_width_ft": 120,
+            "building_depth_ft": 120
+          }
+        },
+        {
+          "kind": "unsupported_engine_field",
+          "field": "assumptions.financing.constructionLoan",
+          "message": "Project-level construction loan term overrides are not injected into v1 deal structuring. The engine still resolves the financing product from canonical config.",
+          "value": {
+            "rate": 0.0875,
+            "ltcPct": 0.75,
+            "termMonths": 14,
+            "originationPct": 0.015
+          }
+        },
+        {
+          "kind": "unsupported_engine_field",
+          "field": "assumptions.financing.permanentLoan",
+          "message": "Project-level permanent loan overrides are not injected into v1 deal structuring. The engine still resolves the permanent product from canonical config.",
+          "value": {
+            "rate": 0.0625,
+            "ltvPct": 0.75,
+            "amortYears": 30,
+            "minDscr": 1.25
+          }
+        },
+        {
+          "kind": "unsupported_engine_field",
+          "field": "assumptions.operations.opexRatioPct",
+          "message": "High-level opex ratio is not a direct v1 deal-engine input. The loader maps vacancy, bad debt, and property management, then falls back to canonical per-unit operating lines.",
+          "value": 0.35
+        },
+        {
+          "kind": "unsupported_engine_field",
+          "field": "assumptions.retail.capRate",
+          "message": "Retail cap rate is not applied directly in the v1 project-deal loader. Project valuation still uses the canonical residential cap-rate path.",
+          "value": 0.075
+        },
+        {
+          "kind": "normalized_value",
+          "field": "deal_definition.project_program_profile_id",
+          "message": "Project program profile inferred from active commercial segments.",
+          "value": "mixed_use"
+        },
+        {
+          "kind": "unsupported_engine_field",
+          "field": "facts.overlays.{craTier,craEligibility}",
+          "message": "CRA Expand is preserved as a verified overlay fact, but the v1 deal engine does not currently allow cra_expand_tax_abatement on this custom site-plan scope.",
+          "value": {
+            "craTier": "Expand",
+            "craEligibility": "new_construction"
+          }
+        },
+        {
+          "kind": "unsupported_engine_field",
+          "field": "assumptions.developerFee.lihtcMaxPct",
+          "message": "LIHTC developer-fee max percentage is not mapped directly because the v1 engine contract caps developer fee in dollars, not as a percent-of-basis constraint.",
+          "value": 0.1
+        }
+      ],
+      "dealResult": {
+        "schema_version": 1,
+        "engine_version": "deal-structuring-v1",
+        "deal_structure": {
+          "structure_id": "deal_cincinnati_colerain_north_bend_gateway_right_sized_rental_hold",
+          "feasibility_status": "viable_with_gap",
+          "completeness_status": "deal_structuring_ready",
+          "plan_scope": {
+            "plan_code": null,
+            "plan_family": "mixed_use",
+            "custom_shell_id": "colerain-north-bend-gateway_right-sized",
+            "custom_shell_label": "Right-Sized",
+            "building_type": "mixed_use",
+            "site_layout": "frontage_bar"
+          },
+          "deal_definition": {
+            "unit_mix": [
+              {
+                "bedroom_count": 0,
+                "count": 12,
+                "ami_band": 60
+              },
+              {
+                "bedroom_count": 1,
+                "count": 30,
+                "ami_band": 60
+              },
+              {
+                "bedroom_count": 2,
+                "count": 33,
+                "ami_band": 60
+              },
+              {
+                "bedroom_count": 3,
+                "count": 12,
+                "ami_band": 60
+              }
+            ],
+            "segments": [
+              {
+                "segment_id": "zone-1_commercial",
+                "segment_type": "commercial",
+                "label": "L-Shape Corner Commercial",
+                "square_feet": 2500,
+                "commercial_use_type": "retail",
+                "lease_structure": "nnn",
+                "annual_rent_per_sf": 15,
+                "tenant_improvement_allowance_per_sf": 50
+              },
+              {
+                "segment_id": "zone-1_residential",
+                "segment_type": "residential",
+                "label": "L-Shape Corner Residential",
+                "square_feet": 91700,
+                "unit_mix": [
+                  {
+                    "bedroom_count": 0,
+                    "count": 12,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 1,
+                    "count": 30,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 2,
+                    "count": 25,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 3,
+                    "count": 8,
+                    "ami_band": 60
+                  }
+                ]
+              },
+              {
+                "segment_id": "zone-2_residential",
+                "segment_type": "residential",
+                "label": "Colerain Frontage Residential",
+                "square_feet": 28800,
+                "unit_mix": [
+                  {
+                    "bedroom_count": 2,
+                    "count": 4,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 2,
+                    "count": 4,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 3,
+                    "count": 4,
+                    "ami_band": 60
+                  }
+                ]
+              }
+            ],
+            "housing_tier": "affordable",
+            "ami_band": 60,
+            "tenure_strategy": "rental_hold",
+            "funding_path": "lihtc",
+            "project_program_profile_id": "mixed_use",
+            "subordinate_financing_products": [],
+            "subsidy_program_ids": [],
+            "developer_fee_policy": {
+              "calculation_basis": "hard_plus_soft",
+              "developer_fee_pct": 0.05,
+              "developer_fee_floor": 5000
+            },
+            "reserve_policy": {
+              "replacement_reserve_per_unit": 300
+            },
+            "program_eligibility_policy": {
+              "enforce_program_compatibility": true,
+              "enforce_ami_mix_rules": true,
+              "enforce_use_class_rules": true,
+              "enforce_location_rules": true,
+              "enforce_construction_type_rules": true,
+              "enforce_mutual_exclusions": true,
+              "eligibility_override_mode": "strict"
+            },
+            "sponsor_profile": {
+              "developer_archetype": "private_for_profit",
+              "mission_constraints": {
+                "long_term_affordability_required": false,
+                "permanent_land_stewardship": false,
+                "anti_displacement_priority": false
+              },
+              "capital_access_profile": {
+                "can_raise_tax_credit_equity": true,
+                "can_raise_program_related_investments": false,
+                "can_access_philanthropic_grants": false,
+                "can_access_below_market_public_land": false,
+                "can_raise_sponsor_equity": true
+              },
+              "return_tolerance_profile": {
+                "target_cash_on_cash_floor": null,
+                "target_developer_fee_floor": null,
+                "allows_deferred_fee": false
+              }
+            },
+            "land_control_mode": {
+              "mode": "public_land_write_down",
+              "acquisition_cost": 3501,
+              "land_use_restrictions": [],
+              "disposition_conditions": [],
+              "notes": "Hamilton County Land Reutilization Corporation hclrc_controlled_assemblage"
+            }
+          },
+          "assumptions": {
+            "land_cost": 3501,
+            "hard_cost_basis": 210,
+            "soft_cost_basis": 0.1,
+            "contingency_basis": 0.06,
+            "market_context": {
+              "geography_type": "municipality",
+              "geography_ref": "cincinnati",
+              "construction_cost_region": "cincinnati_metro",
+              "rent_region": "mount_airy",
+              "sale_region": "mount_airy",
+              "insurance_region": "cincinnati_metro",
+              "tax_region": "hamilton_county_oh",
+              "source_as_of_date": "HUD-2025",
+              "notes": "Loaded from colerain-north-bend-gateway/finance"
+            },
+            "ami_rent_limit_assumptions": {
+              "source": "hamilton_county_2025_hud",
+              "percent_of_income": 0.3
+            },
+            "operating_expense_assumptions": {
+              "property_management_pct": 0.08,
+              "maintenance_and_repairs_per_unit": 1800,
+              "utilities_owner_paid_per_unit": 600,
+              "insurance_per_unit": 900,
+              "taxes_per_unit": 2700,
+              "compliance_monitoring_per_unit": 0,
+              "annual_audit_and_reporting_cost": 0,
+              "replacement_reserve_per_unit": 300,
+              "vacancy_pct": 0.05,
+              "bad_debt_pct": 0.01
+            },
+            "revenue_assumptions": {
+              "cap_rate": 0.065
+            },
+            "timeline_assumptions": {
+              "predev_months": 2,
+              "construction_months": 8,
+              "lease_up_months": 3
+            },
+            "exit_or_hold_assumptions": {
+              "hold_years": 15,
+              "rent_growth_pct": 0.02,
+              "expense_growth_pct": 0.02
+            },
+            "tax_credit_assumptions": {
+              "credit_type": "lihtc_9",
+              "credit_period_years": 10,
+              "credit_pricing_per_dollar": 0.92
+            },
+            "site_development_costs": {
+              "utility_connection_fee": 150000,
+              "landscaping_allowance": 100000
+            },
+            "tax_assumptions": {
+              "mill_rate": 0.062,
+              "assessment_ratio": 0.35,
+              "marginal_federal_rate": 0.24,
+              "marginal_state_rate": 0.04,
+              "depreciation_years": 27.5,
+              "depreciation_recapture_rate": 0.25
+            }
+          },
+          "applied_cost_model": {
+            "cost_model_path": "resolved",
+            "construction_system_id": "masonry_mixed_use_small",
+            "construction_system_selection_origin": "auto",
+            "construction_system_label": "Masonry Small Mixed-Use",
+            "construction_system_legacy_cost_preset_id": "standard_wood",
+            "building_type": "mixed_use",
+            "site_layout": "frontage_bar",
+            "matched_lookup_building_type": "mixed_use",
+            "sponsor_archetype": "private_for_profit",
+            "sponsor_archetype_origin": "explicit",
+            "base_cost_basis": {
+              "hard_cost_psf": 240,
+              "soft_cost_pct": 0.12,
+              "contingency_pct": 0.08,
+              "sale_marketing_pct": 0.03,
+              "rental_stabilization_pct": 0.025
+            },
+            "effective_cost_basis": {
+              "hard_cost_psf": 240,
+              "soft_cost_pct": 0.12,
+              "contingency_pct": 0.08,
+              "sale_marketing_pct": 0.03,
+              "rental_stabilization_pct": 0.025
+            },
+            "building_type_modifier": {
+              "hard_cost_multiplier": 1,
+              "notes": []
+            },
+            "site_layout_modifier": {
+              "hard_cost_multiplier": 1,
+              "notes": []
+            },
+            "sponsor_delivery_override": {
+              "soft_cost_pct_delta": 0,
+              "contingency_pct_delta": 0,
+              "construction_duration_months_delta": 0,
+              "notes": []
+            },
+            "applied_hard_cost_multiplier": 1,
+            "applied_notes": [],
+            "fallback_reason": null,
+            "fallback_retirement_signal": null
+          },
+          "applied_program_mix": {
+            "segments": [
+              {
+                "segment_id": "zone-1_commercial",
+                "segment_type": "commercial",
+                "label": "L-Shape Corner Commercial",
+                "square_feet": 2500,
+                "residential_unit_count": null,
+                "commercial_use_type": "retail",
+                "lease_structure": "nnn",
+                "operating_expense_ratio": 0.12,
+                "absorption_months": 12,
+                "stabilized_occupancy_pct": 0.9,
+                "revenue": {
+                  "annual_gross_potential_income": 37500,
+                  "annual_effective_gross_income": 33750,
+                  "annual_operating_expenses": 4050,
+                  "annual_noi": 29700
+                },
+                "cost": {
+                  "hard_cost_total": 387500,
+                  "tenant_improvement_allowance_total": 125000,
+                  "total_segment_cost": 512500,
+                  "effective_hard_cost_psf": 155
+                }
+              },
+              {
+                "segment_id": "zone-1_residential",
+                "segment_type": "residential",
+                "label": "L-Shape Corner Residential",
+                "square_feet": 91700,
+                "residential_unit_count": 75,
+                "commercial_use_type": null,
+                "lease_structure": null,
+                "operating_expense_ratio": 0.5482,
+                "absorption_months": 3,
+                "stabilized_occupancy_pct": 0.94,
+                "revenue": {
+                  "annual_gross_potential_income": 1073682,
+                  "annual_effective_gross_income": 1009261.08,
+                  "annual_operating_expenses": 553240.89,
+                  "annual_noi": 456020.19
+                },
+                "cost": {
+                  "hard_cost_total": 22008000,
+                  "tenant_improvement_allowance_total": 0,
+                  "total_segment_cost": 22008000,
+                  "effective_hard_cost_psf": 240
+                }
+              },
+              {
+                "segment_id": "zone-2_residential",
+                "segment_type": "residential",
+                "label": "Colerain Frontage Residential",
+                "square_feet": 28800,
+                "residential_unit_count": 12,
+                "commercial_use_type": null,
+                "lease_structure": null,
+                "operating_expense_ratio": 0.4316,
+                "absorption_months": 3,
+                "stabilized_occupancy_pct": 0.94,
+                "revenue": {
+                  "annual_gross_potential_income": 228744,
+                  "annual_effective_gross_income": 215019.36,
+                  "annual_operating_expenses": 92801.55,
+                  "annual_noi": 122217.81
+                },
+                "cost": {
+                  "hard_cost_total": 6912000,
+                  "tenant_improvement_allowance_total": 0,
+                  "total_segment_cost": 6912000,
+                  "effective_hard_cost_psf": 240
+                }
+              }
+            ],
+            "totals": {
+              "residential_unit_count": 87,
+              "commercial_square_feet": 2500,
+              "annual_gross_potential_income": 1339926,
+              "annual_effective_gross_income": 1258030.44,
+              "annual_operating_expenses": 650092.44,
+              "annual_noi": 607938,
+              "hard_cost_total": 29307500,
+              "tenant_improvement_allowance_total": 125000,
+              "total_segment_cost": 29432500
+            }
+          },
+          "sources_and_uses": {
+            "uses": [
+              {
+                "label": "Land",
+                "amount": 3501
+              },
+              {
+                "label": "Hard Costs",
+                "amount": 29307500
+              },
+              {
+                "label": "Commercial TI Allowance",
+                "amount": 125000
+              },
+              {
+                "label": "Water/Sewer Tap Fees",
+                "amount": 150000
+              },
+              {
+                "label": "Landscaping",
+                "amount": 100000
+              },
+              {
+                "label": "Soft Costs",
+                "amount": 3516900
+              },
+              {
+                "label": "Contingency",
+                "amount": 2344600
+              },
+              {
+                "label": "Reserves",
+                "amount": 52200
+              },
+              {
+                "label": "Developer Fee",
+                "amount": 1641220
+              },
+              {
+                "label": "Financing Carry Estimate",
+                "amount": 1566898
+              }
+            ],
+            "sources": [
+              {
+                "label": "Permanent Debt",
+                "amount": 6332687.5
+              },
+              {
+                "label": "Tax Credit Equity",
+                "amount": 27178603.2
+              }
+            ],
+            "gap_or_surplus": -5296528.3
+          },
+          "primary_financial_metrics": {
+            "mode": "rental",
+            "return_metric": null,
+            "return_metric_label": "yield_on_cost_pct",
+            "annual_noi": 607938,
+            "gross_sales_revenue": null,
+            "net_sales_proceeds": null,
+            "net_profit": null,
+            "profit_margin_pct": null
+          },
+          "construction_capital_stack": {
+            "construction_financing": {
+              "financing_product_id": "construction_loan",
+              "financing_product_label": "Construction Loan",
+              "loan_to_cost_pct": 0.8,
+              "interest_rate": 0.0875,
+              "term_months": 11,
+              "origination_fee_pct": 0.015,
+              "equity_at_close_pct": 0.2,
+              "max_loan_per_unit": null,
+              "max_loan_per_property": null,
+              "max_borrower_exposure": null
+            },
+            "sources_and_uses": {
+              "uses": {
+                "stage_1": {
+                  "land": 3501,
+                  "hard": 29307500,
+                  "tenant_improvements": 125000,
+                  "site_extraordinary": 250000,
+                  "soft_costs": 3516900,
+                  "contingency": 2344600,
+                  "total": 35547501
+                },
+                "additional_close_uses": 1693420,
+                "close_uses_before_financing": 37240921,
+                "financing_costs_estimate": {
+                  "financed_basis": 35544000,
+                  "average_outstanding_pct_of_financed_basis": 0.5,
+                  "estimated_average_loan_balance": 14217600,
+                  "origination_fee": 426528,
+                  "interest_carry": 1140370,
+                  "total": 1566898,
+                  "included_in_stage_1_total": false
+                },
+                "subsidy_bridge_costs_estimate": {
+                  "estimated_advance_amount": 0,
+                  "interest_carry": 0,
+                  "fee": 0,
+                  "total": 0,
+                  "blended_interest_rate": null,
+                  "blended_fee_pct": null,
+                  "blended_term_months": null,
+                  "included_in_stage_1_total": false
+                },
+                "total_with_capital_estimate": 38807819
+              },
+              "sources": {
+                "construction_debt_estimate": {
+                  "loan_to_cost_pct": 0.8,
+                  "raw_ltc_proceeds": 28435200,
+                  "estimated_proceeds": 28435200,
+                  "max_loan_per_unit_cap_amount": null,
+                  "max_loan_per_property_cap_amount": null,
+                  "max_borrower_exposure_cap_amount": null,
+                  "binding_constraint": "ltc",
+                  "basis": "hard + tenant_improvements + site_extraordinary + soft_costs + contingency"
+                },
+                "subsidy": {
+                  "amount": 0,
+                  "manual_amount": 0,
+                  "manual_close_funding_amount": 0,
+                  "program_amount": 0,
+                  "program_at_close_amount": 0,
+                  "program_bridgeable_short_term_amount": 0,
+                  "program_post_stabilization_amount": 0,
+                  "program_operating_period_amount": 0,
+                  "close_funding_amount": 0,
+                  "deferred_amount": 0,
+                  "selected_program_ids": []
+                },
+                "subsidy_bridge_advance_estimate": {
+                  "estimated_amount": 0,
+                  "backed_by_program_amount": 0,
+                  "included_in_close_funding": true,
+                  "bridge_carry_modeled_in_stage_1_total": false
+                },
+                "sponsor_equity_estimate": {
+                  "estimated_amount": 10372619
+                },
+                "total_estimated_sources": 38807819
+              },
+              "balancing": {
+                "estimated_gap_or_surplus": 0,
+                "note": "Construction capital stack balances Stage 1 cost plus financing and bridge estimates using construction debt, close-funded subsidy, bridgeable subsidy advances, and sponsor equity. Post-stabilization and operating-period subsidy remains visible but does not reduce close equity in this stage."
+              }
+            },
+            "subordinate_sources": [
+              {
+                "label": "Tax Credit Equity",
+                "amount": 27178603.2,
+                "instrument_class": "tax_credit_equity",
+                "priority_position": 90
+              }
+            ]
+          },
+          "permanent_capital_stack": {
+            "mode": "rental_hold",
+            "financing_product_id": "bank_portfolio_perm",
+            "financing_product_label": "Bank Portfolio Permanent Loan",
+            "ltv": 0.72,
+            "min_dscr": 1.2,
+            "rate": 0.0675,
+            "amortization_months": 300,
+            "implied_value": 9352892.31,
+            "max_debt_by_ltv": 6734082.46,
+            "max_debt_by_dscr": 6332687.5,
+            "selected_permanent_debt": 6332687.5,
+            "annual_debt_service": 525039.21,
+            "adjusted_noi": 607938,
+            "debt_yield": 0.096,
+            "debt_service_coverage_ratio": 1.1579,
+            "equity_requirement_at_conversion": 30908233.5
+          },
+          "subsidy_stack": {
+            "selected_program_ids": [],
+            "selected_programs": [],
+            "property_tax_abatement_pct": 0,
+            "tax_credit_equity_amount": 27178603.2
+          },
+          "capital_events_timeline": [
+            {
+              "stage": "close",
+              "timing_ref": "month_0",
+              "sources": [
+                {
+                  "label": "Construction Debt",
+                  "amount": 28435200
+                },
+                {
+                  "label": "Tax Credit Equity",
+                  "amount": 27178603.2
+                }
+              ],
+              "uses": [
+                {
+                  "label": "Close Uses Before Financing",
+                  "amount": 37240921
+                },
+                {
+                  "label": "Financing Carry Estimate",
+                  "amount": 1566898
+                }
+              ]
+            },
+            {
+              "stage": "stabilization_conversion",
+              "timing_ref": "post_stabilization",
+              "sources": [
+                {
+                  "label": "Permanent Debt",
+                  "amount": 6332687.5
+                }
+              ],
+              "uses": [],
+              "notes": "Conversion to stabilized hold capital stack."
+            }
+          ],
+          "unit_program_summary": {
+            "selected_plan_id": "colerain-north-bend-gateway_right-sized",
+            "selected_plan_name": "Right-Sized",
+            "requested_plan_family": "mixed_use",
+            "custom_shell": {
+              "shell_id": "colerain-north-bend-gateway_right-sized",
+              "shell_label": "Right-Sized",
+              "building_type": "mixed_use",
+              "site_layout": "frontage_bar",
+              "use_class": "residential",
+              "units_per_building": 87,
+              "building_width_ft": 125.3,
+              "building_depth_ft": 125.3,
+              "stories_above_grade": 6,
+              "above_grade_building_sf": 123000,
+              "total_constructed_sf": 123000,
+              "sf_per_unit": 1413.79,
+              "parking_strategy": {
+                "parking_family": "tuck_under",
+                "stall_count": 40
+              },
+              "source": "planner"
+            },
+            "custom_site_plan": {
+              "site_plan_id": "colerain-north-bend-gateway_right-sized",
+              "site_plan_label": "Right-Sized",
+              "arrangement_type": "right-sized",
+              "dominant_building_type": "mixed_use",
+              "site_layout": "frontage_bar",
+              "buildings": [
+                {
+                  "building_id": "zone-1",
+                  "shell_id": "zone-1",
+                  "shell_label": "L-Shape Corner",
+                  "building_type": "mixed_use",
+                  "site_layout": "frontage_bar",
+                  "use_class": "residential",
+                  "units_per_building": 75,
+                  "building_width_ft": 125.3,
+                  "building_depth_ft": 125.3,
+                  "stories_above_grade": 6,
+                  "above_grade_building_sf": 94200,
+                  "total_constructed_sf": 94200,
+                  "sf_per_unit": 1256,
+                  "parking_strategy": {
+                    "parking_family": "tuck_under",
+                    "stall_count": 40
+                  }
+                },
+                {
+                  "building_id": "zone-2",
+                  "shell_id": "zone-2",
+                  "shell_label": "Colerain Frontage",
+                  "building_type": "townhouse_row",
+                  "site_layout": "side_by_side",
+                  "use_class": "residential",
+                  "units_per_building": 12,
+                  "building_width_ft": 120,
+                  "building_depth_ft": 120,
+                  "stories_above_grade": 2,
+                  "above_grade_building_sf": 28800,
+                  "total_constructed_sf": 28800,
+                  "sf_per_unit": 2400
+                }
+              ],
+              "aggregate_units": 87,
+              "aggregate_above_grade_building_sf": 123000,
+              "aggregate_total_constructed_sf": 123000,
+              "land_cost_allocation_policy": "pro_rata_gross_sf",
+              "shared_site_costs": {
+                "parking_and_access": 0,
+                "site_work": 200000,
+                "utilities": 0
+              },
+              "source": "scenario_matrix"
+            },
+            "plan_house_type": "87-unit custom shell",
+            "plan_units_per_building": 87,
+            "total_requested_units": 87,
+            "building_count": 1,
+            "site_constrained": false,
+            "selected_orientation": "default",
+            "unit_mix": [
+              {
+                "bedroom_count": 0,
+                "count": 12,
+                "ami_band": 60
+              },
+              {
+                "bedroom_count": 1,
+                "count": 30,
+                "ami_band": 60
+              },
+              {
+                "bedroom_count": 2,
+                "count": 33,
+                "ami_band": 60
+              },
+              {
+                "bedroom_count": 3,
+                "count": 12,
+                "ami_band": 60
+              }
+            ],
+            "program_segments": [
+              {
+                "segment_id": "zone-1_commercial",
+                "segment_type": "commercial",
+                "label": "L-Shape Corner Commercial",
+                "square_feet": 2500,
+                "commercial_use_type": "retail",
+                "lease_structure": "nnn",
+                "annual_rent_per_sf": 15,
+                "tenant_improvement_allowance_per_sf": 50
+              },
+              {
+                "segment_id": "zone-1_residential",
+                "segment_type": "residential",
+                "label": "L-Shape Corner Residential",
+                "square_feet": 91700,
+                "unit_mix": [
+                  {
+                    "bedroom_count": 0,
+                    "count": 12,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 1,
+                    "count": 30,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 2,
+                    "count": 25,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 3,
+                    "count": 8,
+                    "ami_band": 60
+                  }
+                ]
+              },
+              {
+                "segment_id": "zone-2_residential",
+                "segment_type": "residential",
+                "label": "Colerain Frontage Residential",
+                "square_feet": 28800,
+                "unit_mix": [
+                  {
+                    "bedroom_count": 2,
+                    "count": 4,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 2,
+                    "count": 4,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 3,
+                    "count": 4,
+                    "ami_band": 60
+                  }
+                ]
+              }
+            ]
+          },
+          "required_subsidy_to_breakeven": 5296528.3,
+          "required_subsidy_to_target_return": 5296528.3,
+          "max_supportable_land_cost": 0,
+          "max_supportable_hard_cost": 196.94,
+          "program_constraint_result": {
+            "status": "eligible_with_warnings",
+            "failures": [],
+            "warnings": [
+              {
+                "severity": "warning",
+                "code": "lihtc_9_competitive_allocation",
+                "message": "9% LIHTC feasibility remains subject to competitive allocation and QAP scoring."
+              },
+              {
+                "severity": "warning",
+                "code": "lihtc_basis_boost_not_resolved",
+                "message": "Automatic QCT/DDA basis boost lookup is not yet wired; provide basis_boost_pct explicitly when known."
+              },
+              {
+                "severity": "warning",
+                "code": "public_land_access_unconfirmed_for_sponsor",
+                "message": "Public land write-down is modeled, but the sponsor profile does not indicate direct access to below-market public land."
+              }
+            ],
+            "competitive_allocation_required": true,
+            "applied_lihtc_set_aside_test": "40_60",
+            "basis_boost_pct_applied": null,
+            "basis_boost_source": "none"
+          },
+          "predevelopment_budget_gate": {
+            "gate_status": "limited_spend",
+            "recommended_budget_total": 556842.5,
+            "recommended_budget_breakdown": {
+              "concept_design": 219806.25,
+              "survey": 43961.25,
+              "geotech": 43961.25,
+              "environmental": 43961.25,
+              "legal": 87922.5,
+              "entitlement": 73268.75,
+              "consultant_other": 43961.25
+            },
+            "confidence_tier": "low",
+            "decision_rationale": "Structure is directionally promising, but diligence gaps still limit spend confidence.",
+            "blocking_unknowns": [
+              "site_fit_context",
+              "confirmed_frontage",
+              "unit_level_rent_assumptions",
+              "construction_draw_schedule",
+              "conversion_or_refi_timing",
+              "reserve_release_schedule"
+            ],
+            "next_required_inputs": [
+              "site_fit_context",
+              "confirmed_frontage",
+              "unit_level_rent_assumptions",
+              "construction_draw_schedule",
+              "conversion_or_refi_timing",
+              "reserve_release_schedule"
+            ]
+          },
+          "confidence_notes": [
+            "Requested building type mixed_use resolved to custom shell colerain-north-bend-gateway_right-sized.",
+            "Custom shell screening used 125.3x125.3 at 6 stories instead of a catalog plan.",
+            "Multi-building site plan colerain-north-bend-gateway_right-sized was translated to an aggregate shell for v1 deal structuring while preserving per-building land and shared-cost allocations in the input contract.",
+            "Run is site-agnostic and relies on market_context rather than a resolved site.",
+            "Missing unit rents were auto-derived from the Hamilton County 2025 AMI rent-limit schedule.",
+            "Rental revenue uses partial unit-level pricing coverage and may rely on plan-average fallbacks.",
+            "Private sponsor defaults assume market-rate execution posture unless explicit mission capital or partner access is supplied.",
+            "Hamilton County Land Reutilization Corporation hclrc_controlled_assemblage",
+            "9% LIHTC feasibility remains subject to competitive allocation and QAP scoring.",
+            "Automatic QCT/DDA basis boost lookup is not yet wired; provide basis_boost_pct explicitly when known.",
+            "Public land write-down is modeled, but the sponsor profile does not indicate direct access to below-market public land."
+          ],
+          "verification_summary": {
+            "arithmetic_checks": [
+              {
+                "check_name": "sources_uses_gap_consistency",
+                "status": "passed",
+                "message": "Sources minus uses matches the reported gap or surplus."
+              },
+              {
+                "check_name": "required_subsidy_consistency",
+                "status": "passed",
+                "message": "Required subsidy to breakeven matches the computed gap."
+              },
+              {
+                "check_name": "feasibility_status_consistency",
+                "status": "passed",
+                "message": "Feasibility status is consistent with the computed subsidy gap."
+              },
+              {
+                "check_name": "rental_permanent_debt_service_consistency",
+                "status": "passed",
+                "message": "Permanent debt implies positive annual debt service."
+              },
+              {
+                "check_name": "rental_dscr_consistency",
+                "status": "passed",
+                "message": "Reported DSCR matches adjusted NOI and annual debt service."
+              }
+            ],
+            "data_validation_notes": [
+              "Arithmetic checks were evaluated against the engine output for this run.",
+              "Run is site-agnostic and did not use a resolved parcel/site record.",
+              "Rent assumptions were derived from the Hamilton County 2025 AMI rent-limit schedule."
+            ],
+            "human_review_flags": [
+              "Historical closed-deal backtest is not available for this run.",
+              "Construction cost, market rent, and sale assumptions remain caller- or config-driven inputs and are not independently appraised by the engine.",
+              "LIHTC structures still require human review of award likelihood, legal structure, and investor terms."
+            ],
+            "historical_backtest_status": "not_available",
+            "requires_human_review": true
+          },
+          "missing_inputs_for_full_proforma": [
+            "site_fit_context",
+            "confirmed_frontage",
+            "unit_level_rent_assumptions",
+            "construction_draw_schedule",
+            "conversion_or_refi_timing",
+            "reserve_release_schedule"
+          ]
+        }
+      },
+      "annualCashFlow": {
+        "years": [
+          {
+            "year": 1,
+            "grossPotentialIncome": 1004944.5,
+            "effectiveGrossIncome": 943522.83,
+            "operatingExpensesBeforeAbatement": 650092.44,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 650092.44,
+            "annualNoi": 293430.39,
+            "annualDebtService": 525039.21,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": -231608.82,
+            "endingLoanBalance": 6232028.4,
+            "annualDepreciation": 1411066.11,
+            "taxableIncome": -1642674.93,
+            "taxLiability": 0,
+            "afterTaxCashFlow": -231608.82
+          },
+          {
+            "year": 2,
+            "grossPotentialIncome": 1366724.52,
+            "effectiveGrossIncome": 1283191.05,
+            "operatingExpensesBeforeAbatement": 663094.29,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 663094.29,
+            "annualNoi": 620096.76,
+            "annualDebtService": 525039.21,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 95057.55,
+            "endingLoanBalance": 6124360.61,
+            "annualDepreciation": 1411066.11,
+            "taxableIncome": -1316008.56,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 95057.55
+          },
+          {
+            "year": 3,
+            "grossPotentialIncome": 1394059.01,
+            "effectiveGrossIncome": 1308854.87,
+            "operatingExpensesBeforeAbatement": 676356.17,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 676356.17,
+            "annualNoi": 632498.7,
+            "annualDebtService": 525039.21,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 107459.49,
+            "endingLoanBalance": 6009196.13,
+            "annualDepreciation": 1411066.11,
+            "taxableIncome": -1303606.62,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 107459.49
+          },
+          {
+            "year": 4,
+            "grossPotentialIncome": 1421940.19,
+            "effectiveGrossIncome": 1335031.97,
+            "operatingExpensesBeforeAbatement": 689883.3,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 689883.3,
+            "annualNoi": 645148.67,
+            "annualDebtService": 525039.21,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 120109.46,
+            "endingLoanBalance": 5886012.99,
+            "annualDepreciation": 1411066.11,
+            "taxableIncome": -1290956.65,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 120109.46
+          },
+          {
+            "year": 5,
+            "grossPotentialIncome": 1450378.99,
+            "effectiveGrossIncome": 1361732.6,
+            "operatingExpensesBeforeAbatement": 703680.96,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 703680.96,
+            "annualNoi": 658051.64,
+            "annualDebtService": 525039.21,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 133012.43,
+            "endingLoanBalance": 5754252.86,
+            "annualDepreciation": 1411066.11,
+            "taxableIncome": -1278053.68,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 133012.43
+          },
+          {
+            "year": 6,
+            "grossPotentialIncome": 1479386.57,
+            "effectiveGrossIncome": 1388967.25,
+            "operatingExpensesBeforeAbatement": 717754.58,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 717754.58,
+            "annualNoi": 671212.67,
+            "annualDebtService": 525039.21,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 146173.46,
+            "endingLoanBalance": 5613318.55,
+            "annualDepreciation": 1411066.11,
+            "taxableIncome": -1264892.65,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 146173.46
+          },
+          {
+            "year": 7,
+            "grossPotentialIncome": 1508974.31,
+            "effectiveGrossIncome": 1416746.61,
+            "operatingExpensesBeforeAbatement": 732109.67,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 732109.67,
+            "annualNoi": 684636.94,
+            "annualDebtService": 525039.21,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 159597.73,
+            "endingLoanBalance": 5462571.27,
+            "annualDepreciation": 1411066.11,
+            "taxableIncome": -1251468.38,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 159597.73
+          },
+          {
+            "year": 8,
+            "grossPotentialIncome": 1539153.79,
+            "effectiveGrossIncome": 1445081.53,
+            "operatingExpensesBeforeAbatement": 746751.87,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 746751.87,
+            "annualNoi": 698329.66,
+            "annualDebtService": 525039.21,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 173290.45,
+            "endingLoanBalance": 5301327.77,
+            "annualDepreciation": 1411066.11,
+            "taxableIncome": -1237775.66,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 173290.45
+          },
+          {
+            "year": 9,
+            "grossPotentialIncome": 1569936.87,
+            "effectiveGrossIncome": 1473983.17,
+            "operatingExpensesBeforeAbatement": 761686.91,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 761686.91,
+            "annualNoi": 712296.26,
+            "annualDebtService": 525039.21,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 187257.05,
+            "endingLoanBalance": 5128857.21,
+            "annualDepreciation": 1411066.11,
+            "taxableIncome": -1223809.06,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 187257.05
+          },
+          {
+            "year": 10,
+            "grossPotentialIncome": 1601335.61,
+            "effectiveGrossIncome": 1503462.83,
+            "operatingExpensesBeforeAbatement": 776920.64,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 776920.64,
+            "annualNoi": 726542.19,
+            "annualDebtService": 525039.21,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 201502.98,
+            "endingLoanBalance": 4944377.89,
+            "annualDepreciation": 1411066.11,
+            "taxableIncome": -1209563.13,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 201502.98
+          },
+          {
+            "year": 11,
+            "grossPotentialIncome": 1633362.32,
+            "effectiveGrossIncome": 1533532.09,
+            "operatingExpensesBeforeAbatement": 792459.06,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 792459.06,
+            "annualNoi": 741073.03,
+            "annualDebtService": 525039.21,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 216033.82,
+            "endingLoanBalance": 4747053.65,
+            "annualDepreciation": 1411066.11,
+            "taxableIncome": -1195032.29,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 216033.82
+          },
+          {
+            "year": 12,
+            "grossPotentialIncome": 1666029.56,
+            "effectiveGrossIncome": 1564202.72,
+            "operatingExpensesBeforeAbatement": 808308.24,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 808308.24,
+            "annualNoi": 755894.48,
+            "annualDebtService": 525039.21,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 230855.27,
+            "endingLoanBalance": 4535990.14,
+            "annualDepreciation": 1411066.11,
+            "taxableIncome": -1180210.84,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 230855.27
+          },
+          {
+            "year": 13,
+            "grossPotentialIncome": 1699350.15,
+            "effectiveGrossIncome": 1595486.78,
+            "operatingExpensesBeforeAbatement": 824474.4,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 824474.4,
+            "annualNoi": 771012.38,
+            "annualDebtService": 525039.21,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 245973.17,
+            "endingLoanBalance": 4310230.7,
+            "annualDepreciation": 1411066.11,
+            "taxableIncome": -1165092.94,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 245973.17
+          },
+          {
+            "year": 14,
+            "grossPotentialIncome": 1733337.16,
+            "effectiveGrossIncome": 1627396.52,
+            "operatingExpensesBeforeAbatement": 840963.89,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 840963.89,
+            "annualNoi": 786432.63,
+            "annualDebtService": 525039.21,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 261393.42,
+            "endingLoanBalance": 4068752.1,
+            "annualDepreciation": 1411066.11,
+            "taxableIncome": -1149672.69,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 261393.42
+          },
+          {
+            "year": 15,
+            "grossPotentialIncome": 1768003.9,
+            "effectiveGrossIncome": 1659944.45,
+            "operatingExpensesBeforeAbatement": 857783.17,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 857783.17,
+            "annualNoi": 802161.28,
+            "annualDebtService": 525039.21,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 277122.07,
+            "endingLoanBalance": 3810459.85,
+            "annualDepreciation": 1411066.11,
+            "taxableIncome": -1133944.04,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 277122.07
+          }
+        ],
+        "sponsorEquity": 10372619,
+        "unfundedGap": 5296528.3,
+        "initialEquity": 15669147.3,
+        "exitValue": 12340942.77,
+        "saleCosts": 370228.28,
+        "remainingBalance": 3810459.85,
+        "exitEquity": 8160254.64,
+        "exitEquityAfterTax": 2868756.73,
+        "leveragedIrr": -0.0281,
+        "avgCashOnCash": 0.0099,
+        "afterTaxIrr": -0.0794,
+        "afterTaxCashOnCash": 0.0099,
+        "hold_years": 15,
+        "irr": -0.0281,
+        "avg_cash_on_cash": 0.0099,
+        "annual_coc": [
+          -0.01,
+          0.01,
+          0.01,
+          0.01,
+          0.01,
+          0.01,
+          0.01,
+          0.01,
+          0.01,
+          0.01,
+          0.01,
+          0.01,
+          0.02,
+          0.02,
+          0.02
+        ],
+        "exit": {
+          "exit_value": 12340942.77,
+          "sale_costs": 370228.28,
+          "remaining_balance": 3810459.85,
+          "exit_equity": 8160254.64,
+          "exit_equity_after_tax": 2868756.73
+        }
+      },
+      "workbook": {
+        "label": "Right-Sized",
+        "description": "87 units, 2 buildings, solid CDC",
+        "buildings": 2,
+        "units": 87,
+        "retailSf": 2500,
+        "grossSf": 123000,
+        "summary": {
+          "totalDevCost": 38807819,
+          "totalSources": 33511290.7,
+          "noiStabilized": 607938,
+          "dscr": 1.1579,
+          "yieldOnCost": 0.0157,
+          "avgCashOnCash": 0.0099,
+          "gapOrSurplus": -5296528.3,
+          "requiredSubsidyToBreakeven": 5296528.3,
+          "requiredSubsidyToTargetReturn": 5296528.3,
+          "lihtcEquity": 27178603.2,
+          "permLoan": 6332687.5,
+          "costPerUnit": 446066.89
+        },
+        "budget": {
+          "uses": [
+            {
+              "category": "Land",
+              "label": "Land",
+              "amount": 3501
+            },
+            {
+              "category": "Hard Costs",
+              "label": "Hard Costs",
+              "amount": 29307500
+            },
+            {
+              "category": "Hard Costs",
+              "label": "Commercial TI Allowance",
+              "amount": 125000
+            },
+            {
+              "category": "Site Work",
+              "label": "Water/Sewer Tap Fees",
+              "amount": 150000
+            },
+            {
+              "category": "Site Work",
+              "label": "Landscaping",
+              "amount": 100000
+            },
+            {
+              "category": "Soft Costs",
+              "label": "Soft Costs",
+              "amount": 3516900
+            },
+            {
+              "category": "Contingency",
+              "label": "Contingency",
+              "amount": 2344600
+            },
+            {
+              "category": "Reserves",
+              "label": "Reserves",
+              "amount": 52200
+            },
+            {
+              "category": "Developer Fee",
+              "label": "Developer Fee",
+              "amount": 1641220
+            },
+            {
+              "category": "Financing",
+              "label": "Financing Carry Estimate",
+              "amount": 1566898
+            }
+          ],
+          "totalUses": 38807819
+        },
+        "sources": {
+          "items": [
+            {
+              "label": "Permanent Debt",
+              "type": "debt",
+              "amount": 6332687.5,
+              "terms": "6.75% / 25yr / 1.16x DSCR"
+            },
+            {
+              "label": "Tax Credit Equity",
+              "type": "equity",
+              "amount": 27178603.2,
+              "terms": "LIHTC 9% / $0.92 / 10yr credit"
+            }
+          ],
+          "totalSources": 33511290.7
+        },
+        "proforma": [
+          {
+            "label": "Potential Gross Income",
+            "amount": 1339926
+          },
+          {
+            "label": "Effective Gross Income",
+            "amount": 1258030.44
+          },
+          {
+            "label": "Operating Expenses",
+            "amount": -650092.44
+          },
+          {
+            "label": "Net Operating Income",
+            "amount": 607938
+          },
+          {
+            "label": "Annual Debt Service",
+            "amount": -525039.21
+          },
+          {
+            "label": "Cash Flow Before Tax",
+            "amount": 82898.79
+          }
+        ],
+        "returns": {
+          "yieldOnCost": 0.0157,
+          "avgCashOnCash": 0.0099,
+          "leveragedIrr": -0.0281,
+          "afterTaxIrr": -0.0794,
+          "dscr": 1.1579,
+          "permLoanToValue": 0.6771,
+          "permLoanToCost": 0.1632,
+          "stabilizedValue": 9352892.31,
+          "costPerUnit": 446066.89,
+          "noiPerUnit": 6987.79
+        },
+        "constraints": {
+          "gate": "limited_spend",
+          "warnings": [
+            "Modeled land basis combines acquisitionCost and closingCosts because the current deal engine prices a single land use line.",
+            "Footprint width/depth are approximated from usable pad area because finance/zones.json currently stores area, not explicit building dimensions.",
+            "Footprint width/depth are approximated from usable pad area because finance/zones.json currently stores area, not explicit building dimensions.",
+            "Project program profile inferred from active commercial segments.",
+            "9% LIHTC feasibility remains subject to competitive allocation and QAP scoring.",
+            "Automatic QCT/DDA basis boost lookup is not yet wired; provide basis_boost_pct explicitly when known.",
+            "Public land write-down is modeled, but the sponsor profile does not indicate direct access to below-market public land.",
+            "Missing input: site_fit_context",
+            "Missing input: confirmed_frontage",
+            "Missing input: unit_level_rent_assumptions",
+            "Missing input: construction_draw_schedule",
+            "Missing input: conversion_or_refi_timing",
+            "Missing input: reserve_release_schedule",
+            "Full pro forma still needs: site_fit_context",
+            "Full pro forma still needs: confirmed_frontage",
+            "Full pro forma still needs: unit_level_rent_assumptions",
+            "Full pro forma still needs: construction_draw_schedule",
+            "Full pro forma still needs: conversion_or_refi_timing",
+            "Full pro forma still needs: reserve_release_schedule"
+          ],
+          "unsupported": [
+            "assumptions.construction.siteExtraordinary.{hillsideRetaining,stormwaterBioswale,demolition}: These extraordinary site-work buckets are preserved on custom_site_plan_spec.shared_site_costs for future consumers, but the v1 deal engine does not price them yet.",
+            "assumptions.financing.constructionLoan: Project-level construction loan term overrides are not injected into v1 deal structuring. The engine still resolves the financing product from canonical config.",
+            "assumptions.financing.permanentLoan: Project-level permanent loan overrides are not injected into v1 deal structuring. The engine still resolves the permanent product from canonical config.",
+            "assumptions.operations.opexRatioPct: High-level opex ratio is not a direct v1 deal-engine input. The loader maps vacancy, bad debt, and property management, then falls back to canonical per-unit operating lines.",
+            "assumptions.retail.capRate: Retail cap rate is not applied directly in the v1 project-deal loader. Project valuation still uses the canonical residential cap-rate path.",
+            "facts.overlays.{craTier,craEligibility}: CRA Expand is preserved as a verified overlay fact, but the v1 deal engine does not currently allow cra_expand_tax_abatement on this custom site-plan scope.",
+            "assumptions.developerFee.lihtcMaxPct: LIHTC developer-fee max percentage is not mapped directly because the v1 engine contract caps developer fee in dollars, not as a percent-of-basis constraint."
+          ],
+          "arithmeticChecks": [
+            {
+              "checkName": "sources_uses_gap_consistency",
+              "status": "passed",
+              "message": "Sources minus uses matches the reported gap or surplus."
+            },
+            {
+              "checkName": "required_subsidy_consistency",
+              "status": "passed",
+              "message": "Required subsidy to breakeven matches the computed gap."
+            },
+            {
+              "checkName": "feasibility_status_consistency",
+              "status": "passed",
+              "message": "Feasibility status is consistent with the computed subsidy gap."
+            },
+            {
+              "checkName": "rental_permanent_debt_service_consistency",
+              "status": "passed",
+              "message": "Permanent debt implies positive annual debt service."
+            },
+            {
+              "checkName": "rental_dscr_consistency",
+              "status": "passed",
+              "message": "Reported DSCR matches adjusted NOI and annual debt service."
+            }
+          ],
+          "humanReviewFlags": [
+            "Historical closed-deal backtest is not available for this run.",
+            "Construction cost, market rent, and sale assumptions remain caller- or config-driven inputs and are not independently appraised by the engine.",
+            "LIHTC structures still require human review of award likelihood, legal structure, and investor terms."
+          ]
+        }
+      }
+    },
+    {
+      "id": "three-buildings",
+      "name": "Three Buildings",
+      "description": "131 units, 3 buildings, co-developer",
+      "summary": {
+        "scenario_id": "three-buildings",
+        "label": "Three Buildings",
+        "active_zone_ids": [
+          "zone-1",
+          "zone-2",
+          "zone-3"
+        ],
+        "total_units": 131,
+        "total_commercial_square_feet": 4000,
+        "total_constructed_square_feet": 167700
+      },
+      "request": {
+        "schema_version": 1,
+        "run_kind": "structure_plan_deal",
+        "custom_site_plan_spec": {
+          "site_plan_id": "colerain-north-bend-gateway_three-buildings",
+          "site_plan_label": "Three Buildings",
+          "arrangement_type": "three-buildings",
+          "dominant_building_type": "mixed_use",
+          "site_layout": "frontage_bar",
+          "buildings": [
+            {
+              "building_id": "zone-1",
+              "shell_id": "zone-1",
+              "shell_label": "L-Shape Corner",
+              "building_type": "mixed_use",
+              "site_layout": "frontage_bar",
+              "use_class": "residential",
+              "units_per_building": 75,
+              "building_width_ft": 125.3,
+              "building_depth_ft": 125.3,
+              "stories_above_grade": 6,
+              "above_grade_building_sf": 94200,
+              "total_constructed_sf": 94200,
+              "sf_per_unit": 1256,
+              "parking_strategy": {
+                "parking_family": "tuck_under",
+                "stall_count": 40
+              }
+            },
+            {
+              "building_id": "zone-2",
+              "shell_id": "zone-2",
+              "shell_label": "Colerain Frontage",
+              "building_type": "apartment",
+              "site_layout": "frontage_bar",
+              "use_class": "residential",
+              "units_per_building": 32,
+              "building_width_ft": 120,
+              "building_depth_ft": 120,
+              "stories_above_grade": 3,
+              "above_grade_building_sf": 43200,
+              "total_constructed_sf": 43200,
+              "sf_per_unit": 1350
+            },
+            {
+              "building_id": "zone-3",
+              "shell_id": "zone-3",
+              "shell_label": "North Bend Frontage",
+              "building_type": "mixed_use",
+              "site_layout": "frontage_bar",
+              "use_class": "residential",
+              "units_per_building": 24,
+              "building_width_ft": 100.5,
+              "building_depth_ft": 100.5,
+              "stories_above_grade": 3,
+              "above_grade_building_sf": 30300,
+              "total_constructed_sf": 30300,
+              "sf_per_unit": 1262.5
+            }
+          ],
+          "aggregate_units": 131,
+          "aggregate_above_grade_building_sf": 167700,
+          "aggregate_total_constructed_sf": 167700,
+          "land_cost_allocation_policy": "pro_rata_gross_sf",
+          "shared_site_costs": {
+            "parking_and_access": 0,
+            "site_work": 200000,
+            "utilities": 0
+          },
+          "source": "scenario_matrix"
+        },
+        "site_fit_context": {
+          "site_slug": "colerain-north-bend-gateway",
+          "canonical_address": "colerain-north-bend-gateway",
+          "municipality_slug": "cincinnati",
+          "zoning_code": "CC-P-B+CC-M-B+SF-6-MH"
+        },
+        "deal_definition": {
+          "unit_mix": [],
+          "segments": [
+            {
+              "segment_id": "zone-1_commercial",
+              "segment_type": "commercial",
+              "label": "L-Shape Corner Commercial",
+              "square_feet": 2500,
+              "commercial_use_type": "retail",
+              "lease_structure": "nnn",
+              "annual_rent_per_sf": 15,
+              "tenant_improvement_allowance_per_sf": 50
+            },
+            {
+              "segment_id": "zone-1_residential",
+              "segment_type": "residential",
+              "label": "L-Shape Corner Residential",
+              "square_feet": 91700,
+              "unit_mix": [
+                {
+                  "bedroom_count": 0,
+                  "count": 12,
+                  "ami_band": 60
+                },
+                {
+                  "bedroom_count": 1,
+                  "count": 30,
+                  "ami_band": 60
+                },
+                {
+                  "bedroom_count": 2,
+                  "count": 25,
+                  "ami_band": 60
+                },
+                {
+                  "bedroom_count": 3,
+                  "count": 8,
+                  "ami_band": 60
+                }
+              ]
+            },
+            {
+              "segment_id": "zone-2_residential",
+              "segment_type": "residential",
+              "label": "Colerain Frontage Residential",
+              "square_feet": 43200,
+              "unit_mix": [
+                {
+                  "bedroom_count": 1,
+                  "count": 8,
+                  "ami_band": 60
+                },
+                {
+                  "bedroom_count": 2,
+                  "count": 14,
+                  "ami_band": 60
+                },
+                {
+                  "bedroom_count": 3,
+                  "count": 10,
+                  "ami_band": 60
+                }
+              ]
+            },
+            {
+              "segment_id": "zone-3_commercial",
+              "segment_type": "commercial",
+              "label": "North Bend Frontage Commercial",
+              "square_feet": 1500,
+              "commercial_use_type": "service",
+              "lease_structure": "nnn"
+            },
+            {
+              "segment_id": "zone-3_residential",
+              "segment_type": "residential",
+              "label": "North Bend Frontage Residential",
+              "square_feet": 28800,
+              "unit_mix": [
+                {
+                  "bedroom_count": 0,
+                  "count": 4,
+                  "ami_band": 60
+                },
+                {
+                  "bedroom_count": 1,
+                  "count": 10,
+                  "ami_band": 60
+                },
+                {
+                  "bedroom_count": 2,
+                  "count": 8,
+                  "ami_band": 60
+                },
+                {
+                  "bedroom_count": 3,
+                  "count": 2,
+                  "ami_band": 60
+                }
+              ]
+            }
+          ],
+          "housing_tier": "affordable",
+          "ami_band": 60,
+          "tenure_strategy": "rental_hold",
+          "funding_path": "lihtc",
+          "project_program_profile_id": "mixed_use",
+          "subordinate_financing_products": [],
+          "subsidy_program_ids": [],
+          "developer_fee_policy": {
+            "calculation_basis": "hard_plus_soft",
+            "developer_fee_pct": 0.05,
+            "developer_fee_floor": 5000
+          },
+          "reserve_policy": {
+            "replacement_reserve_per_unit": 300
+          },
+          "program_eligibility_policy": {
+            "enforce_program_compatibility": true,
+            "enforce_ami_mix_rules": true,
+            "enforce_use_class_rules": true,
+            "enforce_location_rules": true,
+            "enforce_construction_type_rules": true,
+            "enforce_mutual_exclusions": true,
+            "eligibility_override_mode": "strict"
+          },
+          "sponsor_profile": {
+            "developer_archetype": "private_for_profit",
+            "mission_constraints": {
+              "long_term_affordability_required": false,
+              "permanent_land_stewardship": false,
+              "anti_displacement_priority": false
+            },
+            "capital_access_profile": {
+              "can_raise_tax_credit_equity": true,
+              "can_raise_program_related_investments": false,
+              "can_access_philanthropic_grants": false,
+              "can_access_below_market_public_land": false,
+              "can_raise_sponsor_equity": true
+            },
+            "return_tolerance_profile": {
+              "target_cash_on_cash_floor": null,
+              "target_developer_fee_floor": null,
+              "allows_deferred_fee": false
+            }
+          },
+          "land_control_mode": {
+            "mode": "public_land_write_down",
+            "acquisition_cost": 3501,
+            "land_use_restrictions": [],
+            "disposition_conditions": [],
+            "notes": "Hamilton County Land Reutilization Corporation hclrc_controlled_assemblage"
+          }
+        },
+        "assumptions": {
+          "land_cost": 3501,
+          "hard_cost_basis": 210,
+          "soft_cost_basis": 0.1,
+          "contingency_basis": 0.06,
+          "market_context": {
+            "geography_type": "municipality",
+            "geography_ref": "cincinnati",
+            "construction_cost_region": "cincinnati_metro",
+            "rent_region": "mount_airy",
+            "sale_region": "mount_airy",
+            "insurance_region": "cincinnati_metro",
+            "tax_region": "hamilton_county_oh",
+            "source_as_of_date": "HUD-2025",
+            "notes": "Loaded from colerain-north-bend-gateway/finance"
+          },
+          "ami_rent_limit_assumptions": {
+            "source": "hamilton_county_2025_hud",
+            "percent_of_income": 0.3
+          },
+          "operating_expense_assumptions": {
+            "property_management_pct": 0.08,
+            "maintenance_and_repairs_per_unit": 1800,
+            "utilities_owner_paid_per_unit": 600,
+            "insurance_per_unit": 900,
+            "taxes_per_unit": 2700,
+            "compliance_monitoring_per_unit": 0,
+            "annual_audit_and_reporting_cost": 0,
+            "replacement_reserve_per_unit": 300,
+            "vacancy_pct": 0.05,
+            "bad_debt_pct": 0.01
+          },
+          "revenue_assumptions": {
+            "cap_rate": 0.065
+          },
+          "timeline_assumptions": {
+            "predev_months": 2,
+            "construction_months": 8,
+            "lease_up_months": 3
+          },
+          "exit_or_hold_assumptions": {
+            "hold_years": 15,
+            "rent_growth_pct": 0.02,
+            "expense_growth_pct": 0.02
+          },
+          "tax_credit_assumptions": {
+            "credit_type": "lihtc_9",
+            "credit_period_years": 10,
+            "credit_pricing_per_dollar": 0.92
+          },
+          "site_development_costs": {
+            "utility_connection_fee": 150000,
+            "landscaping_allowance": 100000
+          },
+          "tax_assumptions": {
+            "mill_rate": 0.062,
+            "assessment_ratio": 0.35,
+            "marginal_federal_rate": 0.24,
+            "marginal_state_rate": 0.04,
+            "depreciation_years": 27.5,
+            "depreciation_recapture_rate": 0.25
+          }
+        },
+        "requested_views": [
+          "summary",
+          "analyst"
+        ]
+      },
+      "loaderDiagnostics": [
+        {
+          "kind": "combined_value",
+          "field": "assumptions.land_cost",
+          "message": "Modeled land basis combines acquisitionCost and closingCosts because the current deal engine prices a single land use line.",
+          "value": 3501
+        },
+        {
+          "kind": "unsupported_engine_field",
+          "field": "assumptions.construction.siteExtraordinary.{hillsideRetaining,stormwaterBioswale,demolition}",
+          "message": "These extraordinary site-work buckets are preserved on custom_site_plan_spec.shared_site_costs for future consumers, but the v1 deal engine does not price them yet.",
+          "value": 200000
+        },
+        {
+          "kind": "approximated_dimension",
+          "field": "custom_site_plan_spec.buildings.zone-1.{building_width_ft,building_depth_ft}",
+          "message": "Footprint width/depth are approximated from usable pad area because finance/zones.json currently stores area, not explicit building dimensions.",
+          "value": {
+            "footprint_sf": 15700,
+            "building_width_ft": 125.3,
+            "building_depth_ft": 125.3
+          }
+        },
+        {
+          "kind": "approximated_dimension",
+          "field": "custom_site_plan_spec.buildings.zone-2.{building_width_ft,building_depth_ft}",
+          "message": "Footprint width/depth are approximated from usable pad area because finance/zones.json currently stores area, not explicit building dimensions.",
+          "value": {
+            "footprint_sf": 14400,
+            "building_width_ft": 120,
+            "building_depth_ft": 120
+          }
+        },
+        {
+          "kind": "approximated_dimension",
+          "field": "custom_site_plan_spec.buildings.zone-3.{building_width_ft,building_depth_ft}",
+          "message": "Footprint width/depth are approximated from usable pad area because finance/zones.json currently stores area, not explicit building dimensions.",
+          "value": {
+            "footprint_sf": 10100,
+            "building_width_ft": 100.5,
+            "building_depth_ft": 100.5
+          }
+        },
+        {
+          "kind": "unsupported_engine_field",
+          "field": "assumptions.financing.constructionLoan",
+          "message": "Project-level construction loan term overrides are not injected into v1 deal structuring. The engine still resolves the financing product from canonical config.",
+          "value": {
+            "rate": 0.0875,
+            "ltcPct": 0.75,
+            "termMonths": 14,
+            "originationPct": 0.015
+          }
+        },
+        {
+          "kind": "unsupported_engine_field",
+          "field": "assumptions.financing.permanentLoan",
+          "message": "Project-level permanent loan overrides are not injected into v1 deal structuring. The engine still resolves the permanent product from canonical config.",
+          "value": {
+            "rate": 0.0625,
+            "ltvPct": 0.75,
+            "amortYears": 30,
+            "minDscr": 1.25
+          }
+        },
+        {
+          "kind": "unsupported_engine_field",
+          "field": "assumptions.operations.opexRatioPct",
+          "message": "High-level opex ratio is not a direct v1 deal-engine input. The loader maps vacancy, bad debt, and property management, then falls back to canonical per-unit operating lines.",
+          "value": 0.35
+        },
+        {
+          "kind": "unsupported_engine_field",
+          "field": "assumptions.retail.capRate",
+          "message": "Retail cap rate is not applied directly in the v1 project-deal loader. Project valuation still uses the canonical residential cap-rate path.",
+          "value": 0.075
+        },
+        {
+          "kind": "normalized_value",
+          "field": "deal_definition.project_program_profile_id",
+          "message": "Project program profile inferred from active commercial segments.",
+          "value": "mixed_use"
+        },
+        {
+          "kind": "unsupported_engine_field",
+          "field": "facts.overlays.{craTier,craEligibility}",
+          "message": "CRA Expand is preserved as a verified overlay fact, but the v1 deal engine does not currently allow cra_expand_tax_abatement on this custom site-plan scope.",
+          "value": {
+            "craTier": "Expand",
+            "craEligibility": "new_construction"
+          }
+        },
+        {
+          "kind": "unsupported_engine_field",
+          "field": "assumptions.developerFee.lihtcMaxPct",
+          "message": "LIHTC developer-fee max percentage is not mapped directly because the v1 engine contract caps developer fee in dollars, not as a percent-of-basis constraint.",
+          "value": 0.1
+        }
+      ],
+      "dealResult": {
+        "schema_version": 1,
+        "engine_version": "deal-structuring-v1",
+        "deal_structure": {
+          "structure_id": "deal_cincinnati_colerain_north_bend_gateway_three_buildings_rental_hold",
+          "feasibility_status": "viable_with_gap",
+          "completeness_status": "deal_structuring_ready",
+          "plan_scope": {
+            "plan_code": null,
+            "plan_family": "mixed_use",
+            "custom_shell_id": "colerain-north-bend-gateway_three-buildings",
+            "custom_shell_label": "Three Buildings",
+            "building_type": "mixed_use",
+            "site_layout": "frontage_bar"
+          },
+          "deal_definition": {
+            "unit_mix": [
+              {
+                "bedroom_count": 0,
+                "count": 16,
+                "ami_band": 60
+              },
+              {
+                "bedroom_count": 1,
+                "count": 48,
+                "ami_band": 60
+              },
+              {
+                "bedroom_count": 2,
+                "count": 47,
+                "ami_band": 60
+              },
+              {
+                "bedroom_count": 3,
+                "count": 20,
+                "ami_band": 60
+              }
+            ],
+            "segments": [
+              {
+                "segment_id": "zone-1_commercial",
+                "segment_type": "commercial",
+                "label": "L-Shape Corner Commercial",
+                "square_feet": 2500,
+                "commercial_use_type": "retail",
+                "lease_structure": "nnn",
+                "annual_rent_per_sf": 15,
+                "tenant_improvement_allowance_per_sf": 50
+              },
+              {
+                "segment_id": "zone-1_residential",
+                "segment_type": "residential",
+                "label": "L-Shape Corner Residential",
+                "square_feet": 91700,
+                "unit_mix": [
+                  {
+                    "bedroom_count": 0,
+                    "count": 12,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 1,
+                    "count": 30,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 2,
+                    "count": 25,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 3,
+                    "count": 8,
+                    "ami_band": 60
+                  }
+                ]
+              },
+              {
+                "segment_id": "zone-2_residential",
+                "segment_type": "residential",
+                "label": "Colerain Frontage Residential",
+                "square_feet": 43200,
+                "unit_mix": [
+                  {
+                    "bedroom_count": 1,
+                    "count": 8,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 2,
+                    "count": 14,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 3,
+                    "count": 10,
+                    "ami_band": 60
+                  }
+                ]
+              },
+              {
+                "segment_id": "zone-3_commercial",
+                "segment_type": "commercial",
+                "label": "North Bend Frontage Commercial",
+                "square_feet": 1500,
+                "commercial_use_type": "service",
+                "lease_structure": "nnn"
+              },
+              {
+                "segment_id": "zone-3_residential",
+                "segment_type": "residential",
+                "label": "North Bend Frontage Residential",
+                "square_feet": 28800,
+                "unit_mix": [
+                  {
+                    "bedroom_count": 0,
+                    "count": 4,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 1,
+                    "count": 10,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 2,
+                    "count": 8,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 3,
+                    "count": 2,
+                    "ami_band": 60
+                  }
+                ]
+              }
+            ],
+            "housing_tier": "affordable",
+            "ami_band": 60,
+            "tenure_strategy": "rental_hold",
+            "funding_path": "lihtc",
+            "project_program_profile_id": "mixed_use",
+            "subordinate_financing_products": [],
+            "subsidy_program_ids": [],
+            "developer_fee_policy": {
+              "calculation_basis": "hard_plus_soft",
+              "developer_fee_pct": 0.05,
+              "developer_fee_floor": 5000
+            },
+            "reserve_policy": {
+              "replacement_reserve_per_unit": 300
+            },
+            "program_eligibility_policy": {
+              "enforce_program_compatibility": true,
+              "enforce_ami_mix_rules": true,
+              "enforce_use_class_rules": true,
+              "enforce_location_rules": true,
+              "enforce_construction_type_rules": true,
+              "enforce_mutual_exclusions": true,
+              "eligibility_override_mode": "strict"
+            },
+            "sponsor_profile": {
+              "developer_archetype": "private_for_profit",
+              "mission_constraints": {
+                "long_term_affordability_required": false,
+                "permanent_land_stewardship": false,
+                "anti_displacement_priority": false
+              },
+              "capital_access_profile": {
+                "can_raise_tax_credit_equity": true,
+                "can_raise_program_related_investments": false,
+                "can_access_philanthropic_grants": false,
+                "can_access_below_market_public_land": false,
+                "can_raise_sponsor_equity": true
+              },
+              "return_tolerance_profile": {
+                "target_cash_on_cash_floor": null,
+                "target_developer_fee_floor": null,
+                "allows_deferred_fee": false
+              }
+            },
+            "land_control_mode": {
+              "mode": "public_land_write_down",
+              "acquisition_cost": 3501,
+              "land_use_restrictions": [],
+              "disposition_conditions": [],
+              "notes": "Hamilton County Land Reutilization Corporation hclrc_controlled_assemblage"
+            }
+          },
+          "assumptions": {
+            "land_cost": 3501,
+            "hard_cost_basis": 210,
+            "soft_cost_basis": 0.1,
+            "contingency_basis": 0.06,
+            "market_context": {
+              "geography_type": "municipality",
+              "geography_ref": "cincinnati",
+              "construction_cost_region": "cincinnati_metro",
+              "rent_region": "mount_airy",
+              "sale_region": "mount_airy",
+              "insurance_region": "cincinnati_metro",
+              "tax_region": "hamilton_county_oh",
+              "source_as_of_date": "HUD-2025",
+              "notes": "Loaded from colerain-north-bend-gateway/finance"
+            },
+            "ami_rent_limit_assumptions": {
+              "source": "hamilton_county_2025_hud",
+              "percent_of_income": 0.3
+            },
+            "operating_expense_assumptions": {
+              "property_management_pct": 0.08,
+              "maintenance_and_repairs_per_unit": 1800,
+              "utilities_owner_paid_per_unit": 600,
+              "insurance_per_unit": 900,
+              "taxes_per_unit": 2700,
+              "compliance_monitoring_per_unit": 0,
+              "annual_audit_and_reporting_cost": 0,
+              "replacement_reserve_per_unit": 300,
+              "vacancy_pct": 0.05,
+              "bad_debt_pct": 0.01
+            },
+            "revenue_assumptions": {
+              "cap_rate": 0.065
+            },
+            "timeline_assumptions": {
+              "predev_months": 2,
+              "construction_months": 8,
+              "lease_up_months": 3
+            },
+            "exit_or_hold_assumptions": {
+              "hold_years": 15,
+              "rent_growth_pct": 0.02,
+              "expense_growth_pct": 0.02
+            },
+            "tax_credit_assumptions": {
+              "credit_type": "lihtc_9",
+              "credit_period_years": 10,
+              "credit_pricing_per_dollar": 0.92
+            },
+            "site_development_costs": {
+              "utility_connection_fee": 150000,
+              "landscaping_allowance": 100000
+            },
+            "tax_assumptions": {
+              "mill_rate": 0.062,
+              "assessment_ratio": 0.35,
+              "marginal_federal_rate": 0.24,
+              "marginal_state_rate": 0.04,
+              "depreciation_years": 27.5,
+              "depreciation_recapture_rate": 0.25
+            }
+          },
+          "applied_cost_model": {
+            "cost_model_path": "resolved",
+            "construction_system_id": "masonry_mixed_use_small",
+            "construction_system_selection_origin": "auto",
+            "construction_system_label": "Masonry Small Mixed-Use",
+            "construction_system_legacy_cost_preset_id": "standard_wood",
+            "building_type": "mixed_use",
+            "site_layout": "frontage_bar",
+            "matched_lookup_building_type": "mixed_use",
+            "sponsor_archetype": "private_for_profit",
+            "sponsor_archetype_origin": "explicit",
+            "base_cost_basis": {
+              "hard_cost_psf": 240,
+              "soft_cost_pct": 0.12,
+              "contingency_pct": 0.08,
+              "sale_marketing_pct": 0.03,
+              "rental_stabilization_pct": 0.025
+            },
+            "effective_cost_basis": {
+              "hard_cost_psf": 240,
+              "soft_cost_pct": 0.12,
+              "contingency_pct": 0.08,
+              "sale_marketing_pct": 0.03,
+              "rental_stabilization_pct": 0.025
+            },
+            "building_type_modifier": {
+              "hard_cost_multiplier": 1,
+              "notes": []
+            },
+            "site_layout_modifier": {
+              "hard_cost_multiplier": 1,
+              "notes": []
+            },
+            "sponsor_delivery_override": {
+              "soft_cost_pct_delta": 0,
+              "contingency_pct_delta": 0,
+              "construction_duration_months_delta": 0,
+              "notes": []
+            },
+            "applied_hard_cost_multiplier": 1,
+            "applied_notes": [],
+            "fallback_reason": null,
+            "fallback_retirement_signal": null
+          },
+          "applied_program_mix": {
+            "segments": [
+              {
+                "segment_id": "zone-1_commercial",
+                "segment_type": "commercial",
+                "label": "L-Shape Corner Commercial",
+                "square_feet": 2500,
+                "residential_unit_count": null,
+                "commercial_use_type": "retail",
+                "lease_structure": "nnn",
+                "operating_expense_ratio": 0.12,
+                "absorption_months": 12,
+                "stabilized_occupancy_pct": 0.9,
+                "revenue": {
+                  "annual_gross_potential_income": 37500,
+                  "annual_effective_gross_income": 33750,
+                  "annual_operating_expenses": 4050,
+                  "annual_noi": 29700
+                },
+                "cost": {
+                  "hard_cost_total": 387500,
+                  "tenant_improvement_allowance_total": 125000,
+                  "total_segment_cost": 512500,
+                  "effective_hard_cost_psf": 155
+                }
+              },
+              {
+                "segment_id": "zone-1_residential",
+                "segment_type": "residential",
+                "label": "L-Shape Corner Residential",
+                "square_feet": 91700,
+                "residential_unit_count": 75,
+                "commercial_use_type": null,
+                "lease_structure": null,
+                "operating_expense_ratio": 0.5482,
+                "absorption_months": 3,
+                "stabilized_occupancy_pct": 0.94,
+                "revenue": {
+                  "annual_gross_potential_income": 1073682,
+                  "annual_effective_gross_income": 1009261.08,
+                  "annual_operating_expenses": 553240.89,
+                  "annual_noi": 456020.19
+                },
+                "cost": {
+                  "hard_cost_total": 22008000,
+                  "tenant_improvement_allowance_total": 0,
+                  "total_segment_cost": 22008000,
+                  "effective_hard_cost_psf": 240
+                }
+              },
+              {
+                "segment_id": "zone-2_residential",
+                "segment_type": "residential",
+                "label": "Colerain Frontage Residential",
+                "square_feet": 43200,
+                "residential_unit_count": 32,
+                "commercial_use_type": null,
+                "lease_structure": null,
+                "operating_expense_ratio": 0.4473,
+                "absorption_months": 3,
+                "stabilized_occupancy_pct": 0.94,
+                "revenue": {
+                  "annual_gross_potential_income": 583920,
+                  "annual_effective_gross_income": 548884.8,
+                  "annual_operating_expenses": 245510.78,
+                  "annual_noi": 303374.02
+                },
+                "cost": {
+                  "hard_cost_total": 10368000,
+                  "tenant_improvement_allowance_total": 0,
+                  "total_segment_cost": 10368000,
+                  "effective_hard_cost_psf": 240
+                }
+              },
+              {
+                "segment_id": "zone-3_commercial",
+                "segment_type": "commercial",
+                "label": "North Bend Frontage Commercial",
+                "square_feet": 1500,
+                "residential_unit_count": null,
+                "commercial_use_type": "service",
+                "lease_structure": "nnn",
+                "operating_expense_ratio": 0.12,
+                "absorption_months": 10,
+                "stabilized_occupancy_pct": 0.92,
+                "revenue": {
+                  "annual_gross_potential_income": 30000,
+                  "annual_effective_gross_income": 27600,
+                  "annual_operating_expenses": 3312,
+                  "annual_noi": 24288
+                },
+                "cost": {
+                  "hard_cost_total": 225000,
+                  "tenant_improvement_allowance_total": 45000,
+                  "total_segment_cost": 270000,
+                  "effective_hard_cost_psf": 150
+                }
+              },
+              {
+                "segment_id": "zone-3_residential",
+                "segment_type": "residential",
+                "label": "North Bend Frontage Residential",
+                "square_feet": 28800,
+                "residential_unit_count": 24,
+                "commercial_use_type": null,
+                "lease_structure": null,
+                "operating_expense_ratio": 0.556,
+                "absorption_months": 3,
+                "stabilized_occupancy_pct": 0.94,
+                "revenue": {
+                  "annual_gross_potential_income": 337896,
+                  "annual_effective_gross_income": 317622.24,
+                  "annual_operating_expenses": 176609.78,
+                  "annual_noi": 141012.46
+                },
+                "cost": {
+                  "hard_cost_total": 6912000,
+                  "tenant_improvement_allowance_total": 0,
+                  "total_segment_cost": 6912000,
+                  "effective_hard_cost_psf": 240
+                }
+              }
+            ],
+            "totals": {
+              "residential_unit_count": 131,
+              "commercial_square_feet": 4000,
+              "annual_gross_potential_income": 2062998,
+              "annual_effective_gross_income": 1937118.12,
+              "annual_operating_expenses": 982723.45,
+              "annual_noi": 954394.67,
+              "hard_cost_total": 39900500,
+              "tenant_improvement_allowance_total": 170000,
+              "total_segment_cost": 40070500
+            }
+          },
+          "sources_and_uses": {
+            "uses": [
+              {
+                "label": "Land",
+                "amount": 3501
+              },
+              {
+                "label": "Hard Costs",
+                "amount": 39900500
+              },
+              {
+                "label": "Commercial TI Allowance",
+                "amount": 170000
+              },
+              {
+                "label": "Water/Sewer Tap Fees",
+                "amount": 150000
+              },
+              {
+                "label": "Landscaping",
+                "amount": 100000
+              },
+              {
+                "label": "Soft Costs",
+                "amount": 4788060
+              },
+              {
+                "label": "Contingency",
+                "amount": 3192040
+              },
+              {
+                "label": "Reserves",
+                "amount": 78600
+              },
+              {
+                "label": "Developer Fee",
+                "amount": 2234428
+              },
+              {
+                "label": "Financing Carry Estimate",
+                "amount": 2129251.45
+              }
+            ],
+            "sources": [
+              {
+                "label": "Permanent Debt",
+                "amount": 9941611.13
+              },
+              {
+                "label": "Tax Credit Equity",
+                "amount": 37002127.68
+              }
+            ],
+            "gap_or_surplus": -5802641.64
+          },
+          "primary_financial_metrics": {
+            "mode": "rental",
+            "return_metric": null,
+            "return_metric_label": "yield_on_cost_pct",
+            "annual_noi": 954394.67,
+            "gross_sales_revenue": null,
+            "net_sales_proceeds": null,
+            "net_profit": null,
+            "profit_margin_pct": null
+          },
+          "construction_capital_stack": {
+            "construction_financing": {
+              "financing_product_id": "construction_loan",
+              "financing_product_label": "Construction Loan",
+              "loan_to_cost_pct": 0.8,
+              "interest_rate": 0.0875,
+              "term_months": 11,
+              "origination_fee_pct": 0.015,
+              "equity_at_close_pct": 0.2,
+              "max_loan_per_unit": null,
+              "max_loan_per_property": null,
+              "max_borrower_exposure": null
+            },
+            "sources_and_uses": {
+              "uses": {
+                "stage_1": {
+                  "land": 3501,
+                  "hard": 39900500,
+                  "tenant_improvements": 170000,
+                  "site_extraordinary": 250000,
+                  "soft_costs": 4788060,
+                  "contingency": 3192040,
+                  "total": 48304101
+                },
+                "additional_close_uses": 2313028,
+                "close_uses_before_financing": 50617129,
+                "financing_costs_estimate": {
+                  "financed_basis": 48300600,
+                  "average_outstanding_pct_of_financed_basis": 0.5,
+                  "estimated_average_loan_balance": 19320240,
+                  "origination_fee": 579607.2,
+                  "interest_carry": 1549644.25,
+                  "total": 2129251.45,
+                  "included_in_stage_1_total": false
+                },
+                "subsidy_bridge_costs_estimate": {
+                  "estimated_advance_amount": 0,
+                  "interest_carry": 0,
+                  "fee": 0,
+                  "total": 0,
+                  "blended_interest_rate": null,
+                  "blended_fee_pct": null,
+                  "blended_term_months": null,
+                  "included_in_stage_1_total": false
+                },
+                "total_with_capital_estimate": 52746380.45
+              },
+              "sources": {
+                "construction_debt_estimate": {
+                  "loan_to_cost_pct": 0.8,
+                  "raw_ltc_proceeds": 38640480,
+                  "estimated_proceeds": 38640480,
+                  "max_loan_per_unit_cap_amount": null,
+                  "max_loan_per_property_cap_amount": null,
+                  "max_borrower_exposure_cap_amount": null,
+                  "binding_constraint": "ltc",
+                  "basis": "hard + tenant_improvements + site_extraordinary + soft_costs + contingency"
+                },
+                "subsidy": {
+                  "amount": 0,
+                  "manual_amount": 0,
+                  "manual_close_funding_amount": 0,
+                  "program_amount": 0,
+                  "program_at_close_amount": 0,
+                  "program_bridgeable_short_term_amount": 0,
+                  "program_post_stabilization_amount": 0,
+                  "program_operating_period_amount": 0,
+                  "close_funding_amount": 0,
+                  "deferred_amount": 0,
+                  "selected_program_ids": []
+                },
+                "subsidy_bridge_advance_estimate": {
+                  "estimated_amount": 0,
+                  "backed_by_program_amount": 0,
+                  "included_in_close_funding": true,
+                  "bridge_carry_modeled_in_stage_1_total": false
+                },
+                "sponsor_equity_estimate": {
+                  "estimated_amount": 14105900.45
+                },
+                "total_estimated_sources": 52746380.45
+              },
+              "balancing": {
+                "estimated_gap_or_surplus": 0,
+                "note": "Construction capital stack balances Stage 1 cost plus financing and bridge estimates using construction debt, close-funded subsidy, bridgeable subsidy advances, and sponsor equity. Post-stabilization and operating-period subsidy remains visible but does not reduce close equity in this stage."
+              }
+            },
+            "subordinate_sources": [
+              {
+                "label": "Tax Credit Equity",
+                "amount": 37002127.68,
+                "instrument_class": "tax_credit_equity",
+                "priority_position": 90
+              }
+            ]
+          },
+          "permanent_capital_stack": {
+            "mode": "rental_hold",
+            "financing_product_id": "bank_portfolio_perm",
+            "financing_product_label": "Bank Portfolio Permanent Loan",
+            "ltv": 0.72,
+            "min_dscr": 1.2,
+            "rate": 0.0675,
+            "amortization_months": 300,
+            "implied_value": 14682994.92,
+            "max_debt_by_ltv": 10571756.34,
+            "max_debt_by_dscr": 9941611.13,
+            "selected_permanent_debt": 9941611.13,
+            "annual_debt_service": 824252.85,
+            "adjusted_noi": 954394.67,
+            "debt_yield": 0.096,
+            "debt_service_coverage_ratio": 1.1579,
+            "equity_requirement_at_conversion": 40675517.87
+          },
+          "subsidy_stack": {
+            "selected_program_ids": [],
+            "selected_programs": [],
+            "property_tax_abatement_pct": 0,
+            "tax_credit_equity_amount": 37002127.68
+          },
+          "capital_events_timeline": [
+            {
+              "stage": "close",
+              "timing_ref": "month_0",
+              "sources": [
+                {
+                  "label": "Construction Debt",
+                  "amount": 38640480
+                },
+                {
+                  "label": "Tax Credit Equity",
+                  "amount": 37002127.68
+                }
+              ],
+              "uses": [
+                {
+                  "label": "Close Uses Before Financing",
+                  "amount": 50617129
+                },
+                {
+                  "label": "Financing Carry Estimate",
+                  "amount": 2129251.45
+                }
+              ]
+            },
+            {
+              "stage": "stabilization_conversion",
+              "timing_ref": "post_stabilization",
+              "sources": [
+                {
+                  "label": "Permanent Debt",
+                  "amount": 9941611.13
+                }
+              ],
+              "uses": [],
+              "notes": "Conversion to stabilized hold capital stack."
+            }
+          ],
+          "unit_program_summary": {
+            "selected_plan_id": "colerain-north-bend-gateway_three-buildings",
+            "selected_plan_name": "Three Buildings",
+            "requested_plan_family": "mixed_use",
+            "custom_shell": {
+              "shell_id": "colerain-north-bend-gateway_three-buildings",
+              "shell_label": "Three Buildings",
+              "building_type": "mixed_use",
+              "site_layout": "frontage_bar",
+              "use_class": "residential",
+              "units_per_building": 131,
+              "building_width_ft": 125.3,
+              "building_depth_ft": 125.3,
+              "stories_above_grade": 6,
+              "above_grade_building_sf": 167700,
+              "total_constructed_sf": 167700,
+              "sf_per_unit": 1280.15,
+              "parking_strategy": {
+                "parking_family": "tuck_under",
+                "stall_count": 40
+              },
+              "source": "planner"
+            },
+            "custom_site_plan": {
+              "site_plan_id": "colerain-north-bend-gateway_three-buildings",
+              "site_plan_label": "Three Buildings",
+              "arrangement_type": "three-buildings",
+              "dominant_building_type": "mixed_use",
+              "site_layout": "frontage_bar",
+              "buildings": [
+                {
+                  "building_id": "zone-1",
+                  "shell_id": "zone-1",
+                  "shell_label": "L-Shape Corner",
+                  "building_type": "mixed_use",
+                  "site_layout": "frontage_bar",
+                  "use_class": "residential",
+                  "units_per_building": 75,
+                  "building_width_ft": 125.3,
+                  "building_depth_ft": 125.3,
+                  "stories_above_grade": 6,
+                  "above_grade_building_sf": 94200,
+                  "total_constructed_sf": 94200,
+                  "sf_per_unit": 1256,
+                  "parking_strategy": {
+                    "parking_family": "tuck_under",
+                    "stall_count": 40
+                  }
+                },
+                {
+                  "building_id": "zone-2",
+                  "shell_id": "zone-2",
+                  "shell_label": "Colerain Frontage",
+                  "building_type": "apartment",
+                  "site_layout": "frontage_bar",
+                  "use_class": "residential",
+                  "units_per_building": 32,
+                  "building_width_ft": 120,
+                  "building_depth_ft": 120,
+                  "stories_above_grade": 3,
+                  "above_grade_building_sf": 43200,
+                  "total_constructed_sf": 43200,
+                  "sf_per_unit": 1350
+                },
+                {
+                  "building_id": "zone-3",
+                  "shell_id": "zone-3",
+                  "shell_label": "North Bend Frontage",
+                  "building_type": "mixed_use",
+                  "site_layout": "frontage_bar",
+                  "use_class": "residential",
+                  "units_per_building": 24,
+                  "building_width_ft": 100.5,
+                  "building_depth_ft": 100.5,
+                  "stories_above_grade": 3,
+                  "above_grade_building_sf": 30300,
+                  "total_constructed_sf": 30300,
+                  "sf_per_unit": 1262.5
+                }
+              ],
+              "aggregate_units": 131,
+              "aggregate_above_grade_building_sf": 167700,
+              "aggregate_total_constructed_sf": 167700,
+              "land_cost_allocation_policy": "pro_rata_gross_sf",
+              "shared_site_costs": {
+                "parking_and_access": 0,
+                "site_work": 200000,
+                "utilities": 0
+              },
+              "source": "scenario_matrix"
+            },
+            "plan_house_type": "131-unit custom shell",
+            "plan_units_per_building": 131,
+            "total_requested_units": 131,
+            "building_count": 1,
+            "site_constrained": false,
+            "selected_orientation": "default",
+            "unit_mix": [
+              {
+                "bedroom_count": 0,
+                "count": 16,
+                "ami_band": 60
+              },
+              {
+                "bedroom_count": 1,
+                "count": 48,
+                "ami_band": 60
+              },
+              {
+                "bedroom_count": 2,
+                "count": 47,
+                "ami_band": 60
+              },
+              {
+                "bedroom_count": 3,
+                "count": 20,
+                "ami_band": 60
+              }
+            ],
+            "program_segments": [
+              {
+                "segment_id": "zone-1_commercial",
+                "segment_type": "commercial",
+                "label": "L-Shape Corner Commercial",
+                "square_feet": 2500,
+                "commercial_use_type": "retail",
+                "lease_structure": "nnn",
+                "annual_rent_per_sf": 15,
+                "tenant_improvement_allowance_per_sf": 50
+              },
+              {
+                "segment_id": "zone-1_residential",
+                "segment_type": "residential",
+                "label": "L-Shape Corner Residential",
+                "square_feet": 91700,
+                "unit_mix": [
+                  {
+                    "bedroom_count": 0,
+                    "count": 12,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 1,
+                    "count": 30,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 2,
+                    "count": 25,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 3,
+                    "count": 8,
+                    "ami_band": 60
+                  }
+                ]
+              },
+              {
+                "segment_id": "zone-2_residential",
+                "segment_type": "residential",
+                "label": "Colerain Frontage Residential",
+                "square_feet": 43200,
+                "unit_mix": [
+                  {
+                    "bedroom_count": 1,
+                    "count": 8,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 2,
+                    "count": 14,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 3,
+                    "count": 10,
+                    "ami_band": 60
+                  }
+                ]
+              },
+              {
+                "segment_id": "zone-3_commercial",
+                "segment_type": "commercial",
+                "label": "North Bend Frontage Commercial",
+                "square_feet": 1500,
+                "commercial_use_type": "service",
+                "lease_structure": "nnn"
+              },
+              {
+                "segment_id": "zone-3_residential",
+                "segment_type": "residential",
+                "label": "North Bend Frontage Residential",
+                "square_feet": 28800,
+                "unit_mix": [
+                  {
+                    "bedroom_count": 0,
+                    "count": 4,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 1,
+                    "count": 10,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 2,
+                    "count": 8,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 3,
+                    "count": 2,
+                    "ami_band": 60
+                  }
+                ]
+              }
+            ]
+          },
+          "required_subsidy_to_breakeven": 5802641.64,
+          "required_subsidy_to_target_return": 5802641.64,
+          "max_supportable_land_cost": 0,
+          "max_supportable_hard_cost": 205.4,
+          "program_constraint_result": {
+            "status": "eligible_with_warnings",
+            "failures": [],
+            "warnings": [
+              {
+                "severity": "warning",
+                "code": "lihtc_9_competitive_allocation",
+                "message": "9% LIHTC feasibility remains subject to competitive allocation and QAP scoring."
+              },
+              {
+                "severity": "warning",
+                "code": "lihtc_basis_boost_not_resolved",
+                "message": "Automatic QCT/DDA basis boost lookup is not yet wired; provide basis_boost_pct explicitly when known."
+              },
+              {
+                "severity": "warning",
+                "code": "public_land_access_unconfirmed_for_sponsor",
+                "message": "Public land write-down is modeled, but the sponsor profile does not indicate direct access to below-market public land."
+              }
+            ],
+            "competitive_allocation_required": true,
+            "applied_lihtc_set_aside_test": "40_60",
+            "basis_boost_pct_applied": null,
+            "basis_boost_source": "none"
+          },
+          "predevelopment_budget_gate": {
+            "gate_status": "limited_spend",
+            "recommended_budget_total": 758109.5,
+            "recommended_budget_breakdown": {
+              "concept_design": 299253.75,
+              "survey": 59850.75,
+              "geotech": 59850.75,
+              "environmental": 59850.75,
+              "legal": 119701.5,
+              "entitlement": 99751.25,
+              "consultant_other": 59850.75
+            },
+            "confidence_tier": "low",
+            "decision_rationale": "Structure is directionally promising, but diligence gaps still limit spend confidence.",
+            "blocking_unknowns": [
+              "site_fit_context",
+              "confirmed_frontage",
+              "unit_level_rent_assumptions",
+              "construction_draw_schedule",
+              "conversion_or_refi_timing",
+              "reserve_release_schedule"
+            ],
+            "next_required_inputs": [
+              "site_fit_context",
+              "confirmed_frontage",
+              "unit_level_rent_assumptions",
+              "construction_draw_schedule",
+              "conversion_or_refi_timing",
+              "reserve_release_schedule"
+            ]
+          },
+          "confidence_notes": [
+            "Requested building type mixed_use resolved to custom shell colerain-north-bend-gateway_three-buildings.",
+            "Custom shell screening used 125.3x125.3 at 6 stories instead of a catalog plan.",
+            "Multi-building site plan colerain-north-bend-gateway_three-buildings was translated to an aggregate shell for v1 deal structuring while preserving per-building land and shared-cost allocations in the input contract.",
+            "Run is site-agnostic and relies on market_context rather than a resolved site.",
+            "Missing unit rents were auto-derived from the Hamilton County 2025 AMI rent-limit schedule.",
+            "Rental revenue uses partial unit-level pricing coverage and may rely on plan-average fallbacks.",
+            "Private sponsor defaults assume market-rate execution posture unless explicit mission capital or partner access is supplied.",
+            "Hamilton County Land Reutilization Corporation hclrc_controlled_assemblage",
+            "9% LIHTC feasibility remains subject to competitive allocation and QAP scoring.",
+            "Automatic QCT/DDA basis boost lookup is not yet wired; provide basis_boost_pct explicitly when known.",
+            "Public land write-down is modeled, but the sponsor profile does not indicate direct access to below-market public land."
+          ],
+          "verification_summary": {
+            "arithmetic_checks": [
+              {
+                "check_name": "sources_uses_gap_consistency",
+                "status": "passed",
+                "message": "Sources minus uses matches the reported gap or surplus."
+              },
+              {
+                "check_name": "required_subsidy_consistency",
+                "status": "passed",
+                "message": "Required subsidy to breakeven matches the computed gap."
+              },
+              {
+                "check_name": "feasibility_status_consistency",
+                "status": "passed",
+                "message": "Feasibility status is consistent with the computed subsidy gap."
+              },
+              {
+                "check_name": "rental_permanent_debt_service_consistency",
+                "status": "passed",
+                "message": "Permanent debt implies positive annual debt service."
+              },
+              {
+                "check_name": "rental_dscr_consistency",
+                "status": "passed",
+                "message": "Reported DSCR matches adjusted NOI and annual debt service."
+              }
+            ],
+            "data_validation_notes": [
+              "Arithmetic checks were evaluated against the engine output for this run.",
+              "Run is site-agnostic and did not use a resolved parcel/site record.",
+              "Rent assumptions were derived from the Hamilton County 2025 AMI rent-limit schedule."
+            ],
+            "human_review_flags": [
+              "Historical closed-deal backtest is not available for this run.",
+              "Construction cost, market rent, and sale assumptions remain caller- or config-driven inputs and are not independently appraised by the engine.",
+              "LIHTC structures still require human review of award likelihood, legal structure, and investor terms."
+            ],
+            "historical_backtest_status": "not_available",
+            "requires_human_review": true
+          },
+          "missing_inputs_for_full_proforma": [
+            "site_fit_context",
+            "confirmed_frontage",
+            "unit_level_rent_assumptions",
+            "construction_draw_schedule",
+            "conversion_or_refi_timing",
+            "reserve_release_schedule"
+          ]
+        }
+      },
+      "annualCashFlow": {
+        "years": [
+          {
+            "year": 1,
+            "grossPotentialIncome": 1547248.5,
+            "effectiveGrossIncome": 1452838.59,
+            "operatingExpensesBeforeAbatement": 982723.45,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 982723.45,
+            "annualNoi": 470115.14,
+            "annualDebtService": 824252.85,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": -354137.71,
+            "endingLoanBalance": 9783587.59,
+            "annualDepreciation": 1917922.89,
+            "taxableIncome": -2272060.6,
+            "taxLiability": 0,
+            "afterTaxCashFlow": -354137.71
+          },
+          {
+            "year": 2,
+            "grossPotentialIncome": 2104257.96,
+            "effectiveGrossIncome": 1975860.48,
+            "operatingExpensesBeforeAbatement": 1002377.92,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 1002377.92,
+            "annualNoi": 973482.56,
+            "annualDebtService": 824252.85,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 149229.71,
+            "endingLoanBalance": 9614561.21,
+            "annualDepreciation": 1917922.89,
+            "taxableIncome": -1768693.18,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 149229.71
+          },
+          {
+            "year": 3,
+            "grossPotentialIncome": 2146343.12,
+            "effectiveGrossIncome": 2015377.69,
+            "operatingExpensesBeforeAbatement": 1022425.48,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 1022425.48,
+            "annualNoi": 992952.21,
+            "annualDebtService": 824252.85,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 168699.36,
+            "endingLoanBalance": 9433765.86,
+            "annualDepreciation": 1917922.89,
+            "taxableIncome": -1749223.53,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 168699.36
+          },
+          {
+            "year": 4,
+            "grossPotentialIncome": 2189269.98,
+            "effectiveGrossIncome": 2055685.24,
+            "operatingExpensesBeforeAbatement": 1042873.99,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 1042873.99,
+            "annualNoi": 1012811.25,
+            "annualDebtService": 824252.85,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 188558.4,
+            "endingLoanBalance": 9240382.11,
+            "annualDepreciation": 1917922.89,
+            "taxableIncome": -1729364.49,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 188558.4
+          },
+          {
+            "year": 5,
+            "grossPotentialIncome": 2233055.38,
+            "effectiveGrossIncome": 2096798.95,
+            "operatingExpensesBeforeAbatement": 1063731.47,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 1063731.47,
+            "annualNoi": 1033067.48,
+            "annualDebtService": 824252.85,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 208814.63,
+            "endingLoanBalance": 9033533.44,
+            "annualDepreciation": 1917922.89,
+            "taxableIncome": -1709108.26,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 208814.63
+          },
+          {
+            "year": 6,
+            "grossPotentialIncome": 2277716.49,
+            "effectiveGrossIncome": 2138734.93,
+            "operatingExpensesBeforeAbatement": 1085006.1,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 1085006.1,
+            "annualNoi": 1053728.83,
+            "annualDebtService": 824252.85,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 229475.98,
+            "endingLoanBalance": 8812282.33,
+            "annualDepreciation": 1917922.89,
+            "taxableIncome": -1688446.91,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 229475.98
+          },
+          {
+            "year": 7,
+            "grossPotentialIncome": 2323270.82,
+            "effectiveGrossIncome": 2181509.63,
+            "operatingExpensesBeforeAbatement": 1106706.22,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 1106706.22,
+            "annualNoi": 1074803.41,
+            "annualDebtService": 824252.85,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 250550.56,
+            "endingLoanBalance": 8575625.96,
+            "annualDepreciation": 1917922.89,
+            "taxableIncome": -1667372.33,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 250550.56
+          },
+          {
+            "year": 8,
+            "grossPotentialIncome": 2369736.23,
+            "effectiveGrossIncome": 2225139.82,
+            "operatingExpensesBeforeAbatement": 1128840.34,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 1128840.34,
+            "annualNoi": 1096299.48,
+            "annualDebtService": 824252.85,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 272046.63,
+            "endingLoanBalance": 8322491.69,
+            "annualDepreciation": 1917922.89,
+            "taxableIncome": -1645876.26,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 272046.63
+          },
+          {
+            "year": 9,
+            "grossPotentialIncome": 2417130.96,
+            "effectiveGrossIncome": 2269642.62,
+            "operatingExpensesBeforeAbatement": 1151417.15,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 1151417.15,
+            "annualNoi": 1118225.47,
+            "annualDebtService": 824252.85,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 293972.62,
+            "endingLoanBalance": 8051732.21,
+            "annualDepreciation": 1917922.89,
+            "taxableIncome": -1623950.27,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 293972.62
+          },
+          {
+            "year": 10,
+            "grossPotentialIncome": 2465473.58,
+            "effectiveGrossIncome": 2315035.47,
+            "operatingExpensesBeforeAbatement": 1174445.49,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 1174445.49,
+            "annualNoi": 1140589.98,
+            "annualDebtService": 824252.85,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 316337.13,
+            "endingLoanBalance": 7762120.31,
+            "annualDepreciation": 1917922.89,
+            "taxableIncome": -1601585.76,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 316337.13
+          },
+          {
+            "year": 11,
+            "grossPotentialIncome": 2514783.05,
+            "effectiveGrossIncome": 2361336.18,
+            "operatingExpensesBeforeAbatement": 1197934.4,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 1197934.4,
+            "annualNoi": 1163401.78,
+            "annualDebtService": 824252.85,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 339148.93,
+            "endingLoanBalance": 7452343.33,
+            "annualDepreciation": 1917922.89,
+            "taxableIncome": -1578773.96,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 339148.93
+          },
+          {
+            "year": 12,
+            "grossPotentialIncome": 2565078.71,
+            "effectiveGrossIncome": 2408562.9,
+            "operatingExpensesBeforeAbatement": 1221893.09,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 1221893.09,
+            "annualNoi": 1186669.81,
+            "annualDebtService": 824252.85,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 362416.96,
+            "endingLoanBalance": 7120997.21,
+            "annualDepreciation": 1917922.89,
+            "taxableIncome": -1555505.93,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 362416.96
+          },
+          {
+            "year": 13,
+            "grossPotentialIncome": 2616380.29,
+            "effectiveGrossIncome": 2456734.16,
+            "operatingExpensesBeforeAbatement": 1246330.95,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 1246330.95,
+            "annualNoi": 1210403.21,
+            "annualDebtService": 824252.85,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 386150.36,
+            "endingLoanBalance": 6766580.15,
+            "annualDepreciation": 1917922.89,
+            "taxableIncome": -1531772.53,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 386150.36
+          },
+          {
+            "year": 14,
+            "grossPotentialIncome": 2668707.89,
+            "effectiveGrossIncome": 2505868.84,
+            "operatingExpensesBeforeAbatement": 1271257.57,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 1271257.57,
+            "annualNoi": 1234611.27,
+            "annualDebtService": 824252.85,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 410358.42,
+            "endingLoanBalance": 6387485.75,
+            "annualDepreciation": 1917922.89,
+            "taxableIncome": -1507564.47,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 410358.42
+          },
+          {
+            "year": 15,
+            "grossPotentialIncome": 2722082.05,
+            "effectiveGrossIncome": 2555986.22,
+            "operatingExpensesBeforeAbatement": 1296682.72,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 1296682.72,
+            "annualNoi": 1259303.5,
+            "annualDebtService": 824252.85,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 435050.65,
+            "endingLoanBalance": 5981995.8,
+            "annualDepreciation": 1917922.89,
+            "taxableIncome": -1482872.24,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 435050.65
+          }
+        ],
+        "sponsorEquity": 14105900.45,
+        "unfundedGap": 5802641.64,
+        "initialEquity": 19908542.09,
+        "exitValue": 19373900,
+        "saleCosts": 581217,
+        "remainingBalance": 5981995.8,
+        "exitEquity": 12810687.2,
+        "exitEquityAfterTax": 5618476.36,
+        "leveragedIrr": -0.0134,
+        "avgCashOnCash": 0.0122,
+        "afterTaxIrr": -0.0551,
+        "afterTaxCashOnCash": 0.0122,
+        "hold_years": 15,
+        "irr": -0.0134,
+        "avg_cash_on_cash": 0.0122,
+        "annual_coc": [
+          -0.02,
+          0.01,
+          0.01,
+          0.01,
+          0.01,
+          0.01,
+          0.01,
+          0.01,
+          0.01,
+          0.02,
+          0.02,
+          0.02,
+          0.02,
+          0.02,
+          0.02
+        ],
+        "exit": {
+          "exit_value": 19373900,
+          "sale_costs": 581217,
+          "remaining_balance": 5981995.8,
+          "exit_equity": 12810687.2,
+          "exit_equity_after_tax": 5618476.36
+        }
+      },
+      "workbook": {
+        "label": "Three Buildings",
+        "description": "131 units, 3 buildings, co-developer",
+        "buildings": 3,
+        "units": 131,
+        "retailSf": 4000,
+        "grossSf": 167700,
+        "summary": {
+          "totalDevCost": 52746380.45,
+          "totalSources": 46943738.81,
+          "noiStabilized": 954394.67,
+          "dscr": 1.1579,
+          "yieldOnCost": 0.0181,
+          "avgCashOnCash": 0.0122,
+          "gapOrSurplus": -5802641.64,
+          "requiredSubsidyToBreakeven": 5802641.64,
+          "requiredSubsidyToTargetReturn": 5802641.64,
+          "lihtcEquity": 37002127.68,
+          "permLoan": 9941611.13,
+          "costPerUnit": 402644.13
+        },
+        "budget": {
+          "uses": [
+            {
+              "category": "Land",
+              "label": "Land",
+              "amount": 3501
+            },
+            {
+              "category": "Hard Costs",
+              "label": "Hard Costs",
+              "amount": 39900500
+            },
+            {
+              "category": "Hard Costs",
+              "label": "Commercial TI Allowance",
+              "amount": 170000
+            },
+            {
+              "category": "Site Work",
+              "label": "Water/Sewer Tap Fees",
+              "amount": 150000
+            },
+            {
+              "category": "Site Work",
+              "label": "Landscaping",
+              "amount": 100000
+            },
+            {
+              "category": "Soft Costs",
+              "label": "Soft Costs",
+              "amount": 4788060
+            },
+            {
+              "category": "Contingency",
+              "label": "Contingency",
+              "amount": 3192040
+            },
+            {
+              "category": "Reserves",
+              "label": "Reserves",
+              "amount": 78600
+            },
+            {
+              "category": "Developer Fee",
+              "label": "Developer Fee",
+              "amount": 2234428
+            },
+            {
+              "category": "Financing",
+              "label": "Financing Carry Estimate",
+              "amount": 2129251.45
+            }
+          ],
+          "totalUses": 52746380.45
+        },
+        "sources": {
+          "items": [
+            {
+              "label": "Permanent Debt",
+              "type": "debt",
+              "amount": 9941611.13,
+              "terms": "6.75% / 25yr / 1.16x DSCR"
+            },
+            {
+              "label": "Tax Credit Equity",
+              "type": "equity",
+              "amount": 37002127.68,
+              "terms": "LIHTC 9% / $0.92 / 10yr credit"
+            }
+          ],
+          "totalSources": 46943738.81
+        },
+        "proforma": [
+          {
+            "label": "Potential Gross Income",
+            "amount": 2062998
+          },
+          {
+            "label": "Effective Gross Income",
+            "amount": 1937118.12
+          },
+          {
+            "label": "Operating Expenses",
+            "amount": -982723.45
+          },
+          {
+            "label": "Net Operating Income",
+            "amount": 954394.67
+          },
+          {
+            "label": "Annual Debt Service",
+            "amount": -824252.85
+          },
+          {
+            "label": "Cash Flow Before Tax",
+            "amount": 130141.82
+          }
+        ],
+        "returns": {
+          "yieldOnCost": 0.0181,
+          "avgCashOnCash": 0.0122,
+          "leveragedIrr": -0.0134,
+          "afterTaxIrr": -0.0551,
+          "dscr": 1.1579,
+          "permLoanToValue": 0.6771,
+          "permLoanToCost": 0.1885,
+          "stabilizedValue": 14682994.92,
+          "costPerUnit": 402644.13,
+          "noiPerUnit": 7285.46
+        },
+        "constraints": {
+          "gate": "limited_spend",
+          "warnings": [
+            "Modeled land basis combines acquisitionCost and closingCosts because the current deal engine prices a single land use line.",
+            "Footprint width/depth are approximated from usable pad area because finance/zones.json currently stores area, not explicit building dimensions.",
+            "Footprint width/depth are approximated from usable pad area because finance/zones.json currently stores area, not explicit building dimensions.",
+            "Footprint width/depth are approximated from usable pad area because finance/zones.json currently stores area, not explicit building dimensions.",
+            "Project program profile inferred from active commercial segments.",
+            "9% LIHTC feasibility remains subject to competitive allocation and QAP scoring.",
+            "Automatic QCT/DDA basis boost lookup is not yet wired; provide basis_boost_pct explicitly when known.",
+            "Public land write-down is modeled, but the sponsor profile does not indicate direct access to below-market public land.",
+            "Missing input: site_fit_context",
+            "Missing input: confirmed_frontage",
+            "Missing input: unit_level_rent_assumptions",
+            "Missing input: construction_draw_schedule",
+            "Missing input: conversion_or_refi_timing",
+            "Missing input: reserve_release_schedule",
+            "Full pro forma still needs: site_fit_context",
+            "Full pro forma still needs: confirmed_frontage",
+            "Full pro forma still needs: unit_level_rent_assumptions",
+            "Full pro forma still needs: construction_draw_schedule",
+            "Full pro forma still needs: conversion_or_refi_timing",
+            "Full pro forma still needs: reserve_release_schedule"
+          ],
+          "unsupported": [
+            "assumptions.construction.siteExtraordinary.{hillsideRetaining,stormwaterBioswale,demolition}: These extraordinary site-work buckets are preserved on custom_site_plan_spec.shared_site_costs for future consumers, but the v1 deal engine does not price them yet.",
+            "assumptions.financing.constructionLoan: Project-level construction loan term overrides are not injected into v1 deal structuring. The engine still resolves the financing product from canonical config.",
+            "assumptions.financing.permanentLoan: Project-level permanent loan overrides are not injected into v1 deal structuring. The engine still resolves the permanent product from canonical config.",
+            "assumptions.operations.opexRatioPct: High-level opex ratio is not a direct v1 deal-engine input. The loader maps vacancy, bad debt, and property management, then falls back to canonical per-unit operating lines.",
+            "assumptions.retail.capRate: Retail cap rate is not applied directly in the v1 project-deal loader. Project valuation still uses the canonical residential cap-rate path.",
+            "facts.overlays.{craTier,craEligibility}: CRA Expand is preserved as a verified overlay fact, but the v1 deal engine does not currently allow cra_expand_tax_abatement on this custom site-plan scope.",
+            "assumptions.developerFee.lihtcMaxPct: LIHTC developer-fee max percentage is not mapped directly because the v1 engine contract caps developer fee in dollars, not as a percent-of-basis constraint."
+          ],
+          "arithmeticChecks": [
+            {
+              "checkName": "sources_uses_gap_consistency",
+              "status": "passed",
+              "message": "Sources minus uses matches the reported gap or surplus."
+            },
+            {
+              "checkName": "required_subsidy_consistency",
+              "status": "passed",
+              "message": "Required subsidy to breakeven matches the computed gap."
+            },
+            {
+              "checkName": "feasibility_status_consistency",
+              "status": "passed",
+              "message": "Feasibility status is consistent with the computed subsidy gap."
+            },
+            {
+              "checkName": "rental_permanent_debt_service_consistency",
+              "status": "passed",
+              "message": "Permanent debt implies positive annual debt service."
+            },
+            {
+              "checkName": "rental_dscr_consistency",
+              "status": "passed",
+              "message": "Reported DSCR matches adjusted NOI and annual debt service."
+            }
+          ],
+          "humanReviewFlags": [
+            "Historical closed-deal backtest is not available for this run.",
+            "Construction cost, market rent, and sale assumptions remain caller- or config-driven inputs and are not independently appraised by the engine.",
+            "LIHTC structures still require human review of award likelihood, legal structure, and investor terms."
+          ]
+        }
+      }
+    },
+    {
+      "id": "max-density",
+      "name": "Max Density",
+      "description": "165 units, 3 buildings, major developer",
+      "summary": {
+        "scenario_id": "max-density",
+        "label": "Max Density",
+        "active_zone_ids": [
+          "zone-1",
+          "zone-2",
+          "zone-3"
+        ],
+        "total_units": 165,
+        "total_commercial_square_feet": 4000,
+        "total_constructed_square_feet": 192200
+      },
+      "request": {
+        "schema_version": 1,
+        "run_kind": "structure_plan_deal",
+        "custom_site_plan_spec": {
+          "site_plan_id": "colerain-north-bend-gateway_max-density",
+          "site_plan_label": "Max Density",
+          "arrangement_type": "max-density",
+          "dominant_building_type": "mixed_use",
+          "site_layout": "frontage_bar",
+          "buildings": [
+            {
+              "building_id": "zone-1",
+              "shell_id": "zone-1",
+              "shell_label": "L-Shape Corner",
+              "building_type": "mixed_use",
+              "site_layout": "frontage_bar",
+              "use_class": "residential",
+              "units_per_building": 75,
+              "building_width_ft": 125.3,
+              "building_depth_ft": 125.3,
+              "stories_above_grade": 6,
+              "above_grade_building_sf": 94200,
+              "total_constructed_sf": 94200,
+              "sf_per_unit": 1256,
+              "parking_strategy": {
+                "parking_family": "tuck_under",
+                "stall_count": 40
+              }
+            },
+            {
+              "building_id": "zone-2",
+              "shell_id": "zone-2",
+              "shell_label": "Colerain Frontage",
+              "building_type": "apartment",
+              "site_layout": "frontage_bar",
+              "use_class": "residential",
+              "units_per_building": 53,
+              "building_width_ft": 120,
+              "building_depth_ft": 120,
+              "stories_above_grade": 4,
+              "above_grade_building_sf": 57600,
+              "total_constructed_sf": 57600,
+              "sf_per_unit": 1086.79
+            },
+            {
+              "building_id": "zone-3",
+              "shell_id": "zone-3",
+              "shell_label": "North Bend Frontage",
+              "building_type": "mixed_use",
+              "site_layout": "frontage_bar",
+              "use_class": "residential",
+              "units_per_building": 37,
+              "building_width_ft": 100.5,
+              "building_depth_ft": 100.5,
+              "stories_above_grade": 4,
+              "above_grade_building_sf": 40400,
+              "total_constructed_sf": 40400,
+              "sf_per_unit": 1091.89
+            }
+          ],
+          "aggregate_units": 165,
+          "aggregate_above_grade_building_sf": 192200,
+          "aggregate_total_constructed_sf": 192200,
+          "land_cost_allocation_policy": "pro_rata_gross_sf",
+          "shared_site_costs": {
+            "parking_and_access": 0,
+            "site_work": 200000,
+            "utilities": 0
+          },
+          "source": "scenario_matrix"
+        },
+        "site_fit_context": {
+          "site_slug": "colerain-north-bend-gateway",
+          "canonical_address": "colerain-north-bend-gateway",
+          "municipality_slug": "cincinnati",
+          "zoning_code": "CC-P-B+CC-M-B+SF-6-MH"
+        },
+        "deal_definition": {
+          "unit_mix": [],
+          "segments": [
+            {
+              "segment_id": "zone-1_commercial",
+              "segment_type": "commercial",
+              "label": "L-Shape Corner Commercial",
+              "square_feet": 2500,
+              "commercial_use_type": "retail",
+              "lease_structure": "nnn",
+              "annual_rent_per_sf": 15,
+              "tenant_improvement_allowance_per_sf": 50
+            },
+            {
+              "segment_id": "zone-1_residential",
+              "segment_type": "residential",
+              "label": "L-Shape Corner Residential",
+              "square_feet": 91700,
+              "unit_mix": [
+                {
+                  "bedroom_count": 0,
+                  "count": 12,
+                  "ami_band": 60
+                },
+                {
+                  "bedroom_count": 1,
+                  "count": 30,
+                  "ami_band": 60
+                },
+                {
+                  "bedroom_count": 2,
+                  "count": 25,
+                  "ami_band": 60
+                },
+                {
+                  "bedroom_count": 3,
+                  "count": 8,
+                  "ami_band": 60
+                }
+              ]
+            },
+            {
+              "segment_id": "zone-2_residential",
+              "segment_type": "residential",
+              "label": "Colerain Frontage Residential",
+              "square_feet": 57600,
+              "unit_mix": [
+                {
+                  "bedroom_count": 1,
+                  "count": 13,
+                  "ami_band": 60
+                },
+                {
+                  "bedroom_count": 2,
+                  "count": 23,
+                  "ami_band": 60
+                },
+                {
+                  "bedroom_count": 3,
+                  "count": 17,
+                  "ami_band": 60
+                }
+              ]
+            },
+            {
+              "segment_id": "zone-3_commercial",
+              "segment_type": "commercial",
+              "label": "North Bend Frontage Commercial",
+              "square_feet": 1500,
+              "commercial_use_type": "service",
+              "lease_structure": "nnn"
+            },
+            {
+              "segment_id": "zone-3_residential",
+              "segment_type": "residential",
+              "label": "North Bend Frontage Residential",
+              "square_feet": 38900,
+              "unit_mix": [
+                {
+                  "bedroom_count": 0,
+                  "count": 6,
+                  "ami_band": 60
+                },
+                {
+                  "bedroom_count": 1,
+                  "count": 15,
+                  "ami_band": 60
+                },
+                {
+                  "bedroom_count": 2,
+                  "count": 12,
+                  "ami_band": 60
+                },
+                {
+                  "bedroom_count": 3,
+                  "count": 4,
+                  "ami_band": 60
+                }
+              ]
+            }
+          ],
+          "housing_tier": "affordable",
+          "ami_band": 60,
+          "tenure_strategy": "rental_hold",
+          "funding_path": "lihtc",
+          "project_program_profile_id": "mixed_use",
+          "subordinate_financing_products": [],
+          "subsidy_program_ids": [],
+          "developer_fee_policy": {
+            "calculation_basis": "hard_plus_soft",
+            "developer_fee_pct": 0.05,
+            "developer_fee_floor": 5000
+          },
+          "reserve_policy": {
+            "replacement_reserve_per_unit": 300
+          },
+          "program_eligibility_policy": {
+            "enforce_program_compatibility": true,
+            "enforce_ami_mix_rules": true,
+            "enforce_use_class_rules": true,
+            "enforce_location_rules": true,
+            "enforce_construction_type_rules": true,
+            "enforce_mutual_exclusions": true,
+            "eligibility_override_mode": "strict"
+          },
+          "sponsor_profile": {
+            "developer_archetype": "private_for_profit",
+            "mission_constraints": {
+              "long_term_affordability_required": false,
+              "permanent_land_stewardship": false,
+              "anti_displacement_priority": false
+            },
+            "capital_access_profile": {
+              "can_raise_tax_credit_equity": true,
+              "can_raise_program_related_investments": false,
+              "can_access_philanthropic_grants": false,
+              "can_access_below_market_public_land": false,
+              "can_raise_sponsor_equity": true
+            },
+            "return_tolerance_profile": {
+              "target_cash_on_cash_floor": null,
+              "target_developer_fee_floor": null,
+              "allows_deferred_fee": false
+            }
+          },
+          "land_control_mode": {
+            "mode": "public_land_write_down",
+            "acquisition_cost": 3501,
+            "land_use_restrictions": [],
+            "disposition_conditions": [],
+            "notes": "Hamilton County Land Reutilization Corporation hclrc_controlled_assemblage"
+          }
+        },
+        "assumptions": {
+          "land_cost": 3501,
+          "hard_cost_basis": 210,
+          "soft_cost_basis": 0.1,
+          "contingency_basis": 0.06,
+          "market_context": {
+            "geography_type": "municipality",
+            "geography_ref": "cincinnati",
+            "construction_cost_region": "cincinnati_metro",
+            "rent_region": "mount_airy",
+            "sale_region": "mount_airy",
+            "insurance_region": "cincinnati_metro",
+            "tax_region": "hamilton_county_oh",
+            "source_as_of_date": "HUD-2025",
+            "notes": "Loaded from colerain-north-bend-gateway/finance"
+          },
+          "ami_rent_limit_assumptions": {
+            "source": "hamilton_county_2025_hud",
+            "percent_of_income": 0.3
+          },
+          "operating_expense_assumptions": {
+            "property_management_pct": 0.08,
+            "maintenance_and_repairs_per_unit": 1800,
+            "utilities_owner_paid_per_unit": 600,
+            "insurance_per_unit": 900,
+            "taxes_per_unit": 2700,
+            "compliance_monitoring_per_unit": 0,
+            "annual_audit_and_reporting_cost": 0,
+            "replacement_reserve_per_unit": 300,
+            "vacancy_pct": 0.05,
+            "bad_debt_pct": 0.01
+          },
+          "revenue_assumptions": {
+            "cap_rate": 0.065
+          },
+          "timeline_assumptions": {
+            "predev_months": 2,
+            "construction_months": 8,
+            "lease_up_months": 3
+          },
+          "exit_or_hold_assumptions": {
+            "hold_years": 15,
+            "rent_growth_pct": 0.02,
+            "expense_growth_pct": 0.02
+          },
+          "tax_credit_assumptions": {
+            "credit_type": "lihtc_9",
+            "credit_period_years": 10,
+            "credit_pricing_per_dollar": 0.92
+          },
+          "site_development_costs": {
+            "utility_connection_fee": 150000,
+            "landscaping_allowance": 100000
+          },
+          "tax_assumptions": {
+            "mill_rate": 0.062,
+            "assessment_ratio": 0.35,
+            "marginal_federal_rate": 0.24,
+            "marginal_state_rate": 0.04,
+            "depreciation_years": 27.5,
+            "depreciation_recapture_rate": 0.25
+          }
+        },
+        "requested_views": [
+          "summary",
+          "analyst"
+        ]
+      },
+      "loaderDiagnostics": [
+        {
+          "kind": "combined_value",
+          "field": "assumptions.land_cost",
+          "message": "Modeled land basis combines acquisitionCost and closingCosts because the current deal engine prices a single land use line.",
+          "value": 3501
+        },
+        {
+          "kind": "unsupported_engine_field",
+          "field": "assumptions.construction.siteExtraordinary.{hillsideRetaining,stormwaterBioswale,demolition}",
+          "message": "These extraordinary site-work buckets are preserved on custom_site_plan_spec.shared_site_costs for future consumers, but the v1 deal engine does not price them yet.",
+          "value": 200000
+        },
+        {
+          "kind": "approximated_dimension",
+          "field": "custom_site_plan_spec.buildings.zone-1.{building_width_ft,building_depth_ft}",
+          "message": "Footprint width/depth are approximated from usable pad area because finance/zones.json currently stores area, not explicit building dimensions.",
+          "value": {
+            "footprint_sf": 15700,
+            "building_width_ft": 125.3,
+            "building_depth_ft": 125.3
+          }
+        },
+        {
+          "kind": "approximated_dimension",
+          "field": "custom_site_plan_spec.buildings.zone-2.{building_width_ft,building_depth_ft}",
+          "message": "Footprint width/depth are approximated from usable pad area because finance/zones.json currently stores area, not explicit building dimensions.",
+          "value": {
+            "footprint_sf": 14400,
+            "building_width_ft": 120,
+            "building_depth_ft": 120
+          }
+        },
+        {
+          "kind": "approximated_dimension",
+          "field": "custom_site_plan_spec.buildings.zone-3.{building_width_ft,building_depth_ft}",
+          "message": "Footprint width/depth are approximated from usable pad area because finance/zones.json currently stores area, not explicit building dimensions.",
+          "value": {
+            "footprint_sf": 10100,
+            "building_width_ft": 100.5,
+            "building_depth_ft": 100.5
+          }
+        },
+        {
+          "kind": "unsupported_engine_field",
+          "field": "assumptions.financing.constructionLoan",
+          "message": "Project-level construction loan term overrides are not injected into v1 deal structuring. The engine still resolves the financing product from canonical config.",
+          "value": {
+            "rate": 0.0875,
+            "ltcPct": 0.75,
+            "termMonths": 14,
+            "originationPct": 0.015
+          }
+        },
+        {
+          "kind": "unsupported_engine_field",
+          "field": "assumptions.financing.permanentLoan",
+          "message": "Project-level permanent loan overrides are not injected into v1 deal structuring. The engine still resolves the permanent product from canonical config.",
+          "value": {
+            "rate": 0.0625,
+            "ltvPct": 0.75,
+            "amortYears": 30,
+            "minDscr": 1.25
+          }
+        },
+        {
+          "kind": "unsupported_engine_field",
+          "field": "assumptions.operations.opexRatioPct",
+          "message": "High-level opex ratio is not a direct v1 deal-engine input. The loader maps vacancy, bad debt, and property management, then falls back to canonical per-unit operating lines.",
+          "value": 0.35
+        },
+        {
+          "kind": "unsupported_engine_field",
+          "field": "assumptions.retail.capRate",
+          "message": "Retail cap rate is not applied directly in the v1 project-deal loader. Project valuation still uses the canonical residential cap-rate path.",
+          "value": 0.075
+        },
+        {
+          "kind": "normalized_value",
+          "field": "deal_definition.project_program_profile_id",
+          "message": "Project program profile inferred from active commercial segments.",
+          "value": "mixed_use"
+        },
+        {
+          "kind": "unsupported_engine_field",
+          "field": "facts.overlays.{craTier,craEligibility}",
+          "message": "CRA Expand is preserved as a verified overlay fact, but the v1 deal engine does not currently allow cra_expand_tax_abatement on this custom site-plan scope.",
+          "value": {
+            "craTier": "Expand",
+            "craEligibility": "new_construction"
+          }
+        },
+        {
+          "kind": "unsupported_engine_field",
+          "field": "assumptions.developerFee.lihtcMaxPct",
+          "message": "LIHTC developer-fee max percentage is not mapped directly because the v1 engine contract caps developer fee in dollars, not as a percent-of-basis constraint.",
+          "value": 0.1
+        },
+        {
+          "kind": "constraint_mismatch",
+          "field": "facts.zoning.commercialBandMaxUnitsByDensity,facts.zoning.sitewideIllustrativeUnitsAt700SfPerUnit",
+          "message": "Scenario max-density exceeds one or more checked-in density references. The loader preserves the scenario for predevelopment modeling and records the mismatch explicitly instead of failing load.",
+          "value": {
+            "total_units": 165,
+            "exceeded_references": [
+              {
+                "field": "facts.zoning.commercialBandMaxUnitsByDensity",
+                "value": 136
+              },
+              {
+                "field": "facts.zoning.sitewideIllustrativeUnitsAt700SfPerUnit",
+                "value": 158
+              }
+            ]
+          }
+        }
+      ],
+      "dealResult": {
+        "schema_version": 1,
+        "engine_version": "deal-structuring-v1",
+        "deal_structure": {
+          "structure_id": "deal_cincinnati_colerain_north_bend_gateway_max_density_rental_hold",
+          "feasibility_status": "viable_with_gap",
+          "completeness_status": "deal_structuring_ready",
+          "plan_scope": {
+            "plan_code": null,
+            "plan_family": "mixed_use",
+            "custom_shell_id": "colerain-north-bend-gateway_max-density",
+            "custom_shell_label": "Max Density",
+            "building_type": "mixed_use",
+            "site_layout": "frontage_bar"
+          },
+          "deal_definition": {
+            "unit_mix": [
+              {
+                "bedroom_count": 0,
+                "count": 18,
+                "ami_band": 60
+              },
+              {
+                "bedroom_count": 1,
+                "count": 58,
+                "ami_band": 60
+              },
+              {
+                "bedroom_count": 2,
+                "count": 60,
+                "ami_band": 60
+              },
+              {
+                "bedroom_count": 3,
+                "count": 29,
+                "ami_band": 60
+              }
+            ],
+            "segments": [
+              {
+                "segment_id": "zone-1_commercial",
+                "segment_type": "commercial",
+                "label": "L-Shape Corner Commercial",
+                "square_feet": 2500,
+                "commercial_use_type": "retail",
+                "lease_structure": "nnn",
+                "annual_rent_per_sf": 15,
+                "tenant_improvement_allowance_per_sf": 50
+              },
+              {
+                "segment_id": "zone-1_residential",
+                "segment_type": "residential",
+                "label": "L-Shape Corner Residential",
+                "square_feet": 91700,
+                "unit_mix": [
+                  {
+                    "bedroom_count": 0,
+                    "count": 12,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 1,
+                    "count": 30,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 2,
+                    "count": 25,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 3,
+                    "count": 8,
+                    "ami_band": 60
+                  }
+                ]
+              },
+              {
+                "segment_id": "zone-2_residential",
+                "segment_type": "residential",
+                "label": "Colerain Frontage Residential",
+                "square_feet": 57600,
+                "unit_mix": [
+                  {
+                    "bedroom_count": 1,
+                    "count": 13,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 2,
+                    "count": 23,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 3,
+                    "count": 17,
+                    "ami_band": 60
+                  }
+                ]
+              },
+              {
+                "segment_id": "zone-3_commercial",
+                "segment_type": "commercial",
+                "label": "North Bend Frontage Commercial",
+                "square_feet": 1500,
+                "commercial_use_type": "service",
+                "lease_structure": "nnn"
+              },
+              {
+                "segment_id": "zone-3_residential",
+                "segment_type": "residential",
+                "label": "North Bend Frontage Residential",
+                "square_feet": 38900,
+                "unit_mix": [
+                  {
+                    "bedroom_count": 0,
+                    "count": 6,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 1,
+                    "count": 15,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 2,
+                    "count": 12,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 3,
+                    "count": 4,
+                    "ami_band": 60
+                  }
+                ]
+              }
+            ],
+            "housing_tier": "affordable",
+            "ami_band": 60,
+            "tenure_strategy": "rental_hold",
+            "funding_path": "lihtc",
+            "project_program_profile_id": "mixed_use",
+            "subordinate_financing_products": [],
+            "subsidy_program_ids": [],
+            "developer_fee_policy": {
+              "calculation_basis": "hard_plus_soft",
+              "developer_fee_pct": 0.05,
+              "developer_fee_floor": 5000
+            },
+            "reserve_policy": {
+              "replacement_reserve_per_unit": 300
+            },
+            "program_eligibility_policy": {
+              "enforce_program_compatibility": true,
+              "enforce_ami_mix_rules": true,
+              "enforce_use_class_rules": true,
+              "enforce_location_rules": true,
+              "enforce_construction_type_rules": true,
+              "enforce_mutual_exclusions": true,
+              "eligibility_override_mode": "strict"
+            },
+            "sponsor_profile": {
+              "developer_archetype": "private_for_profit",
+              "mission_constraints": {
+                "long_term_affordability_required": false,
+                "permanent_land_stewardship": false,
+                "anti_displacement_priority": false
+              },
+              "capital_access_profile": {
+                "can_raise_tax_credit_equity": true,
+                "can_raise_program_related_investments": false,
+                "can_access_philanthropic_grants": false,
+                "can_access_below_market_public_land": false,
+                "can_raise_sponsor_equity": true
+              },
+              "return_tolerance_profile": {
+                "target_cash_on_cash_floor": null,
+                "target_developer_fee_floor": null,
+                "allows_deferred_fee": false
+              }
+            },
+            "land_control_mode": {
+              "mode": "public_land_write_down",
+              "acquisition_cost": 3501,
+              "land_use_restrictions": [],
+              "disposition_conditions": [],
+              "notes": "Hamilton County Land Reutilization Corporation hclrc_controlled_assemblage"
+            }
+          },
+          "assumptions": {
+            "land_cost": 3501,
+            "hard_cost_basis": 210,
+            "soft_cost_basis": 0.1,
+            "contingency_basis": 0.06,
+            "market_context": {
+              "geography_type": "municipality",
+              "geography_ref": "cincinnati",
+              "construction_cost_region": "cincinnati_metro",
+              "rent_region": "mount_airy",
+              "sale_region": "mount_airy",
+              "insurance_region": "cincinnati_metro",
+              "tax_region": "hamilton_county_oh",
+              "source_as_of_date": "HUD-2025",
+              "notes": "Loaded from colerain-north-bend-gateway/finance"
+            },
+            "ami_rent_limit_assumptions": {
+              "source": "hamilton_county_2025_hud",
+              "percent_of_income": 0.3
+            },
+            "operating_expense_assumptions": {
+              "property_management_pct": 0.08,
+              "maintenance_and_repairs_per_unit": 1800,
+              "utilities_owner_paid_per_unit": 600,
+              "insurance_per_unit": 900,
+              "taxes_per_unit": 2700,
+              "compliance_monitoring_per_unit": 0,
+              "annual_audit_and_reporting_cost": 0,
+              "replacement_reserve_per_unit": 300,
+              "vacancy_pct": 0.05,
+              "bad_debt_pct": 0.01
+            },
+            "revenue_assumptions": {
+              "cap_rate": 0.065
+            },
+            "timeline_assumptions": {
+              "predev_months": 2,
+              "construction_months": 8,
+              "lease_up_months": 3
+            },
+            "exit_or_hold_assumptions": {
+              "hold_years": 15,
+              "rent_growth_pct": 0.02,
+              "expense_growth_pct": 0.02
+            },
+            "tax_credit_assumptions": {
+              "credit_type": "lihtc_9",
+              "credit_period_years": 10,
+              "credit_pricing_per_dollar": 0.92
+            },
+            "site_development_costs": {
+              "utility_connection_fee": 150000,
+              "landscaping_allowance": 100000
+            },
+            "tax_assumptions": {
+              "mill_rate": 0.062,
+              "assessment_ratio": 0.35,
+              "marginal_federal_rate": 0.24,
+              "marginal_state_rate": 0.04,
+              "depreciation_years": 27.5,
+              "depreciation_recapture_rate": 0.25
+            }
+          },
+          "applied_cost_model": {
+            "cost_model_path": "resolved",
+            "construction_system_id": "masonry_mixed_use_small",
+            "construction_system_selection_origin": "auto",
+            "construction_system_label": "Masonry Small Mixed-Use",
+            "construction_system_legacy_cost_preset_id": "standard_wood",
+            "building_type": "mixed_use",
+            "site_layout": "frontage_bar",
+            "matched_lookup_building_type": "mixed_use",
+            "sponsor_archetype": "private_for_profit",
+            "sponsor_archetype_origin": "explicit",
+            "base_cost_basis": {
+              "hard_cost_psf": 240,
+              "soft_cost_pct": 0.12,
+              "contingency_pct": 0.08,
+              "sale_marketing_pct": 0.03,
+              "rental_stabilization_pct": 0.025
+            },
+            "effective_cost_basis": {
+              "hard_cost_psf": 240,
+              "soft_cost_pct": 0.12,
+              "contingency_pct": 0.08,
+              "sale_marketing_pct": 0.03,
+              "rental_stabilization_pct": 0.025
+            },
+            "building_type_modifier": {
+              "hard_cost_multiplier": 1,
+              "notes": []
+            },
+            "site_layout_modifier": {
+              "hard_cost_multiplier": 1,
+              "notes": []
+            },
+            "sponsor_delivery_override": {
+              "soft_cost_pct_delta": 0,
+              "contingency_pct_delta": 0,
+              "construction_duration_months_delta": 0,
+              "notes": []
+            },
+            "applied_hard_cost_multiplier": 1,
+            "applied_notes": [],
+            "fallback_reason": null,
+            "fallback_retirement_signal": null
+          },
+          "applied_program_mix": {
+            "segments": [
+              {
+                "segment_id": "zone-1_commercial",
+                "segment_type": "commercial",
+                "label": "L-Shape Corner Commercial",
+                "square_feet": 2500,
+                "residential_unit_count": null,
+                "commercial_use_type": "retail",
+                "lease_structure": "nnn",
+                "operating_expense_ratio": 0.12,
+                "absorption_months": 12,
+                "stabilized_occupancy_pct": 0.9,
+                "revenue": {
+                  "annual_gross_potential_income": 37500,
+                  "annual_effective_gross_income": 33750,
+                  "annual_operating_expenses": 4050,
+                  "annual_noi": 29700
+                },
+                "cost": {
+                  "hard_cost_total": 387500,
+                  "tenant_improvement_allowance_total": 125000,
+                  "total_segment_cost": 512500,
+                  "effective_hard_cost_psf": 155
+                }
+              },
+              {
+                "segment_id": "zone-1_residential",
+                "segment_type": "residential",
+                "label": "L-Shape Corner Residential",
+                "square_feet": 91700,
+                "residential_unit_count": 75,
+                "commercial_use_type": null,
+                "lease_structure": null,
+                "operating_expense_ratio": 0.5482,
+                "absorption_months": 3,
+                "stabilized_occupancy_pct": 0.94,
+                "revenue": {
+                  "annual_gross_potential_income": 1073682,
+                  "annual_effective_gross_income": 1009261.08,
+                  "annual_operating_expenses": 553240.89,
+                  "annual_noi": 456020.19
+                },
+                "cost": {
+                  "hard_cost_total": 22008000,
+                  "tenant_improvement_allowance_total": 0,
+                  "total_segment_cost": 22008000,
+                  "effective_hard_cost_psf": 240
+                }
+              },
+              {
+                "segment_id": "zone-2_residential",
+                "segment_type": "residential",
+                "label": "Colerain Frontage Residential",
+                "square_feet": 57600,
+                "residential_unit_count": 53,
+                "commercial_use_type": null,
+                "lease_structure": null,
+                "operating_expense_ratio": 0.4465,
+                "absorption_months": 3,
+                "stabilized_occupancy_pct": 0.94,
+                "revenue": {
+                  "annual_gross_potential_income": 969102,
+                  "annual_effective_gross_income": 910955.88,
+                  "annual_operating_expenses": 406776.47,
+                  "annual_noi": 504179.41
+                },
+                "cost": {
+                  "hard_cost_total": 13824000,
+                  "tenant_improvement_allowance_total": 0,
+                  "total_segment_cost": 13824000,
+                  "effective_hard_cost_psf": 240
+                }
+              },
+              {
+                "segment_id": "zone-3_commercial",
+                "segment_type": "commercial",
+                "label": "North Bend Frontage Commercial",
+                "square_feet": 1500,
+                "residential_unit_count": null,
+                "commercial_use_type": "service",
+                "lease_structure": "nnn",
+                "operating_expense_ratio": 0.12,
+                "absorption_months": 10,
+                "stabilized_occupancy_pct": 0.92,
+                "revenue": {
+                  "annual_gross_potential_income": 30000,
+                  "annual_effective_gross_income": 27600,
+                  "annual_operating_expenses": 3312,
+                  "annual_noi": 24288
+                },
+                "cost": {
+                  "hard_cost_total": 225000,
+                  "tenant_improvement_allowance_total": 45000,
+                  "total_segment_cost": 270000,
+                  "effective_hard_cost_psf": 150
+                }
+              },
+              {
+                "segment_id": "zone-3_residential",
+                "segment_type": "residential",
+                "label": "North Bend Frontage Residential",
+                "square_feet": 38900,
+                "residential_unit_count": 37,
+                "commercial_use_type": null,
+                "lease_structure": null,
+                "operating_expense_ratio": 0.5499,
+                "absorption_months": 3,
+                "stabilized_occupancy_pct": 0.94,
+                "revenue": {
+                  "annual_gross_potential_income": 527778,
+                  "annual_effective_gross_income": 496111.32,
+                  "annual_operating_expenses": 272788.91,
+                  "annual_noi": 223322.41
+                },
+                "cost": {
+                  "hard_cost_total": 9336000,
+                  "tenant_improvement_allowance_total": 0,
+                  "total_segment_cost": 9336000,
+                  "effective_hard_cost_psf": 240
+                }
+              }
+            ],
+            "totals": {
+              "residential_unit_count": 165,
+              "commercial_square_feet": 4000,
+              "annual_gross_potential_income": 2638062,
+              "annual_effective_gross_income": 2477678.28,
+              "annual_operating_expenses": 1240168.27,
+              "annual_noi": 1237510.01,
+              "hard_cost_total": 45780500,
+              "tenant_improvement_allowance_total": 170000,
+              "total_segment_cost": 45950500
+            }
+          },
+          "sources_and_uses": {
+            "uses": [
+              {
+                "label": "Land",
+                "amount": 3501
+              },
+              {
+                "label": "Hard Costs",
+                "amount": 45780500
+              },
+              {
+                "label": "Commercial TI Allowance",
+                "amount": 170000
+              },
+              {
+                "label": "Water/Sewer Tap Fees",
+                "amount": 150000
+              },
+              {
+                "label": "Landscaping",
+                "amount": 100000
+              },
+              {
+                "label": "Soft Costs",
+                "amount": 5493660
+              },
+              {
+                "label": "Contingency",
+                "amount": 3662440
+              },
+              {
+                "label": "Reserves",
+                "amount": 99000
+              },
+              {
+                "label": "Developer Fee",
+                "amount": 2563708
+              },
+              {
+                "label": "Financing Carry Estimate",
+                "amount": 2440303.45
+              }
+            ],
+            "sources": [
+              {
+                "label": "Permanent Debt",
+                "amount": 12890729.25
+              },
+              {
+                "label": "Tax Credit Equity",
+                "amount": 42455004.48
+              }
+            ],
+            "gap_or_surplus": -5117378.72
+          },
+          "primary_financial_metrics": {
+            "mode": "rental",
+            "return_metric": null,
+            "return_metric_label": "yield_on_cost_pct",
+            "annual_noi": 1237510.01,
+            "gross_sales_revenue": null,
+            "net_sales_proceeds": null,
+            "net_profit": null,
+            "profit_margin_pct": null
+          },
+          "construction_capital_stack": {
+            "construction_financing": {
+              "financing_product_id": "construction_loan",
+              "financing_product_label": "Construction Loan",
+              "loan_to_cost_pct": 0.8,
+              "interest_rate": 0.0875,
+              "term_months": 11,
+              "origination_fee_pct": 0.015,
+              "equity_at_close_pct": 0.2,
+              "max_loan_per_unit": null,
+              "max_loan_per_property": null,
+              "max_borrower_exposure": null
+            },
+            "sources_and_uses": {
+              "uses": {
+                "stage_1": {
+                  "land": 3501,
+                  "hard": 45780500,
+                  "tenant_improvements": 170000,
+                  "site_extraordinary": 250000,
+                  "soft_costs": 5493660,
+                  "contingency": 3662440,
+                  "total": 55360101
+                },
+                "additional_close_uses": 2662708,
+                "close_uses_before_financing": 58022809,
+                "financing_costs_estimate": {
+                  "financed_basis": 55356600,
+                  "average_outstanding_pct_of_financed_basis": 0.5,
+                  "estimated_average_loan_balance": 22142640,
+                  "origination_fee": 664279.2,
+                  "interest_carry": 1776024.25,
+                  "total": 2440303.45,
+                  "included_in_stage_1_total": false
+                },
+                "subsidy_bridge_costs_estimate": {
+                  "estimated_advance_amount": 0,
+                  "interest_carry": 0,
+                  "fee": 0,
+                  "total": 0,
+                  "blended_interest_rate": null,
+                  "blended_fee_pct": null,
+                  "blended_term_months": null,
+                  "included_in_stage_1_total": false
+                },
+                "total_with_capital_estimate": 60463112.45
+              },
+              "sources": {
+                "construction_debt_estimate": {
+                  "loan_to_cost_pct": 0.8,
+                  "raw_ltc_proceeds": 44285280,
+                  "estimated_proceeds": 44285280,
+                  "max_loan_per_unit_cap_amount": null,
+                  "max_loan_per_property_cap_amount": null,
+                  "max_borrower_exposure_cap_amount": null,
+                  "binding_constraint": "ltc",
+                  "basis": "hard + tenant_improvements + site_extraordinary + soft_costs + contingency"
+                },
+                "subsidy": {
+                  "amount": 0,
+                  "manual_amount": 0,
+                  "manual_close_funding_amount": 0,
+                  "program_amount": 0,
+                  "program_at_close_amount": 0,
+                  "program_bridgeable_short_term_amount": 0,
+                  "program_post_stabilization_amount": 0,
+                  "program_operating_period_amount": 0,
+                  "close_funding_amount": 0,
+                  "deferred_amount": 0,
+                  "selected_program_ids": []
+                },
+                "subsidy_bridge_advance_estimate": {
+                  "estimated_amount": 0,
+                  "backed_by_program_amount": 0,
+                  "included_in_close_funding": true,
+                  "bridge_carry_modeled_in_stage_1_total": false
+                },
+                "sponsor_equity_estimate": {
+                  "estimated_amount": 16177832.45
+                },
+                "total_estimated_sources": 60463112.45
+              },
+              "balancing": {
+                "estimated_gap_or_surplus": 0,
+                "note": "Construction capital stack balances Stage 1 cost plus financing and bridge estimates using construction debt, close-funded subsidy, bridgeable subsidy advances, and sponsor equity. Post-stabilization and operating-period subsidy remains visible but does not reduce close equity in this stage."
+              }
+            },
+            "subordinate_sources": [
+              {
+                "label": "Tax Credit Equity",
+                "amount": 42455004.48,
+                "instrument_class": "tax_credit_equity",
+                "priority_position": 90
+              }
+            ]
+          },
+          "permanent_capital_stack": {
+            "mode": "rental_hold",
+            "financing_product_id": "bank_portfolio_perm",
+            "financing_product_label": "Bank Portfolio Permanent Loan",
+            "ltv": 0.72,
+            "min_dscr": 1.2,
+            "rate": 0.0675,
+            "amortization_months": 300,
+            "implied_value": 19038615.54,
+            "max_debt_by_ltv": 13707803.19,
+            "max_debt_by_dscr": 12890729.25,
+            "selected_permanent_debt": 12890729.25,
+            "annual_debt_service": 1068762.41,
+            "adjusted_noi": 1237510.01,
+            "debt_yield": 0.096,
+            "debt_service_coverage_ratio": 1.1579,
+            "equity_requirement_at_conversion": 45132079.75
+          },
+          "subsidy_stack": {
+            "selected_program_ids": [],
+            "selected_programs": [],
+            "property_tax_abatement_pct": 0,
+            "tax_credit_equity_amount": 42455004.48
+          },
+          "capital_events_timeline": [
+            {
+              "stage": "close",
+              "timing_ref": "month_0",
+              "sources": [
+                {
+                  "label": "Construction Debt",
+                  "amount": 44285280
+                },
+                {
+                  "label": "Tax Credit Equity",
+                  "amount": 42455004.48
+                }
+              ],
+              "uses": [
+                {
+                  "label": "Close Uses Before Financing",
+                  "amount": 58022809
+                },
+                {
+                  "label": "Financing Carry Estimate",
+                  "amount": 2440303.45
+                }
+              ]
+            },
+            {
+              "stage": "stabilization_conversion",
+              "timing_ref": "post_stabilization",
+              "sources": [
+                {
+                  "label": "Permanent Debt",
+                  "amount": 12890729.25
+                }
+              ],
+              "uses": [],
+              "notes": "Conversion to stabilized hold capital stack."
+            }
+          ],
+          "unit_program_summary": {
+            "selected_plan_id": "colerain-north-bend-gateway_max-density",
+            "selected_plan_name": "Max Density",
+            "requested_plan_family": "mixed_use",
+            "custom_shell": {
+              "shell_id": "colerain-north-bend-gateway_max-density",
+              "shell_label": "Max Density",
+              "building_type": "mixed_use",
+              "site_layout": "frontage_bar",
+              "use_class": "residential",
+              "units_per_building": 165,
+              "building_width_ft": 125.3,
+              "building_depth_ft": 125.3,
+              "stories_above_grade": 6,
+              "above_grade_building_sf": 192200,
+              "total_constructed_sf": 192200,
+              "sf_per_unit": 1164.85,
+              "parking_strategy": {
+                "parking_family": "tuck_under",
+                "stall_count": 40
+              },
+              "source": "planner"
+            },
+            "custom_site_plan": {
+              "site_plan_id": "colerain-north-bend-gateway_max-density",
+              "site_plan_label": "Max Density",
+              "arrangement_type": "max-density",
+              "dominant_building_type": "mixed_use",
+              "site_layout": "frontage_bar",
+              "buildings": [
+                {
+                  "building_id": "zone-1",
+                  "shell_id": "zone-1",
+                  "shell_label": "L-Shape Corner",
+                  "building_type": "mixed_use",
+                  "site_layout": "frontage_bar",
+                  "use_class": "residential",
+                  "units_per_building": 75,
+                  "building_width_ft": 125.3,
+                  "building_depth_ft": 125.3,
+                  "stories_above_grade": 6,
+                  "above_grade_building_sf": 94200,
+                  "total_constructed_sf": 94200,
+                  "sf_per_unit": 1256,
+                  "parking_strategy": {
+                    "parking_family": "tuck_under",
+                    "stall_count": 40
+                  }
+                },
+                {
+                  "building_id": "zone-2",
+                  "shell_id": "zone-2",
+                  "shell_label": "Colerain Frontage",
+                  "building_type": "apartment",
+                  "site_layout": "frontage_bar",
+                  "use_class": "residential",
+                  "units_per_building": 53,
+                  "building_width_ft": 120,
+                  "building_depth_ft": 120,
+                  "stories_above_grade": 4,
+                  "above_grade_building_sf": 57600,
+                  "total_constructed_sf": 57600,
+                  "sf_per_unit": 1086.79
+                },
+                {
+                  "building_id": "zone-3",
+                  "shell_id": "zone-3",
+                  "shell_label": "North Bend Frontage",
+                  "building_type": "mixed_use",
+                  "site_layout": "frontage_bar",
+                  "use_class": "residential",
+                  "units_per_building": 37,
+                  "building_width_ft": 100.5,
+                  "building_depth_ft": 100.5,
+                  "stories_above_grade": 4,
+                  "above_grade_building_sf": 40400,
+                  "total_constructed_sf": 40400,
+                  "sf_per_unit": 1091.89
+                }
+              ],
+              "aggregate_units": 165,
+              "aggregate_above_grade_building_sf": 192200,
+              "aggregate_total_constructed_sf": 192200,
+              "land_cost_allocation_policy": "pro_rata_gross_sf",
+              "shared_site_costs": {
+                "parking_and_access": 0,
+                "site_work": 200000,
+                "utilities": 0
+              },
+              "source": "scenario_matrix"
+            },
+            "plan_house_type": "165-unit custom shell",
+            "plan_units_per_building": 165,
+            "total_requested_units": 165,
+            "building_count": 1,
+            "site_constrained": false,
+            "selected_orientation": "default",
+            "unit_mix": [
+              {
+                "bedroom_count": 0,
+                "count": 18,
+                "ami_band": 60
+              },
+              {
+                "bedroom_count": 1,
+                "count": 58,
+                "ami_band": 60
+              },
+              {
+                "bedroom_count": 2,
+                "count": 60,
+                "ami_band": 60
+              },
+              {
+                "bedroom_count": 3,
+                "count": 29,
+                "ami_band": 60
+              }
+            ],
+            "program_segments": [
+              {
+                "segment_id": "zone-1_commercial",
+                "segment_type": "commercial",
+                "label": "L-Shape Corner Commercial",
+                "square_feet": 2500,
+                "commercial_use_type": "retail",
+                "lease_structure": "nnn",
+                "annual_rent_per_sf": 15,
+                "tenant_improvement_allowance_per_sf": 50
+              },
+              {
+                "segment_id": "zone-1_residential",
+                "segment_type": "residential",
+                "label": "L-Shape Corner Residential",
+                "square_feet": 91700,
+                "unit_mix": [
+                  {
+                    "bedroom_count": 0,
+                    "count": 12,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 1,
+                    "count": 30,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 2,
+                    "count": 25,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 3,
+                    "count": 8,
+                    "ami_band": 60
+                  }
+                ]
+              },
+              {
+                "segment_id": "zone-2_residential",
+                "segment_type": "residential",
+                "label": "Colerain Frontage Residential",
+                "square_feet": 57600,
+                "unit_mix": [
+                  {
+                    "bedroom_count": 1,
+                    "count": 13,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 2,
+                    "count": 23,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 3,
+                    "count": 17,
+                    "ami_band": 60
+                  }
+                ]
+              },
+              {
+                "segment_id": "zone-3_commercial",
+                "segment_type": "commercial",
+                "label": "North Bend Frontage Commercial",
+                "square_feet": 1500,
+                "commercial_use_type": "service",
+                "lease_structure": "nnn"
+              },
+              {
+                "segment_id": "zone-3_residential",
+                "segment_type": "residential",
+                "label": "North Bend Frontage Residential",
+                "square_feet": 38900,
+                "unit_mix": [
+                  {
+                    "bedroom_count": 0,
+                    "count": 6,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 1,
+                    "count": 15,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 2,
+                    "count": 12,
+                    "ami_band": 60
+                  },
+                  {
+                    "bedroom_count": 3,
+                    "count": 4,
+                    "ami_band": 60
+                  }
+                ]
+              }
+            ]
+          },
+          "required_subsidy_to_breakeven": 5117378.72,
+          "required_subsidy_to_target_return": 5117378.72,
+          "max_supportable_land_cost": 0,
+          "max_supportable_hard_cost": 213.37,
+          "program_constraint_result": {
+            "status": "eligible_with_warnings",
+            "failures": [],
+            "warnings": [
+              {
+                "severity": "warning",
+                "code": "lihtc_9_competitive_allocation",
+                "message": "9% LIHTC feasibility remains subject to competitive allocation and QAP scoring."
+              },
+              {
+                "severity": "warning",
+                "code": "lihtc_basis_boost_not_resolved",
+                "message": "Automatic QCT/DDA basis boost lookup is not yet wired; provide basis_boost_pct explicitly when known."
+              },
+              {
+                "severity": "warning",
+                "code": "public_land_access_unconfirmed_for_sponsor",
+                "message": "Public land write-down is modeled, but the sponsor profile does not indicate direct access to below-market public land."
+              }
+            ],
+            "competitive_allocation_required": true,
+            "applied_lihtc_set_aside_test": "40_60",
+            "basis_boost_pct_applied": null,
+            "basis_boost_source": "none"
+          },
+          "predevelopment_budget_gate": {
+            "gate_status": "limited_spend",
+            "recommended_budget_total": 869829.5,
+            "recommended_budget_breakdown": {
+              "concept_design": 343353.75,
+              "survey": 68670.75,
+              "geotech": 68670.75,
+              "environmental": 68670.75,
+              "legal": 137341.5,
+              "entitlement": 114451.25,
+              "consultant_other": 68670.75
+            },
+            "confidence_tier": "low",
+            "decision_rationale": "Structure is directionally promising, but diligence gaps still limit spend confidence.",
+            "blocking_unknowns": [
+              "site_fit_context",
+              "confirmed_frontage",
+              "unit_level_rent_assumptions",
+              "construction_draw_schedule",
+              "conversion_or_refi_timing",
+              "reserve_release_schedule"
+            ],
+            "next_required_inputs": [
+              "site_fit_context",
+              "confirmed_frontage",
+              "unit_level_rent_assumptions",
+              "construction_draw_schedule",
+              "conversion_or_refi_timing",
+              "reserve_release_schedule"
+            ]
+          },
+          "confidence_notes": [
+            "Requested building type mixed_use resolved to custom shell colerain-north-bend-gateway_max-density.",
+            "Custom shell screening used 125.3x125.3 at 6 stories instead of a catalog plan.",
+            "Multi-building site plan colerain-north-bend-gateway_max-density was translated to an aggregate shell for v1 deal structuring while preserving per-building land and shared-cost allocations in the input contract.",
+            "Run is site-agnostic and relies on market_context rather than a resolved site.",
+            "Missing unit rents were auto-derived from the Hamilton County 2025 AMI rent-limit schedule.",
+            "Rental revenue uses partial unit-level pricing coverage and may rely on plan-average fallbacks.",
+            "Private sponsor defaults assume market-rate execution posture unless explicit mission capital or partner access is supplied.",
+            "Hamilton County Land Reutilization Corporation hclrc_controlled_assemblage",
+            "9% LIHTC feasibility remains subject to competitive allocation and QAP scoring.",
+            "Automatic QCT/DDA basis boost lookup is not yet wired; provide basis_boost_pct explicitly when known.",
+            "Public land write-down is modeled, but the sponsor profile does not indicate direct access to below-market public land."
+          ],
+          "verification_summary": {
+            "arithmetic_checks": [
+              {
+                "check_name": "sources_uses_gap_consistency",
+                "status": "passed",
+                "message": "Sources minus uses matches the reported gap or surplus."
+              },
+              {
+                "check_name": "required_subsidy_consistency",
+                "status": "passed",
+                "message": "Required subsidy to breakeven matches the computed gap."
+              },
+              {
+                "check_name": "feasibility_status_consistency",
+                "status": "passed",
+                "message": "Feasibility status is consistent with the computed subsidy gap."
+              },
+              {
+                "check_name": "rental_permanent_debt_service_consistency",
+                "status": "passed",
+                "message": "Permanent debt implies positive annual debt service."
+              },
+              {
+                "check_name": "rental_dscr_consistency",
+                "status": "passed",
+                "message": "Reported DSCR matches adjusted NOI and annual debt service."
+              }
+            ],
+            "data_validation_notes": [
+              "Arithmetic checks were evaluated against the engine output for this run.",
+              "Run is site-agnostic and did not use a resolved parcel/site record.",
+              "Rent assumptions were derived from the Hamilton County 2025 AMI rent-limit schedule."
+            ],
+            "human_review_flags": [
+              "Historical closed-deal backtest is not available for this run.",
+              "Construction cost, market rent, and sale assumptions remain caller- or config-driven inputs and are not independently appraised by the engine.",
+              "LIHTC structures still require human review of award likelihood, legal structure, and investor terms."
+            ],
+            "historical_backtest_status": "not_available",
+            "requires_human_review": true
+          },
+          "missing_inputs_for_full_proforma": [
+            "site_fit_context",
+            "confirmed_frontage",
+            "unit_level_rent_assumptions",
+            "construction_draw_schedule",
+            "conversion_or_refi_timing",
+            "reserve_release_schedule"
+          ]
+        }
+      },
+      "annualCashFlow": {
+        "years": [
+          {
+            "year": 1,
+            "grossPotentialIncome": 1978546.5,
+            "effectiveGrossIncome": 1858258.71,
+            "operatingExpensesBeforeAbatement": 1240168.27,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 1240168.27,
+            "annualNoi": 618090.44,
+            "annualDebtService": 1068762.41,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": -450671.97,
+            "endingLoanBalance": 12685829,
+            "annualDepreciation": 2198531.33,
+            "taxableIncome": -2649203.3,
+            "taxLiability": 0,
+            "afterTaxCashFlow": -450671.97
+          },
+          {
+            "year": 2,
+            "grossPotentialIncome": 2690823.24,
+            "effectiveGrossIncome": 2527231.85,
+            "operatingExpensesBeforeAbatement": 1264971.64,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 1264971.64,
+            "annualNoi": 1262260.21,
+            "annualDebtService": 1068762.41,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 193497.8,
+            "endingLoanBalance": 12466661.97,
+            "annualDepreciation": 2198531.33,
+            "taxableIncome": -2005033.53,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 193497.8
+          },
+          {
+            "year": 3,
+            "grossPotentialIncome": 2744639.7,
+            "effectiveGrossIncome": 2577776.48,
+            "operatingExpensesBeforeAbatement": 1290271.07,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 1290271.07,
+            "annualNoi": 1287505.41,
+            "annualDebtService": 1068762.41,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 218743,
+            "endingLoanBalance": 12232234.79,
+            "annualDepreciation": 2198531.33,
+            "taxableIncome": -1979788.33,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 218743
+          },
+          {
+            "year": 4,
+            "grossPotentialIncome": 2799532.5,
+            "effectiveGrossIncome": 2629332.01,
+            "operatingExpensesBeforeAbatement": 1316076.49,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 1316076.49,
+            "annualNoi": 1313255.52,
+            "annualDebtService": 1068762.41,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 244493.11,
+            "endingLoanBalance": 11981484.93,
+            "annualDepreciation": 2198531.33,
+            "taxableIncome": -1954038.22,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 244493.11
+          },
+          {
+            "year": 5,
+            "grossPotentialIncome": 2855523.15,
+            "effectiveGrossIncome": 2681918.65,
+            "operatingExpensesBeforeAbatement": 1342398.02,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 1342398.02,
+            "annualNoi": 1339520.63,
+            "annualDebtService": 1068762.41,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 270758.22,
+            "endingLoanBalance": 11713275.87,
+            "annualDepreciation": 2198531.33,
+            "taxableIncome": -1927773.11,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 270758.22
+          },
+          {
+            "year": 6,
+            "grossPotentialIncome": 2912633.61,
+            "effectiveGrossIncome": 2735557.02,
+            "operatingExpensesBeforeAbatement": 1369245.98,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 1369245.98,
+            "annualNoi": 1366311.04,
+            "annualDebtService": 1068762.41,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 297548.63,
+            "endingLoanBalance": 11426391.97,
+            "annualDepreciation": 2198531.33,
+            "taxableIncome": -1900982.7,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 297548.63
+          },
+          {
+            "year": 7,
+            "grossPotentialIncome": 2970886.28,
+            "effectiveGrossIncome": 2790268.16,
+            "operatingExpensesBeforeAbatement": 1396630.9,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 1396630.9,
+            "annualNoi": 1393637.26,
+            "annualDebtService": 1068762.41,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 324874.85,
+            "endingLoanBalance": 11119532.94,
+            "annualDepreciation": 2198531.33,
+            "taxableIncome": -1873656.48,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 324874.85
+          },
+          {
+            "year": 8,
+            "grossPotentialIncome": 3030304.01,
+            "effectiveGrossIncome": 2846073.53,
+            "operatingExpensesBeforeAbatement": 1424563.52,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 1424563.52,
+            "annualNoi": 1421510.01,
+            "annualDebtService": 1068762.41,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 352747.6,
+            "endingLoanBalance": 10791307.94,
+            "annualDepreciation": 2198531.33,
+            "taxableIncome": -1845783.73,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 352747.6
+          },
+          {
+            "year": 9,
+            "grossPotentialIncome": 3090910.09,
+            "effectiveGrossIncome": 2902995,
+            "operatingExpensesBeforeAbatement": 1453054.79,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 1453054.79,
+            "annualNoi": 1449940.21,
+            "annualDebtService": 1068762.41,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 381177.8,
+            "endingLoanBalance": 10440229.32,
+            "annualDepreciation": 2198531.33,
+            "taxableIncome": -1817353.53,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 381177.8
+          },
+          {
+            "year": 10,
+            "grossPotentialIncome": 3152728.29,
+            "effectiveGrossIncome": 2961054.9,
+            "operatingExpensesBeforeAbatement": 1482115.88,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 1482115.88,
+            "annualNoi": 1478939.02,
+            "annualDebtService": 1068762.41,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 410176.61,
+            "endingLoanBalance": 10064705.81,
+            "annualDepreciation": 2198531.33,
+            "taxableIncome": -1788354.72,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 410176.61
+          },
+          {
+            "year": 11,
+            "grossPotentialIncome": 3215782.86,
+            "effectiveGrossIncome": 3020276,
+            "operatingExpensesBeforeAbatement": 1511758.2,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 1511758.2,
+            "annualNoi": 1508517.8,
+            "annualDebtService": 1068762.41,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 439755.39,
+            "endingLoanBalance": 9663035.38,
+            "annualDepreciation": 2198531.33,
+            "taxableIncome": -1758775.94,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 439755.39
+          },
+          {
+            "year": 12,
+            "grossPotentialIncome": 3280098.51,
+            "effectiveGrossIncome": 3080681.51,
+            "operatingExpensesBeforeAbatement": 1541993.37,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 1541993.37,
+            "annualNoi": 1538688.14,
+            "annualDebtService": 1068762.41,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 469925.73,
+            "endingLoanBalance": 9233397.47,
+            "annualDepreciation": 2198531.33,
+            "taxableIncome": -1728605.6,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 469925.73
+          },
+          {
+            "year": 13,
+            "grossPotentialIncome": 3345700.49,
+            "effectiveGrossIncome": 3142295.15,
+            "operatingExpensesBeforeAbatement": 1572833.23,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 1572833.23,
+            "annualNoi": 1569461.92,
+            "annualDebtService": 1068762.41,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 500699.51,
+            "endingLoanBalance": 8773844.75,
+            "annualDepreciation": 2198531.33,
+            "taxableIncome": -1697831.82,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 500699.51
+          },
+          {
+            "year": 14,
+            "grossPotentialIncome": 3412614.49,
+            "effectiveGrossIncome": 3205141.05,
+            "operatingExpensesBeforeAbatement": 1604289.9,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 1604289.9,
+            "annualNoi": 1600851.15,
+            "annualDebtService": 1068762.41,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 532088.74,
+            "endingLoanBalance": 8282294.33,
+            "annualDepreciation": 2198531.33,
+            "taxableIncome": -1666442.59,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 532088.74
+          },
+          {
+            "year": 15,
+            "grossPotentialIncome": 3480866.78,
+            "effectiveGrossIncome": 3269243.87,
+            "operatingExpensesBeforeAbatement": 1636375.69,
+            "propertyTaxAbatement": 0,
+            "operatingExpensesNet": 1636375.69,
+            "annualNoi": 1632868.18,
+            "annualDebtService": 1068762.41,
+            "annualOperatingSupport": 0,
+            "preTaxCashFlow": 564105.77,
+            "endingLoanBalance": 7756518.26,
+            "annualDepreciation": 2198531.33,
+            "taxableIncome": -1634425.56,
+            "taxLiability": 0,
+            "afterTaxCashFlow": 564105.77
+          }
+        ],
+        "sponsorEquity": 16177832.45,
+        "unfundedGap": 5117378.72,
+        "initialEquity": 21295211.17,
+        "exitValue": 25121048.92,
+        "saleCosts": 753631.47,
+        "remainingBalance": 7756518.26,
+        "exitEquity": 16610899.19,
+        "exitEquityAfterTax": 8366406.7,
+        "leveragedIrr": 0.0002,
+        "avgCashOnCash": 0.0149,
+        "afterTaxIrr": -0.0352,
+        "afterTaxCashOnCash": 0.0149,
+        "hold_years": 15,
+        "irr": 0.0002,
+        "avg_cash_on_cash": 0.0149,
+        "annual_coc": [
+          -0.02,
+          0.01,
+          0.01,
+          0.01,
+          0.01,
+          0.01,
+          0.02,
+          0.02,
+          0.02,
+          0.02,
+          0.02,
+          0.02,
+          0.02,
+          0.02,
+          0.03
+        ],
+        "exit": {
+          "exit_value": 25121048.92,
+          "sale_costs": 753631.47,
+          "remaining_balance": 7756518.26,
+          "exit_equity": 16610899.19,
+          "exit_equity_after_tax": 8366406.7
+        }
+      },
+      "workbook": {
+        "label": "Max Density",
+        "description": "165 units, 3 buildings, major developer",
+        "buildings": 3,
+        "units": 165,
+        "retailSf": 4000,
+        "grossSf": 192200,
+        "summary": {
+          "totalDevCost": 60463112.45,
+          "totalSources": 55345733.73,
+          "noiStabilized": 1237510.01,
+          "dscr": 1.1579,
+          "yieldOnCost": 0.0205,
+          "avgCashOnCash": 0.0149,
+          "gapOrSurplus": -5117378.72,
+          "requiredSubsidyToBreakeven": 5117378.72,
+          "requiredSubsidyToTargetReturn": 5117378.72,
+          "lihtcEquity": 42455004.48,
+          "permLoan": 12890729.25,
+          "costPerUnit": 366443.11
+        },
+        "budget": {
+          "uses": [
+            {
+              "category": "Land",
+              "label": "Land",
+              "amount": 3501
+            },
+            {
+              "category": "Hard Costs",
+              "label": "Hard Costs",
+              "amount": 45780500
+            },
+            {
+              "category": "Hard Costs",
+              "label": "Commercial TI Allowance",
+              "amount": 170000
+            },
+            {
+              "category": "Site Work",
+              "label": "Water/Sewer Tap Fees",
+              "amount": 150000
+            },
+            {
+              "category": "Site Work",
+              "label": "Landscaping",
+              "amount": 100000
+            },
+            {
+              "category": "Soft Costs",
+              "label": "Soft Costs",
+              "amount": 5493660
+            },
+            {
+              "category": "Contingency",
+              "label": "Contingency",
+              "amount": 3662440
+            },
+            {
+              "category": "Reserves",
+              "label": "Reserves",
+              "amount": 99000
+            },
+            {
+              "category": "Developer Fee",
+              "label": "Developer Fee",
+              "amount": 2563708
+            },
+            {
+              "category": "Financing",
+              "label": "Financing Carry Estimate",
+              "amount": 2440303.45
+            }
+          ],
+          "totalUses": 60463112.45
+        },
+        "sources": {
+          "items": [
+            {
+              "label": "Permanent Debt",
+              "type": "debt",
+              "amount": 12890729.25,
+              "terms": "6.75% / 25yr / 1.16x DSCR"
+            },
+            {
+              "label": "Tax Credit Equity",
+              "type": "equity",
+              "amount": 42455004.48,
+              "terms": "LIHTC 9% / $0.92 / 10yr credit"
+            }
+          ],
+          "totalSources": 55345733.73
+        },
+        "proforma": [
+          {
+            "label": "Potential Gross Income",
+            "amount": 2638062
+          },
+          {
+            "label": "Effective Gross Income",
+            "amount": 2477678.28
+          },
+          {
+            "label": "Operating Expenses",
+            "amount": -1240168.27
+          },
+          {
+            "label": "Net Operating Income",
+            "amount": 1237510.01
+          },
+          {
+            "label": "Annual Debt Service",
+            "amount": -1068762.41
+          },
+          {
+            "label": "Cash Flow Before Tax",
+            "amount": 168747.6
+          }
+        ],
+        "returns": {
+          "yieldOnCost": 0.0205,
+          "avgCashOnCash": 0.0149,
+          "leveragedIrr": 0.0002,
+          "afterTaxIrr": -0.0352,
+          "dscr": 1.1579,
+          "permLoanToValue": 0.6771,
+          "permLoanToCost": 0.2132,
+          "stabilizedValue": 19038615.54,
+          "costPerUnit": 366443.11,
+          "noiPerUnit": 7500.06
+        },
+        "constraints": {
+          "gate": "limited_spend",
+          "warnings": [
+            "Modeled land basis combines acquisitionCost and closingCosts because the current deal engine prices a single land use line.",
+            "Footprint width/depth are approximated from usable pad area because finance/zones.json currently stores area, not explicit building dimensions.",
+            "Footprint width/depth are approximated from usable pad area because finance/zones.json currently stores area, not explicit building dimensions.",
+            "Footprint width/depth are approximated from usable pad area because finance/zones.json currently stores area, not explicit building dimensions.",
+            "Project program profile inferred from active commercial segments.",
+            "Scenario max-density exceeds one or more checked-in density references. The loader preserves the scenario for predevelopment modeling and records the mismatch explicitly instead of failing load.",
+            "9% LIHTC feasibility remains subject to competitive allocation and QAP scoring.",
+            "Automatic QCT/DDA basis boost lookup is not yet wired; provide basis_boost_pct explicitly when known.",
+            "Public land write-down is modeled, but the sponsor profile does not indicate direct access to below-market public land.",
+            "Missing input: site_fit_context",
+            "Missing input: confirmed_frontage",
+            "Missing input: unit_level_rent_assumptions",
+            "Missing input: construction_draw_schedule",
+            "Missing input: conversion_or_refi_timing",
+            "Missing input: reserve_release_schedule",
+            "Full pro forma still needs: site_fit_context",
+            "Full pro forma still needs: confirmed_frontage",
+            "Full pro forma still needs: unit_level_rent_assumptions",
+            "Full pro forma still needs: construction_draw_schedule",
+            "Full pro forma still needs: conversion_or_refi_timing",
+            "Full pro forma still needs: reserve_release_schedule"
+          ],
+          "unsupported": [
+            "assumptions.construction.siteExtraordinary.{hillsideRetaining,stormwaterBioswale,demolition}: These extraordinary site-work buckets are preserved on custom_site_plan_spec.shared_site_costs for future consumers, but the v1 deal engine does not price them yet.",
+            "assumptions.financing.constructionLoan: Project-level construction loan term overrides are not injected into v1 deal structuring. The engine still resolves the financing product from canonical config.",
+            "assumptions.financing.permanentLoan: Project-level permanent loan overrides are not injected into v1 deal structuring. The engine still resolves the permanent product from canonical config.",
+            "assumptions.operations.opexRatioPct: High-level opex ratio is not a direct v1 deal-engine input. The loader maps vacancy, bad debt, and property management, then falls back to canonical per-unit operating lines.",
+            "assumptions.retail.capRate: Retail cap rate is not applied directly in the v1 project-deal loader. Project valuation still uses the canonical residential cap-rate path.",
+            "facts.overlays.{craTier,craEligibility}: CRA Expand is preserved as a verified overlay fact, but the v1 deal engine does not currently allow cra_expand_tax_abatement on this custom site-plan scope.",
+            "assumptions.developerFee.lihtcMaxPct: LIHTC developer-fee max percentage is not mapped directly because the v1 engine contract caps developer fee in dollars, not as a percent-of-basis constraint."
+          ],
+          "arithmeticChecks": [
+            {
+              "checkName": "sources_uses_gap_consistency",
+              "status": "passed",
+              "message": "Sources minus uses matches the reported gap or surplus."
+            },
+            {
+              "checkName": "required_subsidy_consistency",
+              "status": "passed",
+              "message": "Required subsidy to breakeven matches the computed gap."
+            },
+            {
+              "checkName": "feasibility_status_consistency",
+              "status": "passed",
+              "message": "Feasibility status is consistent with the computed subsidy gap."
+            },
+            {
+              "checkName": "rental_permanent_debt_service_consistency",
+              "status": "passed",
+              "message": "Permanent debt implies positive annual debt service."
+            },
+            {
+              "checkName": "rental_dscr_consistency",
+              "status": "passed",
+              "message": "Reported DSCR matches adjusted NOI and annual debt service."
+            }
+          ],
+          "humanReviewFlags": [
+            "Historical closed-deal backtest is not available for this run.",
+            "Construction cost, market rent, and sale assumptions remain caller- or config-driven inputs and are not independently appraised by the engine.",
+            "LIHTC structures still require human review of award likelihood, legal structure, and investor terms."
+          ]
+        }
+      }
+    }
+  ]
+};

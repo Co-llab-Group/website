@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "site-deal-assumptions.v1",
+  "land": {
+    "acquisitionCost": 1,
+    "closingCosts": 3500
+  },
+  "construction": {
+    "hardCostPsf": 210,
+    "costTier": "standard_wood_frame",
+    "basementFactor": 0.5,
+    "softCostPct": 0.1,
+    "contingencyPct": 0.06,
+    "siteExtraordinary": {
+      "hillsideRetaining": 80000,
+      "stormwaterBioswale": 120000,
+      "trailAndLandscaping": 100000,
+      "utilityConnections": 150000,
+      "demolition": 0
+    }
+  },
+  "operations": {
+    "vacancyPct": 0.05,
+    "collectionLossPct": 0.01,
+    "opexRatioPct": 0.35,
+    "propertyMgmtPct": 0.08,
+    "propertyTaxMillRate": 0.062,
+    "assessmentRatio": 0.35,
+    "maintenancePct": 0.1,
+    "capexReservePct": 0.05,
+    "rentGrowthPct": 0.02,
+    "expenseGrowthPct": 0.02
+  },
+  "operatingExpenseAssumptions": {
+    "maintenanceAndRepairsPerUnit": 1800,
+    "utilitiesOwnerPaidPerUnit": 600,
+    "insurancePerUnit": 900,
+    "taxesPerUnit": 2700,
+    "complianceMonitoringPerUnit": 0,
+    "annualAuditAndReportingCost": 0,
+    "replacementReservePerUnit": 300
+  },
+  "taxAssumptions": {
+    "marginalFederalRate": 0.24,
+    "marginalStateRate": 0.04,
+    "depreciationYears": 27.5,
+    "depreciationRecaptureRate": 0.25
+  },
+  "financing": {
+    "constructionLoan": {
+      "rate": 0.0875,
+      "ltcPct": 0.75,
+      "termMonths": 14,
+      "originationPct": 0.015
+    },
+    "permanentLoan": {
+      "rate": 0.0625,
+      "ltvPct": 0.75,
+      "amortYears": 30,
+      "minDscr": 1.25
+    },
+    "lihtc9": {
+      "creditRate": 0.09,
+      "creditPeriodYears": 10,
+      "pricingPerDollar": 0.92,
+      "compliancePeriodYears": 15
+    }
+  },
+  "developerFee": {
+    "ratePct": 0.05,
+    "basis": "hard_plus_soft",
+    "floorDollars": 5000,
+    "lihtcMaxPct": 0.1
+  },
+  "retail": {
+    "rentPsfAnnual": 15,
+    "tiAllowancePsf": 50,
+    "capRate": 0.075
+  },
+  "marketRents": {
+    "studio": 950,
+    "oneBr": 1150,
+    "twoBr": 1400,
+    "threeBr": 1650
+  }
+}
