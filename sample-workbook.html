@@ -515,7 +515,7 @@ tr:hover td{background:#f9f8f5}
       <div class="section-sub">4 zones &middot; 3 buildable + 1 green buffer</div>
 
       <div class="card" style="text-align:center;padding:12px">
-        <img src="renderings/site-plan/development-zone-plan.png" style="max-width:100%;border-radius:4px;cursor:zoom-in" onclick="openLightbox(this.src)" alt="Development Zone Plan">
+        <img src="renderings/site-plan/development-zone-plan.webp" style="max-width:100%;border-radius:4px;cursor:zoom-in" onclick="openLightbox(this.src)" alt="Development Zone Plan">
       </div>
 
       <div style="margin-top:18px">
@@ -888,11 +888,11 @@ $$('.sort-btn').forEach(th=>{th.onclick=()=>{
 
 // ── Terrain ──
 const terrainItems=[
-  {label:'Composite Slope',src:'renderings/terrain/composite-slope-analysis.png'},
-  {label:'Elevation',src:'renderings/terrain/elevation-heatmap.png'},
-  {label:'Section A-A (S→N)',src:'renderings/terrain/section-AA-south-to-north.png'},
-  {label:'Section B-B (W→E)',src:'renderings/terrain/section-BB-west-to-east.png'},
-  {label:'Soil Suitability',src:'renderings/terrain/soil-development-suitability.png'},
+  {label:'Composite Slope',src:'renderings/terrain/composite-slope-analysis.webp'},
+  {label:'Elevation',src:'renderings/terrain/elevation-heatmap.webp'},
+  {label:'Section A-A (S→N)',src:'renderings/terrain/section-AA-south-to-north.webp'},
+  {label:'Section B-B (W→E)',src:'renderings/terrain/section-BB-west-to-east.webp'},
+  {label:'Soil Suitability',src:'renderings/terrain/soil-development-suitability.webp'},
   {label:'Aerial Reference',src:'renderings/reference/parcel-boundary-aerial.jpeg'},
   {label:'3D Interactive',src:null,href:'renderings/terrain/interactive-terrain-3d.html'},
 ];
@@ -909,11 +909,11 @@ tDisp.innerHTML=`<img src="${terrainItems[0].src}" alt="${terrainItems[0].label}
 
 // ── Concepts gallery ──
 const conceptItems=[
-  {label:'Axonometric Diagram',src:'renderings/concepts/concept-axonometric-diagram.png'},
-  {label:'Infographic Site Plan',src:'renderings/concepts/concept-infographic-site-plan.png'},
-  {label:'Photorealistic Aerial',src:'renderings/concepts/concept-photorealistic-aerial.png'},
-  {label:'Pencil Sketch (Annotated)',src:'renderings/concepts/concept-pencil-sketch-annotated.png'},
-  {label:'Pencil Sketch (Bird\'s Eye)',src:'renderings/concepts/concept-pencil-sketch-birdseye.png'},
+  {label:'Axonometric Diagram',src:'renderings/concepts/concept-axonometric-diagram.webp'},
+  {label:'Infographic Site Plan',src:'renderings/concepts/concept-infographic-site-plan.webp'},
+  {label:'Photorealistic Aerial',src:'renderings/concepts/concept-photorealistic-aerial.webp'},
+  {label:'Pencil Sketch (Annotated)',src:'renderings/concepts/concept-pencil-sketch-annotated.webp'},
+  {label:'Pencil Sketch (Bird\'s Eye)',src:'renderings/concepts/concept-pencil-sketch-birdseye.webp'},
 ];
 const cTabs=$('#concept-tabs'),cDisp=$('#concept-display');
 conceptItems.forEach((item,i)=>{
