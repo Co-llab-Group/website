@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Cincinnati skyline across the Ohio River at twilight, showing PNC Tower, Fifth Third Center, the Roebling Suspension Bridge, and the Great American Tower">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Cincinnati skyline across the Ohio River at twilight, featuring PNC Tower, Carew Tower, Fifth Third Center, Scripps Center, the twin-tower Roebling Suspension Bridge, and the Great American Tower">
   <defs>
     <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#0B0D0C"/>
@@ -16,13 +16,19 @@
       <path d="M 24 0 L 0 0 0 24" fill="none" stroke="rgba(212,162,74,0.06)" stroke-width="0.5"/>
     </pattern>
     <linearGradient id="winGlow" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#D4A24A" stop-opacity="0.9"/>
+      <stop offset="0%" stop-color="#D4A24A" stop-opacity="0.95"/>
       <stop offset="100%" stop-color="#C8522A" stop-opacity="0.7"/>
     </linearGradient>
+
     <filter id="ripple" x="0" y="0" width="100%" height="100%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.015 0.08" numOctaves="2" seed="5"/>
-      <feDisplacementMap in="SourceGraphic" scale="3"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.008 0.14" numOctaves="2" seed="7"/>
+      <feDisplacementMap in="SourceGraphic" scale="8"/>
     </filter>
+    <filter id="rippleHeavy" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.006 0.18" numOctaves="3" seed="11"/>
+      <feDisplacementMap in="SourceGraphic" scale="14"/>
+    </filter>
+
     <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="2"/>
       <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
@@ -47,325 +53,474 @@
   <rect x="0" y="340" width="1200" height="60" fill="#C8522A" opacity="0.08"/>
   <rect x="0" y="360" width="1200" height="40" fill="#D4A24A" opacity="0.05"/>
 
-  <!-- BACK SKYLINE (faded) -->
-  <g opacity="0.35" fill="#1a2028" stroke="#2a3038" stroke-width="0.4">
-    <rect x="40" y="300" width="40" height="100"/>
-    <rect x="90" y="280" width="50" height="120"/>
-    <rect x="150" y="310" width="35" height="90"/>
-    <rect x="1050" y="290" width="45" height="110"/>
-    <rect x="1100" y="310" width="55" height="90"/>
+  <!-- Distant back-layer silhouette -->
+  <g opacity="0.35" fill="#1a2028">
+    <rect x="20" y="310" width="30" height="90"/>
+    <rect x="55" y="300" width="28" height="100"/>
+    <rect x="1100" y="305" width="30" height="95"/>
+    <rect x="1135" y="320" width="40" height="80"/>
   </g>
 
-  <!-- LEFT CLUSTER (PNC Tower) -->
+  <!-- Left edge low-rise -->
   <g>
-    <rect x="20" y="320" width="70" height="80" fill="#181d20"/>
-    <rect x="85" y="300" width="50" height="100" fill="#1c2225"/>
-    <rect x="130" y="310" width="40" height="90" fill="#181d20"/>
-    <rect x="175" y="200" width="58" height="200" fill="#1c2225"/>
-    <rect x="170" y="270" width="68" height="10" fill="#2a3136"/>
-    <rect x="185" y="170" width="38" height="30" fill="#1c2225"/>
-    <ellipse cx="204" cy="170" rx="22" ry="8" fill="#2a3136"/>
-    <path d="M 182 170 Q 204 140 226 170 Z" fill="#2a3136"/>
-    <line x1="204" y1="140" x2="204" y2="108" stroke="#D4A24A" stroke-width="1.2"/>
-    <circle cx="204" cy="106" r="1.8" fill="#D4A24A" filter="url(#glow)"/>
-    <rect x="240" y="330" width="35" height="70" fill="#181d20"/>
-    <rect x="278" y="290" width="44" height="110" fill="#1c2225"/>
-    <rect x="325" y="310" width="30" height="90" fill="#181d20"/>
-    <rect x="358" y="270" width="42" height="130" fill="#1c2225"/>
-    <rect x="410" y="210" width="50" height="190" fill="#1c2225"/>
-    <path d="M 410 210 L 460 210 L 450 195 L 420 195 Z" fill="#2a3136"/>
-    <rect x="428" y="175" width="14" height="20" fill="#1c2225"/>
-    <line x1="435" y1="175" x2="435" y2="155" stroke="#8a9ba8" stroke-width="0.8"/>
-    <rect x="468" y="260" width="36" height="140" fill="#181d20"/>
-    <rect x="508" y="240" width="42" height="160" fill="#1c2225"/>
-    <rect x="555" y="280" width="30" height="120" fill="#181d20"/>
-    <rect x="590" y="300" width="28" height="100" fill="#14181a"/>
-    <rect x="622" y="310" width="30" height="90" fill="#14181a"/>
+    <rect x="20" y="340" width="38" height="60" fill="#14181a"/>
+    <rect x="58" y="320" width="32" height="80" fill="#181d20"/>
+    <rect x="88" y="330" width="28" height="70" fill="#14181a"/>
   </g>
 
-  <!-- ROEBLING BRIDGE -->
+  <!-- PNC Tower CLUSTER -->
   <g>
-    <path d="M 520 360 Q 680 200 760 200 Q 840 200 1000 360" stroke="#2a4a6e" stroke-width="2.4" fill="none" opacity="0.85"/>
-    <path d="M 520 370 Q 680 240 760 240 Q 840 240 1000 370" stroke="#2a4a6e" stroke-width="1.8" fill="none" opacity="0.6"/>
-    <g stroke="#2a4a6e" stroke-width="0.5" opacity="0.7">
-      <line x1="540" y1="356" x2="540" y2="374"/>
-      <line x1="555" y1="345" x2="555" y2="374"/>
-      <line x1="570" y1="335" x2="570" y2="374"/>
-      <line x1="585" y1="325" x2="585" y2="374"/>
-      <line x1="600" y1="316" x2="600" y2="374"/>
-      <line x1="615" y1="308" x2="615" y2="374"/>
-      <line x1="630" y1="300" x2="630" y2="374"/>
-      <line x1="645" y1="293" x2="645" y2="374"/>
-      <line x1="660" y1="286" x2="660" y2="374"/>
-      <line x1="675" y1="280" x2="675" y2="374"/>
-      <line x1="690" y1="275" x2="690" y2="374"/>
-      <line x1="705" y1="270" x2="705" y2="374"/>
-      <line x1="815" y1="270" x2="815" y2="374"/>
-      <line x1="830" y1="275" x2="830" y2="374"/>
-      <line x1="845" y1="280" x2="845" y2="374"/>
-      <line x1="860" y1="286" x2="860" y2="374"/>
-      <line x1="875" y1="293" x2="875" y2="374"/>
-      <line x1="890" y1="300" x2="890" y2="374"/>
-      <line x1="905" y1="308" x2="905" y2="374"/>
-      <line x1="920" y1="316" x2="920" y2="374"/>
-      <line x1="935" y1="325" x2="935" y2="374"/>
-      <line x1="950" y1="335" x2="950" y2="374"/>
-      <line x1="965" y1="345" x2="965" y2="374"/>
-      <line x1="980" y1="356" x2="980" y2="374"/>
+    <rect x="116" y="290" width="32" height="110" fill="#181d20"/>
+    <rect x="146" y="275" width="28" height="125" fill="#1c2225"/>
+    <rect x="174" y="190" width="56" height="210" fill="#1c2225"/>
+    <rect x="170" y="255" width="64" height="8" fill="#2a3136"/>
+    <rect x="184" y="160" width="36" height="30" fill="#1c2225"/>
+    <ellipse cx="202" cy="160" rx="22" ry="7" fill="#2a3136"/>
+    <path d="M 182 160 Q 202 128 222 160 Z" fill="#2a3136"/>
+    <line x1="202" y1="128" x2="202" y2="92" stroke="#D4A24A" stroke-width="1.2"/>
+    <circle cx="202" cy="90" r="1.8" fill="#D4A24A" filter="url(#glow)"/>
+    <rect x="232" y="280" width="26" height="120" fill="#181d20"/>
+    <rect x="258" y="305" width="22" height="95" fill="#14181a"/>
+  </g>
+
+  <!-- CAREW TOWER (Art Deco stepped crown) -->
+  <g>
+    <rect x="284" y="215" width="52" height="185" fill="#1c2225"/>
+    <rect x="288" y="195" width="44" height="22" fill="#1c2225"/>
+    <rect x="294" y="178" width="32" height="18" fill="#20272c"/>
+    <rect x="300" y="163" width="20" height="16" fill="#1c2225"/>
+    <rect x="303" y="150" width="14" height="14" fill="#20272c"/>
+    <rect x="306" y="142" width="8" height="9" fill="#1c2225"/>
+    <line x1="310" y1="142" x2="310" y2="70" stroke="#8a9ba8" stroke-width="0.7"/>
+    <line x1="310" y1="90" x2="314" y2="94" stroke="#8a9ba8" stroke-width="0.5"/>
+    <line x1="310" y1="105" x2="306" y2="110" stroke="#8a9ba8" stroke-width="0.5"/>
+    <circle cx="310" cy="68" r="1.2" fill="#C8522A" filter="url(#glow)"/>
+    <rect x="284" y="215" width="1.5" height="185" fill="#D4A24A" opacity="0.15"/>
+  </g>
+
+  <!-- Tight gap fillers -->
+  <g>
+    <rect x="338" y="300" width="22" height="100" fill="#14181a"/>
+    <rect x="360" y="275" width="28" height="125" fill="#181d20"/>
+  </g>
+
+  <!-- FIFTH THIRD CENTER -->
+  <g>
+    <rect x="390" y="200" width="48" height="200" fill="#1c2225"/>
+    <path d="M 390 200 L 438 200 L 432 188 L 396 188 Z" fill="#2a3136"/>
+    <rect x="408" y="168" width="12" height="20" fill="#1c2225"/>
+    <line x1="414" y1="168" x2="414" y2="148" stroke="#8a9ba8" stroke-width="0.7"/>
+    <circle cx="414" cy="147" r="1.2" fill="#D4A24A" filter="url(#glow)"/>
+    <rect x="436" y="200" width="2" height="200" fill="#12161a"/>
+  </g>
+
+  <!-- Tight cluster between 5/3 and Scripps -->
+  <g>
+    <rect x="440" y="270" width="24" height="130" fill="#181d20"/>
+    <rect x="464" y="295" width="20" height="105" fill="#14181a"/>
+    <rect x="484" y="250" width="32" height="150" fill="#1c2225"/>
+  </g>
+
+  <!-- SCRIPPS CENTER (pyramid top) -->
+  <g>
+    <rect x="518" y="225" width="42" height="175" fill="#1c2225"/>
+    <path d="M 518 225 L 539 200 L 560 225 Z" fill="#2a3136"/>
+    <path d="M 525 218 L 539 204 L 553 218" stroke="#D4A24A" stroke-width="0.4" fill="none" opacity="0.5"/>
+    <rect x="537" y="198" width="4" height="8" fill="#1c2225"/>
+    <line x1="539" y1="198" x2="539" y2="172" stroke="#8a9ba8" stroke-width="0.6"/>
+    <circle cx="539" cy="170" r="1.2" fill="#D4A24A" filter="url(#glow)"/>
+    <rect x="558" y="225" width="2" height="175" fill="#12161a"/>
+  </g>
+
+  <!-- Buildings leading to bridge -->
+  <g>
+    <rect x="562" y="290" width="22" height="110" fill="#181d20"/>
+    <rect x="584" y="305" width="24" height="95" fill="#14181a"/>
+    <rect x="608" y="330" width="18" height="70" fill="#181d20"/>
+    <rect x="626" y="315" width="20" height="85" fill="#14181a"/>
+    <rect x="646" y="345" width="24" height="55" fill="#181d20"/>
+  </g>
+
+  <!-- ROEBLING BRIDGE — two symmetrical towers with parabolic cables -->
+  <g>
+    <path d="M 540 378 Q 605 220 695 190 Q 795 175 895 190 Q 985 220 1050 378"
+          stroke="#5a7a9a" stroke-width="2.6" fill="none" opacity="0.9"/>
+    <path d="M 540 384 Q 605 240 695 210 Q 795 198 895 210 Q 985 240 1050 384"
+          stroke="#4a6a8a" stroke-width="1.6" fill="none" opacity="0.6"/>
+    <path d="M 540 392 Q 605 260 695 230 Q 795 218 895 230 Q 985 260 1050 392"
+          stroke="#3a5a7a" stroke-width="0.8" fill="none" opacity="0.4"/>
+
+    <g stroke="#5a7a9a" stroke-width="0.5" opacity="0.45">
+      <line x1="545" y1="370" x2="545" y2="378"/>
+      <line x1="555" y1="348" x2="555" y2="378"/>
+      <line x1="567" y1="328" x2="567" y2="378"/>
+      <line x1="580" y1="308" x2="580" y2="378"/>
+      <line x1="593" y1="288" x2="593" y2="378"/>
+      <line x1="606" y1="268" x2="606" y2="378"/>
+      <line x1="620" y1="250" x2="620" y2="378"/>
+      <line x1="634" y1="234" x2="634" y2="378"/>
+      <line x1="648" y1="220" x2="648" y2="378"/>
+      <line x1="662" y1="208" x2="662" y2="378"/>
+      <line x1="676" y1="198" x2="676" y2="378"/>
     </g>
-    <rect x="520" y="373" width="480" height="3" fill="#2a4a6e" opacity="0.6"/>
+    <g stroke="#5a7a9a" stroke-width="0.5" opacity="0.45">
+      <line x1="725" y1="184" x2="725" y2="378"/>
+      <line x1="740" y1="180" x2="740" y2="378"/>
+      <line x1="755" y1="177" x2="755" y2="378"/>
+      <line x1="770" y1="175" x2="770" y2="378"/>
+      <line x1="785" y1="174" x2="785" y2="378"/>
+      <line x1="800" y1="174" x2="800" y2="378"/>
+      <line x1="815" y1="175" x2="815" y2="378"/>
+      <line x1="830" y1="177" x2="830" y2="378"/>
+      <line x1="845" y1="180" x2="845" y2="378"/>
+      <line x1="860" y1="184" x2="860" y2="378"/>
+    </g>
+    <g stroke="#5a7a9a" stroke-width="0.5" opacity="0.45">
+      <line x1="914" y1="198" x2="914" y2="378"/>
+      <line x1="928" y1="208" x2="928" y2="378"/>
+      <line x1="942" y1="220" x2="942" y2="378"/>
+      <line x1="956" y1="234" x2="956" y2="378"/>
+      <line x1="970" y1="250" x2="970" y2="378"/>
+      <line x1="984" y1="268" x2="984" y2="378"/>
+      <line x1="997" y1="288" x2="997" y2="378"/>
+      <line x1="1010" y1="308" x2="1010" y2="378"/>
+      <line x1="1023" y1="328" x2="1023" y2="378"/>
+      <line x1="1035" y1="348" x2="1035" y2="378"/>
+      <line x1="1045" y1="370" x2="1045" y2="378"/>
+    </g>
+
+    <rect x="540" y="377" width="510" height="3.5" fill="#4a6a8a" opacity="0.7"/>
+    <rect x="540" y="380" width="510" height="1" fill="#2a4a6e" opacity="0.6"/>
+
+    <!-- LEFT BRIDGE TOWER -->
     <g>
-      <rect x="715" y="200" width="50" height="175" fill="#C8522A"/>
-      <g stroke="#8a3a1e" stroke-width="0.3" opacity="0.5">
-        <line x1="715" y1="220" x2="765" y2="220"/>
-        <line x1="715" y1="240" x2="765" y2="240"/>
-        <line x1="715" y1="260" x2="765" y2="260"/>
-        <line x1="715" y1="280" x2="765" y2="280"/>
-        <line x1="715" y1="300" x2="765" y2="300"/>
-        <line x1="715" y1="320" x2="765" y2="320"/>
-        <line x1="715" y1="340" x2="765" y2="340"/>
-        <line x1="715" y1="360" x2="765" y2="360"/>
+      <rect x="672" y="192" width="48" height="185" fill="#A94725"/>
+      <g stroke="#6a2a12" stroke-width="0.3" opacity="0.5">
+        <line x1="672" y1="215" x2="720" y2="215"/>
+        <line x1="672" y1="235" x2="720" y2="235"/>
+        <line x1="672" y1="255" x2="720" y2="255"/>
+        <line x1="672" y1="275" x2="720" y2="275"/>
+        <line x1="672" y1="295" x2="720" y2="295"/>
+        <line x1="672" y1="315" x2="720" y2="315"/>
+        <line x1="672" y1="335" x2="720" y2="335"/>
+        <line x1="672" y1="355" x2="720" y2="355"/>
       </g>
-      <rect x="715" y="200" width="3" height="175" fill="#D4A24A" opacity="0.6"/>
-      <rect x="762" y="200" width="3" height="175" fill="#8a3a1e" opacity="0.7"/>
-      <path d="M 722 330 L 722 300 Q 728 290 734 300 L 734 330 Z" fill="#0a0d10"/>
-      <path d="M 746 330 L 746 300 Q 752 290 758 300 L 758 330 Z" fill="#0a0d10"/>
-      <rect x="710" y="195" width="60" height="8" fill="#D4A24A"/>
-      <rect x="713" y="190" width="54" height="5" fill="#C8522A"/>
-      <path d="M 720 190 L 724 165 L 728 190 Z" fill="#D4A24A"/>
-      <path d="M 752 190 L 756 165 L 760 190 Z" fill="#D4A24A"/>
-      <circle cx="724" cy="162" r="1.2" fill="#D4A24A" filter="url(#glow)"/>
-      <circle cx="756" cy="162" r="1.2" fill="#D4A24A" filter="url(#glow)"/>
+      <rect x="672" y="192" width="3" height="185" fill="#D4A24A" opacity="0.45"/>
+      <rect x="717" y="192" width="3" height="185" fill="#5a1f0c" opacity="0.75"/>
+      <path d="M 678 335 L 678 305 Q 684 295 690 305 L 690 335 Z" fill="#0a0d10"/>
+      <path d="M 702 335 L 702 305 Q 708 295 714 305 L 714 335 Z" fill="#0a0d10"/>
+      <rect x="668" y="186" width="56" height="7" fill="#C89560"/>
+      <rect x="670" y="182" width="52" height="5" fill="#A94725"/>
+      <path d="M 678 182 L 682 160 L 686 182 Z" fill="#C89560"/>
+      <path d="M 706 182 L 710 160 L 714 182 Z" fill="#C89560"/>
+      <circle cx="682" cy="157" r="1.3" fill="#D4A24A" filter="url(#glow)"/>
+      <circle cx="710" cy="157" r="1.3" fill="#D4A24A" filter="url(#glow)"/>
+      <rect x="666" y="377" width="60" height="28" fill="#6a2a12"/>
+      <rect x="663" y="402" width="66" height="6" fill="#42170a"/>
     </g>
-    <rect x="708" y="374" width="64" height="30" fill="#8a3a1e"/>
-    <rect x="705" y="400" width="70" height="8" fill="#5a2a18"/>
+
+    <!-- RIGHT BRIDGE TOWER -->
+    <g>
+      <rect x="872" y="192" width="48" height="185" fill="#A94725"/>
+      <g stroke="#6a2a12" stroke-width="0.3" opacity="0.5">
+        <line x1="872" y1="215" x2="920" y2="215"/>
+        <line x1="872" y1="235" x2="920" y2="235"/>
+        <line x1="872" y1="255" x2="920" y2="255"/>
+        <line x1="872" y1="275" x2="920" y2="275"/>
+        <line x1="872" y1="295" x2="920" y2="295"/>
+        <line x1="872" y1="315" x2="920" y2="315"/>
+        <line x1="872" y1="335" x2="920" y2="335"/>
+        <line x1="872" y1="355" x2="920" y2="355"/>
+      </g>
+      <rect x="872" y="192" width="3" height="185" fill="#D4A24A" opacity="0.45"/>
+      <rect x="917" y="192" width="3" height="185" fill="#5a1f0c" opacity="0.75"/>
+      <path d="M 878 335 L 878 305 Q 884 295 890 305 L 890 335 Z" fill="#0a0d10"/>
+      <path d="M 902 335 L 902 305 Q 908 295 914 305 L 914 335 Z" fill="#0a0d10"/>
+      <rect x="868" y="186" width="56" height="7" fill="#C89560"/>
+      <rect x="870" y="182" width="52" height="5" fill="#A94725"/>
+      <path d="M 878 182 L 882 160 L 886 182 Z" fill="#C89560"/>
+      <path d="M 906 182 L 910 160 L 914 182 Z" fill="#C89560"/>
+      <circle cx="882" cy="157" r="1.3" fill="#D4A24A" filter="url(#glow)"/>
+      <circle cx="910" cy="157" r="1.3" fill="#D4A24A" filter="url(#glow)"/>
+      <rect x="866" y="377" width="60" height="28" fill="#6a2a12"/>
+      <rect x="863" y="402" width="66" height="6" fill="#42170a"/>
+    </g>
+
+    <!-- Warm lights on towers -->
+    <g filter="url(#glow)">
+      <circle cx="682" cy="210" r="1.5" fill="#D4A24A"/>
+      <circle cx="710" cy="210" r="1.5" fill="#D4A24A"/>
+      <circle cx="696" cy="250" r="1.3" fill="#D4A24A" opacity="0.85"/>
+      <circle cx="682" cy="290" r="1.2" fill="#D4A24A" opacity="0.75"/>
+      <circle cx="710" cy="290" r="1.2" fill="#D4A24A" opacity="0.75"/>
+      <circle cx="882" cy="210" r="1.5" fill="#D4A24A"/>
+      <circle cx="910" cy="210" r="1.5" fill="#D4A24A"/>
+      <circle cx="896" cy="250" r="1.3" fill="#D4A24A" opacity="0.85"/>
+      <circle cx="882" cy="290" r="1.2" fill="#D4A24A" opacity="0.75"/>
+      <circle cx="910" cy="290" r="1.2" fill="#D4A24A" opacity="0.75"/>
+    </g>
   </g>
 
-  <!-- RIGHT CLUSTER (Great American) -->
+  <!-- Waterfront buildings between bridge and GA Tower -->
   <g>
-    <rect x="785" y="300" width="30" height="100" fill="#14181a"/>
-    <rect x="818" y="280" width="38" height="120" fill="#1c2225"/>
-    <rect x="860" y="260" width="35" height="140" fill="#181d20"/>
-    <rect x="898" y="290" width="32" height="110" fill="#14181a"/>
-    <rect x="934" y="270" width="40" height="130" fill="#1c2225"/>
-    <rect x="980" y="220" width="44" height="180" fill="#1c2225"/>
-    <path d="M 980 220 L 1024 220 L 1024 205 L 1002 195 L 980 205 Z" fill="#2a3136"/>
-    <rect x="1028" y="290" width="28" height="110" fill="#181d20"/>
-    <g>
-      <rect x="1060" y="130" width="62" height="270" fill="#1c2225"/>
-      <rect x="1058" y="130" width="2" height="270" fill="#2a3136"/>
-      <rect x="1122" y="130" width="2" height="270" fill="#12161a"/>
-      <rect x="1055" y="125" width="72" height="8" fill="#2a3136"/>
-      <path d="M 1060 125 Q 1075 100 1091 115 Q 1107 100 1122 125 Z" fill="#2a3136" stroke="#3a4248" stroke-width="0.5"/>
-      <path d="M 1060 125 Q 1070 108 1080 118" stroke="#D4A24A" stroke-width="0.8" fill="none" opacity="0.8"/>
-      <path d="M 1080 118 Q 1091 100 1102 118" stroke="#D4A24A" stroke-width="0.8" fill="none" opacity="0.8"/>
-      <path d="M 1102 118 Q 1112 108 1122 125" stroke="#D4A24A" stroke-width="0.8" fill="none" opacity="0.8"/>
-      <rect x="1089" y="85" width="4" height="25" fill="#2a3136"/>
-      <circle cx="1091" cy="84" r="2" fill="#D4A24A" filter="url(#glow)"/>
-    </g>
-    <rect x="1130" y="320" width="30" height="80" fill="#181d20"/>
-    <rect x="1165" y="340" width="35" height="60" fill="#14181a"/>
+    <rect x="935" y="340" width="24" height="60" fill="#181d20"/>
+    <rect x="959" y="320" width="28" height="80" fill="#14181a"/>
+    <rect x="987" y="300" width="22" height="100" fill="#181d20"/>
+    <rect x="1009" y="310" width="26" height="90" fill="#14181a"/>
+    <rect x="1035" y="285" width="24" height="115" fill="#181d20"/>
+  </g>
+
+  <!-- GREAT AMERICAN TOWER — dominant, tiara crown -->
+  <g>
+    <rect x="1060" y="108" width="64" height="292" fill="#1c2225"/>
+    <rect x="1058" y="108" width="2" height="292" fill="#2a3136"/>
+    <rect x="1076" y="108" width="1" height="292" fill="#161a1c" opacity="0.7"/>
+    <rect x="1091" y="108" width="1" height="292" fill="#161a1c" opacity="0.7"/>
+    <rect x="1106" y="108" width="1" height="292" fill="#161a1c" opacity="0.7"/>
+    <rect x="1124" y="108" width="2" height="292" fill="#12161a"/>
+    <rect x="1058" y="238" width="68" height="2" fill="#2a3136" opacity="0.7"/>
+
+    <rect x="1055" y="103" width="74" height="7" fill="#2a3136"/>
+    <path d="M 1058 103 Q 1073 76 1092 90 Q 1111 76 1126 103 Z"
+          fill="#252c30" stroke="#3a4248" stroke-width="0.5"/>
+    <path d="M 1058 103 Q 1068 84 1080 92"
+          stroke="#D4A24A" stroke-width="0.9" fill="none" opacity="0.85"/>
+    <path d="M 1080 92 Q 1092 76 1104 92"
+          stroke="#D4A24A" stroke-width="0.9" fill="none" opacity="0.85"/>
+    <path d="M 1104 92 Q 1116 84 1126 103"
+          stroke="#D4A24A" stroke-width="0.9" fill="none" opacity="0.85"/>
+    <circle cx="1080" cy="92" r="1" fill="#D4A24A" filter="url(#glow)"/>
+    <circle cx="1104" cy="92" r="1" fill="#D4A24A" filter="url(#glow)"/>
+
+    <rect x="1090" y="58" width="4" height="34" fill="#2a3136"/>
+    <circle cx="1092" cy="56" r="2.2" fill="#D4A24A" filter="url(#glow)"/>
+    <circle cx="1092" cy="56" r="3.5" fill="#C8522A" opacity="0.3" filter="url(#glow)"/>
+  </g>
+
+  <!-- Right edge low-rise -->
+  <g>
+    <rect x="1132" y="330" width="28" height="70" fill="#181d20"/>
+    <rect x="1160" y="345" width="40" height="55" fill="#14181a"/>
   </g>
 
   <!-- WINDOW LIGHTS -->
   <g fill="url(#winGlow)">
     <g>
-      <rect x="183" y="215" width="3" height="4"/><rect x="190" y="215" width="3" height="4"/>
-      <rect x="197" y="215" width="3" height="4"/><rect x="204" y="215" width="3" height="4"/>
-      <rect x="211" y="215" width="3" height="4"/><rect x="218" y="215" width="3" height="4"/>
-      <rect x="183" y="228" width="3" height="4" opacity="0.6"/><rect x="197" y="228" width="3" height="4"/>
-      <rect x="211" y="228" width="3" height="4"/><rect x="218" y="228" width="3" height="4" opacity="0.5"/>
-      <rect x="190" y="241" width="3" height="4"/><rect x="204" y="241" width="3" height="4"/>
-      <rect x="218" y="241" width="3" height="4"/>
-      <rect x="183" y="254" width="3" height="4"/><rect x="197" y="254" width="3" height="4" opacity="0.5"/>
-      <rect x="211" y="254" width="3" height="4"/>
-      <rect x="183" y="290" width="3" height="4"/><rect x="197" y="290" width="3" height="4"/>
-      <rect x="211" y="290" width="3" height="4" opacity="0.6"/>
-      <rect x="183" y="310" width="3" height="4"/><rect x="218" y="310" width="3" height="4"/>
-      <rect x="183" y="330" width="3" height="4" opacity="0.5"/><rect x="197" y="330" width="3" height="4"/>
-      <rect x="211" y="330" width="3" height="4"/>
-      <rect x="183" y="355" width="3" height="4"/><rect x="197" y="355" width="3" height="4"/>
-      <rect x="211" y="355" width="3" height="4"/><rect x="218" y="355" width="3" height="4" opacity="0.5"/>
+      <rect x="182" y="205" width="3" height="4"/><rect x="190" y="205" width="3" height="4"/>
+      <rect x="198" y="205" width="3" height="4"/><rect x="206" y="205" width="3" height="4"/>
+      <rect x="214" y="205" width="3" height="4"/><rect x="222" y="205" width="3" height="4"/>
+      <rect x="182" y="220" width="3" height="4" opacity="0.6"/><rect x="198" y="220" width="3" height="4"/>
+      <rect x="214" y="220" width="3" height="4"/><rect x="222" y="220" width="3" height="4" opacity="0.5"/>
+      <rect x="190" y="235" width="3" height="4"/><rect x="206" y="235" width="3" height="4"/>
+      <rect x="222" y="235" width="3" height="4"/>
+      <rect x="182" y="250" width="3" height="4"/><rect x="198" y="250" width="3" height="4" opacity="0.5"/>
+      <rect x="214" y="250" width="3" height="4"/>
+      <rect x="182" y="280" width="3" height="4"/><rect x="198" y="280" width="3" height="4"/>
+      <rect x="214" y="280" width="3" height="4" opacity="0.6"/>
+      <rect x="182" y="305" width="3" height="4"/><rect x="222" y="305" width="3" height="4"/>
+      <rect x="182" y="330" width="3" height="4" opacity="0.5"/><rect x="198" y="330" width="3" height="4"/>
+      <rect x="214" y="330" width="3" height="4"/>
+      <rect x="182" y="355" width="3" height="4"/><rect x="198" y="355" width="3" height="4"/>
+      <rect x="214" y="355" width="3" height="4"/><rect x="222" y="355" width="3" height="4" opacity="0.5"/>
     </g>
     <g>
-      <rect x="418" y="225" width="3" height="4"/><rect x="428" y="225" width="3" height="4"/>
-      <rect x="440" y="225" width="3" height="4"/><rect x="452" y="225" width="3" height="4"/>
-      <rect x="418" y="245" width="3" height="4" opacity="0.5"/><rect x="428" y="245" width="3" height="4"/>
-      <rect x="440" y="245" width="3" height="4"/>
-      <rect x="418" y="265" width="3" height="4"/><rect x="440" y="265" width="3" height="4"/>
-      <rect x="452" y="265" width="3" height="4"/>
-      <rect x="418" y="290" width="3" height="4"/><rect x="428" y="290" width="3" height="4" opacity="0.6"/>
-      <rect x="440" y="290" width="3" height="4"/><rect x="452" y="290" width="3" height="4"/>
-      <rect x="428" y="320" width="3" height="4"/><rect x="440" y="320" width="3" height="4"/>
-      <rect x="418" y="350" width="3" height="4"/><rect x="452" y="350" width="3" height="4"/>
+      <rect x="290" y="228" width="3" height="4"/><rect x="300" y="228" width="3" height="4"/>
+      <rect x="312" y="228" width="3" height="4"/><rect x="324" y="228" width="3" height="4"/>
+      <rect x="290" y="245" width="3" height="4" opacity="0.5"/><rect x="300" y="245" width="3" height="4"/>
+      <rect x="312" y="245" width="3" height="4"/><rect x="324" y="245" width="3" height="4"/>
+      <rect x="300" y="265" width="3" height="4"/><rect x="312" y="265" width="3" height="4"/>
+      <rect x="324" y="265" width="3" height="4"/>
+      <rect x="290" y="285" width="3" height="4"/><rect x="300" y="285" width="3" height="4"/>
+      <rect x="312" y="285" width="3" height="4" opacity="0.6"/><rect x="324" y="285" width="3" height="4"/>
+      <rect x="290" y="310" width="3" height="4"/><rect x="312" y="310" width="3" height="4"/>
+      <rect x="324" y="310" width="3" height="4"/>
+      <rect x="300" y="335" width="3" height="4"/><rect x="312" y="335" width="3" height="4"/>
+      <rect x="290" y="360" width="3" height="4"/><rect x="324" y="360" width="3" height="4"/>
+      <rect x="297" y="200" width="2" height="3"/><rect x="307" y="200" width="2" height="3"/>
+      <rect x="317" y="200" width="2" height="3"/>
+      <rect x="302" y="184" width="2" height="3"/><rect x="312" y="184" width="2" height="3"/>
     </g>
-    <g opacity="0.7">
-      <rect x="283" y="300" width="3" height="4"/><rect x="295" y="300" width="3" height="4"/>
-      <rect x="310" y="300" width="3" height="4"/>
-      <rect x="283" y="325" width="3" height="4"/><rect x="295" y="325" width="3" height="4"/>
-      <rect x="310" y="325" width="3" height="4"/>
-      <rect x="283" y="360" width="3" height="4"/><rect x="310" y="360" width="3" height="4"/>
-      <rect x="368" y="285" width="3" height="4"/><rect x="380" y="285" width="3" height="4"/>
-      <rect x="392" y="285" width="3" height="4"/>
-      <rect x="368" y="310" width="3" height="4"/><rect x="380" y="310" width="3" height="4"/>
-      <rect x="392" y="310" width="3" height="4"/>
-      <rect x="368" y="340" width="3" height="4"/><rect x="380" y="340" width="3" height="4"/>
-      <rect x="392" y="340" width="3" height="4"/>
-      <rect x="368" y="370" width="3" height="4"/><rect x="392" y="370" width="3" height="4"/>
-      <rect x="475" y="275" width="3" height="4"/><rect x="488" y="275" width="3" height="4"/>
-      <rect x="475" y="300" width="3" height="4"/><rect x="488" y="300" width="3" height="4"/>
-      <rect x="475" y="330" width="3" height="4"/><rect x="488" y="330" width="3" height="4"/>
-      <rect x="475" y="360" width="3" height="4"/><rect x="488" y="360" width="3" height="4"/>
-      <rect x="515" y="255" width="3" height="4"/><rect x="528" y="255" width="3" height="4"/>
-      <rect x="540" y="255" width="3" height="4"/>
-      <rect x="515" y="280" width="3" height="4"/><rect x="540" y="280" width="3" height="4"/>
-      <rect x="515" y="310" width="3" height="4"/><rect x="528" y="310" width="3" height="4"/>
-      <rect x="540" y="340" width="3" height="4"/><rect x="515" y="340" width="3" height="4"/>
-      <rect x="528" y="370" width="3" height="4"/><rect x="540" y="370" width="3" height="4"/>
+    <g>
+      <rect x="398" y="215" width="3" height="4"/><rect x="408" y="215" width="3" height="4"/>
+      <rect x="420" y="215" width="3" height="4"/><rect x="432" y="215" width="3" height="4"/>
+      <rect x="398" y="235" width="3" height="4" opacity="0.5"/><rect x="408" y="235" width="3" height="4"/>
+      <rect x="420" y="235" width="3" height="4"/>
+      <rect x="398" y="255" width="3" height="4"/><rect x="420" y="255" width="3" height="4"/>
+      <rect x="432" y="255" width="3" height="4"/>
+      <rect x="398" y="280" width="3" height="4"/><rect x="408" y="280" width="3" height="4" opacity="0.6"/>
+      <rect x="420" y="280" width="3" height="4"/><rect x="432" y="280" width="3" height="4"/>
+      <rect x="408" y="310" width="3" height="4"/><rect x="420" y="310" width="3" height="4"/>
+      <rect x="398" y="340" width="3" height="4"/><rect x="432" y="340" width="3" height="4"/>
+      <rect x="408" y="370" width="3" height="4"/><rect x="420" y="370" width="3" height="4"/>
+    </g>
+    <g>
+      <rect x="524" y="240" width="3" height="4"/><rect x="536" y="240" width="3" height="4"/>
+      <rect x="548" y="240" width="3" height="4"/>
+      <rect x="524" y="262" width="3" height="4" opacity="0.6"/><rect x="536" y="262" width="3" height="4"/>
+      <rect x="548" y="262" width="3" height="4"/>
+      <rect x="524" y="285" width="3" height="4"/><rect x="548" y="285" width="3" height="4"/>
+      <rect x="524" y="308" width="3" height="4"/><rect x="536" y="308" width="3" height="4"/>
+      <rect x="548" y="308" width="3" height="4" opacity="0.5"/>
+      <rect x="524" y="335" width="3" height="4"/><rect x="548" y="335" width="3" height="4"/>
+      <rect x="536" y="365" width="3" height="4"/>
+    </g>
+    <g opacity="0.72">
+      <rect x="121" y="300" width="3" height="4"/><rect x="133" y="300" width="3" height="4"/>
+      <rect x="121" y="325" width="3" height="4"/><rect x="133" y="325" width="3" height="4"/>
+      <rect x="121" y="360" width="3" height="4"/><rect x="133" y="360" width="3" height="4"/>
+      <rect x="151" y="285" width="3" height="4"/><rect x="163" y="285" width="3" height="4"/>
+      <rect x="151" y="315" width="3" height="4"/><rect x="163" y="315" width="3" height="4"/>
+      <rect x="151" y="350" width="3" height="4"/><rect x="163" y="350" width="3" height="4"/>
+      <rect x="238" y="290" width="3" height="4"/><rect x="250" y="290" width="3" height="4"/>
+      <rect x="238" y="320" width="3" height="4"/><rect x="250" y="320" width="3" height="4"/>
+      <rect x="238" y="355" width="3" height="4"/><rect x="250" y="355" width="3" height="4"/>
+      <rect x="346" y="310" width="3" height="4"/><rect x="371" y="285" width="3" height="4"/>
+      <rect x="371" y="315" width="3" height="4"/><rect x="383" y="285" width="3" height="4"/>
+      <rect x="371" y="350" width="3" height="4"/><rect x="383" y="350" width="3" height="4"/>
+      <rect x="446" y="280" width="3" height="4"/><rect x="457" y="280" width="3" height="4"/>
+      <rect x="446" y="310" width="3" height="4"/><rect x="457" y="310" width="3" height="4"/>
+      <rect x="446" y="345" width="3" height="4"/><rect x="457" y="345" width="3" height="4"/>
+      <rect x="490" y="260" width="3" height="4"/><rect x="504" y="260" width="3" height="4"/>
+      <rect x="490" y="290" width="3" height="4"/><rect x="504" y="290" width="3" height="4"/>
+      <rect x="490" y="325" width="3" height="4"/><rect x="504" y="325" width="3" height="4"/>
+      <rect x="490" y="360" width="3" height="4"/><rect x="504" y="360" width="3" height="4"/>
     </g>
     <g opacity="0.75">
-      <rect x="825" y="295" width="3" height="4"/><rect x="840" y="295" width="3" height="4"/>
-      <rect x="825" y="320" width="3" height="4"/><rect x="840" y="320" width="3" height="4"/>
-      <rect x="825" y="350" width="3" height="4"/><rect x="840" y="350" width="3" height="4"/>
-      <rect x="867" y="275" width="3" height="4"/><rect x="880" y="275" width="3" height="4"/>
-      <rect x="867" y="300" width="3" height="4"/><rect x="880" y="300" width="3" height="4"/>
-      <rect x="867" y="330" width="3" height="4"/><rect x="880" y="330" width="3" height="4"/>
-      <rect x="867" y="360" width="3" height="4"/><rect x="880" y="360" width="3" height="4"/>
-      <rect x="940" y="285" width="3" height="4"/><rect x="955" y="285" width="3" height="4"/>
-      <rect x="940" y="310" width="3" height="4"/><rect x="955" y="310" width="3" height="4"/>
-      <rect x="940" y="340" width="3" height="4"/><rect x="955" y="340" width="3" height="4"/>
-      <rect x="940" y="370" width="3" height="4"/><rect x="955" y="370" width="3" height="4"/>
-      <rect x="988" y="240" width="3" height="4"/><rect x="1000" y="240" width="3" height="4"/>
-      <rect x="1012" y="240" width="3" height="4"/>
-      <rect x="988" y="265" width="3" height="4"/><rect x="1012" y="265" width="3" height="4"/>
-      <rect x="988" y="290" width="3" height="4"/><rect x="1000" y="290" width="3" height="4"/>
-      <rect x="1012" y="290" width="3" height="4"/>
-      <rect x="988" y="320" width="3" height="4"/><rect x="1012" y="320" width="3" height="4"/>
-      <rect x="988" y="350" width="3" height="4"/><rect x="1000" y="350" width="3" height="4"/>
-      <rect x="1012" y="350" width="3" height="4"/>
+      <rect x="965" y="330" width="3" height="4"/><rect x="977" y="330" width="3" height="4"/>
+      <rect x="965" y="355" width="3" height="4"/><rect x="977" y="355" width="3" height="4"/>
+      <rect x="992" y="310" width="3" height="4"/><rect x="1002" y="310" width="3" height="4"/>
+      <rect x="992" y="340" width="3" height="4"/><rect x="1002" y="340" width="3" height="4"/>
+      <rect x="992" y="370" width="3" height="4"/><rect x="1002" y="370" width="3" height="4"/>
+      <rect x="1015" y="320" width="3" height="4"/><rect x="1027" y="320" width="3" height="4"/>
+      <rect x="1015" y="350" width="3" height="4"/><rect x="1027" y="350" width="3" height="4"/>
+      <rect x="1040" y="295" width="3" height="4"/><rect x="1052" y="295" width="3" height="4"/>
+      <rect x="1040" y="325" width="3" height="4"/><rect x="1052" y="325" width="3" height="4"/>
+      <rect x="1040" y="360" width="3" height="4"/><rect x="1052" y="360" width="3" height="4"/>
     </g>
     <g>
-      <rect x="1066" y="150" width="3" height="4"/><rect x="1078" y="150" width="3" height="4"/>
-      <rect x="1090" y="150" width="3" height="4"/><rect x="1102" y="150" width="3" height="4"/>
-      <rect x="1114" y="150" width="3" height="4"/>
-      <rect x="1066" y="170" width="3" height="4"/><rect x="1090" y="170" width="3" height="4"/>
-      <rect x="1114" y="170" width="3" height="4"/>
-      <rect x="1078" y="190" width="3" height="4"/><rect x="1102" y="190" width="3" height="4"/>
-      <rect x="1066" y="210" width="3" height="4"/><rect x="1090" y="210" width="3" height="4"/>
-      <rect x="1114" y="210" width="3" height="4"/>
-      <rect x="1066" y="230" width="3" height="4" opacity="0.6"/><rect x="1090" y="230" width="3" height="4"/>
-      <rect x="1102" y="230" width="3" height="4"/>
-      <rect x="1078" y="250" width="3" height="4"/><rect x="1090" y="250" width="3" height="4"/>
-      <rect x="1114" y="250" width="3" height="4"/>
-      <rect x="1066" y="275" width="3" height="4"/><rect x="1102" y="275" width="3" height="4"/>
-      <rect x="1066" y="300" width="3" height="4"/><rect x="1078" y="300" width="3" height="4" opacity="0.5"/>
-      <rect x="1090" y="300" width="3" height="4"/><rect x="1114" y="300" width="3" height="4"/>
-      <rect x="1078" y="325" width="3" height="4"/><rect x="1102" y="325" width="3" height="4"/>
-      <rect x="1066" y="350" width="3" height="4"/><rect x="1090" y="350" width="3" height="4"/>
-      <rect x="1114" y="350" width="3" height="4"/>
-      <rect x="1078" y="375" width="3" height="4"/><rect x="1102" y="375" width="3" height="4"/>
+      <rect x="1066" y="125" width="3" height="4"/><rect x="1080" y="125" width="3" height="4"/>
+      <rect x="1094" y="125" width="3" height="4"/><rect x="1108" y="125" width="3" height="4"/>
+      <rect x="1118" y="125" width="3" height="4"/>
+      <rect x="1066" y="145" width="3" height="4"/><rect x="1094" y="145" width="3" height="4"/>
+      <rect x="1118" y="145" width="3" height="4"/>
+      <rect x="1080" y="165" width="3" height="4"/><rect x="1108" y="165" width="3" height="4"/>
+      <rect x="1066" y="185" width="3" height="4"/><rect x="1094" y="185" width="3" height="4"/>
+      <rect x="1118" y="185" width="3" height="4"/>
+      <rect x="1066" y="205" width="3" height="4" opacity="0.6"/>
+      <rect x="1094" y="205" width="3" height="4"/><rect x="1108" y="205" width="3" height="4"/>
+      <rect x="1080" y="225" width="3" height="4"/><rect x="1094" y="225" width="3" height="4"/>
+      <rect x="1118" y="225" width="3" height="4"/>
+      <rect x="1066" y="248" width="3" height="4"/><rect x="1108" y="248" width="3" height="4"/>
+      <rect x="1066" y="270" width="3" height="4"/><rect x="1080" y="270" width="3" height="4" opacity="0.5"/>
+      <rect x="1094" y="270" width="3" height="4"/><rect x="1118" y="270" width="3" height="4"/>
+      <rect x="1080" y="292" width="3" height="4"/><rect x="1108" y="292" width="3" height="4"/>
+      <rect x="1066" y="315" width="3" height="4"/><rect x="1094" y="315" width="3" height="4"/>
+      <rect x="1118" y="315" width="3" height="4"/>
+      <rect x="1080" y="338" width="3" height="4"/><rect x="1108" y="338" width="3" height="4"/>
+      <rect x="1066" y="360" width="3" height="4"/><rect x="1094" y="360" width="3" height="4"/>
+      <rect x="1118" y="360" width="3" height="4"/>
+      <rect x="1080" y="380" width="3" height="4"/><rect x="1108" y="380" width="3" height="4"/>
     </g>
   </g>
 
-  <g filter="url(#glow)">
-    <circle cx="724" cy="215" r="1.5" fill="#D4A24A"/>
-    <circle cx="756" cy="215" r="1.5" fill="#D4A24A"/>
-    <circle cx="724" cy="250" r="1.2" fill="#D4A24A" opacity="0.8"/>
-    <circle cx="756" cy="250" r="1.2" fill="#D4A24A" opacity="0.8"/>
-    <circle cx="740" cy="280" r="1.2" fill="#D4A24A" opacity="0.7"/>
-  </g>
-
-  <rect x="0" y="396" width="1200" height="10" fill="#14181a"/>
+  <!-- Promenade -->
+  <rect x="0" y="398" width="1200" height="10" fill="#14181a"/>
   <g fill="#D4A24A" opacity="0.8">
-    <circle cx="60" cy="398" r="0.8"/>
-    <circle cx="140" cy="398" r="0.8"/>
-    <circle cx="220" cy="398" r="0.8"/>
-    <circle cx="300" cy="398" r="0.8"/>
-    <circle cx="380" cy="398" r="0.8"/>
-    <circle cx="460" cy="398" r="0.8"/>
-    <circle cx="540" cy="398" r="0.8"/>
-    <circle cx="800" cy="398" r="0.8"/>
-    <circle cx="880" cy="398" r="0.8"/>
-    <circle cx="960" cy="398" r="0.8"/>
-    <circle cx="1040" cy="398" r="0.8"/>
-    <circle cx="1140" cy="398" r="0.8"/>
+    <circle cx="60" cy="400" r="0.8"/><circle cx="130" cy="400" r="0.8"/>
+    <circle cx="210" cy="400" r="0.8"/><circle cx="290" cy="400" r="0.8"/>
+    <circle cx="370" cy="400" r="0.8"/><circle cx="450" cy="400" r="0.8"/>
+    <circle cx="530" cy="400" r="0.8"/><circle cx="945" cy="400" r="0.8"/>
+    <circle cx="1010" cy="400" r="0.8"/><circle cx="1080" cy="400" r="0.8"/>
+    <circle cx="1150" cy="400" r="0.8"/>
   </g>
 
   <!-- RIVER -->
-  <rect x="0" y="406" width="1200" height="214" fill="url(#river)"/>
+  <rect x="0" y="408" width="1200" height="212" fill="url(#river)"/>
   <g opacity="0.4">
-    <rect x="0" y="406" width="1200" height="214" fill="url(#grid)"/>
+    <rect x="0" y="408" width="1200" height="212" fill="url(#grid)"/>
   </g>
 
-  <!-- REFLECTIONS -->
-  <g filter="url(#ripple)" opacity="0.55">
-    <rect x="175" y="406" width="58" height="120" fill="#1c2225"/>
-    <rect x="410" y="406" width="50" height="110" fill="#1c2225"/>
-    <rect x="715" y="406" width="50" height="140" fill="#C8522A" opacity="0.7"/>
-    <rect x="718" y="406" width="44" height="140" fill="#D4A24A" opacity="0.4"/>
-    <rect x="1060" y="406" width="62" height="160" fill="#1c2225"/>
-    <rect x="278" y="406" width="44" height="90" fill="#181d20"/>
-    <rect x="358" y="406" width="42" height="110" fill="#1c2225"/>
-    <rect x="508" y="406" width="42" height="120" fill="#1c2225"/>
-    <rect x="818" y="406" width="38" height="100" fill="#1c2225"/>
-    <rect x="860" y="406" width="35" height="120" fill="#181d20"/>
-    <rect x="934" y="406" width="40" height="110" fill="#1c2225"/>
-    <rect x="980" y="406" width="44" height="150" fill="#1c2225"/>
+  <!-- REFLECTIONS with heavy horizontal ripple -->
+  <g filter="url(#rippleHeavy)" opacity="0.55">
+    <rect x="174" y="408" width="56" height="130" fill="#1c2225"/>
+    <rect x="284" y="408" width="52" height="120" fill="#1c2225"/>
+    <rect x="390" y="408" width="48" height="120" fill="#1c2225"/>
+    <rect x="518" y="408" width="42" height="110" fill="#1c2225"/>
+    <rect x="672" y="408" width="48" height="155" fill="#A94725" opacity="0.75"/>
+    <rect x="676" y="408" width="40" height="155" fill="#D4A24A" opacity="0.4"/>
+    <rect x="872" y="408" width="48" height="155" fill="#A94725" opacity="0.75"/>
+    <rect x="876" y="408" width="40" height="155" fill="#D4A24A" opacity="0.4"/>
+    <rect x="1060" y="408" width="64" height="175" fill="#1c2225"/>
+    <rect x="360" y="408" width="28" height="90" fill="#181d20"/>
+    <rect x="484" y="408" width="32" height="100" fill="#1c2225"/>
+    <rect x="987" y="408" width="22" height="90" fill="#181d20"/>
+    <rect x="1035" y="408" width="24" height="110" fill="#181d20"/>
   </g>
 
-  <!-- LIGHT STREAK REFLECTIONS -->
-  <g opacity="0.7" filter="url(#ripple)">
-    <rect x="720" y="406" width="3" height="180" fill="#D4A24A"/>
-    <rect x="728" y="406" width="2" height="170" fill="#C8522A"/>
-    <rect x="736" y="406" width="3" height="190" fill="#D4A24A"/>
-    <rect x="745" y="406" width="2" height="175" fill="#C8522A"/>
-    <rect x="752" y="406" width="3" height="185" fill="#D4A24A"/>
-    <rect x="760" y="406" width="2" height="170" fill="#C8522A"/>
-    <rect x="204" y="406" width="1.5" height="140" fill="#D4A24A"/>
-    <rect x="435" y="406" width="1.5" height="130" fill="#D4A24A"/>
-    <rect x="740" y="406" width="2" height="200" fill="#D4A24A"/>
-    <rect x="1091" y="406" width="1.5" height="160" fill="#D4A24A"/>
-    <rect x="290" y="406" width="1" height="100" fill="#D4A24A" opacity="0.6"/>
-    <rect x="380" y="406" width="1" height="110" fill="#D4A24A" opacity="0.6"/>
-    <rect x="530" y="406" width="1" height="120" fill="#D4A24A" opacity="0.5"/>
-    <rect x="870" y="406" width="1" height="110" fill="#D4A24A" opacity="0.5"/>
-    <rect x="950" y="406" width="1" height="120" fill="#D4A24A" opacity="0.6"/>
-    <rect x="1000" y="406" width="1" height="140" fill="#D4A24A" opacity="0.6"/>
+  <!-- Vibrant light streaks -->
+  <g opacity="0.75" filter="url(#ripple)">
+    <rect x="678" y="408" width="3" height="195" fill="#D4A24A"/>
+    <rect x="686" y="408" width="2" height="185" fill="#C8522A"/>
+    <rect x="694" y="408" width="3" height="200" fill="#D4A24A"/>
+    <rect x="703" y="408" width="2" height="190" fill="#C8522A"/>
+    <rect x="712" y="408" width="3" height="195" fill="#D4A24A"/>
+    <rect x="878" y="408" width="3" height="195" fill="#D4A24A"/>
+    <rect x="886" y="408" width="2" height="185" fill="#C8522A"/>
+    <rect x="894" y="408" width="3" height="200" fill="#D4A24A"/>
+    <rect x="903" y="408" width="2" height="190" fill="#C8522A"/>
+    <rect x="912" y="408" width="3" height="195" fill="#D4A24A"/>
+    <rect x="202" y="408" width="1.5" height="150" fill="#D4A24A"/>
+    <rect x="310" y="408" width="1.5" height="160" fill="#D4A24A"/>
+    <rect x="414" y="408" width="1.5" height="140" fill="#D4A24A"/>
+    <rect x="539" y="408" width="1.5" height="130" fill="#D4A24A"/>
+    <rect x="1092" y="408" width="2" height="180" fill="#D4A24A"/>
+    <rect x="290" y="408" width="1" height="110" fill="#D4A24A" opacity="0.55"/>
+    <rect x="380" y="408" width="1" height="115" fill="#D4A24A" opacity="0.55"/>
+    <rect x="450" y="408" width="1" height="120" fill="#D4A24A" opacity="0.5"/>
+    <rect x="530" y="408" width="1" height="120" fill="#D4A24A" opacity="0.5"/>
+    <rect x="985" y="408" width="1" height="110" fill="#D4A24A" opacity="0.5"/>
+    <rect x="1020" y="408" width="1" height="120" fill="#D4A24A" opacity="0.55"/>
+    <rect x="1055" y="408" width="1" height="130" fill="#D4A24A" opacity="0.55"/>
+    <rect x="1108" y="408" width="1" height="150" fill="#D4A24A" opacity="0.6"/>
   </g>
 
   <g stroke="rgba(212,162,74,0.08)" stroke-width="0.4" fill="none">
-    <line x1="0" y1="430" x2="1200" y2="430"/>
+    <line x1="0" y1="432" x2="1200" y2="432"/>
     <line x1="0" y1="455" x2="1200" y2="455"/>
     <line x1="0" y1="485" x2="1200" y2="485"/>
     <line x1="0" y1="520" x2="1200" y2="520"/>
     <line x1="0" y1="560" x2="1200" y2="560"/>
     <line x1="0" y1="600" x2="1200" y2="600"/>
   </g>
+  <g stroke="rgba(212,162,74,0.12)" stroke-width="0.5" fill="none" opacity="0.6">
+    <path d="M 0 445 Q 300 448 600 443 T 1200 446"/>
+    <path d="M 0 500 Q 350 504 700 497 T 1200 502"/>
+    <path d="M 0 555 Q 400 559 800 552 T 1200 557"/>
+  </g>
 
   <!-- ANNOTATIONS -->
   <g font-family="JetBrains Mono, monospace" font-size="8" fill="rgba(212,162,74,0.7)" letter-spacing="1">
-    <line x1="204" y1="105" x2="204" y2="95" stroke="rgba(212,162,74,0.5)" stroke-width="0.5"/>
-    <line x1="204" y1="95" x2="260" y2="95" stroke="rgba(212,162,74,0.5)" stroke-width="0.5"/>
-    <text x="265" y="98">PNC TOWER · 495 FT</text>
-    <line x1="740" y1="162" x2="740" y2="52" stroke="rgba(212,162,74,0.5)" stroke-width="0.5"/>
-    <line x1="740" y1="52" x2="830" y2="52" stroke="rgba(212,162,74,0.5)" stroke-width="0.5"/>
-    <text x="835" y="55">ROEBLING BRIDGE · 1866</text>
-    <line x1="1091" y1="82" x2="1091" y2="40" stroke="rgba(212,162,74,0.5)" stroke-width="0.5"/>
-    <line x1="1091" y1="40" x2="980" y2="40" stroke="rgba(212,162,74,0.5)" stroke-width="0.5"/>
-    <text x="825" y="43">GREAT AMERICAN · 665 FT</text>
+    <line x1="795" y1="175" x2="795" y2="128" stroke="rgba(212,162,74,0.5)" stroke-width="0.5"/>
+    <line x1="795" y1="128" x2="870" y2="128" stroke="rgba(212,162,74,0.5)" stroke-width="0.5"/>
+    <text x="875" y="131">ROEBLING BRIDGE · 1866</text>
+
+    <line x1="1092" y1="54" x2="1092" y2="30" stroke="rgba(212,162,74,0.5)" stroke-width="0.5"/>
+    <line x1="1092" y1="30" x2="970" y2="30" stroke="rgba(212,162,74,0.5)" stroke-width="0.5"/>
+    <text x="815" y="33">GREAT AMERICAN · 665 FT</text>
+
     <text x="60" y="540" font-style="italic" font-family="Fraunces, serif" font-size="22" fill="rgba(212,162,74,0.25)" letter-spacing="4">OHIO RIVER</text>
   </g>
 
-  <!-- CROSSHAIR -->
+  <!-- Scanner crosshair centered on bridge -->
   <g stroke="#D4A24A" stroke-width="0.6" opacity="0.5">
-    <circle cx="740" cy="290" r="22" fill="none"/>
-    <line x1="740" y1="260" x2="740" y2="278"/>
-    <line x1="740" y1="302" x2="740" y2="320"/>
-    <line x1="710" y1="290" x2="728" y2="290"/>
-    <line x1="752" y1="290" x2="770" y2="290"/>
+    <circle cx="795" cy="285" r="22" fill="none"/>
+    <line x1="795" y1="255" x2="795" y2="273"/>
+    <line x1="795" y1="297" x2="795" y2="315"/>
+    <line x1="765" y1="285" x2="783" y2="285"/>
+    <line x1="807" y1="285" x2="825" y2="285"/>
   </g>
 
-  <!-- REGISTRATION MARKS -->
+  <!-- Registration marks -->
   <g stroke="#D4A24A" stroke-width="0.8" opacity="0.4" fill="none">
     <path d="M 12 12 L 12 24 M 12 12 L 24 12"/>
     <path d="M 1188 12 L 1188 24 M 1188 12 L 1176 12"/>
