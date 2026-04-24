@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Colerain-North Bend Gateway — Site Workbook</title>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({startOnLoad:false});</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@300;400;500&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#f6f5f1;--fg:#1a1917;--sidebar:#171715;--sidebar-fg:#b8b5aa;
+  --card:#fff;--card-border:#e2dfd6;--card-shadow:0 1px 3px rgba(0,0,0,.06);
+  --accent:#2d6a4f;--accent-light:#d8f3dc;--accent-mid:#52b788;
+  --danger:#9b2226;--danger-light:#fde8e8;
+  --warn:#bc6c25;--warn-light:#fefae0;
+  --mono:'JetBrains Mono',monospace;--sans:'DM Sans',sans-serif;
+  --text-xs:.7rem;--text-sm:.8rem;--text-base:.875rem;--text-lg:1.05rem;--text-xl:1.35rem;--text-2xl:1.7rem;
+}
+html{font-size:15px;-webkit-font-smoothing:antialiased}
+body{font-family:var(--sans);color:var(--fg);background:var(--bg);display:flex;height:100vh;overflow:hidden}
+
+/* Sidebar */
+.sidebar{width:240px;min-width:240px;background:var(--sidebar);color:var(--sidebar-fg);display:flex;flex-direction:column;overflow-y:auto;z-index:10}
+.sidebar-header{padding:20px 18px 12px;border-bottom:1px solid rgba(255,255,255,.06)}
+.sidebar-header h1{font-size:var(--text-sm);font-weight:600;color:#e8e6df;letter-spacing:.02em;line-height:1.3}
+.sidebar-header .subtitle{font-size:var(--text-xs);color:#807d72;margin-top:4px;font-family:var(--mono);font-weight:300}
+.sidebar nav{flex:1;padding:8px 0}
+.sidebar nav button{
+  display:flex;align-items:center;gap:10px;width:100%;padding:8px 18px;border:none;background:none;
+  color:var(--sidebar-fg);font:400 var(--text-sm)/1.3 var(--sans);cursor:pointer;text-align:left;
+  transition:all .15s;border-left:2px solid transparent;
+}
+.sidebar nav button:hover{background:rgba(255,255,255,.04);color:#e8e6df}
+.sidebar nav button.active{background:rgba(255,255,255,.07);color:#e8e6df;border-left-color:var(--accent-mid)}
+.sidebar nav button .icon{font-size:14px;width:18px;opacity:.6}
+.sidebar nav button.active .icon{opacity:1}
+.sidebar-footer{padding:14px 18px;border-top:1px solid rgba(255,255,255,.06);font-size:var(--text-xs);color:#5a5850;font-family:var(--mono)}
+
+/* Main */
+.main{flex:1;overflow-y:auto;padding:0}
+.main-inner{max-width:1100px;margin:0 auto;padding:32px 40px 60px}
+section{display:none}
+section.active{display:block}
+section h2{font-size:var(--text-2xl);font-weight:700;color:var(--fg);margin-bottom:4px;letter-spacing:-.02em}
+section .section-sub{font-size:var(--text-sm);color:#6b6960;margin-bottom:28px;font-family:var(--mono);font-weight:300}
+.divider{height:1px;background:var(--card-border);margin:28px 0}
+
+/* Cards */
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:6px;padding:20px 22px;margin-bottom:14px;box-shadow:var(--card-shadow)}
+.card h3{font-size:var(--text-base);font-weight:600;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+
+/* KV pairs */
+.kv{display:grid;grid-template-columns:140px 1fr;gap:4px 12px;font-size:var(--text-sm)}
+.kv dt{color:#6b6960;font-weight:400}.kv dd{font-weight:500}
+.kv dd.mono{font-family:var(--mono);font-weight:400;font-size:var(--text-xs)}
+
+/* Badges */
+.badge{display:inline-block;padding:2px 8px;border-radius:3px;font-size:var(--text-xs);font-weight:500;font-family:var(--mono);letter-spacing:.01em}
+.badge-green{background:var(--accent-light);color:var(--accent)}
+.badge-red{background:var(--danger-light);color:var(--danger)}
+.badge-amber{background:var(--warn-light);color:var(--warn)}
+.badge-gray{background:#eeedea;color:#6b6960}
+.badge-outline{background:transparent;border:1px solid var(--card-border);color:#6b6960}
+
+/* Tables */
+table{width:100%;border-collapse:collapse;font-size:var(--text-sm)}
+th{text-align:left;padding:8px 10px;font-weight:500;color:#6b6960;font-size:var(--text-xs);text-transform:uppercase;letter-spacing:.04em;border-bottom:2px solid var(--card-border);white-space:nowrap}
+td{padding:7px 10px;border-bottom:1px solid #eeedea;vertical-align:top}
+tr:hover td{background:#f9f8f5}
+.num{font-family:var(--mono);font-weight:400;font-size:var(--text-xs);text-align:right}
+.sort-btn{cursor:pointer;user-select:none}
+.sort-btn:hover{color:var(--fg)}
+
+/* Callout */
+.callout{border-left:3px solid var(--accent);background:var(--accent-light);padding:14px 18px;border-radius:0 6px 6px 0;font-size:var(--text-sm);line-height:1.6;margin:20px 0}
+.callout.warn{border-left-color:var(--warn);background:var(--warn-light)}
+.callout strong{font-weight:600}
+
+/* Image gallery */
+.gallery-tabs{display:flex;gap:0;border-bottom:1px solid var(--card-border);margin-bottom:0;flex-wrap:wrap}
+.gallery-tabs button{
+  padding:8px 14px;border:none;background:none;font:400 var(--text-xs)/1 var(--mono);
+  color:#6b6960;cursor:pointer;border-bottom:2px solid transparent;transition:all .15s;
+}
+.gallery-tabs button:hover{color:var(--fg)}
+.gallery-tabs button.active{color:var(--accent);border-bottom-color:var(--accent);font-weight:500}
+.gallery-img-wrap{background:var(--card);border:1px solid var(--card-border);border-top:none;border-radius:0 0 6px 6px;padding:16px;text-align:center;min-height:200px}
+.gallery-img-wrap img{max-width:100%;height:auto;border-radius:3px;cursor:zoom-in}
+.gallery-img-wrap a.open-link{display:inline-block;padding:10px 20px;background:var(--accent);color:#fff;text-decoration:none;border-radius:4px;font-size:var(--text-sm);font-weight:500;margin-top:12px}
+
+/* Lightbox */
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:100;display:none;align-items:center;justify-content:center;cursor:zoom-out;padding:24px}
+.lightbox.open{display:flex}
+.lightbox img{max-width:95vw;max-height:92vh;object-fit:contain;border-radius:4px}
+
+/* Zone cards */
+.zone-card{border-left:4px solid #ccc;padding-left:18px;margin-bottom:18px}
+.zone-card.z1{border-left-color:#ae2012}.zone-card.z2{border-left-color:#ee9b00}
+.zone-card.z3{border-left-color:#0a9396}.zone-card.z4{border-left-color:#588157}
+.zone-card h4{font-size:var(--text-base);font-weight:600;margin-bottom:6px}
+.zone-card .meta{font-size:var(--text-xs);color:#6b6960;font-family:var(--mono);line-height:1.7}
+
+/* Scenario cards */
+.scenario{border:1px solid var(--card-border);border-radius:6px;padding:18px 22px;margin-bottom:14px;background:var(--card)}
+.scenario h4{font-size:var(--text-lg);font-weight:700;margin-bottom:2px}
+.scenario .tagline{font-size:var(--text-sm);color:#6b6960;margin-bottom:12px}
+.scenario .unit-count{font-family:var(--mono);font-size:var(--text-2xl);font-weight:300;color:var(--accent);margin-bottom:8px}
+.scenario .mix{font-size:var(--text-xs);font-family:var(--mono);color:#6b6960;line-height:1.8}
+
+/* Sub-tabs */
+.sub-tabs{display:flex;gap:0;margin-bottom:20px;border-bottom:1px solid var(--card-border)}
+.sub-tabs button{padding:8px 16px;border:none;background:none;font:500 var(--text-sm)/1 var(--sans);color:#6b6960;cursor:pointer;border-bottom:2px solid transparent}
+.sub-tabs button:hover{color:var(--fg)}
+.sub-tabs button.active{color:var(--accent);border-bottom-color:var(--accent)}
+.sub-content{display:none}.sub-content.active{display:block}
+
+/* Stat row */
+.stat-row{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:20px}
+.stat{text-align:center;padding:14px 20px;background:var(--card);border:1px solid var(--card-border);border-radius:6px;min-width:120px;flex:1}
+.stat .val{font-family:var(--mono);font-size:var(--text-xl);font-weight:500;color:var(--accent)}
+.stat .label{font-size:var(--text-xs);color:#6b6960;margin-top:2px}
+
+/* Scenario strip */
+.scenario-strip{display:flex;gap:8px;flex-wrap:wrap}
+.scenario-strip button{
+  flex:1;min-width:140px;padding:10px 14px;border:1px solid var(--card-border);border-radius:6px;
+  background:var(--card);cursor:pointer;text-align:left;transition:all .15s;font-family:var(--sans);
+}
+.scenario-strip button:hover{border-color:var(--accent-mid);background:#f0fdf4}
+.scenario-strip button.active{border-color:var(--accent);background:var(--accent-light);box-shadow:0 0 0 1px var(--accent)}
+.scenario-strip .s-units{font-family:var(--mono);font-size:var(--text-xl);font-weight:500;color:var(--accent)}
+.scenario-strip .s-label{font-size:var(--text-sm);font-weight:600;margin-top:2px}
+.scenario-strip .s-tag{font-size:var(--text-xs);color:#6b6960}
+
+/* Workbook line items */
+.wb-line{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #eeedea;font-size:var(--text-sm)}
+.wb-line.total{border-top:2px solid var(--card-border);border-bottom:2px solid var(--card-border);font-weight:600;margin-top:4px;padding:8px 0}
+.wb-line.subtotal{font-weight:600;background:#f9f8f5;padding:6px 8px;margin:0 -8px;border-radius:3px}
+.wb-line .amt{font-family:var(--mono);font-size:var(--text-xs)}
+.wb-line .amt.neg{color:var(--danger)}
+.wb-line .amt.pos{color:var(--accent)}
+.wb-gate{display:inline-block;padding:4px 12px;border-radius:4px;font-family:var(--mono);font-size:var(--text-sm);font-weight:500}
+.wb-gate.pass{background:var(--accent-light);color:var(--accent)}
+.wb-gate.conditional{background:var(--warn-light);color:var(--warn)}
+.wb-gate.fail{background:var(--danger-light);color:var(--danger)}
+.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px 14px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:var(--text-xs);font-family:var(--mono);color:#6b6960;text-transform:uppercase;letter-spacing:.04em}
+.field input{width:100%;padding:9px 10px;border:1px solid var(--card-border);border-radius:4px;background:#fff;font:400 var(--text-sm)/1.2 var(--sans);color:var(--fg)}
+.field input:focus{outline:none;border-color:var(--accent-mid);box-shadow:0 0 0 2px rgba(82,183,136,.12)}
+.btn-row{display:flex;gap:10px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:4px;
+  border:1px solid var(--card-border);background:var(--card);color:var(--fg);font:500 var(--text-sm)/1 var(--sans);cursor:pointer;
+}
+.btn:hover{border-color:var(--accent-mid);background:#f9f8f5}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.primary:hover{background:#245741;border-color:#245741}
+.btn:disabled{opacity:.6;cursor:not-allowed}
+
+/* Mermaid */
+.mermaid-wrap{background:var(--card);border:1px solid var(--card-border);border-radius:6px;padding:20px;margin:20px 0;overflow-x:auto}
+.mermaid-wrap .mermaid{display:flex;justify-content:center}
+.mermaid svg{max-width:100%}
+
+/* Timeline */
+.tl{min-width:780px}
+.tl-section{margin-bottom:18px}
+.tl-section-label{font-size:var(--text-xs);font-family:var(--mono);font-weight:500;text-transform:uppercase;letter-spacing:.05em;color:#6b6960;margin-bottom:6px}
+.tl-row{display:flex;align-items:center;height:28px;margin-bottom:2px}
+.tl-task-label{width:240px;min-width:240px;font-size:var(--text-xs);color:#3a3832;text-align:right;padding-right:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tl-track{flex:1;position:relative;height:20px;background:#f3f2ee;border-radius:3px}
+.tl-bar{position:absolute;height:20px;border-radius:3px;top:0}
+.tl-bar.done{background:#bbb;border:1px solid #999}
+.tl-bar.active{background:#eee;border:1px solid #999}
+.tl-bar.normal{background:#707070}
+.tl-bar.crit{background:#d42}
+.tl-bar.milestone{width:12px!important;height:12px!important;top:4px;transform:rotate(45deg);border-radius:1px}
+.tl-bar.milestone.normal{background:#707070}
+.tl-bar.milestone.crit{background:#d42}
+.tl-axis{display:flex;margin-top:6px;padding-left:240px}
+.tl-axis span{flex:1;font-size:var(--text-xs);font-family:var(--mono);color:#807d72;text-align:center}
+.tl-today{position:absolute;top:0;bottom:0;width:2px;background:#d42;z-index:2}
+
+/* Roadmap */
+.roadmap-phase{margin-bottom:24px}
+.roadmap-phase h4{font-size:var(--text-base);font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:10px}
+.roadmap-phase h4 .phase-tag{font-size:var(--text-xs);font-family:var(--mono);padding:3px 10px;border-radius:3px;font-weight:500}
+.phase-30 .phase-tag{background:var(--accent-light);color:var(--accent)}
+.phase-60 .phase-tag{background:var(--warn-light);color:var(--warn)}
+.phase-90 .phase-tag{background:#e8e6df;color:#6b6960}
+.phase-beyond .phase-tag{background:#f0f0ee;color:#807d72}
+.task-list{list-style:none;padding:0;margin:0}
+.task-list li{display:flex;align-items:flex-start;gap:10px;padding:8px 12px;border-bottom:1px solid #eeedea;font-size:var(--text-sm);line-height:1.5}
+.task-list li:last-child{border-bottom:none}
+.task-check{width:16px;height:16px;border:2px solid var(--card-border);border-radius:3px;flex-shrink:0;margin-top:2px}
+.task-check.done{background:var(--accent);border-color:var(--accent)}
+.task-owner{font-family:var(--mono);font-size:var(--text-xs);color:#807d72;margin-left:auto;white-space:nowrap}
+
+/* Narrative prose */
+.prose{font-size:var(--text-base);line-height:1.8;color:#3a3832}
+.prose p{margin-bottom:16px}
+.prose h3{font-size:var(--text-lg);font-weight:700;color:var(--fg);margin:28px 0 8px;letter-spacing:-.01em}
+.prose h3:first-child{margin-top:0}
+.prose ul,.prose ol{margin:0 0 16px 20px;line-height:1.8}
+.prose li{margin-bottom:4px}
+.prose strong{font-weight:600;color:var(--fg)}
+.prose .inline-stat{font-family:var(--mono);font-weight:500;color:var(--accent)}
+.prose .source-tag{font-size:var(--text-xs);font-family:var(--mono);color:#807d72;display:inline-block;margin-left:4px}
+.prose .aside-box{background:#f9f8f5;border:1px solid var(--card-border);border-radius:6px;padding:16px 20px;margin:20px 0;font-size:var(--text-sm);line-height:1.7}
+.prose .aside-box h4{font-size:var(--text-sm);font-weight:600;margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em;color:#6b6960}
+.prose .method-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}
+@media(max-width:700px){.prose .method-grid{grid-template-columns:1fr}}
+.prose .method-grid .card{margin-bottom:0}
+
+/* Print */
+@media print{.sidebar{display:none}.main{overflow:visible}section{display:block!important;page-break-inside:avoid}.lightbox{display:none!important}}
+</style>
+</head>
+<body>
+
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <h1>Colerain-North Bend<br>Gateway</h1>
+    <div class="subtitle">Mt. Airy / Cincinnati, OH</div>
+  </div>
+  <nav id="nav"></nav>
+  <div class="sidebar-footer">
+    phase0 / site workbook<br>
+    snapshot 2026-04-15
+  </div>
+</aside>
+
+<div class="main">
+  <div class="main-inner">
+
+    <!-- EXECUTIVE SUMMARY -->
+    <section id="executive">
+      <h2>Executive Summary</h2>
+      <div class="section-sub">Phase Zero Pre-Development Assessment &middot; April 2026</div>
+
+      <div class="prose">
+
+        <h3>The Opportunity</h3>
+        <p>The Colerain-North Bend Gateway is a <span class="inline-stat">2.55-acre</span>, <span class="inline-stat">15-parcel</span> assemblage at the intersection of Colerain Avenue and North Bend Road in Mount Airy, Cincinnati. The site is fully controlled by the Hamilton County Land Reutilization Corporation (HCLRC) at a nominal acquisition cost of <span class="inline-stat">$1</span>, and has been confirmed for development consideration by HomeBase CDC through the Mt. Airy CURE partnership.</p>
+
+        <p>This assessment evaluates the site across four development scenarios ranging from <strong>57 to 165 units</strong>, each structured as a LIHTC 9% affordable housing deal. The site's combination of Qualified Census Tract status, CRA Expand tax abatement, donated land, and market rents that already align with 60% AMI limits makes this a strong LIHTC candidate&mdash;but the calculator-backed underwriting reveals that <strong>all four scenarios carry a funding gap of $4.3&ndash;5.8M</strong> that will require additional soft sources, deferred developer fee, or gap financing to close.</p>
+
+        <h3>Site Characteristics</h3>
+        <p>The site sits at a prominent commercial intersection with approximately <span class="inline-stat">400 ft</span> of Colerain Avenue frontage and <span class="inline-stat">200 ft</span> of North Bend Road frontage. The block is zoned CC-P-B (Community Commercial, Pedestrian) across 14 parcels and CC-M-B (Community Commercial, Mixed-Use) on the corner parcel&mdash;both permitting mixed-use development with an <span class="inline-stat">85 ft</span> height limit, no story cap, no FAR limit, and a density allowance of <span class="inline-stat">700 sf/unit</span> yielding up to <span class="inline-stat">167 units</span> by right.</p>
+
+        <p>Topography is the primary physical constraint. The buildable plateau along both street frontages sits at <span class="inline-stat">925&ndash;943 ft</span> elevation with cross-slopes of 6&ndash;16%. Behind the Colerain frontage, the grade breaks sharply&mdash;dropping 53 ft over 150 ft of plan distance at 35&ndash;40% slope. This cliff defines the eastern edge of the buildable area and creates a natural boundary for a green buffer zone.</p>
+
+        <h3>Development Concept</h3>
+        <p>The site is organized into four zones based on topography, frontage, and zoning:</p>
+        <ul>
+          <li><strong>Zone 1 &mdash; L-Shape Corner</strong> (15,700 sf): Mixed-use anchor building wrapping the Colerain/North Bend intersection. Ground-floor retail at the corner (2,500 sf), residential above, tuck-under parking exploiting the cross-slope. This is the gateway identity building.</li>
+          <li><strong>Zone 2 &mdash; Colerain Frontage</strong> (18,160 sf): Residential building(s) stepping down the south half of Colerain. Townhomes at smaller scale, walk-up apartments at larger scale. The steepening grade (10&ndash;14%) favors individually-stepped units.</li>
+          <li><strong>Zone 3 &mdash; North Bend Frontage</strong> (12,642 sf): Mixed-use building east of the L, with ground-floor flex/retail (1,500 sf). Activated only in the Three Buildings and Max Density scenarios.</li>
+          <li><strong>Zone 4 &mdash; Hillside Buffer</strong> (30,348 sf): Non-buildable. Trail system, bioswales for stormwater management, and community garden. This zone is the amenity differentiator&mdash;east-facing units look out over the tree canopy into the valley.</li>
+        </ul>
+
+        <h3>Scenario Matrix</h3>
+        <p>Four scenarios test the relationship between project scale, capital structure, and CDC organizational capacity:</p>
+
+        <div class="card" style="overflow-x:auto;margin:20px 0">
+          <table>
+            <thead><tr><th>Scenario</th><th class="num">Units</th><th class="num">Buildings</th><th class="num">TDC</th><th class="num">LIHTC Equity</th><th class="num">Gap</th><th>CDC Profile</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Starter</strong></td><td class="num">57</td><td class="num">2</td><td class="num">$28.9M</td><td class="num">$20.2M</td><td class="num" style="color:var(--danger)">($4.3M)</td><td>First LIHTC deal</td></tr>
+              <tr><td><strong>Right-Sized</strong></td><td class="num">87</td><td class="num">2</td><td class="num">$38.8M</td><td class="num">$27.2M</td><td class="num" style="color:var(--danger)">($5.3M)</td><td>Proven operator</td></tr>
+              <tr><td><strong>Three Buildings</strong></td><td class="num">131</td><td class="num">3</td><td class="num">$52.7M</td><td class="num">$37.0M</td><td class="num" style="color:var(--danger)">($5.8M)</td><td>Co-developer needed</td></tr>
+              <tr><td><strong>Max Density</strong></td><td class="num">165</td><td class="num">3</td><td class="num">$60.5M</td><td class="num">$42.5M</td><td class="num" style="color:var(--danger)">($5.1M)</td><td>Major developer</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>All four scenarios use the same financing structure: LIHTC 9% tax credit equity as the primary capital source, a conventional permanent loan sized by NOI/DSCR, and CRA Expand property tax abatement (75% for 12 years). The QCT 30% basis boost generates significant credit equity ($20&ndash;43M depending on scale), but a persistent <strong>$4&ndash;6M funding gap</strong> remains across all scenarios. This gap reflects the full-cost underwriting from the deal-structuring engine&mdash;including financing carry, conservative soft cost ratios, and reserves that hand estimates typically undercount. Closing the gap will require layering soft sources: deferred developer fee, HOME loans, FHLB AHP grants, Ohio Housing Trust Fund, CDFI soft seconds, and/or Cincinnati gap grants.</p>
+
+        <h3>The LIHTC Advantage at This Location</h3>
+        <p>The most important finding of this assessment is that <strong>60% AMI rent limits are essentially equal to market rents in Mt. Airy</strong>. The rent haircut for going LIHTC is negligible:</p>
+
+        <div class="card" style="overflow-x:auto;margin:20px 0">
+          <table>
+            <thead><tr><th>Unit Type</th><th class="num">Market Rent</th><th class="num">60% AMI (net)</th><th class="num">Difference</th></tr></thead>
+            <tbody>
+              <tr><td>Studio</td><td class="num">$950</td><td class="num">$950</td><td class="num" style="color:var(--accent)">$0</td></tr>
+              <tr><td>1 BR</td><td class="num">$1,150</td><td class="num">$1,134</td><td class="num">-$16</td></tr>
+              <tr><td>2 BR</td><td class="num">$1,400</td><td class="num">$1,361</td><td class="num">-$39</td></tr>
+              <tr><td>3 BR</td><td class="num">$1,650</td><td class="num">$1,419</td><td class="num">-$231</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>This means the LIHTC program is subsidizing the <em>construction cost gap</em>, not the <em>rent gap</em>. The credit generates $20&ndash;43M in tax credit equity depending on scale, while the revenue impact is minimal. This is the ideal LIHTC profile.</p>
+
+        <h3>CDC Capacity Considerations</h3>
+        <p>The site can support 165 units. LIHTC equity covers 70&ndash;85% of TDC at every scale, but a $4&ndash;6M gap remains that requires soft source layering. Beyond the capital stack, <strong>the binding constraint is organizational capacity.</strong> A $60M LIHTC deal requires:</p>
+        <ul>
+          <li>A dedicated development team managing $3&ndash;5M/month in construction draws</li>
+          <li>A syndicator relationship&mdash;the tax credit investor will underwrite the CDC's capacity before committing equity</li>
+          <li>15+ years of LIHTC compliance infrastructure (income verification, unit mix monitoring, annual reporting)</li>
+          <li>Asset management for 100+ units indefinitely</li>
+        </ul>
+
+        <div class="aside-box">
+          <h4>Recommended Path</h4>
+          <p><strong>Phase the project by CDC growth stage.</strong> Start with the L-building (Zone 1, 57 units, ~$29M TDC) as a single LIHTC application, potentially with a co-developer. The ~$4.3M gap on Phase 1 is addressable with deferred developer fee (~$1.4M), HOME ($110k), FHLB AHP ($85k), Ohio HTF ($60k), CDFI ($75k), Cincinnati gap grant ($50k), and sponsor equity or additional state sources for the remainder. Use Phase 1 to build syndicator relationships and compliance infrastructure. Pursue Zones 2 and 3 as separate LIHTC applications once Phase 1 is stabilized. Each phase builds the CDC's track record for the next.</p>
+        </div>
+
+        <h3>Comparable Scale</h3>
+        <p>For context, this project at full buildout (165 units, $60.5M TDC) is comparable in scale to the <strong>College Hill Station</strong> mixed-use development on Hamilton Avenue&mdash;a multi-building, transit-oriented project that combined LIHTC, CRA, and gap financing across phased delivery. The Colerain-North Bend site has similar advantages: gateway corner, public land, and strong overlay incentives. The difference is that College Hill had an established development team from the outset; HomeBase/CURE may need to build toward that capacity through phasing or partnership.</p>
+
+        <h3>Key Risks</h3>
+        <ul>
+          <li><strong>Funding gap requires soft source layering.</strong> The engine shows a $4.3&ndash;5.8M gap across all scenarios after LIHTC equity and permanent debt. This is typical for new-construction affordable deals in Cincinnati&mdash;it means the project needs 3&ndash;5 additional soft sources (HOME, FHLB AHP, Ohio HTF, CDFI, deferred fee) to close. Each source has its own application cycle and compliance requirements.</li>
+          <li><strong>9% LIHTC allocation is competitive.</strong> Ohio awards credits through a scored Qualified Allocation Plan. QCT status, donated land, and CRA abatement strengthen the application, but the allocation is not guaranteed.</li>
+          <li><strong>Construction cost sensitivity.</strong> The $210/sf assumption is based on RS Means Q1 2026 Cincinnati metro data. The engine applies this to full gross building area including circulation, which produces higher TDCs than net-rentable-only estimates. A 14&ndash;18 month LIHTC application-to-closing timeline means construction starts in late 2027 or 2028. Even modest cost escalation widens the gap.</li>
+          <li><strong>DSCR at 1.16x is below target.</strong> All four scenarios produce a debt service coverage ratio of 1.16x, below the typical 1.25x lender minimum. This constrains permanent loan sizing and may require interest rate buydowns, longer amortization, or subordinate debt to reach closing.</li>
+          <li><strong>Hillside site work.</strong> The $450k site extraordinary budget for retaining walls, stormwater, and utility connections is a preliminary estimate. Geotechnical investigation is needed before design development to confirm foundation conditions on the 12&ndash;16% slopes.</li>
+          <li><strong>Competing disposition.</strong> Parcels 022800030019 (5460 Colerain, $596k sale in 2024) and 022800030064 (2559 N Bend, $3.3M adjacent sale in 2025) flag concurrent commercial assembly activity in the area. Monitor for competing interests during the predevelopment period.</li>
+        </ul>
+
+        <h3>Methodology &amp; Sources</h3>
+        <div class="method-grid">
+          <div class="card">
+            <h3 style="font-size:var(--text-sm);margin:0 0 8px">Site Data</h3>
+            <dl class="kv" style="font-size:var(--text-xs)">
+              <dt>Parcels</dt><dd>Hamilton County Auditor via CAGIS API</dd>
+              <dt>Geometry</dt><dd>CAGIS parcel boundaries, EPSG:3735 projection</dd>
+              <dt>Topography</dt><dd>USGS 3DEP 1m DEM + CAGIS LiDAR</dd>
+              <dt>Soils</dt><dd>USDA NRCS gSSURGO via Web Soil Survey</dd>
+              <dt>Zoning</dt><dd>Cincinnati Municode, confirmed against CAGIS zoning layer</dd>
+            </dl>
+          </div>
+          <div class="card">
+            <h3 style="font-size:var(--text-sm);margin:0 0 8px">Financial Assumptions</h3>
+            <dl class="kv" style="font-size:var(--text-xs)">
+              <dt>Construction</dt><dd>RS Means 2026, Cincinnati metro adjustment</dd>
+              <dt>Rents</dt><dd>CoStar Cincinnati Q1 2026, Mt. Airy submarket</dd>
+              <dt>AMI Limits</dt><dd>HUD FY2025 Income Limits, Hamilton County</dd>
+              <dt>QCT</dt><dd>HUD QCT2026 dataset (huduser.gov), Tract 85.01</dd>
+              <dt>CRA</dt><dd>City of Cincinnati CRA Expand program schedule</dd>
+              <dt>Cap Rates</dt><dd>CoStar Cincinnati multifamily Q1 2026</dd>
+            </dl>
+          </div>
+          <div class="card">
+            <h3 style="font-size:var(--text-sm);margin:0 0 8px">Underwriting Engine</h3>
+            <dl class="kv" style="font-size:var(--text-xs)">
+              <dt>TDC</dt><dd>Site-engine deal-structuring-engine v1</dd>
+              <dt>LIHTC</dt><dd>9% credit, 10yr period, $0.92 pricing</dd>
+              <dt>Debt sizing</dt><dd>NOI &divide; DSCR (1.25x min), 6.25%, 30yr amort</dd>
+              <dt>Overlays</dt><dd>QCT 30% basis boost, CRA 75%/12yr abatement</dd>
+            </dl>
+          </div>
+          <div class="card">
+            <h3 style="font-size:var(--text-sm);margin:0 0 8px">What This Is Not</h3>
+            <dl class="kv" style="font-size:var(--text-xs)">
+              <dt>Appraisal</dt><dd>No. Preliminary feasibility only.</dd>
+              <dt>Engineering</dt><dd>No. Geotech &amp; civil needed.</dd>
+              <dt>Legal</dt><dd>No. Title work &amp; entitlements required.</dd>
+              <dt>Commitment</dt><dd>No. No financing commitments exist.</dd>
+            </dl>
+          </div>
+        </div>
+
+        <div class="aside-box" style="margin-top:28px">
+          <h4>About This Assessment</h4>
+          <p>This is a <strong>Phase Zero pro forma light</strong>&mdash;a conversation starter, not a financing commitment. It answers "is this worth pursuing?" before anyone commits predevelopment capital to architects, engineers, and attorneys. The analysis uses deterministic site data, published financial benchmarks, and a calculator-backed underwriting engine to evaluate feasibility across multiple scenarios. All assumptions are documented and adjustable.</p>
+          <p style="margin-top:10px">A <strong>full underwriting assessment</strong>&mdash;with sensitivity analysis, Monte Carlo simulations, construction scheduling, lender-ready pro formas, and third-party market studies&mdash;is the next step if the CDC decides to move forward. See the <strong>Roadmap</strong> tab for the 30/60/90 day action plan and what that full assessment would include.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section id="overview">
+      <h2>Site Overview</h2>
+      <div class="section-sub">Deterministic facts &middot; 15 parcels &middot; 2.55 ac</div>
+
+      <div class="stat-row">
+        <div class="stat"><div class="val">15</div><div class="label">Parcels</div></div>
+        <div class="stat"><div class="val">2.55 ac</div><div class="label">Total Area</div></div>
+        <div class="stat"><div class="val">136</div><div class="label">Max Units</div></div>
+        <div class="stat"><div class="val">104 ft</div><div class="label">Elev. Drop</div></div>
+        <div class="stat"><div class="val">15%</div><div class="label">Mean Slope</div></div>
+      </div>
+
+      <div class="card-grid">
+        <div class="card">
+          <h3>Identity</h3>
+          <dl class="kv">
+            <dt>Site</dt><dd>Colerain-North Bend Gateway</dd>
+            <dt>Neighborhood</dt><dd>Mount Airy</dd>
+            <dt>Municipality</dt><dd>City of Cincinnati, OH</dd>
+            <dt>Address</dt><dd>COLERAIN AVE + 9 more</dd>
+            <dt>Lot Frame</dt><dd class="mono">397.68 ft &times; 472.26 ft</dd>
+            <dt>Total Area</dt><dd class="mono">111,182 sf / 2.55 ac</dd>
+            <dt>Centroid</dt><dd class="mono">-84.5696, 39.1909</dd>
+          </dl>
+        </div>
+        <div class="card">
+          <h3>Control</h3>
+          <dl class="kv">
+            <dt>Entity</dt><dd>Hamilton County Land Reutilization Corp.</dd>
+            <dt>Status</dt><dd><span class="badge badge-green">confirmed</span></dd>
+            <dt>Confirmed</dt><dd class="mono">2026-03-15</dd>
+            <dt>Source</dt><dd>HomeBase / Alexis Heidenreich</dd>
+            <dt>Acquisition</dt><dd class="mono">$1 + $3,500 closing</dd>
+          </dl>
+        </div>
+        <div class="card">
+          <h3>Zoning</h3>
+          <dl class="kv">
+            <dt>Primary</dt><dd><span class="badge badge-outline">CC-P-B</span> &times; 13 parcels</dd>
+            <dt>Corner</dt><dd><span class="badge badge-outline">CC-M-B</span> &times; 1 parcel</dd>
+            <dt>Residential</dt><dd><span class="badge badge-outline">SF-6-MH</span> &times; 1 parcel</dd>
+            <dt>Max Height</dt><dd class="mono">85 ft (CC zones)</dd>
+            <dt>Density</dt><dd class="mono">700 sf/unit &rarr; 136 units</dd>
+            <dt>Illustrative</dt><dd class="mono">158 units (sitewide)</dd>
+          </dl>
+        </div>
+        <div class="card">
+          <h3>Overlays</h3>
+          <dl class="kv">
+            <dt>CRA</dt><dd><span class="badge badge-green">Expand</span> 75% / 12 yr</dd>
+            <dt>Hillside</dt><dd><span class="badge badge-amber">yes</span></dd>
+            <dt>Opportunity Zone</dt><dd><span class="badge badge-gray">no</span></dd>
+            <dt>Historic</dt><dd><span class="badge badge-gray">no</span></dd>
+            <dt>Flood Zone</dt><dd><span class="badge badge-gray">no</span></dd>
+            <dt>QCT</dt><dd><span class="badge badge-gray">unverified</span></dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARCELS -->
+    <section id="parcels">
+      <h2>Parcels</h2>
+      <div class="section-sub">15 parcels &middot; all HCLRC-controlled &middot; tax exempt</div>
+      <div class="card" style="overflow-x:auto">
+        <table id="parcel-table">
+          <thead><tr>
+            <th class="sort-btn" data-col="0">Address</th>
+            <th class="sort-btn" data-col="1">ID</th>
+            <th class="sort-btn" data-col="2">Zoning</th>
+            <th class="sort-btn num" data-col="3">Slope</th>
+            <th class="sort-btn" data-col="4">Elevation</th>
+            <th class="sort-btn" data-col="5">Status</th>
+            <th class="sort-btn" data-col="6">Role</th>
+          </tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- TERRAIN -->
+    <section id="terrain">
+      <h2>Terrain Analysis</h2>
+      <div class="section-sub">DEM: USGS 3DEP 1m / CAGIS LiDAR &middot; Soil: USDA NRCS gSSURGO</div>
+      <div class="gallery-tabs" id="terrain-tabs"></div>
+      <div class="gallery-img-wrap" id="terrain-display"></div>
+    </section>
+
+    <!-- SLOPE -->
+    <section id="slope">
+      <h2>Slope Analysis</h2>
+      <div class="section-sub">Elev range 870&ndash;943 ft &middot; Colerain sidewalk ~937 ft &middot; North Bend ~940 ft</div>
+
+      <div class="callout warn">
+        <strong>Hard slope break at 16% &rarr; 27%.</strong> ~110 ft parcel depth on Colerain at ~12% grade &rarr; rear property line at ~923 ft &rarr; 53 ft drop to 870 ft at 35% avg. No parcels in between.
+      </div>
+
+      <h3 style="margin:22px 0 10px;font-size:var(--text-base)">Buildable Zone <span class="badge badge-green">6&ndash;16% slope</span></h3>
+      <div class="card" style="overflow-x:auto">
+        <table>
+          <thead><tr><th>Parcel</th><th>Role</th><th class="num">Avg Slope</th><th>Elevation</th><th class="num">Drop</th></tr></thead>
+          <tbody>
+            <tr><td>035 (2565 N Bend)</td><td>N Bend extension</td><td class="num">6%</td><td class="num">925&ndash;931 ft</td><td class="num">6 ft</td></tr>
+            <tr><td>036 (ROW sliver)</td><td>N Bend edge</td><td class="num">8%</td><td class="num">926&ndash;930 ft</td><td class="num">4 ft</td></tr>
+            <tr><td>049 (5448 Colerain)</td><td>Colerain frontage</td><td class="num">9%</td><td class="num">925&ndash;937 ft</td><td class="num">12 ft</td></tr>
+            <tr><td>105 (5442 Colerain)</td><td>Colerain frontage</td><td class="num">10%</td><td class="num">923&ndash;937 ft</td><td class="num">14 ft</td></tr>
+            <tr><td>020 (5456 Colerain)</td><td>Colerain frontage</td><td class="num">11%</td><td class="num">926&ndash;938 ft</td><td class="num">12 ft</td></tr>
+            <tr><td>033 (2563 N Bend)</td><td>N Bend extension</td><td class="num">11%</td><td class="num">915&ndash;931 ft</td><td class="num">16 ft</td></tr>
+            <tr><td>104 (5454 Colerain)</td><td>Colerain frontage</td><td class="num">11%</td><td class="num">926&ndash;937 ft</td><td class="num">11 ft</td></tr>
+            <tr><td>019 (5460 Colerain)</td><td>CC-M-B corner anchor</td><td class="num">13%</td><td class="num">928&ndash;940 ft</td><td class="num">12 ft</td></tr>
+            <tr><td>018 (ROW sliver)</td><td>N Bend edge</td><td class="num">14%</td><td class="num">931&ndash;942 ft</td><td class="num">11 ft</td></tr>
+            <tr><td>034 (5430 Colerain)</td><td>Colerain frontage</td><td class="num">14%</td><td class="num">908&ndash;936 ft</td><td class="num">28 ft</td></tr>
+            <tr><td>017 (2563 N Bend)</td><td>N Bend frontage</td><td class="num">15%</td><td class="num">930&ndash;943 ft</td><td class="num">13 ft</td></tr>
+            <tr><td>064 (2559 N Bend)</td><td>N Bend frontage</td><td class="num">16%</td><td class="num">911&ndash;943 ft</td><td class="num">32 ft</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="margin:22px 0 10px;font-size:var(--text-base)">Hillside / Non-Buildable <span class="badge badge-red">&gt;25% slope</span></h3>
+      <div class="card" style="overflow-x:auto">
+        <table>
+          <thead><tr><th>Parcel</th><th>Role</th><th class="num">Avg Slope</th><th>Elevation</th><th class="num">Drop</th></tr></thead>
+          <tbody>
+            <tr><td>247 (N Bend Rd, no #)</td><td>Hillside</td><td class="num">27%</td><td class="num">905&ndash;930 ft</td><td class="num">25 ft</td></tr>
+            <tr><td>016 (Colerain Ave, no #)</td><td>Hillside</td><td class="num">35%</td><td class="num">873&ndash;926 ft</td><td class="num">53 ft</td></tr>
+            <tr><td>048 (5430 Colerain REAR)</td><td>Hillside</td><td class="num">40%</td><td class="num">870&ndash;923 ft</td><td class="num">53 ft</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ZONES -->
+    <section id="zones">
+      <h2>Development Zones</h2>
+      <div class="section-sub">4 zones &middot; 3 buildable + 1 green buffer</div>
+
+      <div class="card" style="text-align:center;padding:12px">
+        <img src="renderings/site-plan/development-zone-plan.png" style="max-width:100%;border-radius:4px;cursor:zoom-in" onclick="openLightbox(this.src)" alt="Development Zone Plan">
+      </div>
+
+      <div style="margin-top:18px">
+        <div class="zone-card z1">
+          <h4>Zone 1 &mdash; L-Shape Corner <span class="badge badge-red" style="font-size:.65rem">anchor_mixed_use</span></h4>
+          <div class="meta">
+            <strong>15,700 sf</strong> &middot; CC-M-B &middot; Parcels: 019, 020, 017, 018, 036<br>
+            Ground floor: <strong>retail</strong> (2,500 sf) &middot; Slope: 9% &middot; Tuck-under parking &middot; Max 85 ft
+          </div>
+        </div>
+        <div class="zone-card z2">
+          <h4>Zone 2 &mdash; Colerain Frontage <span class="badge badge-amber" style="font-size:.65rem">residential</span></h4>
+          <div class="meta">
+            <strong>18,160 sf</strong> (14,400 usable) &middot; CC-P-B &middot; Parcels: 049, 104, 105, 034<br>
+            Ground floor: <strong>residential</strong> &middot; Slope: 12%
+          </div>
+        </div>
+        <div class="zone-card z3">
+          <h4>Zone 3 &mdash; North Bend Frontage <span class="badge badge-green" style="font-size:.65rem">mixed_use</span></h4>
+          <div class="meta">
+            <strong>12,642 sf</strong> (10,100 usable) &middot; CC-P-B &middot; Parcels: 035, 033, 064<br>
+            Ground floor: <strong>flex</strong> (1,500 sf retail) &middot; Slope: 14%
+          </div>
+        </div>
+        <div class="zone-card z4">
+          <h4>Zone 4 &mdash; Hillside Buffer <span class="badge badge-gray" style="font-size:.65rem">green_buffer</span></h4>
+          <div class="meta">
+            <strong>30,348 sf</strong> &middot; Non-buildable &middot; Parcels: 048, 016, 247<br>
+            Program: trail, bioswale, community garden
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONCEPTS -->
+    <section id="concepts">
+      <h2>Concept Renderings</h2>
+      <div class="section-sub">5 styles &middot; axonometric &middot; infographic &middot; photorealistic &middot; pencil sketch</div>
+      <div class="gallery-tabs" id="concept-tabs"></div>
+      <div class="gallery-img-wrap" id="concept-display"></div>
+    </section>
+
+    <!-- ROADMAP -->
+    <section id="roadmap">
+      <h2>Roadmap &amp; Next Steps</h2>
+      <div class="section-sub">Pro forma light &middot; conversation starter &middot; not a full underwriting commitment</div>
+
+      <div class="callout" style="margin-bottom:24px">
+        <strong>What this is:</strong> A Phase Zero feasibility sketch&mdash;enough to start the conversation with HomeBase/CURE, identify the right development partners, and decide whether to commit predevelopment capital. <strong>What this is not:</strong> A full underwriting assessment. A complete deal package would include sensitivity analysis, Monte Carlo simulations on cost/rent scenarios, detailed construction scheduling, and lender-ready pro formas. That work is Phase 1.
+      </div>
+
+      <!-- Project Timeline (HTML/CSS) -->
+      <h3 style="margin-bottom:12px">Project Timeline</h3>
+      <div class="card" style="overflow-x:auto;padding:24px" id="timeline-card"></div>
+
+      <!-- Decision Flow (Mermaid — content-sized, no container dependency) -->
+      <h3 style="margin:28px 0 12px">Decision Flow</h3>
+      <div class="mermaid-wrap" id="flow-wrap">
+        <pre id="mermaid-flow" class="mermaid-deferred"></pre>
+      </div>
+
+      <!-- 30/60/90 Action Plan -->
+      <h3 style="margin:28px 0 12px">30 / 60 / 90 Day Action Plan</h3>
+
+      <div class="card roadmap-phase phase-30">
+        <h4><span class="phase-tag">0&ndash;30 DAYS</span> Alignment &amp; Capacity</h4>
+        <ul class="task-list">
+          <li><span class="task-check done"></span>Complete Phase Zero site analysis &amp; pro forma light<span class="task-owner">Co-Llab</span></li>
+          <li><span class="task-check done"></span>Verify QCT status (Tract 85.01 confirmed)<span class="task-owner">Co-Llab</span></li>
+          <li><span class="task-check done"></span>Confirm site control via HCLRC<span class="task-owner">HomeBase</span></li>
+          <li><span class="task-check"></span>Present workbook to HomeBase/CURE leadership<span class="task-owner">Co-Llab + HomeBase</span></li>
+          <li><span class="task-check"></span>CDC capacity self-assessment: staffing, track record, compliance readiness<span class="task-owner">HomeBase</span></li>
+          <li><span class="task-check"></span>Select target scenario (Starter / Right-Sized / Three Buildings / Max)<span class="task-owner">HomeBase + Co-Llab</span></li>
+          <li><span class="task-check"></span>Identify 2&ndash;3 potential co-developer partners (if needed for selected scale)<span class="task-owner">HomeBase</span></li>
+        </ul>
+      </div>
+
+      <div class="card roadmap-phase phase-60">
+        <h4><span class="phase-tag">30&ndash;60 DAYS</span> Pre-Development Scoping</h4>
+        <ul class="task-list">
+          <li><span class="task-check"></span>Co-developer interviews &amp; LOI (if applicable)<span class="task-owner">HomeBase</span></li>
+          <li><span class="task-check"></span>Commission geotechnical investigation (hillside slopes, foundation conditions)<span class="task-owner">Co-Llab / Engineer</span></li>
+          <li><span class="task-check"></span>Phase I environmental site assessment<span class="task-owner">Consultant</span></li>
+          <li><span class="task-check"></span>Preliminary title work on all 15 parcels<span class="task-owner">Attorney</span></li>
+          <li><span class="task-check"></span>Soft source inventory: identify which gap programs are open, deadlines, and dollar limits<span class="task-owner">Co-Llab</span></li>
+          <li><span class="task-check"></span>OHFA QAP review: confirm scoring criteria, application deadlines, competitive landscape<span class="task-owner">Co-Llab</span></li>
+          <li><span class="task-check"></span>Full underwriting: sensitivity analysis, best/worst/base case scenarios<span class="task-owner">Co-Llab</span></li>
+        </ul>
+      </div>
+
+      <div class="card roadmap-phase phase-90">
+        <h4><span class="phase-tag">60&ndash;90 DAYS</span> Design &amp; Application Prep</h4>
+        <ul class="task-list">
+          <li><span class="task-check"></span>Architect RFP / selection for schematic design<span class="task-owner">HomeBase + Co-Dev</span></li>
+          <li><span class="task-check"></span>Schematic site plan based on selected scenario + geotech findings<span class="task-owner">Architect</span></li>
+          <li><span class="task-check"></span>Syndicator pre-engagement: capacity presentation, preliminary LOI<span class="task-owner">Co-Dev / HomeBase</span></li>
+          <li><span class="task-check"></span>CRA Expand application (if not already filed)<span class="task-owner">HomeBase</span></li>
+          <li><span class="task-check"></span>Soft source applications: HOME, FHLB AHP, Ohio HTF (match to open cycles)<span class="task-owner">Co-Llab + HomeBase</span></li>
+          <li><span class="task-check"></span>LIHTC 9% application draft &amp; scoring self-assessment<span class="task-owner">Co-Llab + Co-Dev</span></li>
+        </ul>
+      </div>
+
+      <div class="card roadmap-phase phase-beyond">
+        <h4><span class="phase-tag">90+ DAYS</span> Beyond Phase Zero</h4>
+        <ul class="task-list">
+          <li><span class="task-check"></span>Submit OHFA 9% LIHTC application<span class="task-owner">Development team</span></li>
+          <li><span class="task-check"></span>Construction loan engagement &amp; term sheet<span class="task-owner">Development team</span></li>
+          <li><span class="task-check"></span>Design development &amp; construction documents<span class="task-owner">Architect</span></li>
+          <li><span class="task-check"></span>GC procurement &amp; pricing<span class="task-owner">Development team</span></li>
+          <li><span class="task-check"></span>Financial closing<span class="task-owner">Development team</span></li>
+          <li><span class="task-check"></span>Construction start (Phase 1 &mdash; Zone 1 L-building)<span class="task-owner">GC</span></li>
+        </ul>
+      </div>
+
+      <!-- Outstanding Questions -->
+      <h3 style="margin:28px 0 12px">Outstanding Questions for CDC Review</h3>
+      <div class="card">
+        <ul class="task-list">
+          <li><span class="task-check"></span><strong>Organizational capacity:</strong> Has HomeBase completed a LIHTC deal before? What was the scale? Do they have compliance staff?<span class="task-owner">HomeBase</span></li>
+          <li><span class="task-check"></span><strong>Co-developer relationships:</strong> Does HomeBase have existing relationships with experienced LIHTC developers in Ohio?<span class="task-owner">HomeBase</span></li>
+          <li><span class="task-check"></span><strong>Scale appetite:</strong> Which scenario aligns with the CDC's 3&ndash;5 year strategic plan? Is phasing preferred?<span class="task-owner">HomeBase</span></li>
+          <li><span class="task-check"></span><strong>Product vision:</strong> Is 100% affordable rental the right product, or is there appetite for mixed-income or a for-sale component?<span class="task-owner">HomeBase + Community</span></li>
+          <li><span class="task-check"></span><strong>Retail tenanting:</strong> Is there a known tenant for the corner retail space? A letter of intent strengthens the LIHTC application.<span class="task-owner">HomeBase</span></li>
+          <li><span class="task-check"></span><strong>Community engagement:</strong> Has the neighborhood been engaged on the development concept? Any known opposition or support?<span class="task-owner">HomeBase</span></li>
+          <li><span class="task-check"></span><strong>Competing interests:</strong> Status of the $596k / $3.3M sale activity on parcels 019 and 064?<span class="task-owner">HomeBase</span></li>
+          <li><span class="task-check"></span><strong>HCLRC disposition timeline:</strong> Are there any parallel disposition commitments or deadlines on these parcels?<span class="task-owner">HomeBase / HCLRC</span></li>
+        </ul>
+      </div>
+
+      <!-- What Full Underwriting Looks Like -->
+      <h3 style="margin:28px 0 12px">What Full Underwriting Would Include</h3>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Sensitivity Analysis</h3>
+          <dl class="kv" style="font-size:var(--text-xs)">
+            <dt>Hard cost</dt><dd>$190 / $210 / $230 / $250 per sf</dd>
+            <dt>Vacancy</dt><dd>3% / 5% / 7% / 10%</dd>
+            <dt>Rent growth</dt><dd>0% / 1% / 2% / 3%</dd>
+            <dt>Interest rate</dt><dd>5.5% / 6.25% / 7.0% / 7.5%</dd>
+            <dt>Credit pricing</dt><dd>$0.86 / $0.89 / $0.92 / $0.95</dd>
+          </dl>
+        </div>
+        <div class="card">
+          <h3>Simulation Runs</h3>
+          <dl class="kv" style="font-size:var(--text-xs)">
+            <dt>Monte Carlo</dt><dd>1,000+ iterations on cost/rent/rate</dd>
+            <dt>Best case</dt><dd>Low cost + high rents + low rates</dd>
+            <dt>Worst case</dt><dd>High cost + flat rents + high rates</dd>
+            <dt>Break-even</dt><dd>What inputs make the gap = $0?</dd>
+            <dt>Stress test</dt><dd>12-month vacancy + 15% cost overrun</dd>
+          </dl>
+        </div>
+        <div class="card">
+          <h3>Construction Detail</h3>
+          <dl class="kv" style="font-size:var(--text-xs)">
+            <dt>Draw schedule</dt><dd>Monthly construction draws + S-curve</dd>
+            <dt>Interest carry</dt><dd>Actual accrual, not lump estimate</dd>
+            <dt>GC pricing</dt><dd>Real bids, not RS Means benchmarks</dd>
+            <dt>Geotech</dt><dd>Foundation design from soil borings</dd>
+            <dt>Value engineering</dt><dd>Where to save without cutting quality</dd>
+          </dl>
+        </div>
+        <div class="card">
+          <h3>Lender-Ready Package</h3>
+          <dl class="kv" style="font-size:var(--text-xs)">
+            <dt>15-year DCF</dt><dd>Year-by-year cash flow + exit</dd>
+            <dt>Tax credit schedule</dt><dd>Annual credits, equity draws, recapture</dd>
+            <dt>Compliance plan</dt><dd>Income verification, reporting, monitoring</dd>
+            <dt>Market study</dt><dd>Third-party rent comp + demand analysis</dd>
+            <dt>Appraisal</dt><dd>As-completed + as-stabilized values</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINANCE WORKBOOK -->
+    <section id="finance">
+      <h2>Finance</h2>
+      <div class="section-sub">LIHTC 9% &middot; 60% AMI &middot; Hamilton County 2025</div>
+
+      <!-- Scenario selector -->
+      <div class="scenario-strip" id="scenario-strip"></div>
+
+      <!-- Workbook sheet tabs -->
+      <div class="sub-tabs" id="wb-tabs" style="margin-top:14px"></div>
+
+      <!-- Dynamic content pane -->
+      <div id="wb-content"></div>
+    </section>
+
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="this.classList.remove('open')">
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<script src="finance/runs/site-deal-results.js"></script>
+<script>
+// ── Helpers ──
+const $=s=>document.querySelector(s);
+const $$=s=>document.querySelectorAll(s);
+const fmt=n=>n==null?'—':n<0?'-$'+Math.abs(n).toLocaleString():'$'+n.toLocaleString();
+const pct=n=>n==null?'—':n.toFixed(1)+'%';
+const fmtx=n=>n==null?'—':n.toFixed(2)+'x';
+
+// ── Nav ──
+const sections = [
+  {id:'executive', label:'Exec Summary', icon:'&#9998;'},
+  {id:'overview', label:'Site Overview', icon:'&#9670;'},
+  {id:'parcels', label:'Parcels', icon:'&#9638;'},
+  {id:'terrain', label:'Terrain', icon:'&#9650;'},
+  {id:'slope', label:'Slope Analysis', icon:'&#8982;'},
+  {id:'zones', label:'Dev Zones', icon:'&#9636;'},
+  {id:'concepts', label:'Concepts', icon:'&#9998;'},
+  {id:'roadmap', label:'Roadmap', icon:'&#9656;'},
+  {id:'finance', label:'Finance', icon:'&#9733;'},
+];
+const nav=$('#nav');
+sections.forEach((s,i)=>{
+  const btn=document.createElement('button');
+  btn.innerHTML=`<span class="icon">${s.icon}</span>${s.label}`;
+  btn.dataset.section=s.id;
+  if(i===0)btn.classList.add('active');
+  btn.onclick=()=>showSection(s.id);
+  nav.appendChild(btn);
+});
+let mermaidRendered=false;
+// ── Timeline (pure HTML — no Mermaid gantt) ──
+const TL_START=new Date('2026-03-01'), TL_END=new Date('2029-09-01');
+const TL_SPAN=TL_END-TL_START;
+function tlPct(d){return Math.max(0,Math.min(100,((new Date(d)-TL_START)/TL_SPAN)*100))}
+const TL_SECTIONS=[
+  {label:'Phase Zero',tasks:[
+    {name:'Site analysis & pro forma light',start:'2026-03',end:'2026-04',cls:'done'},
+    {name:'CDC capacity review',start:'2026-04',end:'2026-06',cls:'active'},
+    {name:'Partner identification',start:'2026-05',end:'2026-07',cls:'normal'},
+  ]},
+  {label:'Pre-Development',tasks:[
+    {name:'Co-developer selection',start:'2026-07',end:'2026-09',cls:'normal'},
+    {name:'Full underwriting & sensitivity',start:'2026-08',end:'2026-11',cls:'normal'},
+    {name:'Geotech & environmental',start:'2026-09',end:'2026-11',cls:'normal'},
+    {name:'Architect & schematic design',start:'2026-10',end:'2027-02',cls:'normal'},
+    {name:'OHFA 9% LIHTC application',start:'2027-01',end:'2027-03',cls:'crit'},
+  ]},
+  {label:'Financing',tasks:[
+    {name:'OHFA allocation decision',start:'2027-06',end:'2027-06',cls:'milestone normal'},
+    {name:'Syndicator engagement & LOI',start:'2027-06',end:'2027-09',cls:'normal'},
+    {name:'Soft source applications',start:'2027-04',end:'2027-10',cls:'normal'},
+    {name:'Construction loan closing',start:'2027-09',end:'2027-12',cls:'crit'},
+  ]},
+  {label:'Construction (Phase 1)',tasks:[
+    {name:'Site work & foundations',start:'2028-01',end:'2028-04',cls:'normal'},
+    {name:'Vertical construction',start:'2028-04',end:'2029-04',cls:'normal'},
+    {name:'Lease-up',start:'2029-02',end:'2029-08',cls:'normal'},
+    {name:'Stabilization',start:'2029-08',end:'2029-08',cls:'milestone normal'},
+  ]},
+];
+const TL_MONTHS=['Mar 26','Jun 26','Sep 26','Dec 26','Mar 27','Jun 27','Sep 27','Dec 27','Mar 28','Jun 28','Sep 28','Dec 28','Mar 29','Jun 29','Sep 29'];
+function buildTimeline(){
+  const todayPct=tlPct('2026-04-16');
+  let h='<div class="tl" style="position:relative">';
+  // Today line — spans full chart height
+  h+=`<div style="position:absolute;left:calc(240px + ${todayPct}% * (100% - 240px) / 100);top:0;bottom:30px;width:2px;background:#d42;z-index:2;pointer-events:none"></div>`;
+  for(const sec of TL_SECTIONS){
+    h+=`<div class="tl-section"><div class="tl-section-label">${sec.label}</div>`;
+    for(const t of sec.tasks){
+      const left=tlPct(t.start+'-01');
+      const right=tlPct(t.end+'-28');
+      const w=Math.max(right-left,0.5);
+      const isMilestone=t.cls.includes('milestone');
+      h+=`<div class="tl-row"><div class="tl-task-label">${t.name}</div><div class="tl-track">`;
+      // Today marker inside each track
+      h+=`<div style="position:absolute;left:${todayPct}%;top:0;bottom:0;width:1px;background:rgba(221,68,34,.2);z-index:1"></div>`;
+      if(isMilestone){
+        h+=`<div class="tl-bar milestone ${t.cls.replace('milestone','').trim()}" style="left:${left}%"></div>`;
+      }else{
+        h+=`<div class="tl-bar ${t.cls}" style="left:${left}%;width:${w}%"></div>`;
+      }
+      h+=`</div></div>`;
+    }
+    h+=`</div>`;
+  }
+  // Axis
+  h+='<div class="tl-axis">';
+  for(const m of TL_MONTHS) h+=`<span>${m}</span>`;
+  h+='</div>';
+  // Today label
+  h+=`<div class="tl-axis" style="margin-top:0"><span style="position:absolute;left:calc(240px + ${todayPct}%);transform:translateX(-50%);color:#d42;font-weight:500">Today</span></div>`;
+  h+='</div>';
+  $('#timeline-card').innerHTML=h;
+}
+
+// ── Decision Flow (Mermaid — flowchart sizes from content, not container) ──
+const FLOW_DEF=`flowchart LR
+    A["Phase Zero\nThis workbook"] --> B{"CDC Review\nCan they scale?"}
+    B -->|Yes solo| C["Right-Sized\n87 units"]
+    B -->|Yes with partner| D["Three Buildings\n131 units"]
+    B -->|Not yet| E["Starter\n57 units"]
+    B -->|Maximize| F["Max Density\n165 units"]
+    C --> G["Full Underwriting\nSensitivity + sims"]
+    D --> G
+    E --> G
+    F --> G
+    G --> H{"Gap closeable?"}
+    H -->|Yes| I["OHFA Application"]
+    H -->|Needs work| J["Adjust scope\nadd sources"]
+    J --> G
+    style A fill:#d8f3dc,stroke:#2d6a4f
+    style G fill:#fefae0,stroke:#bc6c25
+    style I fill:#d8f3dc,stroke:#2d6a4f`;
+async function renderRoadmapCharts(){
+  buildTimeline();
+  // Flowchart — Mermaid sizes from content, works fine
+  const flowEl=$('#mermaid-flow');
+  flowEl.textContent=FLOW_DEF;
+  flowEl.classList.add('mermaid');
+  mermaid.initialize({startOnLoad:false,theme:'neutral',flowchart:{curve:'basis',htmlLabels:true,useMaxWidth:true}});
+  await mermaid.run({nodes:[flowEl]});
+}
+function showSection(id){
+  $$('section').forEach(s=>s.classList.remove('active'));
+  $$('#nav button').forEach(b=>b.classList.remove('active'));
+  $('#'+id).classList.add('active');
+  $(`[data-section="${id}"]`).classList.add('active');
+  $('.main').scrollTop=0;
+  if(id==='roadmap'&&!mermaidRendered){mermaidRendered=true;setTimeout(()=>renderRoadmapCharts(),50)}
+}
+showSection('executive');
+
+// ── Parcels ──
+const parcels=[
+  ['5460 COLERAIN AVE','00019','CC-M-B',13,'928–940','vacant','anchor'],
+  ['5456 COLERAIN AVE','00020','CC-P-B',11,'926–938','vacant','provisional'],
+  ['5454 COLERAIN AVE','00104','CC-P-B',11,'926–937','vacant','provisional'],
+  ['5448 COLERAIN AVE','00049','CC-P-B',9,'925–937','vacant','provisional'],
+  ['5442 COLERAIN AVE','00105','CC-P-B',10,'923–937','vacant','provisional'],
+  ['5430 COLERAIN AVE','00034','CC-P-B',14,'908–936','demo_permitted','provisional'],
+  ['5430 COLERAIN REAR','00048','SF-6-MH',40,'870–923','vacant','provisional'],
+  ['2565 NORTH BEND RD','00035','CC-P-B',6,'925–931','vacant','provisional'],
+  ['2563 NORTH BEND RD','00017','CC-P-B',15,'930–943','vacant','provisional'],
+  ['2563 NORTH BEND RD','00033','CC-P-B',11,'915–931','vacant','provisional'],
+  ['2559 NORTH BEND RD','00064','CC-P-B',16,'911–943','vacant','provisional'],
+  ['(ROW sliver)','00018','CC-P-B',14,'931–942','—','provisional'],
+  ['(ROW sliver)','00036','CC-P-B',8,'926–930','—','provisional'],
+  ['COLERAIN AVE','00016','CC-P-B',35,'873–926','vacant','provisional'],
+  ['NORTH BEND RD','00247','CC-P-B',27,'905–930','vacant','provisional'],
+];
+function renderParcels(){
+  const tb=$('#parcel-table tbody');
+  tb.innerHTML=parcels.map(p=>{
+    const sc=p[3]<=16?'badge-green':p[3]<=25?'badge-amber':'badge-red';
+    const st=p[5]==='vacant'?'<span class="badge badge-gray">vacant</span>'
+      :p[5]==='demo_permitted'?'<span class="badge badge-amber">demo permitted</span>'
+      :'<span class="badge badge-outline">'+p[5]+'</span>';
+    const r=p[6]==='anchor'?'<span class="badge badge-green">anchor</span>'
+      :'<span class="badge badge-outline">provisional</span>';
+    return `<tr><td>${p[0]}</td><td class="num">${p[1]}</td><td><span class="badge badge-outline">${p[2]}</span></td>
+      <td class="num"><span class="badge ${sc}">${p[3]}%</span></td><td class="num">${p[4]} ft</td><td>${st}</td><td>${r}</td></tr>`;
+  }).join('');
+}
+renderParcels();
+let sortCol=-1,sortAsc=true;
+$$('.sort-btn').forEach(th=>{th.onclick=()=>{
+  const c=+th.dataset.col;if(sortCol===c)sortAsc=!sortAsc;else{sortCol=c;sortAsc=true}
+  parcels.sort((a,b)=>{let va=a[c],vb=b[c];return typeof va==='number'?(sortAsc?va-vb:vb-va):(sortAsc?String(va).localeCompare(String(vb)):String(vb).localeCompare(String(va)));});
+  renderParcels();
+}});
+
+// ── Terrain ──
+const terrainItems=[
+  {label:'Composite Slope',src:'renderings/terrain/composite-slope-analysis.png'},
+  {label:'Elevation',src:'renderings/terrain/elevation-heatmap.png'},
+  {label:'Section A-A (S→N)',src:'renderings/terrain/section-AA-south-to-north.png'},
+  {label:'Section B-B (W→E)',src:'renderings/terrain/section-BB-west-to-east.png'},
+  {label:'Soil Suitability',src:'renderings/terrain/soil-development-suitability.png'},
+  {label:'Aerial Reference',src:'renderings/reference/parcel-boundary-aerial.jpeg'},
+  {label:'3D Interactive',src:null,href:'renderings/terrain/interactive-terrain-3d.html'},
+];
+const tTabs=$('#terrain-tabs'),tDisp=$('#terrain-display');
+terrainItems.forEach((item,i)=>{
+  const btn=document.createElement('button');btn.textContent=item.label;
+  if(i===0)btn.classList.add('active');
+  btn.onclick=()=>{tTabs.querySelectorAll('button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');
+    if(item.src){tDisp.innerHTML=`<img src="${item.src}" alt="${item.label}" onclick="openLightbox('${item.src}')">`;}
+    else{tDisp.innerHTML=`<p style="padding:40px 0;color:#6b6960">Interactive 3D terrain (opens in new tab)</p><a class="open-link" href="${item.href}" target="_blank">Open 3D Terrain &rarr;</a>`;}
+  };tTabs.appendChild(btn);
+});
+tDisp.innerHTML=`<img src="${terrainItems[0].src}" alt="${terrainItems[0].label}" onclick="openLightbox('${terrainItems[0].src}')">`;
+
+// ── Concepts gallery ──
+const conceptItems=[
+  {label:'Axonometric Diagram',src:'renderings/concepts/concept-axonometric-diagram.png'},
+  {label:'Infographic Site Plan',src:'renderings/concepts/concept-infographic-site-plan.png'},
+  {label:'Photorealistic Aerial',src:'renderings/concepts/concept-photorealistic-aerial.png'},
+  {label:'Pencil Sketch (Annotated)',src:'renderings/concepts/concept-pencil-sketch-annotated.png'},
+  {label:'Pencil Sketch (Bird\'s Eye)',src:'renderings/concepts/concept-pencil-sketch-birdseye.png'},
+];
+const cTabs=$('#concept-tabs'),cDisp=$('#concept-display');
+conceptItems.forEach((item,i)=>{
+  const btn=document.createElement('button');btn.textContent=item.label;
+  if(i===0)btn.classList.add('active');
+  btn.onclick=()=>{cTabs.querySelectorAll('button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');
+    cDisp.innerHTML=`<img src="${item.src}" alt="${item.label}" onclick="openLightbox('${item.src}')">`;
+  };cTabs.appendChild(btn);
+});
+cDisp.innerHTML=`<img src="${conceptItems[0].src}" alt="${conceptItems[0].label}" onclick="openLightbox('${conceptItems[0].src}')">`;
+
+// ── Lightbox ──
+function openLightbox(src){$('#lightbox-img').src=src;$('#lightbox').classList.add('open')}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')$('#lightbox').classList.remove('open')});
+
+// ══════════════════════════════════════════════════════════════════════════════
+// FINANCE WORKBOOK — scenario-driven, sheet-tabbed
+// ══════════════════════════════════════════════════════════════════════════════
+
+let siteDealRunState = window.SITE_DEAL_RUN_ARTIFACT ?? null;
+const SITE_PROJECT_KEY='mt-airy/colerain-north-bend-gateway';
+const SHEETS=['summary','budget','sources','proforma','returns','constraints','facts','assumptions'];
+const SHEET_LABELS={summary:'Summary',budget:'Budget',sources:'Sources',proforma:'Pro Forma',returns:'Returns',constraints:'Constraints',facts:'Facts',assumptions:'Assumptions'};
+const previewState={loading:false,error:null,message:null};
+
+function resolveApiBase(){
+  if(window.location.protocol==='http:'||window.location.protocol==='https:'){
+    return `${window.location.origin.replace(/\/$/,'')}/api`;
+  }
+  return 'http://localhost:3456/api';
+}
+
+const SITE_PREVIEW_URL=`${resolveApiBase()}/site-engine/deal-structures/project-preview`;
+const strip=$('#scenario-strip');
+const wbTabs=$('#wb-tabs');
+let activeScenario=siteDealRunState?.scenarios?.[0]?.id ?? null, activeSheet='summary';
+
+function runScenarios(){
+  return siteDealRunState?.scenarios ?? [];
+}
+
+function renderScenarioStrip(){
+  const scenarios=runScenarios();
+  strip.innerHTML='';
+  scenarios.forEach((scenario)=>{
+    const view=scenario.workbook;
+    const btn=document.createElement('button');
+    btn.dataset.scenario=scenario.id;
+    btn.classList.toggle('active',scenario.id===activeScenario);
+    btn.innerHTML=`<div class="s-units">${view.units} units</div><div class="s-label">${view.label}</div><div class="s-tag">${view.buildings} bldg &middot; ${view.description}</div>`;
+    btn.onclick=()=>{activeScenario=scenario.id;renderWorkbook()};
+    strip.appendChild(btn);
+  });
+}
+
+function renderSheetTabs(){
+  wbTabs.innerHTML='';
+  SHEETS.forEach(s=>{
+    const btn=document.createElement('button');
+    btn.textContent=SHEET_LABELS[s];
+    btn.dataset.sheet=s;
+    btn.classList.toggle('active',s===activeSheet);
+    btn.onclick=()=>{activeSheet=s;renderWorkbook()};
+    wbTabs.appendChild(btn);
+  });
+}
+
+function ratioPct(value){
+  return value==null?'—':pct(value*100);
+}
+
+function scenarioRecord(){
+  return runScenarios().find(s=>s.id===activeScenario) ?? null;
+}
+
+function renderWorkbook(){
+  const scenarios=runScenarios();
+  renderSheetTabs();
+  renderScenarioStrip();
+  if(!siteDealRunState || scenarios.length===0){
+    $('#wb-content').innerHTML=`<div class="callout warn" style="margin-top:16px">Finance workbook data is not loaded. Run <span class="mono">npx tsx api/scripts/generators/generate-site-deal-run.ts --project-dir site-engine/projects/mt-airy/colerain-north-bend-gateway/artifacts</span> to generate calculator-backed workbook artifacts.</div>`;
+    return;
+  }
+  if(!activeScenario || !scenarios.some(s=>s.id===activeScenario)){
+    activeScenario=scenarios[0]?.id ?? null;
+    renderScenarioStrip();
+  }
+  const sc=scenarioRecord();
+  if(!sc){
+    $('#wb-content').innerHTML=`<div class="callout warn" style="margin-top:16px">Selected scenario is missing from the generated run artifact.</div>`;
+    return;
+  }
+  const out=$('#wb-content');
+  const renderers={summary:renderSummary,budget:renderBudget,sources:renderSources,proforma:renderProforma,returns:renderReturns,constraints:renderConstraints,facts:renderFacts,assumptions:renderAssumptions};
+  out.innerHTML=renderers[activeSheet](sc);
+  if(activeSheet==='assumptions'){
+    hydrateAssumptionsControls();
+  }
+}
+
+function line(label,amt,cls){
+  const neg=amt<0;const hl=label.includes('Net Operating')||label.includes('Cash Flow')||label.includes('Effective Gross');
+  return `<div class="wb-line${hl?' subtotal':''}"><span>${label}</span><span class="amt${neg?' neg':''}${amt>0&&hl?' pos':''}">${fmt(amt)}</span></div>`;
+}
+
+function renderSummary(sc){
+  const v=sc.workbook;
+  const s=v.summary;
+  const gap=s.gapOrSurplus;
+  const checks=sc.dealResult.deal_structure.verification_summary.arithmetic_checks;
+  const allChecksPassed=checks.every(check=>check.status==='passed');
+  const gapBadge=gap>=0?`<span class="badge badge-green">surplus ${fmt(gap)}</span>`:`<span class="badge badge-red">gap ${fmt(gap)}</span>`;
+  return `
+  <div class="callout ${allChecksPassed?'ok':'warn'}" style="margin-top:16px">
+    Calculator-backed snapshot generated ${new Date(siteDealRunState.generatedAt).toLocaleString()} using engine <span class="mono">${siteDealRunState.engineVersion}</span>. Arithmetic checks ${allChecksPassed?'passed':'need review'} for this scenario.
+  </div>
+  <div class="stat-row" style="margin-top:16px">
+    <div class="stat"><div class="val">${fmt(s.totalDevCost)}</div><div class="label">Total Dev Cost</div></div>
+    <div class="stat"><div class="val">${fmt(s.noiStabilized)}</div><div class="label">NOI (Yr 1)</div></div>
+    <div class="stat"><div class="val">${fmtx(s.dscr)}</div><div class="label">DSCR</div></div>
+    <div class="stat"><div class="val">${ratioPct(s.yieldOnCost)}</div><div class="label">Yield on Cost</div></div>
+    <div class="stat"><div class="val">${ratioPct(s.avgCashOnCash)}</div><div class="label">Avg Cash on Cash</div></div>
+  </div>
+  <div class="card-grid">
+    <div class="card"><h3>Capital Stack</h3>
+      ${line('LIHTC 9% Equity',s.lihtcEquity)}
+      ${line('Permanent Loan',s.permLoan)}
+      <div class="wb-line total"><span>Total Sources</span><span class="amt">${fmt(s.totalSources)}</span></div>
+      <div style="margin-top:10px">${gapBadge}</div>
+    </div>
+    <div class="card"><h3>Key Metrics</h3>
+      <dl class="kv">
+        <dt>Cost / Unit</dt><dd class="mono">${fmt(s.costPerUnit)}</dd>
+        <dt>Units</dt><dd class="mono">${v.units}</dd>
+        <dt>Buildings</dt><dd class="mono">${v.buildings}</dd>
+        <dt>Gross SF</dt><dd class="mono">${v.grossSf.toLocaleString()}</dd>
+        <dt>Retail SF</dt><dd class="mono">${v.retailSf.toLocaleString()}</dd>
+      </dl>
+    </div>
+  </div>`;
+}
+
+function renderBudget(sc){
+  const b=sc.workbook.budget;let curCat='',rows='';
+  b.uses.forEach((lineItem)=>{
+    if(lineItem.category!==curCat){if(curCat)rows+=`<tr style="height:6px"><td colspan="3"></td></tr>`;curCat=lineItem.category;rows+=`<tr><td colspan="2" style="font-weight:600;color:#6b6960;padding-top:10px">${lineItem.category}</td><td></td></tr>`}
+    rows+=`<tr><td style="padding-left:20px">${lineItem.label}</td><td></td><td class="num">${fmt(lineItem.amount)}</td></tr>`;
+  });
+  return `<div class="card" style="margin-top:16px;overflow-x:auto"><table>
+    <thead><tr><th>Category</th><th></th><th class="num">Amount</th></tr></thead>
+    <tbody>${rows}
+    <tr style="font-weight:700;border-top:2px solid var(--card-border)"><td>Total Development Cost</td><td></td><td class="num">${fmt(b.totalUses)}</td></tr>
+    </tbody></table></div>`;
+}
+
+function renderSources(sc){
+  const s=sc.workbook.sources;
+  const typeColor={debt:'badge-outline',equity:'badge-green',soft:'badge-amber',gap:'badge-red',other:'badge-gray'};
+  let rows=s.items.map((item)=>`<tr><td>${item.label}</td><td><span class="badge ${typeColor[item.type]||'badge-gray'}">${item.type}</span></td><td class="num">${fmt(item.amount)}</td><td style="font-size:var(--text-xs);color:#6b6960">${item.terms??'—'}</td></tr>`).join('');
+  return `<div class="card" style="margin-top:16px;overflow-x:auto"><table>
+    <thead><tr><th>Source</th><th>Type</th><th class="num">Amount</th><th>Terms</th></tr></thead>
+    <tbody>${rows}
+    <tr style="font-weight:700;border-top:2px solid var(--card-border)"><td>Total Sources</td><td></td><td class="num">${fmt(s.totalSources)}</td><td></td></tr>
+    </tbody></table></div>`;
+}
+
+function renderProforma(sc){
+  let html='<div class="card" style="margin-top:16px">';
+  sc.workbook.proforma.forEach(item=>{html+=line(item.label,item.amount)});
+  return html+'</div>';
+}
+
+function renderReturns(sc){
+  const r=sc.workbook.returns;
+  return `<div class="card-grid" style="margin-top:16px">
+    <div class="card"><h3>Returns</h3><dl class="kv">
+      <dt>Yield on Cost</dt><dd class="mono">${ratioPct(r.yieldOnCost)}</dd>
+      <dt>Avg Cash on Cash</dt><dd class="mono">${ratioPct(r.avgCashOnCash)}</dd>
+      <dt>Leveraged IRR</dt><dd class="mono">${ratioPct(r.leveragedIrr)}</dd>
+      <dt>After-tax IRR</dt><dd class="mono">${ratioPct(r.afterTaxIrr)}</dd>
+      <dt>DSCR</dt><dd class="mono">${fmtx(r.dscr)}</dd>
+      <dt>Loan-to-Value</dt><dd class="mono">${ratioPct(r.permLoanToValue)}</dd>
+      <dt>Loan-to-Cost</dt><dd class="mono">${ratioPct(r.permLoanToCost)}</dd>
+    </dl></div>
+    <div class="card"><h3>Valuation</h3><dl class="kv">
+      <dt>Stabilized Value</dt><dd class="mono">${fmt(r.stabilizedValue)}</dd>
+      <dt>Cost / Unit</dt><dd class="mono">${fmt(r.costPerUnit)}</dd>
+      <dt>NOI / Unit</dt><dd class="mono">${fmt(r.noiPerUnit)}</dd>
+      <dt>Required subsidy</dt><dd class="mono">${fmt(sc.workbook.summary.requiredSubsidyToBreakeven)}</dd>
+      <dt>Gap / surplus</dt><dd class="mono">${fmt(sc.workbook.summary.gapOrSurplus)}</dd>
+    </dl></div>
+  </div>`;
+}
+
+function renderConstraints(sc){
+  const c=sc.workbook.constraints;
+  const gateCls=c.gate==='pass'?'pass':c.gate.includes('conditional')?'conditional':'fail';
+  const gateLabel=c.gate.replace(/_/g,' ');
+  let html=`<div style="margin:16px 0"><span class="wb-gate ${gateCls}">${gateLabel}</span></div>`;
+  if(c.warnings.length){
+    html+='<div class="card"><h3>Warnings</h3>';
+    c.warnings.forEach(w=>{html+=`<div class="callout warn" style="margin:8px 0">${w}</div>`});
+    html+='</div>';
+  }
+  if(c.arithmeticChecks.length){
+    html+='<div class="card" style="margin-top:14px"><h3>Arithmetic Checks</h3><table><thead><tr><th>Check</th><th>Status</th><th>Message</th></tr></thead><tbody>';
+    c.arithmeticChecks.forEach(check=>{html+=`<tr><td>${check.checkName}</td><td><span class="badge ${check.status==='passed'?'badge-green':'badge-red'}">${check.status}</span></td><td>${check.message}</td></tr>`});
+    html+='</tbody></table></div>';
+  }
+  if(c.unsupported.length){
+    html+='<div class="card" style="margin-top:14px"><h3>Unsupported by Engine v1</h3><ul style="padding-left:18px;font-size:var(--text-sm);font-family:var(--mono);line-height:2">';
+    c.unsupported.forEach(u=>{html+=`<li>${u}</li>`});
+    html+='</ul></div>';
+  }
+  if(c.humanReviewFlags.length){
+    html+='<div class="card" style="margin-top:14px"><h3>Human Review Flags</h3><ul style="padding-left:18px;font-size:var(--text-sm);line-height:2">';
+    c.humanReviewFlags.forEach(flag=>{html+=`<li>${flag}</li>`});
+    html+='</ul></div>';
+  }
+  return html;
+}
+
+function renderFacts(){
+  const facts=siteDealRunState?.inputs?.facts;
+  const assumptions=siteDealRunState?.inputs?.assumptions;
+  if(!facts || !assumptions){
+    return `<div class="callout warn" style="margin-top:16px">Facts snapshot is missing from the generated run artifact.</div>`;
+  }
+  const limits=facts.amiRentLimits?.limits60pct ?? {};
+  const grossStudio=limits.studio?.grossMonthly ?? null;
+  const uaStudio=limits.studio?.utilityAllowance ?? null;
+  const grossOne=limits.oneBr?.grossMonthly ?? null;
+  const uaOne=limits.oneBr?.utilityAllowance ?? null;
+  const grossTwo=limits.twoBr?.grossMonthly ?? null;
+  const uaTwo=limits.twoBr?.utilityAllowance ?? null;
+  const grossThree=limits.threeBr?.grossMonthly ?? null;
+  const uaThree=limits.threeBr?.utilityAllowance ?? null;
+  const extra=assumptions.construction.siteExtraordinary;
+  const extraTotal=(extra.hillsideRetaining??0)+(extra.stormwaterBioswale??0)+(extra.trailAndLandscaping??0)+(extra.utilityConnections??0)+(extra.demolition??0);
+  return `<div class="card-grid" style="margin-top:16px">
+    <div class="card"><h3>AMI Rent Limits <span class="badge badge-green">60% AMI</span></h3><table>
+      <thead><tr><th>Type</th><th class="num">Gross</th><th class="num">Util.</th><th class="num">Net</th></tr></thead>
+      <tbody>
+        <tr><td>Studio</td><td class="num">${fmt(grossStudio)}</td><td class="num">${fmt(uaStudio)}</td><td class="num"><strong>${fmt(grossStudio!=null&&uaStudio!=null?grossStudio-uaStudio:null)}</strong></td></tr>
+        <tr><td>1 BR</td><td class="num">${fmt(grossOne)}</td><td class="num">${fmt(uaOne)}</td><td class="num"><strong>${fmt(grossOne!=null&&uaOne!=null?grossOne-uaOne:null)}</strong></td></tr>
+        <tr><td>2 BR</td><td class="num">${fmt(grossTwo)}</td><td class="num">${fmt(uaTwo)}</td><td class="num"><strong>${fmt(grossTwo!=null&&uaTwo!=null?grossTwo-uaTwo:null)}</strong></td></tr>
+        <tr><td>3 BR</td><td class="num">${fmt(grossThree)}</td><td class="num">${fmt(uaThree)}</td><td class="num"><strong>${fmt(grossThree!=null&&uaThree!=null?grossThree-uaThree:null)}</strong></td></tr>
+      </tbody></table></div>
+    <div class="card"><h3>Market Rents</h3><table>
+      <thead><tr><th>Type</th><th class="num">Monthly</th></tr></thead>
+      <tbody><tr><td>Studio</td><td class="num">${fmt(assumptions.marketRents.studio)}</td></tr><tr><td>1 BR</td><td class="num">${fmt(assumptions.marketRents.oneBr)}</td></tr><tr><td>2 BR</td><td class="num">${fmt(assumptions.marketRents.twoBr)}</td></tr><tr><td>3 BR</td><td class="num">${fmt(assumptions.marketRents.threeBr)}</td></tr></tbody></table></div>
+  </div>
+  <div class="card" style="margin-top:14px"><h3>Site Extraordinaries</h3><table>
+    <thead><tr><th>Item</th><th class="num">Cost</th></tr></thead>
+    <tbody>
+      <tr><td>Hillside retaining walls</td><td class="num">${fmt(extra.hillsideRetaining)}</td></tr>
+      <tr><td>Stormwater bioswale</td><td class="num">${fmt(extra.stormwaterBioswale)}</td></tr>
+      <tr><td>Trail &amp; landscaping</td><td class="num">${fmt(extra.trailAndLandscaping)}</td></tr>
+      <tr><td>Utility connections</td><td class="num">${fmt(extra.utilityConnections)}</td></tr>
+      <tr><td>Demolition</td><td class="num">${fmt(extra.demolition)}</td></tr>
+      <tr style="font-weight:600"><td>Total</td><td class="num">${fmt(extraTotal)}</td></tr>
+    </tbody></table></div>`;
+}
+
+function assumptionField(label,name,value,step,suffix=''){
+  const displayValue=typeof value==='number'&&Number.isFinite(value)?String(value):'';
+  return `<div class="field"><label for="${name}">${label}</label><input id="${name}" name="${name}" type="number" step="${step}" value="${displayValue}" inputmode="decimal"${suffix?` data-suffix="${suffix}"`:''}></div>`;
+}
+
+function renderAssumptions(){
+  const assumptions=siteDealRunState?.inputs?.assumptions;
+  if(!assumptions){
+    return `<div class="callout warn" style="margin-top:16px">Assumptions snapshot is missing from the generated run artifact.</div>`;
+  }
+  const status=previewState.error
+    ? `<div class="callout warn" style="margin-top:16px">${previewState.error}</div>`
+    : previewState.message
+      ? `<div class="callout" style="margin-top:16px">${previewState.message}</div>`
+      : '';
+  return `${status}
+  <div class="callout" style="margin-top:16px">
+    Editing this form reruns the full four-scenario workbook through the backend calculator and reloads the browser view from the returned artifact. This is still pro forma light: only the engine-backed fields below are live in v1.
+  </div>
+  <form id="assumptions-preview-form" class="card" style="margin-top:14px">
+    <h3>Live Recalculation Inputs</h3>
+    <div class="form-grid" style="margin-top:14px">
+      ${assumptionField('Hard Cost / SF','construction.hardCostPsf',assumptions.construction.hardCostPsf,'1')}
+      ${assumptionField('Soft Cost %','construction.softCostPct',assumptions.construction.softCostPct,'0.01')}
+      ${assumptionField('Contingency %','construction.contingencyPct',assumptions.construction.contingencyPct,'0.01')}
+      ${assumptionField('Vacancy %','operations.vacancyPct',assumptions.operations.vacancyPct,'0.01')}
+      ${assumptionField('Property Mgmt %','operations.propertyMgmtPct',assumptions.operations.propertyMgmtPct,'0.01')}
+      ${assumptionField('Tax Mill Rate','operations.propertyTaxMillRate',assumptions.operations.propertyTaxMillRate,'0.001')}
+      ${assumptionField('Assessment Ratio','operations.assessmentRatio',assumptions.operations.assessmentRatio,'0.01')}
+      ${assumptionField('Replacement Reserve / Unit','operatingExpenseAssumptions.replacementReservePerUnit',assumptions.operatingExpenseAssumptions.replacementReservePerUnit,'1')}
+      ${assumptionField('LIHTC Pricing / $','financing.lihtc9.pricingPerDollar',assumptions.financing.lihtc9.pricingPerDollar,'0.01')}
+      ${assumptionField('Retail Rent / SF / Yr','retail.rentPsfAnnual',assumptions.retail.rentPsfAnnual,'0.5')}
+      ${assumptionField('Retail TI / SF','retail.tiAllowancePsf',assumptions.retail.tiAllowancePsf,'1')}
+      ${assumptionField('Utility Connections','construction.siteExtraordinary.utilityConnections',assumptions.construction.siteExtraordinary.utilityConnections,'1000')}
+      ${assumptionField('Trail + Landscaping','construction.siteExtraordinary.trailAndLandscaping',assumptions.construction.siteExtraordinary.trailAndLandscaping,'1000')}
+    </div>
+    <div class="btn-row" style="margin-top:18px">
+      <button class="btn primary" type="submit"${previewState.loading?' disabled':''}>${previewState.loading?'Recalculating…':'Recalculate Workbook'}</button>
+      <button class="btn" type="button" id="assumptions-reset"${previewState.loading?' disabled':''}>Restore Project Defaults</button>
+    </div>
+  </form>
+  <div class="card-grid" style="margin-top:14px">
+    <div class="card"><h3>Current Snapshot</h3><dl class="kv">
+      <dt>Construction debt</dt><dd class="mono">${pct(assumptions.financing.constructionLoan.rate*100)} / ${pct(assumptions.financing.constructionLoan.ltcPct*100)} LTC</dd>
+      <dt>Permanent debt</dt><dd class="mono">${pct(assumptions.financing.permanentLoan.rate*100)} / ${assumptions.financing.permanentLoan.amortYears}yr / ${fmtx(assumptions.financing.permanentLoan.minDscr)}x</dd>
+      <dt>Retail cap rate</dt><dd class="mono">${pct(assumptions.retail.capRate*100)}</dd>
+      <dt>OpEx ratio</dt><dd class="mono">${pct(assumptions.operations.opexRatioPct*100)}</dd>
+      <dt>Developer fee</dt><dd class="mono">${pct(assumptions.developerFee.ratePct*100)}</dd>
+    </dl></div>
+    <div class="card"><h3>Not Live in Engine v1</h3><ul style="padding-left:18px;font-size:var(--text-sm);line-height:1.9">
+      <li>Construction-loan and permanent-loan term overrides still resolve from canonical engine config.</li>
+      <li>High-level OpEx ratio is informational; the calculator uses the mapped per-unit expense lines.</li>
+      <li>Retail cap rate is not yet part of the site-deal project valuation path.</li>
+      <li>Hillside retaining, bioswale, and demolition remain tracked as diagnostics until v1 prices them directly.</li>
+    </ul></div>
+  </div>`;
+}
+
+function parseNumber(value){
+  if(value===null||value===undefined||value==='') return undefined;
+  const num=Number(value);
+  return Number.isFinite(num)?num:undefined;
+}
+
+function collectPreviewOverrides(form){
+  const data=new FormData(form);
+  const overrides={};
+  const set=(path,value)=>{
+    if(value===undefined) return;
+    const keys=path.split('.');
+    let cursor=overrides;
+    keys.forEach((key,index)=>{
+      if(index===keys.length-1){cursor[key]=value;return;}
+      cursor[key]=cursor[key]||{};
+      cursor=cursor[key];
+    });
+  };
+  set('construction.hardCostPsf',parseNumber(data.get('construction.hardCostPsf')));
+  set('construction.softCostPct',parseNumber(data.get('construction.softCostPct')));
+  set('construction.contingencyPct',parseNumber(data.get('construction.contingencyPct')));
+  set('operations.vacancyPct',parseNumber(data.get('operations.vacancyPct')));
+  set('operations.propertyMgmtPct',parseNumber(data.get('operations.propertyMgmtPct')));
+  set('operations.propertyTaxMillRate',parseNumber(data.get('operations.propertyTaxMillRate')));
+  set('operations.assessmentRatio',parseNumber(data.get('operations.assessmentRatio')));
+  set('operatingExpenseAssumptions.replacementReservePerUnit',parseNumber(data.get('operatingExpenseAssumptions.replacementReservePerUnit')));
+  set('financing.lihtc9.pricingPerDollar',parseNumber(data.get('financing.lihtc9.pricingPerDollar')));
+  set('retail.rentPsfAnnual',parseNumber(data.get('retail.rentPsfAnnual')));
+  set('retail.tiAllowancePsf',parseNumber(data.get('retail.tiAllowancePsf')));
+  set('construction.siteExtraordinary.utilityConnections',parseNumber(data.get('construction.siteExtraordinary.utilityConnections')));
+  set('construction.siteExtraordinary.trailAndLandscaping',parseNumber(data.get('construction.siteExtraordinary.trailAndLandscaping')));
+  return overrides;
+}
+
+async function parseJsonSafely(response){
+  try{return await response.json()}catch{return null}
+}
+
+async function requestSiteDealPreview(overrides){
+  previewState.loading=true;
+  previewState.error=null;
+  previewState.message=null;
+  renderWorkbook();
+  try{
+    const response=await fetch(SITE_PREVIEW_URL,{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({project_key:SITE_PROJECT_KEY,overrides}),
+    });
+    const body=await parseJsonSafely(response);
+    if(!response.ok||!body?.artifact){
+      throw new Error(body?.message||body?.error||`Preview request failed (${response.status})`);
+    }
+    siteDealRunState=body.artifact;
+    previewState.message=`Preview recalculated from the backend calculator at ${new Date(siteDealRunState.generatedAt).toLocaleTimeString()}.`;
+  }catch(error){
+    const detail=error instanceof Error?error.message:'Unknown preview error';
+    previewState.error=`Preview recalculation failed. ${detail} Make sure the API server is running on localhost:3456 if you opened this workbook directly from disk.`;
+  }finally{
+    previewState.loading=false;
+    renderWorkbook();
+  }
+}
+
+function hydrateAssumptionsControls(){
+  const form=$('#assumptions-preview-form');
+  const reset=$('#assumptions-reset');
+  if(!form||!reset) return;
+  form.addEventListener('submit',async (event)=>{
+    event.preventDefault();
+    await requestSiteDealPreview(collectPreviewOverrides(form));
+  });
+  reset.addEventListener('click',async ()=>{
+    await requestSiteDealPreview({});
+  });
+}
+
+renderWorkbook();
+</script>
+</body>
+</html>
