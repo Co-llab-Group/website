@@ -946,16 +946,6 @@ section h2,
   max-width: 48rem;
 }
 
-.who-body {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 3rem;
-  align-items: start;
-}
-@media (min-width: 900px) {
-  .who-body { grid-template-columns: 7fr 5fr; gap: 4rem; }
-}
-
 .who-groups {
   display: grid;
   gap: 2.5rem;
@@ -963,19 +953,62 @@ section h2,
 }
 @media (min-width: 560px) { .who-groups { grid-template-columns: 1fr 1fr; gap: 3rem; } }
 
-.who-visual {
-  margin: 0;
-  aspect-ratio: 4/5;
+.who-groups-3 { grid-template-columns: 1fr; }
+@media (min-width: 560px) { .who-groups-3 { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 900px) { .who-groups-3 { grid-template-columns: 1fr 1fr 1fr; gap: 3.5rem; } }
+.who-groups-3 .who-list-2 { grid-template-columns: 1fr; }
+
+/* ---------- Regional skyline banner (closes § 05) ---------- */
+.who-skyline {
+  margin: 5rem 1.5rem 0;
+  max-width: 1280px;
+}
+@media (min-width: 768px) { .who-skyline { margin: 6rem auto 0; padding: 0 3rem; } }
+@media (min-width: 1280px) { .who-skyline { padding: 0; margin-left: auto; margin-right: auto; } }
+
+.skyline-frame {
+  position: relative;
+  background: hsl(195 45% 7%);
+  border-radius: 4px;
   overflow: hidden;
-  box-shadow: var(--shadow-arch);
-  background: var(--secondary);
+  box-shadow: var(--shadow-arch), 0 0 0 1px hsl(195 45% 9% / .1);
 }
-.who-visual img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  transition: transform .8s var(--ease);
+.skyline-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
-.who-visual:hover img { transform: scale(1.03); }
+
+.skyline-labels {
+  position: absolute;
+  left: 1.25rem; right: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: .625rem;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: hsl(38 30% 94% / .55);
+  z-index: 2;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.skyline-labels-top { top: 1rem; }
+.skyline-labels-bottom { bottom: 1rem; }
+@media (max-width: 560px) {
+  .skyline-labels { font-size: .5rem; letter-spacing: .08em; left: .75rem; right: .75rem; }
+}
+
+.skyline-caption {
+  text-align: center;
+  margin-top: 2rem;
+  font-family: 'Fraunces', serif;
+  font-weight: 300;
+  font-size: clamp(1.15rem, 2.1vw, 1.5rem);
+  line-height: 1.4;
+  color: var(--muted-foreground);
+  letter-spacing: -.01em;
+}
+.skyline-caption em { font-style: italic; }
 
 /* ---------- CTA ---------- */
 .cta {
