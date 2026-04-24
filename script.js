@@ -29,6 +29,34 @@ const rio = new IntersectionObserver(
 );
 risers.forEach((el) => rio.observe(el));
 
+// Hero rotor — cycles through audiences in the eyebrow chip
+(function initHeroRotor() {
+  const rotor = document.getElementById('hero-rotor');
+  if (!rotor) return;
+  const items = Array.from(rotor.querySelectorAll('.hero-rotor-item'));
+  if (items.length < 2) return;
+  let i = 0;
+
+  function advance() {
+    const prev = items[i];
+    i = (i + 1) % items.length;
+    const next = items[i];
+    prev.classList.remove('is-active');
+    prev.classList.add('is-leaving');
+    next.classList.remove('is-leaving');
+    // reflow so the next item animates from below
+    void next.offsetWidth;
+    next.classList.add('is-active');
+    setTimeout(() => prev.classList.remove('is-leaving'), 600);
+  }
+
+  let timer = setInterval(advance, 2400);
+
+  // Pause on hover
+  rotor.addEventListener('mouseenter', () => { clearInterval(timer); timer = null; });
+  rotor.addEventListener('mouseleave', () => { if (!timer) timer = setInterval(advance, 2400); });
+})();
+
 // Layers viz — auto-cycle through the 4 phases, pause on hover, only run in-view
 (function initLayersViz() {
   const viz = document.getElementById('layers-viz');

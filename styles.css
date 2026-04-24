@@ -201,8 +201,51 @@ section h2,
   .hero-content { padding: 8rem 3rem 8rem; }
 }
 
-.eyebrow { display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; }
+.eyebrow { display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap; }
 .eyebrow .mono { font-size: .75rem; text-transform: uppercase; letter-spacing: .3em; color: rgba(255,255,255,.7); }
+
+/* Cycling identity rotor (the audience chip) */
+.hero-rotor {
+  position: relative;
+  display: inline-block;
+  padding: .3rem .65rem;
+  border: 1px solid hsl(18 75% 52% / .55);
+  background: hsl(18 75% 52% / .1);
+  font-size: .7rem;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--accent);
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.hero-rotor-sizer {
+  visibility: hidden;
+  display: inline-block;
+  pointer-events: none;
+}
+.hero-rotor-item {
+  position: absolute;
+  top: .3rem; bottom: .3rem;
+  left: .65rem; right: .65rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(6px);
+  opacity: 0;
+  transition: opacity .55s var(--ease), transform .55s var(--ease);
+  pointer-events: none;
+}
+.hero-rotor-item.is-active {
+  transform: translateY(0);
+  opacity: 1;
+}
+.hero-rotor-item.is-leaving {
+  transform: translateY(-6px);
+  opacity: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-rotor-item { transition: opacity .2s linear; transform: none !important; }
+}
 
 .hero-headline {
   font-family: 'Fraunces', serif;
