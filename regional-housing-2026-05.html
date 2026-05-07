@@ -1,0 +1,1141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Field Notes · Regional Housing — May 7, 2026 · Collab</title>
+  <meta name="description" content="A field synthesis from the Regional Housing & Economic Competitiveness Convening. Three sectors. One shared diagnosis: Cincinnati's housing system is failing for lack of coordination, equity capital, and trusted community infrastructure — not for lack of money." />
+  <meta property="og:title" content="Field Notes · Regional Housing — May 7, 2026" />
+  <meta property="og:description" content="Three sectors. Twenty-five voices. One shared diagnosis." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="assets/hero-aerial.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* =========================================================
+       Briefing — page-specific styles
+       Layered on top of styles.css; reuses tokens (--accent, --foreground, etc.)
+       ========================================================= */
+
+    /* HERO override: no photo, grid-based dark backdrop */
+    .brief-hero {
+      min-height: 92vh;
+      background: var(--foreground);
+      position: relative;
+      overflow: hidden;
+    }
+    .brief-hero-grid {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(to right, hsla(38,30%,96%,.05) 1px, transparent 1px),
+        linear-gradient(to bottom, hsla(38,30%,96%,.05) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+    }
+    .brief-hero-glow {
+      position: absolute;
+      top: -10rem; right: -8rem;
+      width: 540px; height: 540px;
+      border-radius: 9999px;
+      background: hsl(18 75% 52% / .12);
+      filter: blur(90px);
+      pointer-events: none;
+    }
+    .brief-hero .hero-inner { padding-top: 0; }
+    .brief-hero .hero-content {
+      padding: 9rem 1.5rem 5rem;
+    }
+    @media (min-width: 768px) {
+      .brief-hero .hero-content { padding: 9rem 3rem 7rem; }
+    }
+
+    .brief-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: .85rem;
+      padding: .35rem .7rem;
+      border: 1px solid hsl(18 75% 52% / .55);
+      background: hsl(18 75% 52% / .08);
+      color: var(--accent);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .7rem;
+      text-transform: uppercase;
+      letter-spacing: .22em;
+      margin-bottom: 2rem;
+    }
+    .brief-eyebrow .sep { color: hsl(18 75% 52% / .5); }
+
+    .brief-headline {
+      font-family: 'Fraunces', serif;
+      font-weight: 300;
+      font-size: clamp(2.5rem, 6.5vw, 5.75rem);
+      line-height: .98;
+      letter-spacing: -.02em;
+      color: var(--background);
+      max-width: 1100px;
+      text-wrap: balance;
+      margin-bottom: 2rem;
+    }
+    .brief-headline em.accent { font-style: italic; color: var(--accent); }
+
+    .brief-lede {
+      max-width: 38rem;
+      font-size: 1.125rem;
+      line-height: 1.65;
+      color: rgba(255,255,255,.75);
+      margin-bottom: 3rem;
+    }
+    @media (min-width: 768px) { .brief-lede { font-size: 1.25rem; } }
+
+    .brief-meta-strip {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,.18);
+      max-width: 64rem;
+    }
+    @media (min-width: 640px) {
+      .brief-meta-strip { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 900px) {
+      .brief-meta-strip { grid-template-columns: repeat(4, 1fr); }
+    }
+    .brief-meta-cell {
+      padding: .85rem 1.25rem .85rem 0;
+      border-left: 1px solid rgba(255,255,255,.12);
+      padding-left: 1.25rem;
+    }
+    .brief-meta-cell:first-child { border-left: 0; padding-left: 0; }
+    @media (max-width: 639px) {
+      .brief-meta-cell { border-left: 0; padding-left: 0; border-top: 1px solid rgba(255,255,255,.12); padding-top: 1rem; }
+      .brief-meta-cell:first-child { border-top: 0; padding-top: 0; }
+    }
+    .brief-meta-key {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .625rem;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.5);
+      margin-bottom: .5rem;
+    }
+    .brief-meta-val {
+      font-family: 'Fraunces', serif;
+      font-weight: 300;
+      font-size: 1.15rem;
+      line-height: 1.25;
+      color: var(--background);
+    }
+    .brief-meta-val em { font-style: italic; color: var(--accent); }
+
+    /* Coordinate corner labels (matches layers-viz vocabulary) */
+    .brief-corner {
+      position: absolute;
+      padding: .35rem .6rem;
+      background: hsla(195,45%,9%,.6);
+      border: 1px solid rgba(255,255,255,.15);
+      backdrop-filter: blur(4px);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .55rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.55);
+      z-index: 5;
+    }
+    .brief-corner.tl { top: 5.5rem; left: 1.5rem; }
+    .brief-corner.tr { top: 5.5rem; right: 1.5rem; color: var(--accent); border-color: hsl(18 75% 52% / .4); }
+    @media (min-width: 768px) {
+      .brief-corner.tl { left: 3rem; }
+      .brief-corner.tr { right: 3rem; }
+    }
+    @media (max-width: 720px) {
+      .brief-corner { display: none; }
+    }
+
+    /* ---------- DIAGNOSIS SECTION ---------- */
+    .diagnosis {
+      background: var(--background);
+      color: var(--foreground);
+      padding: 6rem 0;
+    }
+    @media (min-width: 768px) { .diagnosis { padding: 9rem 0; } }
+
+    .diag-head {
+      display: grid;
+      gap: 2.5rem;
+      margin-bottom: 4.5rem;
+    }
+    @media (min-width: 768px) {
+      .diag-head { grid-template-columns: 5fr 7fr; align-items: end; gap: 3rem; }
+    }
+    .diag-head h2 {
+      font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+      line-height: 1;
+      text-wrap: balance;
+    }
+    .diag-head h2 em.accent { font-style: italic; color: var(--accent); }
+    .diag-head p {
+      font-size: 1.125rem;
+      line-height: 1.7;
+      color: var(--muted-foreground);
+      text-wrap: pretty;
+    }
+    .diag-head p + p { margin-top: 1.25rem; }
+
+    .stat-grid {
+      display: grid;
+      gap: 1px;
+      background: var(--border);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 560px) { .stat-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 900px) { .stat-grid { grid-template-columns: repeat(3, 1fr); } }
+    .stat-cell {
+      background: var(--background);
+      padding: 2rem 1.75rem 2rem;
+      transition: background .35s var(--ease);
+    }
+    .stat-cell:hover { background: var(--card); }
+    .stat-cell-num {
+      font-family: 'Fraunces', serif;
+      font-weight: 300;
+      font-size: clamp(2.5rem, 4.5vw, 3.5rem);
+      line-height: 1;
+      letter-spacing: -.02em;
+      color: var(--foreground);
+      margin-bottom: 1rem;
+    }
+    .stat-cell-num em { font-style: italic; color: var(--accent); font-size: .55em; margin-left: .15em; }
+    .stat-cell-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .65rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: .85rem;
+    }
+    .stat-cell-body {
+      font-size: .95rem;
+      line-height: 1.55;
+      color: var(--muted-foreground);
+      max-width: 22rem;
+    }
+    .stat-cell-body cite {
+      display: block;
+      margin-top: .5rem;
+      font-style: normal;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .625rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: hsl(195 15% 45%);
+    }
+
+    /* ---------- SECTOR SECTIONS ---------- */
+    .sector {
+      padding: 6rem 0;
+      border-top: 1px solid var(--border);
+    }
+    @media (min-width: 768px) { .sector { padding: 8rem 0; } }
+    .sector-light { background: var(--background); color: var(--foreground); }
+    .sector-secondary { background: var(--secondary); color: var(--foreground); }
+
+    .sector-head {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-bottom: 4rem;
+      align-items: end;
+    }
+    @media (min-width: 900px) {
+      .sector-head { grid-template-columns: auto 1fr; gap: 3.5rem; }
+    }
+
+    .sector-num-plate {
+      font-family: 'Fraunces', serif;
+      font-weight: 300;
+      font-style: italic;
+      font-size: clamp(5rem, 10vw, 8rem);
+      line-height: .85;
+      color: var(--accent);
+      letter-spacing: -.04em;
+    }
+
+    .sector-title-block .eyebrow-mono { margin-bottom: 1rem; color: var(--muted-foreground); }
+    .sector-title-block h2 {
+      font-size: clamp(2.5rem, 5vw, 3.75rem);
+      line-height: 1;
+      text-wrap: balance;
+      margin-bottom: 1.25rem;
+    }
+    .sector-title-block h2 em.accent { font-style: italic; color: var(--accent); }
+    .sector-title-block .sector-includes {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .7rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--muted-foreground);
+      max-width: 48rem;
+      line-height: 1.7;
+    }
+    .sector-title-block .sector-includes .accent { color: var(--accent); }
+
+    .sector-body {
+      display: grid;
+      gap: 3rem;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 900px) {
+      .sector-body {
+        grid-template-columns: 5fr 4fr 4fr;
+        gap: 3rem;
+      }
+    }
+
+    .block-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .65rem;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      color: var(--accent);
+      padding-bottom: .85rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+    }
+    .block-label::before {
+      content: '';
+      display: inline-block;
+      width: .4rem; height: .4rem;
+      background: var(--accent);
+    }
+
+    .sector-prose p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--muted-foreground);
+      text-wrap: pretty;
+    }
+    .sector-prose p + p { margin-top: 1.1rem; }
+    .sector-prose strong { color: var(--foreground); font-weight: 500; }
+
+    .sector-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .sector-list li {
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+      font-family: 'Fraunces', serif;
+      font-weight: 400;
+      font-size: 1.05rem;
+      line-height: 1.45;
+      color: var(--foreground);
+      display: grid;
+      grid-template-columns: 1.6rem 1fr;
+      gap: .5rem;
+      align-items: baseline;
+    }
+    .sector-list li::before {
+      content: counter(item, decimal-leading-zero);
+      counter-increment: item;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .65rem;
+      letter-spacing: .15em;
+      color: var(--accent);
+      align-self: baseline;
+    }
+    .sector-list { counter-reset: item; }
+    .sector-list li:last-child { border-bottom: 0; }
+
+    .sector-list.deal li::before { color: hsl(36 70% 48%); }
+
+    /* ---------- THROUGH-LINE (dark) ---------- */
+    .throughline {
+      position: relative;
+      background: var(--foreground);
+      color: var(--background);
+      padding: 6rem 0;
+      overflow: hidden;
+    }
+    @media (min-width: 768px) { .throughline { padding: 9rem 0; } }
+    .throughline-grid-bg {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(to right, hsla(38,30%,96%,.04) 1px, transparent 1px),
+        linear-gradient(to bottom, hsla(38,30%,96%,.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+    }
+    .throughline-glow {
+      position: absolute;
+      bottom: -10rem; left: -8rem;
+      width: 460px; height: 460px;
+      border-radius: 9999px;
+      background: hsl(18 75% 52% / .14);
+      filter: blur(90px);
+      pointer-events: none;
+    }
+    .throughline-inner { position: relative; }
+
+    .throughline-head { max-width: 56rem; margin-bottom: 4.5rem; }
+    .throughline-head h2 {
+      font-size: clamp(2.5rem, 5vw, 3.75rem);
+      line-height: 1;
+      margin-top: 1rem;
+      text-wrap: balance;
+    }
+    .throughline-head h2 em.accent { font-style: italic; color: var(--accent); }
+    .throughline-head p {
+      margin-top: 1.5rem;
+      font-size: 1.125rem;
+      color: rgba(255,255,255,.7);
+      line-height: 1.65;
+    }
+
+    .theme-grid {
+      display: grid;
+      gap: 1px;
+      background: rgba(255,255,255,.12);
+    }
+    @media (min-width: 720px) { .theme-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 1100px) { .theme-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .theme-card {
+      background: var(--foreground);
+      padding: 2.25rem 2rem 2.5rem;
+      position: relative;
+      transition: background .35s var(--ease);
+    }
+    .theme-card:hover { background: hsl(195 50% 11%); }
+    .theme-card .theme-num {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1.5rem;
+      color: var(--accent);
+      margin-bottom: 1.25rem;
+      display: block;
+    }
+    .theme-card h3 {
+      font-size: 1.5rem;
+      line-height: 1.15;
+      color: var(--background);
+      margin-bottom: 1rem;
+    }
+    .theme-card p {
+      font-size: .95rem;
+      line-height: 1.65;
+      color: rgba(255,255,255,.7);
+    }
+    .theme-card .theme-rule {
+      margin-top: 2rem;
+      height: 1px;
+      background: rgba(255,255,255,.15);
+      transition: background .3s var(--ease);
+    }
+    .theme-card:hover .theme-rule { background: var(--accent); }
+
+    /* The 5th theme spans wide on desktop */
+    @media (min-width: 1100px) {
+      .theme-card.theme-feature { grid-column: span 3; }
+      .theme-card.theme-feature h3 { font-size: 1.75rem; max-width: 36rem; }
+      .theme-card.theme-feature p { max-width: 56rem; font-size: 1.05rem; }
+    }
+
+    /* ---------- AT SCALE ---------- */
+    .atscale {
+      background: var(--background);
+      color: var(--foreground);
+      padding: 6rem 0;
+    }
+    @media (min-width: 768px) { .atscale { padding: 9rem 0; } }
+    .atscale-head { max-width: 64rem; margin-bottom: 4rem; }
+    .atscale-head h2 {
+      font-size: clamp(2.5rem, 5vw, 3.75rem);
+      line-height: 1;
+      margin-top: 1rem;
+      text-wrap: balance;
+    }
+    .atscale-head h2 em.accent { font-style: italic; color: var(--accent); }
+    .atscale-head p {
+      margin-top: 1.5rem;
+      font-size: 1.125rem;
+      line-height: 1.65;
+      color: var(--muted-foreground);
+      max-width: 48rem;
+    }
+
+    .scale-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      border-top: 1px solid var(--border);
+    }
+    .scale-row {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1.5rem;
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--border);
+      align-items: start;
+    }
+    @media (min-width: 768px) {
+      .scale-row { grid-template-columns: 4rem 6fr 5fr; gap: 2.5rem; align-items: start; }
+    }
+    .scale-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .75rem;
+      letter-spacing: .2em;
+      color: var(--accent);
+      padding-top: .35rem;
+    }
+    .scale-component h3 {
+      font-family: 'Fraunces', serif;
+      font-weight: 300;
+      font-size: clamp(1.4rem, 2.4vw, 1.85rem);
+      line-height: 1.15;
+      letter-spacing: -.01em;
+      margin-bottom: .65rem;
+    }
+    .scale-component p {
+      font-size: .95rem;
+      line-height: 1.6;
+      color: var(--muted-foreground);
+      max-width: 36rem;
+    }
+    .scale-addresses {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .7rem;
+      letter-spacing: .12em;
+      line-height: 1.7;
+      color: var(--muted-foreground);
+      text-transform: uppercase;
+    }
+    .scale-addresses::before {
+      content: '↳ Addresses';
+      display: block;
+      color: var(--accent);
+      letter-spacing: .25em;
+      font-size: .625rem;
+      margin-bottom: .65rem;
+    }
+    @media (max-width: 767px) {
+      .scale-addresses { margin-top: 1rem; }
+    }
+
+    /* ---------- FORWARD CTA ---------- */
+    .forward {
+      position: relative;
+      background: var(--gradient-deep);
+      color: var(--background);
+      padding: 7rem 0;
+      overflow: hidden;
+      text-align: center;
+    }
+    @media (min-width: 768px) { .forward { padding: 10rem 0; } }
+    .forward .cta-glow-a {
+      position: absolute;
+      top: -8rem; right: -8rem;
+      width: 500px; height: 500px;
+      border-radius: 9999px;
+      background: hsl(18 75% 52% / .2);
+      filter: blur(80px);
+      pointer-events: none;
+      animation: ember-pulse 4s ease-in-out infinite;
+    }
+    .forward .cta-glow-b {
+      position: absolute;
+      bottom: -8rem; left: -8rem;
+      width: 400px; height: 400px;
+      border-radius: 9999px;
+      background: hsl(36 70% 48% / .1);
+      filter: blur(80px);
+      pointer-events: none;
+    }
+    .forward-inner { position: relative; max-width: 64rem; margin: 0 auto; padding: 0 1.5rem; }
+    @media (min-width: 768px) { .forward-inner { padding: 0 3rem; } }
+
+    .forward h2 {
+      font-size: clamp(2.5rem, 5.5vw, 4rem);
+      line-height: 1;
+      text-wrap: balance;
+      margin-bottom: 2.25rem;
+    }
+    .forward h2 em.accent { font-style: italic; color: var(--accent); }
+    .forward p {
+      font-size: 1.15rem;
+      line-height: 1.65;
+      color: rgba(255,255,255,.78);
+      max-width: 42rem;
+      margin: 0 auto 2.5rem;
+    }
+    .forward-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+
+    /* ---------- SOURCE LINE ---------- */
+    .source {
+      background: var(--background);
+      padding: 3rem 0;
+      border-top: 1px solid var(--border);
+    }
+    .source-inner {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .65rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--muted-foreground);
+      line-height: 1.8;
+      max-width: 64rem;
+    }
+    .source-inner strong { color: var(--accent); font-weight: 500; }
+  </style>
+</head>
+
+<body>
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-brand">
+      <span class="brand-mark brand-mark-3">TCG</span>
+      <span class="brand-name">Collab</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#question">The Question</a>
+      <a href="index.html#layers">Layers</a>
+      <a href="index.html#stack">Stack</a>
+      <a href="index.html#sample">Sample</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <a href="index.html#contact" class="btn btn-outline-ghost">Start a Site Study</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero brief-hero grain" id="top">
+    <div class="brief-hero-grid"></div>
+    <div class="brief-hero-glow"></div>
+
+    <div class="brief-corner tl">39.10°N · -84.51°W · CIN-02</div>
+    <div class="brief-corner tr">FIELD NOTES · 2026.05.07</div>
+
+    <div class="hero-inner">
+      <div class="container hero-content">
+        <div class="brief-eyebrow rise">
+          <span class="ember-dot"></span>
+          <span>§ Field Notes</span>
+          <span class="sep">/</span>
+          <span>Regional Intelligence</span>
+          <span class="sep">/</span>
+          <span>2026-05-07</span>
+        </div>
+
+        <h1 class="brief-headline rise" style="animation-delay:.1s">
+          The system isn't broken<br />
+          for lack of <em class="accent">money</em>.<br />
+          It's broken for lack of <em class="accent">coordination</em>.
+        </h1>
+
+        <p class="brief-lede rise" style="animation-delay:.25s">
+          Three sectors. One shared diagnosis. A field synthesis from the
+          Regional Housing &amp; Economic Competitiveness Convening at the
+          University of Cincinnati Innovation Lab, convened by the
+          Greater Cincinnati Foundation.
+        </p>
+
+        <div class="brief-meta-strip rise" style="animation-delay:.4s">
+          <div class="brief-meta-cell">
+            <div class="brief-meta-key">Convened by</div>
+            <div class="brief-meta-val">Greater Cincinnati <em>Foundation</em></div>
+          </div>
+          <div class="brief-meta-cell">
+            <div class="brief-meta-key">In partnership with</div>
+            <div class="brief-meta-val">University of Cincinnati <em>Innovation Lab</em></div>
+          </div>
+          <div class="brief-meta-cell">
+            <div class="brief-meta-key">Date</div>
+            <div class="brief-meta-val">May 7, <em>2026</em></div>
+          </div>
+          <div class="brief-meta-cell">
+            <div class="brief-meta-key">Synthesis by</div>
+            <div class="brief-meta-val">Collab · <em>Real Estate Intelligence</em></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIAGNOSIS -->
+  <section class="diagnosis grain" id="diagnosis">
+    <div class="container">
+      <div class="diag-head">
+        <div>
+          <div class="eyebrow-mono">§ 01 · The Diagnosis</div>
+          <h2>Subsidy alone <em class="accent">can't fix this.</em></h2>
+        </div>
+        <div>
+          <p>
+            The room agreed on more than it disagreed on. Elected officials, agency staff, financiers,
+            builders, and intermediaries arrived at the same diagnosis.
+          </p>
+          <p>
+            Cincinnati's housing system isn't failing because of money. It's failing because the funding
+            sources don't coordinate. Because there's no equity capital to do the rebuilding work. And
+            because community trust is treated as a per-project task instead of as shared infrastructure.
+          </p>
+          <p>
+            Subsidy is being used to patch problems it wasn't designed to fix. Broken permitting.
+            Mismatched funder rules. Markets too damaged to attract private equity. Community engagement
+            done deal by deal.
+          </p>
+        </div>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-cell">
+          <div class="stat-cell-label">National</div>
+          <div class="stat-cell-num">4 to 5.5<em>M</em></div>
+          <div class="stat-cell-body">
+            The national housing shortage. Construction can't keep up with new households being formed.
+            <cite>Source · Federal Reserve, U.S. Census</cite>
+          </div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-cell-label">Coordination tax</div>
+          <div class="stat-cell-num">$20<em>K</em></div>
+          <div class="stat-cell-body">
+            Added cost per unit, plus four months added to the timeline, for every extra funding source on a deal.
+            <cite>Source · Berkeley / Turner study</cite>
+          </div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-cell-label">Market repair</div>
+          <div class="stat-cell-num">$5<em>M</em></div>
+          <div class="stat-cell-body">
+            The subsidy needed, over five years, to turn one disinvested neighborhood from a broken
+            market into a working one.
+            <cite>Case · Evanston, 2015 to 2020</cite>
+          </div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-cell-label">Cost burden</div>
+          <div class="stat-cell-num">43<em>%</em></div>
+          <div class="stat-cell-body">
+            of Cincinnati renters spend more than 30% of income on housing. One in four Hamilton County
+            renters spend more than 50%.
+            <cite>Source · Housing Our Future</cite>
+          </div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-cell-label">Wage gap</div>
+          <div class="stat-cell-num">$25<em>/hr</em></div>
+          <div class="stat-cell-body">
+            Required to afford a modest two-bedroom apartment in Cincinnati. None of Ohio's top 15 jobs pays it.
+            <cite>Source · State housing coalition</cite>
+          </div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-cell-label">Builder cycle</div>
+          <div class="stat-cell-num">4<em>yrs</em></div>
+          <div class="stat-cell-body">
+            Typical timeline for a small-scale affordable project without tax credits. Funded
+            $1M at a time.
+            <cite>Reported · small-scale builders</cite>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTOR 01: GOVERNMENT -->
+  <section class="sector sector-light grain" id="government">
+    <div class="container">
+      <div class="sector-head">
+        <div class="sector-num-plate">01</div>
+        <div class="sector-title-block">
+          <div class="eyebrow-mono">§ 02 · Sector One</div>
+          <h2><em class="accent">Government.</em></h2>
+          <div class="sector-includes">
+            City Council and Economic Development · County · Planning Commission ·
+            Ohio General Assembly · HUD · <span class="accent">Federal Reserve Bank</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sector-body">
+        <div class="sector-prose">
+          <div class="block-label">What is happening</div>
+          <p>
+            The public sector is fielding three pressures at once. A growing supply gap. Shrinking
+            fiscal tools as ARPA dollars run out in 2026. And contradictory pressure from the community.
+          </p>
+          <p>
+            In one evening, a city staffer was told that a single neighborhood has
+            <em>too much affordable housing</em>, <em>too much subsidized market-rate housing</em>,
+            and <em>too much vacant land sitting still</em>.
+          </p>
+          <p>
+            County leaders described tools that were built for a simpler problem. The gap used to be
+            purely financial. Now it's also political, informational, and infrastructural. State
+            legislators are caught between home-rule traditions and the need for state-level reform on
+            zoning and permitting. Federal officials see <strong>local readiness</strong>, not federal
+            capacity, as the bottleneck for the next wave of housing legislation.
+          </p>
+        </div>
+
+        <div>
+          <div class="block-label">Concerns</div>
+          <ol class="sector-list">
+            <li>Misperception is the political tax. The label "affordable housing" carries connotations that hurt projects, no matter what they actually deliver.</li>
+            <li>Tools are misaligned with today's gaps. Subsidy stacks designed a decade ago don't close today's construction costs.</li>
+            <li>The infrastructure tail is unfunded. Sewer lift stations, utility upgrades, and brownfield demolition eat into housing budgets.</li>
+            <li>Home rule cuts both ways. State mandates create political blowback. State encouragement alone doesn't have enough teeth.</li>
+          </ol>
+        </div>
+
+        <div>
+          <div class="block-label">A good deal looks like</div>
+          <ol class="sector-list deal">
+            <li>Community engagement is done <em>before</em> the deal hits a planning commission agenda.</li>
+            <li>Mixed-income at the neighborhood scale, not income-segregated.</li>
+            <li>Bundled with infrastructure, workforce, or school-stabilization outcomes.</li>
+            <li>Funding sources pre-coordinated. The public role is one decision, not five.</li>
+            <li>Policy-ready, so the project can absorb new federal or state programs the moment they land.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTOR 02: CAPITAL & FINANCE -->
+  <section class="sector sector-secondary grain" id="capital">
+    <div class="container">
+      <div class="sector-head">
+        <div class="sector-num-plate">02</div>
+        <div class="sector-title-block">
+          <div class="eyebrow-mono">§ 03 · Sector Two</div>
+          <h2><em class="accent">Capital and Finance.</em></h2>
+          <div class="sector-includes">
+            CDFIs · Land Banks · Federal Home Loan Banks · GSEs ·
+            <span class="accent">Mission-aligned institutional capital</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sector-body">
+        <div class="sector-prose">
+          <div class="block-label">What is happening</div>
+          <p>
+            Capital is being deployed, but in pieces too small and too short-dated to move the market.
+            CDFIs described "piecemeal fundraising," meaning small pools recycled on short terms. That
+            structurally limits how much concessionary lending can do.
+          </p>
+          <p>
+            Developer behavior is a function of <strong>equity behavior</strong>. Developers aren't the
+            bad guys. They're the visible end of a chase for equity, and equity won't enter broken markets.
+          </p>
+          <p>
+            Federal banks operate inside fixed regulator constraints that prevent any single national
+            underwriting standard. The GSEs report that Cincinnati's challenges aren't unique nationally.
+            That's both reassuring and a reason to stop solving these problems in isolation.
+          </p>
+        </div>
+
+        <div>
+          <div class="block-label">Concerns</div>
+          <ol class="sector-list">
+            <li>Equity is the missing layer. Debt plus subsidy plus civic-minded equity capped near 3% returns doesn't attract real scale.</li>
+            <li>Funder rule fragmentation is the silent tax. Davis-Bacon wages can shift up to closing day on FHA deals.</li>
+            <li>The capital stack closes too early. Sewer and water reviews come after permits are pulled, after contingency is already spent.</li>
+            <li>Subsidy is treated as gap-fill, not as a return on investment. It should be measured in units created.</li>
+            <li>Legal review is a transfer tax. On $20 to $40 million deals, it's the single largest line item after construction.</li>
+          </ol>
+        </div>
+
+        <div>
+          <div class="block-label">A good deal looks like</div>
+          <ol class="sector-list deal">
+            <li>One coordinated intake. Single application, single underwriting conversation.</li>
+            <li>A meaningful equity layer in the stack. Not 100% tax credits. Not booster-only.</li>
+            <li>A long-dated, low-cost regional capital pool that lets concessionary lenders make longer commitments.</li>
+            <li>A shared, transparent pipeline visible to CDFIs, land banks, mission capital, and tail-end donors.</li>
+            <li>Mixed-income in markets that can plausibly attract national institutional equity.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTOR 03: DEVELOPERS -->
+  <section class="sector sector-light grain" id="developers">
+    <div class="container">
+      <div class="sector-head">
+        <div class="sector-num-plate">03</div>
+        <div class="sector-title-block">
+          <div class="eyebrow-mono">§ 04 · Sector Three</div>
+          <h2><em class="accent">Developers.</em></h2>
+          <div class="sector-includes">
+            Public housing authorities · Single-family infill developers · Market-rate multifamily ·
+            Mixed-income builders · Small-scale affordable builders ·
+            <span class="accent">Realtors</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sector-body">
+        <div class="sector-prose">
+          <div class="block-label">What is happening</div>
+          <p>
+            Every developer described a variation of the same gauntlet.
+            <strong>Market health, then zoning, then community engagement, then advocacy, then council
+            and incentives.</strong> A project that survives all five within a predictable timeline is rare.
+          </p>
+          <p>
+            The Evanston case study showed what it takes to turn a broken market. About $5M of patient
+            loss, over five years, before a private builder can take over and make money. The system has
+            no vehicle to absorb that initial loss at scale.
+          </p>
+          <p>
+            Small-scale builders without tax credits reported four-year project cycles, funded $1M at a
+            time. Market-rate developers reported losing investor interest to lower-friction markets in
+            other states.
+          </p>
+        </div>
+
+        <div>
+          <div class="block-label">Concerns</div>
+          <ol class="sector-list">
+            <li>Equity at the front of the deal is the number one barrier. Civic equity caps near 3%. The pool is small.</li>
+            <li>Scale is not designed in. Lots, permits, and engagement all happen one at a time.</li>
+            <li>The permitting back end blows up the budget. Second-tier utility reviewers come in after permits are issued.</li>
+            <li>Construction jobs are invisible in incentive scoring.</li>
+            <li>Tax delinquency on absentee-landlord property goes unenforced.</li>
+            <li>Community Benefits Agreements, as currently written, are deal-killers for outside private equity.</li>
+            <li>Tax Increment Financing dollars are not consistently deployed for housing and infrastructure as the statute intends.</li>
+          </ol>
+        </div>
+
+        <div>
+          <div class="block-label">A good deal looks like</div>
+          <ol class="sector-list deal">
+            <li>Site-work, utilities, and permitting pre-cleared <em>before</em> lots come to market.</li>
+            <li>Lots released in batches large enough for economies of scale (20 to 40 lots).</li>
+            <li>Community engagement done at the neighborhood-plan level. Done once. Not relitigated per project.</li>
+            <li>A single funding intake yielding a coordinated capital stack within a predictable timeline.</li>
+            <li>Tax enforcement on chronic absentee-landlord property to level the field.</li>
+            <li>Community Benefits Agreements structured to coexist with national equity expectations.</li>
+            <li>Construction jobs and local subcontractor employment counted in incentive math.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THROUGH-LINE -->
+  <section class="throughline grain" id="throughline">
+    <div class="throughline-grid-bg"></div>
+    <div class="throughline-glow"></div>
+    <div class="container throughline-inner">
+      <div class="throughline-head">
+        <div class="eyebrow-mono accent">§ 05 · The Through-Line</div>
+        <h2>Five themes the room <em class="accent">already agrees on.</em></h2>
+        <p>
+          Four shared diagnoses emerged across the three sectors. A fifth reframes housing's economic role.
+          None of them will move the supply curve alone. Together, they describe a system reform.
+        </p>
+      </div>
+
+      <div class="theme-grid">
+        <article class="theme-card">
+          <span class="theme-num">i.</span>
+          <h3>Coordination beats subsidy.</h3>
+          <p>
+            Fragmentation across funders, permitting, community engagement, and legal review costs more
+            than any single financing gap. And it's more recoverable. A coordinated front door is the
+            highest-leverage move available to the region.
+          </p>
+          <div class="theme-rule"></div>
+        </article>
+        <article class="theme-card">
+          <span class="theme-num">ii.</span>
+          <h3>Equity is the missing capital layer.</h3>
+          <p>
+            Debt and subsidy don't build mixed-income housing in markets that need rebuilding. The region
+            needs a long-dated, patient, equity-like pool. Large enough to absorb the early losses that
+            turn broken markets. Structured to work alongside subsidy and outside institutional equity.
+          </p>
+          <div class="theme-rule"></div>
+        </article>
+        <article class="theme-card">
+          <span class="theme-num">iii.</span>
+          <h3>Mixed-income at neighborhood scale is the unlock.</h3>
+          <p>
+            The current toolset funds concentrated affordable housing in already-disinvested neighborhoods.
+            Every sector at the table called this suboptimal. The fix is the symmetric move. Moderate
+            housing in disinvested neighborhoods. Affordable housing in market-rate neighborhoods.
+          </p>
+          <div class="theme-rule"></div>
+        </article>
+        <article class="theme-card">
+          <span class="theme-num">iv.</span>
+          <h3>Community engagement is infrastructure.</h3>
+          <p>
+            When community work is done per-project, every project pays the same tax. The projects that
+            survive aren't the best projects. They're the ones with the highest tolerance for friction.
+            A neighborhood-level engagement framework, funded as infrastructure, removes that tax permanently.
+          </p>
+          <div class="theme-rule"></div>
+        </article>
+        <article class="theme-card theme-feature">
+          <span class="theme-num">v.</span>
+          <h3>Housing is economic, educational, and health infrastructure.</h3>
+          <p>
+            43% of Cincinnati renters are cost-burdened. One in four are severely cost-burdened. In 31
+            of 42 city public schools, 60 to 80% of students are off-track for kindergarten readiness.
+            Chronic absenteeism is at 45%. These are housing outcomes showing up as workforce, school,
+            and health outcomes. Any reform measured only in units built will undercount its own value.
+          </p>
+          <div class="theme-rule"></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- AT SCALE -->
+  <section class="atscale grain" id="atscale">
+    <div class="container">
+      <div class="atscale-head">
+        <div class="eyebrow-mono">§ 06 · What "At Scale" Looks Like</div>
+        <h2>Eight components.<br /><em class="accent">Each one names the complaint it answers.</em></h2>
+        <p>
+          The convening wasn't asked to choose among these. It was asked to name them. And to acknowledge
+          that no single organization can deliver any one of them alone. Each component below maps directly
+          to a complaint heard in the room.
+        </p>
+      </div>
+
+      <ol class="scale-list">
+        <li class="scale-row">
+          <div class="scale-num">01</div>
+          <div class="scale-component">
+            <h3>A regional coordinating intake.</h3>
+            <p>One front door for projects under a defined scale, pulling together CDFIs, land banks, city, county, and aligned philanthropic and mission capital.</p>
+          </div>
+          <div class="scale-addresses">Funder fragmentation · The per-source cost and timeline penalty</div>
+        </li>
+        <li class="scale-row">
+          <div class="scale-num">02</div>
+          <div class="scale-component">
+            <h3>A long-dated regional housing capital pool.</h3>
+            <p>Patient, equity-like capital. Large enough to absorb early-stage losses in turnaround markets, and to take an equity position alongside national institutional capital in mixed-income deals.</p>
+          </div>
+          <div class="scale-addresses">The equity-layer gap · Evanston-scale subsidy requirement</div>
+        </li>
+        <li class="scale-row">
+          <div class="scale-num">03</div>
+          <div class="scale-component">
+            <h3>Pre-cleared neighborhood plans.</h3>
+            <p>Engagement done at the plan level, including pattern-book systems for ADUs and small multi-units. Individual projects inherit zoning and engagement instead of re-litigating them.</p>
+          </div>
+          <div class="scale-addresses">The gauntlet · Per-project community tax</div>
+        </li>
+        <li class="scale-row">
+          <div class="scale-num">04</div>
+          <div class="scale-component">
+            <h3>Unified permitting and second-tier utility review.</h3>
+            <p>One review window that includes sewer, water, and building. Before permits are issued, not after.</p>
+          </div>
+          <div class="scale-addresses">Contingency blow-up at construction</div>
+        </li>
+        <li class="scale-row">
+          <div class="scale-num">05</div>
+          <div class="scale-component">
+            <h3>Tax-delinquency enforcement track.</h3>
+            <p>Targeted at chronic absentee landlords, paired with land-bank inventory transparency so local investors can participate.</p>
+          </div>
+          <div class="scale-addresses">Playing field · Local investor access</div>
+        </li>
+        <li class="scale-row">
+          <div class="scale-num">06</div>
+          <div class="scale-component">
+            <h3>A credit-recognition standard.</h3>
+            <p>Rental-payment history recognized as a credit input, advanced jointly through realtors, GSEs, and state-level legislation. To expand the qualified-buyer pool.</p>
+          </div>
+          <div class="scale-addresses">Qualified-buyer ceiling · Renter-to-owner transition</div>
+        </li>
+        <li class="scale-row">
+          <div class="scale-num">07</div>
+          <div class="scale-component">
+            <h3>An updated incentive framework.</h3>
+            <p>Counts construction jobs, local subcontractor spend, and supply-side outcomes. Structures Community Benefits Agreements to coexist with institutional equity.</p>
+          </div>
+          <div class="scale-addresses">Regional competitiveness for outside equity</div>
+        </li>
+        <li class="scale-row">
+          <div class="scale-num">08</div>
+          <div class="scale-component">
+            <h3>Cross-sector outcome metrics.</h3>
+            <p>Units created, school-mobility reduction, workforce stability, healthcare cost. Owned jointly by housing, schools, workforce, and health systems.</p>
+          </div>
+          <div class="scale-addresses">Housing as economic infrastructure</div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- FORWARD -->
+  <section class="forward" id="forward">
+    <div class="cta-glow-a"></div>
+    <div class="cta-glow-b"></div>
+    <div class="forward-inner grain">
+      <div class="cta-eyebrow">
+        <span class="rule-short"></span>
+        <span class="mono small">The Forward Question</span>
+        <span class="rule-short"></span>
+      </div>
+      <h2>The room is willing.<br />The diagnosis is shared.<br /><em class="accent">Which component goes first?</em></h2>
+      <p>
+        The natural next step is simple. For each of the eight components, identify the smallest
+        viable coalition that could move it from diagnosis to commitment in the next 12 to 18 months.
+        Then name a convening cadence that holds the work between now and then. The Greater
+        Cincinnati Foundation is positioned to be that holding pattern.
+      </p>
+      <div class="forward-buttons">
+        <a href="mailto:hello@thecollab.group?subject=Regional%20Housing%20Briefing" class="btn btn-accent">Continue the Conversation <span class="arrow">↗</span></a>
+        <a href="index.html" class="btn btn-outline-ghost-light">Back to Collab</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOURCE LINE -->
+  <section class="source">
+    <div class="container source-inner">
+      <strong>Source ·</strong> Regional Housing &amp; Economic Competitiveness Convening transcripts,
+      May 7, 2026 · Convened by the Greater Cincinnati Foundation in partnership with the
+      University of Cincinnati Innovation Lab · <strong>Synthesis by Collab</strong>,
+      a real-estate intelligence firm specializing in pre-development data studies.
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer grain">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark brand-mark-3">TCG</span>
+        <div>
+          <div class="footer-name">Collab</div>
+          <div class="mono tiny">The Collab Group · Pre-Development Data Studies.</div>
+        </div>
+      </div>
+      <div class="footer-cats mono small">
+        <span>AI Intelligence</span><span>Design &amp; Finance</span><span>Civic Strategy</span>
+      </div>
+      <div class="mono tiny dim">© The Collab Group · Field Notes · CIN-02</div>
+    </div>
+  </footer>
+</body>
+</html>
